@@ -121,8 +121,8 @@ export default function Nav() {
           .nav-links {
             position: fixed;
             top: 80px;
-            left: 100%;
-            right: auto;
+            left: 0;
+            right: 0;
             bottom: 0;
             width: 100%;
             max-width: 100vw;
@@ -132,13 +132,16 @@ export default function Nav() {
             flex-direction: column;
             gap: 24px;
             padding: 32px 24px;
-            transition: left 0.3s ease, visibility 0.3s ease;
+            transform: translateX(100%);
+            transition: transform 0.3s ease, visibility 0.3s ease;
             align-items: flex-start;
             visibility: hidden;
             overflow-x: hidden;
+            display: none;
           }
           .nav-links.open {
-            left: 0;
+            display: flex;
+            transform: translateX(0);
             visibility: visible;
           }
           .nav-link {
