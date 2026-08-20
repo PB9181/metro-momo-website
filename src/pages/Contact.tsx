@@ -14,7 +14,7 @@ export default function Contact() {
       <section className="section page-hero">
         <div className="container">
           <span className="badge">Apply Now</span>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title display-text">
             Start your
             <br />
             <span className="gradient-text">franchise journey</span>

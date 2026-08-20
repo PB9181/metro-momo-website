@@ -46,7 +46,7 @@ export default function HowItWorks() {
       <section className="section page-hero">
         <div className="container">
           <span className="badge">How It Works</span>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title display-text">
             From application to
             <br />
             <span className="gradient-text">opening day</span>

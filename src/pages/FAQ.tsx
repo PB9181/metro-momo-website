@@ -45,7 +45,7 @@ export default function FAQ() {
       <section className="section page-hero">
         <div className="container">
           <span className="badge">FAQ</span>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title display-text">
             Questions?
             <br />
             <span className="gradient-text">We have answers.</span>

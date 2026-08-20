@@ -58,7 +58,7 @@ export default function Models() {
       <section className="section page-hero">
         <div className="container">
           <span className="badge">Franchise Models</span>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title display-text">
             Pick the format that
             <br />
             <span className="gradient-text">fits your ambition</span>

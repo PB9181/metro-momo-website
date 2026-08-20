@@ -1,5 +1,7 @@
-import { ArrowRight, MapPin, Utensils, Users, TrendingUp, ChefHat } from 'lucide-react'
+import { ArrowRight, MapPin, Utensils, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Marquee from '../components/Marquee.tsx'
+import StatsCounter from '../components/StatsCounter.tsx'
 
 export default function Home() {
   return (
@@ -13,10 +15,10 @@ export default function Home() {
               <Utensils size={16} />
               Authentic Himalayan Street Food
             </span>
-            <h1 className="hero-title">
+            <h1 className="hero-title display-text">
               Bring the Taste of Nepal
               <br />
-              <span className="gradient-text">to Your City</span>
+              <span className="gradient-text text-shadow-pop">to Your City</span>
             </h1>
             <p className="hero-subtitle">
               Launch a METRO MOMO franchise — a fast-growing momo concept built for simplicity,
@@ -195,6 +197,41 @@ export default function Home() {
         `}</style>
       </section>
 
+      <section className="section marquee-section">
+        <div className="container marquee-header">
+          <span className="badge">Food that sells itself</span>
+          <h2 className="section-title">Real momos, real flavor</h2>
+        </div>
+        <Marquee
+          images={[
+            { src: '/hero-momos.png', alt: 'Steaming momos' },
+            { src: '/jhol-momo.png', alt: 'Jhol momo in broth' },
+            { src: '/menu-fried-momo.png', alt: 'Fried chili momos' },
+            { src: '/about-community.png', alt: 'People enjoying momos' },
+            { src: '/model-restaurant.png', alt: 'METRO MOMO restaurant' },
+            { src: '/model-stall.png', alt: 'Street food stall' },
+          ]}
+          speed={40}
+        />
+
+        <style>{`
+          .marquee-section {
+            background: var(--color-surface);
+            padding-bottom: 80px;
+          }
+          .marquee-header {
+            text-align: center;
+            margin-bottom: 48px;
+          }
+          .marquee-section .badge {
+            margin-bottom: 16px;
+          }
+          .marquee-section .section-title {
+            margin: 0 auto;
+          }
+        `}</style>
+      </section>
+
       <section className="section intro">
         <div className="container">
           <div className="intro-grid">
@@ -351,59 +388,25 @@ export default function Home() {
         `}</style>
       </section>
 
-      <section className="section stats-strip">
+      <section className="section stats-section">
         <div className="container">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <TrendingUp size={40} />
-              <strong>Fast Growing</strong>
-              <span>Momo is one of the fastest-growing street food categories in Europe.</span>
-            </div>
-            <div className="stat-item">
-              <ChefHat size={40} />
-              <strong>Simple Ops</strong>
-              <span>Pre-portioned recipes and a simple prep process mean no chef needed.</span>
-            </div>
-            <div className="stat-item">
-              <Users size={40} />
-              <strong>Full Support</strong>
-              <span>Training, supply, marketing, and tech support from day one.</span>
-            </div>
+          <div className="stats-section-header">
+            <span className="badge">By the numbers</span>
+            <h2 className="section-title">Built to scale</h2>
           </div>
+          <StatsCounter />
         </div>
 
         <style>{`
-          .stats-strip {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: white;
-            padding: 64px 0;
+          .stats-section {
+            background: var(--color-bg);
           }
-          .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-          }
-          .stat-item {
+          .stats-section-header {
             text-align: center;
+            margin-bottom: 48px;
           }
-          .stat-item svg {
-            margin: 0 auto 16px;
-          }
-          .stat-item strong {
-            display: block;
-            font-size: 1.35rem;
-            font-weight: 900;
-            margin-bottom: 8px;
-          }
-          .stat-item span {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
-          }
-          @media (max-width: 768px) {
-            .stats-grid {
-              grid-template-columns: 1fr;
-              gap: 24px;
-            }
+          .stats-section-header .badge {
+            margin-bottom: 16px;
           }
         `}</style>
       </section>

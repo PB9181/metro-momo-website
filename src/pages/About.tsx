@@ -39,7 +39,7 @@ export default function About() {
       <section className="section page-hero">
         <div className="container">
           <span className="badge">About Us</span>
-          <h1 className="page-hero-title">
+          <h1 className="page-hero-title display-text">
             A movement for
             <br />
             <span className="gradient-text">momos and owners</span>
