@@ -120,17 +120,26 @@ export default function Nav() {
           }
           .nav-links {
             position: fixed;
-            inset: 80px 0 0 0;
+            top: 80px;
+            left: 100%;
+            right: auto;
+            bottom: 0;
+            width: 100%;
+            max-width: 100vw;
+            height: calc(100vh - 80px);
+            height: calc(100dvh - 80px);
             background: var(--color-bg);
             flex-direction: column;
             gap: 24px;
             padding: 32px 24px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
+            transition: left 0.3s ease, visibility 0.3s ease;
             align-items: flex-start;
+            visibility: hidden;
+            overflow-x: hidden;
           }
           .nav-links.open {
-            transform: translateX(0);
+            left: 0;
+            visibility: visible;
           }
           .nav-link {
             font-size: 1.2rem;

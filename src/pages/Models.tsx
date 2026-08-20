@@ -283,9 +283,11 @@ export default function Models() {
           }
           .comparison-table-wrapper {
             overflow-x: auto;
+            max-width: 100%;
             border-radius: var(--radius-lg);
             background: white;
             box-shadow: var(--shadow-sm);
+            -webkit-overflow-scrolling: touch;
           }
           .comparison-table {
             width: 100%;
