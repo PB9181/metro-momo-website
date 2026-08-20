@@ -71,7 +71,7 @@ export default function Home() {
           .hero {
             position: relative;
             overflow: hidden;
-            padding: 80px 0 140px;
+            padding: 80px 0 40px;
             background: var(--color-bg);
           }
           .hero-inner {
@@ -170,7 +170,7 @@ export default function Home() {
           }
           @media (max-width: 900px) {
             .hero {
-              padding: 60px 0 80px;
+              padding: 60px 0 40px;
             }
             .hero-inner {
               grid-template-columns: 1fr;
@@ -197,7 +197,7 @@ export default function Home() {
           }
           @media (max-width: 480px) {
             .hero {
-              padding: 40px 0 60px;
+              padding: 40px 0 32px;
             }
             .hero-inner {
               gap: 36px;

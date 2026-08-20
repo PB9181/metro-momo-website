@@ -77,7 +77,7 @@ button {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 64px 0;
   position: relative;
 }
 
@@ -403,6 +403,19 @@ button {
   line-height: 0.9 !important;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+}
+
+section.page-hero {
+  padding: 60px 0 40px;
+}
+
+section.page-hero .page-hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  margin: 16px 0 12px;
+}
+
+section.page-hero .page-hero-subtitle {
+  font-size: 1.1rem;
 }
 
 .text-outline {
