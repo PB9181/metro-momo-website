@@ -112,21 +112,41 @@ export default function Nav() {
           color: var(--color-text);
         }
         @media (max-width: 900px) {
+          .nav-inner {
+            height: 80px;
+          }
           .nav-toggle {
             display: block;
           }
           .nav-links {
             position: fixed;
-            inset: 96px 0 0 0;
+            inset: 80px 0 0 0;
             background: var(--color-bg);
             flex-direction: column;
             gap: 24px;
             padding: 32px 24px;
             transform: translateX(100%);
             transition: transform 0.3s ease;
+            align-items: flex-start;
           }
           .nav-links.open {
             transform: translateX(0);
+          }
+          .nav-link {
+            font-size: 1.2rem;
+            padding: 12px 0;
+          }
+          .nav-cta {
+            margin-top: 16px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+          }
+        }
+        @media (max-width: 480px) {
+          .nav-logo svg {
+            width: 100px !important;
+            height: auto !important;
           }
         }
       `}</style>

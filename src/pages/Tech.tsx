@@ -148,7 +148,7 @@ export default function Tech() {
 
       <section className="section tech-grid-section">
         <div className="container">
-          <div className="grid-2">
+          <div className="grid-3">
             {techCategories.map((category) => (
               <div className="card tech-card" key={category.title}>
                 <div className="tech-card-header">
@@ -215,6 +215,26 @@ export default function Tech() {
             border-radius: 50%;
             background: var(--color-accent);
             flex-shrink: 0;
+          }
+          @media (max-width: 768px) {
+            .tech-card {
+              padding: 24px;
+            }
+            .tech-card-icon {
+              width: 44px;
+              height: 44px;
+            }
+            .tech-card-header {
+              gap: 12px;
+            }
+            .tech-card-list li {
+              font-size: 0.9rem;
+            }
+          }
+          @media (max-width: 480px) {
+            .tech-card {
+              padding: 20px;
+            }
           }
         `}</style>
       </section>

@@ -77,7 +77,7 @@ button {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
 }
 
@@ -212,7 +212,7 @@ button {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -415,13 +415,23 @@ button {
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section {
     padding: 64px 0;
   }
 
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0;
+  }
+
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
   .grid-2,
@@ -430,12 +440,61 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .card {
+    padding: 24px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
   .btn {
     padding: 14px 24px;
     font-size: 0.9rem;
   }
 
+  .badge {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
   .blob {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .display-text {
+    font-size: clamp(2.25rem, 12vw, 3.5rem);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    width: 52px;
+    height: 52px;
   }
 }

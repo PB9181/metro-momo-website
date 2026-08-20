@@ -81,7 +81,7 @@ export default function Models() {
 
       <section className="section models-list">
         <div className="container">
-          <div className="grid-2">
+          <div className="grid-3">
             {models.map((model) => (
               <div className={`card model-card ${model.highlighted ? 'model-card-highlighted' : ''}`} key={model.name}>
                 <div className="model-card-image">
@@ -205,6 +205,41 @@ export default function Models() {
             color: var(--color-primary);
             flex-shrink: 0;
           }
+          @media (max-width: 768px) {
+            .model-card-image {
+              height: 200px;
+            }
+            .model-card-content {
+              padding: 24px;
+            }
+            .model-card-header {
+              gap: 12px;
+            }
+            .model-card-icon {
+              width: 44px;
+              height: 44px;
+            }
+            .model-card-price {
+              top: 12px;
+              right: 12px;
+              padding: 6px 12px;
+              font-size: 1rem;
+            }
+          }
+          @media (max-width: 480px) {
+            .model-card-image {
+              height: 180px;
+            }
+            .model-card-content {
+              padding: 20px;
+            }
+            .model-card-features {
+              gap: 8px;
+            }
+            .model-card-features li {
+              font-size: 0.9rem;
+            }
+          }
         `}</style>
       </section>
 
@@ -296,6 +331,30 @@ export default function Models() {
           }
           .tech-included-banner strong {
             color: var(--color-primary);
+          }
+          @media (max-width: 768px) {
+            .comparison-table th,
+            .comparison-table td {
+              padding: 14px 16px;
+              font-size: 0.85rem;
+            }
+            .comparison-table {
+              min-width: 600px;
+            }
+            .tech-included-banner {
+              padding: 14px 18px;
+              font-size: 0.95rem;
+            }
+          }
+          @media (max-width: 480px) {
+            .comparison-table th,
+            .comparison-table td {
+              padding: 12px 14px;
+              font-size: 0.8rem;
+            }
+            .comparison-table {
+              min-width: 520px;
+            }
           }
         `}</style>
       </section>

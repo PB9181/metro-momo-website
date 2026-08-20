@@ -170,11 +170,12 @@ export default function Home() {
           }
           @media (max-width: 900px) {
             .hero {
-              padding: 60px 0 100px;
+              padding: 60px 0 80px;
             }
             .hero-inner {
               grid-template-columns: 1fr;
               text-align: center;
+              gap: 48px;
             }
             .hero-content {
               max-width: 100%;
@@ -192,6 +193,46 @@ export default function Home() {
             .hero-image-badge {
               left: 50%;
               transform: translateX(-50%);
+            }
+          }
+          @media (max-width: 480px) {
+            .hero {
+              padding: 40px 0 60px;
+            }
+            .hero-inner {
+              gap: 36px;
+            }
+            .hero-title {
+              font-size: clamp(2.25rem, 10vw, 3rem);
+            }
+            .hero-subtitle {
+              font-size: 1.1rem;
+            }
+            .hero-actions {
+              flex-direction: column;
+              align-items: center;
+            }
+            .hero-actions .btn {
+              width: 100%;
+              max-width: 320px;
+            }
+            .hero-stats {
+              flex-direction: column;
+              gap: 20px;
+              align-items: center;
+            }
+            .hero-stat {
+              flex-direction: column;
+              text-align: center;
+              gap: 8px;
+            }
+            .hero-image-wrapper {
+              padding: 6px;
+            }
+            .hero-image-badge {
+              bottom: -12px;
+              padding: 10px 16px;
+              font-size: 0.85rem;
             }
           }
         `}</style>
@@ -470,6 +511,24 @@ export default function Home() {
           .tech-preview-cta {
             text-align: center;
             margin-top: 48px;
+          }
+          @media (max-width: 768px) {
+            .tech-preview-card {
+              padding: 24px 20px;
+            }
+            .tech-preview-icon {
+              width: 52px;
+              height: 52px;
+            }
+          }
+          @media (max-width: 480px) {
+            .tech-preview-card {
+              padding: 20px 16px;
+            }
+            .tech-preview-icon {
+              width: 48px;
+              height: 48px;
+            }
           }
         `}</style>
       </section>
