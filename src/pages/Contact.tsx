@@ -143,7 +143,7 @@ export default function Contact() {
                       <option value="">Select a format</option>
                       <option value="compact">Street Stall & Kiosk</option>
                       <option value="restaurant">Full Restaurant</option>
-                      <option value="ghost">Ghost Kitchen</option>
+                      <option value="ghost">Virtual & Ghost Kitchens</option>
                       <option value="unsure">Not sure yet</option>
                     </select>
                   </label>

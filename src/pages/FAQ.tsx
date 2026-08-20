@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: 'What joint-venture formats are available?',
-    answer: 'We offer three formats: Street Stall & Kiosk, Full Restaurant, and Ghost Kitchen. Each has a different footprint and operational profile, with a €0 franchise fee and a revenue-sharing model. Visit our Models page to compare them.'
+    answer: 'We offer three formats: Street Stall & Kiosk, Full Restaurant, and Virtual & Ghost Kitchens. Each has a different footprint and operational profile, with a €0 franchise fee and a revenue-sharing model. Visit our Models page to compare them.'
   },
   {
     question: 'What support will I receive?',
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: 'How long does it take to open?',
-    answer: 'Timeline depends on the format. A street stall/kiosk or ghost kitchen can be ready in 6–10 weeks, while a full restaurant typically takes 3–6 months including site works, permits, and training.',
+    answer: 'Timeline depends on the format. A street stall/kiosk or virtual/ghost kitchen can be ready in 6–10 weeks, while a full restaurant typically takes 3–6 months including site works, permits, and training.',
   },
 ]
 

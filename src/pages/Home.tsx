@@ -331,7 +331,7 @@ export default function Home() {
               <div className="model-preview-image">
                 <img src="/model-stall.png" alt="Ghost kitchen model" />
               </div>
-              <h3 className="card-title">Ghost Kitchen</h3>
+              <h3 className="card-title">Virtual & Ghost Kitchens</h3>
               <p className="card-text">Delivery and pickup-only with minimal front-of-house costs.</p>
               <span className="model-price">€0</span>
             </div>

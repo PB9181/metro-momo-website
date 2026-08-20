@@ -24,10 +24,10 @@ const models = [
   },
   {
     icon: Cloud,
-    name: 'Ghost Kitchen',
+    name: 'Virtual & Ghost Kitchens',
     price: '€0',
     image: '/model-stall.png',
-    description: 'Delivery and pickup-only kitchen with minimal front-of-house costs. Built for online ordering and dark kitchens.',
+    description: 'Delivery and pickup-only kitchen with minimal front-of-house costs. Built for online ordering, dark kitchens, and fast market expansion.',
     features: ['Delivery-first model', 'Low rent overhead', 'Online-ordering ready', 'Shared prep space friendly', 'Fast city expansion'],
     bestFor: 'Digital-first operators',
     highlighted: true,
@@ -225,7 +225,7 @@ export default function Models() {
                   <th>Feature</th>
                   <th>Street Stall & Kiosk</th>
                   <th>Full Restaurant</th>
-                  <th>Ghost Kitchen</th>
+                  <th>Virtual & Ghost Kitchens</th>
                 </tr>
               </thead>
               <tbody>
