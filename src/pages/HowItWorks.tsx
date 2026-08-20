@@ -6,7 +6,7 @@ const steps = [
     step: '01',
     icon: ClipboardList,
     title: 'Submit Interest',
-    text: 'Tell us your preferred location, format, and budget. We review every application personally.',
+    text: 'Tell us your preferred location, format, and goals. We review every application personally.'
   },
   {
     step: '02',
@@ -200,7 +200,7 @@ export default function HowItWorks() {
               <span className="badge badge-gold">Ongoing Support</span>
               <h2 className="section-title">We stay with you after launch</h2>
               <p className="section-subtitle">
-                Launch is just the beginning. Our franchise team provides continuous support to keep your unit growing.
+                Launch is just the beginning. Our partnership team provides continuous support to keep your unit growing.
               </p>
               <ul className="support-list">
                 <li>Monthly performance reviews</li>

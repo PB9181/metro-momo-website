@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const stats = [
   { value: 7, suffix: '+', label: 'Momo varieties', prefix: '' },
-  { value: 3, suffix: '', label: 'Franchise formats', prefix: '' },
+  { value: 3, suffix: '', label: 'Joint-venture formats', prefix: '' },
   { value: 100, suffix: '%', label: 'Owner support', prefix: '' },
   { value: 1, suffix: '', label: 'Dream to launch', prefix: '<' },
 ]

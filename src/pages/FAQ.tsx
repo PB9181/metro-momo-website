@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     question: 'Do I need a chef?',
-    answer: 'No. METRO MOMO uses pre-portioned recipes and a simple preparation process that reduces kitchen complexity. Your team can be trained to produce consistent, high-quality momos without traditional chef experience.',
+    answer: 'No. METRO MOMO uses pre-portioned recipes and a simple preparation process that reduces kitchen complexity. Your team can be trained to produce consistent, high-quality MOMO without traditional chef experience.'
   },
   {
-    question: 'What franchise formats are available?',
-    answer: 'We offer four formats: Premium Street Stall, Mall Kiosk, Shipping Container, and Full Restaurant. Each has a different setup cost, footprint, and operational profile. Visit our Models page to compare them.',
+    question: 'What joint-venture formats are available?',
+    answer: 'We offer four formats: Premium Street Stall, Mall Kiosk, Shipping Container, and Full Restaurant. Each has a different footprint and operational profile, with a €0 franchise fee and a revenue-sharing model. Visit our Models page to compare them.'
   },
   {
     question: 'What support will I receive?',
@@ -51,7 +51,7 @@ export default function FAQ() {
             <span className="gradient-text">We have answers.</span>
           </h1>
           <p className="page-hero-subtitle">
-            Everything you need to know about becoming a METRO MOMO franchisee.
+            Everything you need to know about becoming a METRO MOMO partner.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function FAQ() {
               <div className="faq-contact-card">
                 <HelpCircle size={40} />
                 <h3>Still have questions?</h3>
-                <p>Our franchise team is happy to talk through your specific situation.</p>
+                <p>Our partnership team is happy to talk through your specific situation.</p>
                 <Link to="/contact" className="btn btn-primary">
                   Contact Us <ArrowRight size={18} />
                 </Link>

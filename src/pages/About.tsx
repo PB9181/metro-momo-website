@@ -29,7 +29,7 @@ const values = [
   {
     icon: HandHeart,
     title: 'Shared Success',
-    text: 'We grow when our franchisees grow. Support does not end after the agreement is signed.',
+    text: 'We grow when our partners grow. Support does not end after the agreement is signed.'
   },
 ]
 
@@ -42,7 +42,7 @@ export default function About() {
           <h1 className="page-hero-title display-text">
             A movement for
             <br />
-            <span className="gradient-text">momos and owners</span>
+            <span className="gradient-text">MOMO and owners</span>
           </h1>
           <p className="page-hero-subtitle">
             METRO MOMO was born from a simple belief: great dumplings deserve a great system.
@@ -75,24 +75,24 @@ export default function About() {
           <div className="about-story-grid">
             <div className="about-story-image">
               <div className="image-card">
-                <img src="/about-community.png" alt="People enjoying momos together" />
+                <img src="/about-community.png" alt="People enjoying MOMO together" />
               </div>
             </div>
             <div className="about-story-content">
               <span className="badge badge-gold">Our Story</span>
               <h2 className="section-title">Why we started METRO MOMO</h2>
               <p className="about-story-body">
-                We grew up watching momos bring people together — around street carts, family kitchens, and festival stalls.
+                We grew up watching MOMO bring people together — around street carts, family kitchens, and festival stalls.
                 They are not just a snack; they are a reason to pause, share, and connect.
               </p>
               <p className="about-story-body">
-                When we looked at the food franchise landscape, we saw two extremes: generic fast-food chains and beautiful
+                When we looked at the food landscape, we saw two extremes: generic fast-food chains and beautiful
                 but unscalable independents. METRO MOMO sits in the middle — a brand with real cultural roots and the operational
                 backbone to grow across cities without losing its heart.
               </p>
               <p className="about-story-body">
                 Today, we are building an umbrella that brings independent owners together under one proven system.
-                Every franchisee keeps their local identity while gaining the brand, supply, training, and technology
+                Every partner keeps their local identity while gaining the brand, supply, training, and technology
                 usually reserved for much larger chains.
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function About() {
           <span className="badge">What We Believe</span>
           <h2 className="section-title">Our values</h2>
           <p className="section-subtitle">
-            The principles that guide every decision we make as a franchise network.
+            The principles that guide every decision we make as a partnership network.
           </p>
 
           <div className="grid-3">

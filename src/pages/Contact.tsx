@@ -17,7 +17,7 @@ export default function Contact() {
           <h1 className="page-hero-title display-text">
             Start your
             <br />
-            <span className="gradient-text">franchise journey</span>
+            <span className="gradient-text">partnership journey</span>
           </h1>
           <p className="page-hero-subtitle">
             Tell us about yourself and your target market. Our team will reach out within 48 hours.
@@ -50,7 +50,7 @@ export default function Contact() {
           <div className="contact-grid">
             <div className="contact-info">
               <span className="badge badge-gold">Why METRO MOMO?</span>
-              <h2 className="section-title">What you get as a franchisee</h2>
+              <h2 className="section-title">What you get as a partner</h2>
               <p className="section-subtitle">
                 No prior restaurant experience required for all entry models. We are looking for owners who care about great food and community.
               </p>
@@ -166,7 +166,7 @@ export default function Contact() {
                     Submit Application <Send size={18} />
                   </button>
                   <p className="form-disclaimer">
-                    By submitting, you agree to be contacted by the METRO MOMO franchise team.
+                    By submitting, you agree to be contacted by the METRO MOMO partnership team.
                   </p>
                 </form>
               )}

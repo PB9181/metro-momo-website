@@ -21,7 +21,7 @@ export default function Home() {
               <span className="gradient-text text-shadow-pop">to Your City</span>
             </h1>
             <p className="hero-subtitle">
-              Launch a METRO MOMO franchise — a fast-growing momo concept built for simplicity,
+              Launch a METRO MOMO joint venture — a fast-growing MOMO concept built for simplicity,
               scalability, and serious brand appeal. From street stalls to full restaurants.
             </p>
             <div className="hero-actions">
@@ -200,14 +200,14 @@ export default function Home() {
       <section className="section marquee-section">
         <div className="container marquee-header">
           <span className="badge">Food that sells itself</span>
-          <h2 className="section-title">Real momos, real flavor</h2>
+          <h2 className="section-title">Real MOMO, real flavor</h2>
         </div>
         <Marquee
           images={[
-            { src: '/hero-momos.png', alt: 'Steaming momos' },
-            { src: '/jhol-momo.png', alt: 'Jhol momo in broth' },
-            { src: '/menu-fried-momo.png', alt: 'Fried chili momos' },
-            { src: '/about-community.png', alt: 'People enjoying momos' },
+            { src: '/hero-momos.png', alt: 'Steaming MOMO' },
+            { src: '/jhol-momo.png', alt: 'Jhol MOMO in broth' },
+            { src: '/menu-fried-momo.png', alt: 'Fried chili MOMO' },
+            { src: '/about-community.png', alt: 'People enjoying MOMO' },
             { src: '/model-restaurant.png', alt: 'METRO MOMO restaurant' },
             { src: '/model-stall.png', alt: 'Street food stall' },
           ]}
@@ -237,7 +237,7 @@ export default function Home() {
           <div className="intro-grid">
             <div className="intro-image">
               <div className="image-card">
-                <img src="/about-community.png" alt="People enjoying momos together" />
+                <img src="/about-community.png" alt="People enjoying MOMO together" />
               </div>
             </div>
             <div className="intro-content">
@@ -249,7 +249,7 @@ export default function Home() {
               </h2>
               <p className="section-subtitle">
                 METRO MOMO was created to bring one of Nepal's most loved comfort foods to a wider audience.
-                Momo represents warmth, sharing, and the joy of eating together.
+                MOMO represents warmth, sharing, and the joy of eating together.
               </p>
               <p className="intro-body">
                 While global cuisines have thrived, authentic Himalayan flavours have remained underrepresented.
@@ -304,10 +304,10 @@ export default function Home() {
 
       <section className="section models-preview">
         <div className="container">
-          <span className="badge">Franchise Models</span>
+          <span className="badge">Joint Venture</span>
           <h2 className="section-title">Choose your format</h2>
           <p className="section-subtitle">
-            From compact stalls to full restaurants — pick the model that fits your budget, location, and ambition.
+            From compact stalls to full restaurants — pick the model that fits your location and ambition. No franchise fees; we grow through revenue sharing.
           </p>
 
           <div className="grid-3">
@@ -317,7 +317,7 @@ export default function Home() {
               </div>
               <h3 className="card-title">Street Stall</h3>
               <p className="card-text">Markets, festivals, and high-footfall streets.</p>
-              <span className="model-price">From €12,000</span>
+              <span className="model-price">€0</span>
             </div>
             <div className="card model-preview-card">
               <div className="model-preview-image">
@@ -325,7 +325,7 @@ export default function Home() {
               </div>
               <h3 className="card-title">Mall Kiosk</h3>
               <p className="card-text">Shopping centres and retail environments.</p>
-              <span className="model-price">From €18,000</span>
+              <span className="model-price">€0</span>
             </div>
             <div className="card model-preview-card">
               <div className="model-preview-image">
@@ -333,7 +333,7 @@ export default function Home() {
               </div>
               <h3 className="card-title">Restaurant</h3>
               <p className="card-text">Full dine-in with broader menu and longer hours.</p>
-              <span className="model-price">Custom</span>
+              <span className="model-price">€0</span>
             </div>
           </div>
 
@@ -414,9 +414,9 @@ export default function Home() {
       <section className="section cta-section">
         <div className="container">
           <div className="cta-card">
-            <h2 className="cta-title">Ready to bring momos to your city?</h2>
+            <h2 className="cta-title">Ready to bring MOMO to your city?</h2>
             <p className="cta-text">
-              Join the franchise network built for owners who want to serve something authentic and scalable.
+              Join the partnership network built for owners who want to serve something authentic and scalable.
             </p>
             <Link to="/contact" className="btn btn-gold">
               Start Your Application <ArrowRight size={18} />

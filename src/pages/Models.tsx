@@ -5,7 +5,7 @@ const models = [
   {
     icon: Store,
     name: 'Premium Street Stall',
-    price: '€12,000',
+    price: '€0',
     image: '/model-stall.png',
     description: 'Ideal for markets, festivals, and busy thoroughfares. Compact, efficient, and high visibility.',
     features: ['Compact setup', 'High visibility', 'Lower upfront cost', 'Festival & event ready', 'Basic equipment pack'],
@@ -15,7 +15,7 @@ const models = [
   {
     icon: ShoppingBag,
     name: 'Mall Kiosk',
-    price: '€18,000',
+    price: '€0',
     image: '/model-kiosk.png',
     description: 'Perfect for shopping centres and retail environments with consistent footfall and strong branding.',
     features: ['Premium location', 'Digital menu board', 'Strong brand presence', 'Moderate footprint', 'Mall-ready design'],
@@ -25,7 +25,7 @@ const models = [
   {
     icon: Container,
     name: 'Shipping Container',
-    price: '€25,000',
+    price: '€0',
     image: '/model-restaurant.png',
     description: 'Best for car parks, retail hubs, and destination-style locations where a bold visual presence wins.',
     features: ['Unique visual impact', 'Permanent/semi-permanent', 'Custom branding', 'Higher capacity', 'Instagram-worthy'],
@@ -35,7 +35,7 @@ const models = [
   {
     icon: Building2,
     name: 'Full Restaurant',
-    price: 'Custom',
+    price: '€0',
     image: '/model-restaurant.png',
     description: 'A complete dine-in concept with broader menu options, longer hours, and long-term growth potential.',
     features: ['Full dining room', 'Expanded menu', 'Higher revenue potential', 'Event hosting', 'Territory exclusivity'],
@@ -45,7 +45,7 @@ const models = [
 ]
 
 const comparisonFeatures = [
-  { name: 'Setup cost', stall: 'Low', kiosk: 'Medium', container: 'Medium', restaurant: 'Higher' },
+  { name: 'Franchise fee', stall: '€0', kiosk: '€0', container: '€0', restaurant: '€0' },
   { name: 'Footprint', stall: '2–4 sqm', kiosk: '6–10 sqm', container: '15–30 sqm', restaurant: '50+ sqm' },
   { name: 'Staff needed', stall: '1–2', kiosk: '2–3', container: '2–4', restaurant: '5+' },
   { name: 'Menu range', stall: 'Core menu', kiosk: 'Core + combos', container: 'Full menu', restaurant: 'Full + drinks' },
@@ -57,14 +57,14 @@ export default function Models() {
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">Franchise Models</span>
+          <span className="badge">Joint Venture</span>
           <h1 className="page-hero-title display-text">
             Pick the format that
             <br />
             <span className="gradient-text">fits your ambition</span>
           </h1>
           <p className="page-hero-subtitle">
-            From a compact street stall to a full restaurant — each model is designed for a different budget, location, and growth goal.
+            From a compact street stall to a full restaurant — every joint-venture model starts at €0 franchise fee. We grow together through revenue sharing.
           </p>
         </div>
 
@@ -222,7 +222,7 @@ export default function Models() {
         <div className="container">
           <span className="badge">Compare</span>
           <h2 className="section-title">Model comparison</h2>
-          <p className="section-subtitle">Quick overview of what each franchise format includes.</p>
+          <p className="section-subtitle">Quick overview of what each joint-venture format includes.</p>
 
           <div className="comparison-table-wrapper">
             <table className="comparison-table">
@@ -300,7 +300,7 @@ export default function Models() {
           <div className="cta-card">
             <h2 className="cta-title">Not sure which model is right for you?</h2>
             <p className="cta-text">
-              Our franchise team will help you choose based on your budget, territory, and goals.
+              Our partnership team will help you choose based on your territory and goals.
             </p>
             <Link to="/contact" className="btn btn-gold">
               Book a Discovery Call <ArrowRight size={18} />

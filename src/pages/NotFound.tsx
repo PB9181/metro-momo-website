@@ -10,7 +10,7 @@ export default function NotFound() {
           <h1 className="not-found-title">404</h1>
           <h2 className="not-found-subtitle">This momo rolled away</h2>
           <p className="not-found-text">
-            We could not find the page you were looking for. But there are plenty of momos back home.
+            We could not find the page you were looking for. But there is plenty of MOMO back home.
           </p>
           <Link to="/" className="btn btn-primary">
             <Home size={18} />

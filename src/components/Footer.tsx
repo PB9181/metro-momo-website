@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Logo width={160} variant="white" />
             <p className="footer-tagline">
-              Authentic momos, modern franchise. Built for owners who want to grow.
+              Authentic MOMO, modern joint venture. Built for owners who want to grow.
             </p>
             <div className="footer-socials">
               <a href="#" aria-label="Instagram">
