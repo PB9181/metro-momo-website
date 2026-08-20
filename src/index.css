@@ -77,7 +77,7 @@ button {
 }
 
 .section {
-  padding: 64px 0;
+  padding: 56px 0;
   position: relative;
 }
 
@@ -406,7 +406,7 @@ button {
 }
 
 section.page-hero {
-  padding: 60px 0 40px;
+  padding: 60px 0 24px;
 }
 
 section.page-hero .page-hero-title {
@@ -430,7 +430,7 @@ section.page-hero .page-hero-subtitle {
 
 @media (max-width: 1024px) {
   .section {
-    padding: 64px 0;
+    padding: 56px 0;
   }
 
   .grid-3 {
