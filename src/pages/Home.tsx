@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Utensils, Users } from 'lucide-react'
+import { ArrowRight, MapPin, Utensils, Users, ChefHat } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee.tsx'
 import StatsCounter from '../components/StatsCounter.tsx'
