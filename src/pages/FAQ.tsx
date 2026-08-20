@@ -28,8 +28,12 @@ const faqs = [
     answer: 'Submit your interest, attend a discovery meeting, complete an application and site review, sign the agreement and secure your territory, complete training, and launch. The full process is outlined on our How It Works page.',
   },
   {
+    question: 'What technology is included?',
+    answer: 'Every partner gets access to the Fewa restaurant operating system, including a central HQ dashboard, inventory and cost control, QR and online ordering, table booking, kitchen display, employee scheduling, and HACCP / hygiene checklists.',
+  },
+  {
     question: 'Can I use the Fewa operations app later?',
-    answer: 'Yes. As the network grows, franchisees will be able to connect to the same operations platform that powers modern restaurant teams — covering POS, ordering, kitchen, and back-office tools.',
+    answer: 'Yes. As the network grows, partners will be able to connect to the same operations platform that powers modern restaurant teams — covering POS, ordering, kitchen, and back-office tools.',
   },
   {
     question: 'How long does it take to open?',

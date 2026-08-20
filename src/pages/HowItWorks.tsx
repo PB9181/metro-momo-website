@@ -30,7 +30,7 @@ const steps = [
     step: '05',
     icon: GraduationCap,
     title: 'Training',
-    text: 'Intensive operations, product, and customer-experience training for you and your team.',
+    text: 'Intensive operations, product, and customer-experience training for you and your team — plus setup of the Fewa tech platform.'
   },
   {
     step: '06',
@@ -200,7 +200,7 @@ export default function HowItWorks() {
               <span className="badge badge-gold">Ongoing Support</span>
               <h2 className="section-title">We stay with you after launch</h2>
               <p className="section-subtitle">
-                Launch is just the beginning. Our partnership team provides continuous support to keep your unit growing.
+                Launch is just the beginning. Our partnership team provides continuous support — and the tech platform keeps evolving with your business.
               </p>
               <ul className="support-list">
                 <li>Monthly performance reviews</li>
@@ -209,6 +209,7 @@ export default function HowItWorks() {
                 <li>Supply chain and procurement support</li>
                 <li>Operations coaching and mystery-shop programs</li>
                 <li>Access to the METRO MOMO owner community</li>
+                <li>Platform updates: inventory, ordering, bookings, and compliance</li>
               </ul>
             </div>
             <div className="support-image">

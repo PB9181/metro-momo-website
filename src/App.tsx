@@ -7,6 +7,7 @@ import Models from './pages/Models.tsx'
 import HowItWorks from './pages/HowItWorks.tsx'
 import FAQ from './pages/FAQ.tsx'
 import Contact from './pages/Contact.tsx'
+import Tech from './pages/Tech.tsx'
 import NotFound from './pages/NotFound.tsx'
 
 function Layout() {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       { path: 'models', element: <Models /> },
       { path: 'how-it-works', element: <HowItWorks /> },
       { path: 'faq', element: <FAQ /> },
+      { path: 'tech', element: <Tech /> },
       { path: 'contact', element: <Contact /> },
       { path: '*', element: <NotFound /> },
     ],

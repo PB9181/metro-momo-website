@@ -224,6 +224,10 @@ export default function Models() {
           <h2 className="section-title">Model comparison</h2>
           <p className="section-subtitle">Quick overview of what each joint-venture format includes.</p>
 
+          <div className="tech-included-banner">
+            <strong>Tech included in every format:</strong> central dashboard, inventory, ordering, bookings, staff tools, and HACCP checklists.
+          </div>
+
           <div className="comparison-table-wrapper">
             <table className="comparison-table">
               <thead>
@@ -291,6 +295,19 @@ export default function Models() {
           }
           .comparison-table tr:hover td {
             background: var(--mm-cream);
+          }
+          .tech-included-banner {
+            background: white;
+            border-left: 4px solid var(--color-primary);
+            padding: 18px 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 28px;
+            font-weight: 700;
+            color: var(--color-text);
+            box-shadow: var(--shadow-sm);
+          }
+          .tech-included-banner strong {
+            color: var(--color-primary);
           }
         `}</style>
       </section>

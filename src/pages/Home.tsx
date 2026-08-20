@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Utensils, Users, ChefHat } from 'lucide-react'
+import { ArrowRight, MapPin, Utensils, Users, ChefHat, LayoutDashboard, PackageSearch, QrCode, Smartphone, ClipboardCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee.tsx'
 import StatsCounter from '../components/StatsCounter.tsx'
@@ -382,6 +382,92 @@ export default function Home() {
             color: var(--color-primary);
           }
           .models-preview-cta {
+            text-align: center;
+            margin-top: 48px;
+          }
+        `}</style>
+      </section>
+
+      <section className="section tech-preview">
+        <div className="container">
+          <span className="badge">Tech-Powered</span>
+          <h2 className="section-title">One platform for every location</h2>
+          <p className="section-subtitle">
+            Every partner gets access to the Fewa restaurant operating system — inventory, ordering, bookings, staff, and compliance in one place.
+          </p>
+
+          <div className="grid-3">
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <LayoutDashboard size={28} />
+              </div>
+              <h3 className="card-title">Central Command</h3>
+              <p className="card-text">HQ dashboard, sales analytics, and franchise standards across all units.</p>
+            </div>
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <PackageSearch size={28} />
+              </div>
+              <h3 className="card-title">Inventory & Cost</h3>
+              <p className="card-text">Live stock, recipe COGS, and automated reorder alerts.</p>
+            </div>
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <QrCode size={28} />
+              </div>
+              <h3 className="card-title">QR Ordering</h3>
+              <p className="card-text">Scan-to-order at the table, synced straight to the kitchen.</p>
+            </div>
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <Smartphone size={28} />
+              </div>
+              <h3 className="card-title">Online Ordering</h3>
+              <p className="card-text">Web orders, pickup, delivery, and customer CRM.</p>
+            </div>
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <Users size={28} />
+              </div>
+              <h3 className="card-title">Workforce</h3>
+              <p className="card-text">Scheduling, access control, training, and attendance.</p>
+            </div>
+            <div className="card tech-preview-card">
+              <div className="tech-preview-icon">
+                <ClipboardCheck size={28} />
+              </div>
+              <h3 className="card-title">HACCP & Hygiene</h3>
+              <p className="card-text">Digital checklists, temperature logs, and audit-ready docs.</p>
+            </div>
+          </div>
+
+          <div className="tech-preview-cta">
+            <Link to="/tech" className="btn btn-secondary">
+              Explore the Full Tech Stack <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+
+        <style>{`
+          .tech-preview {
+            background: var(--color-surface);
+          }
+          .tech-preview-card {
+            text-align: center;
+            padding: 32px 24px;
+          }
+          .tech-preview-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+          }
+          .tech-preview-cta {
             text-align: center;
             margin-top: 48px;
           }

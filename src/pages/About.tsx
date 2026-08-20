@@ -29,7 +29,7 @@ const values = [
   {
     icon: HandHeart,
     title: 'Shared Success',
-    text: 'We grow when our partners grow. Support does not end after the agreement is signed.'
+    text: 'We grow when our partners grow. Support — and the shared tech platform — does not end after the agreement is signed.'
   },
 ]
 

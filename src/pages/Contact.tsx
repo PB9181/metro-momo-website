@@ -69,7 +69,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <CheckCircle size={22} />
-                  Future-ready tech platform access
+                  Full Fewa tech platform access (inventory, ordering, bookings, staff, HACCP)
                 </li>
               </ul>
 
