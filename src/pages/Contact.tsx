@@ -141,10 +141,9 @@ export default function Contact() {
                     <span>Preferred model</span>
                     <select>
                       <option value="">Select a format</option>
-                      <option value="stall">Street Stall</option>
-                      <option value="kiosk">Mall Kiosk</option>
-                      <option value="container">Shipping Container</option>
+                      <option value="compact">Street Stall & Kiosk</option>
                       <option value="restaurant">Full Restaurant</option>
+                      <option value="ghost">Ghost Kitchen</option>
                       <option value="unsure">Not sure yet</option>
                     </select>
                   </label>

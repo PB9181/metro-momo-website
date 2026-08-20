@@ -1,35 +1,15 @@
-import { Check, ArrowRight, Store, ShoppingBag, Container, Building2 } from 'lucide-react'
+import { Check, ArrowRight, Store, Building2, Cloud } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const models = [
   {
     icon: Store,
-    name: 'Premium Street Stall',
-    price: '€0',
-    image: '/model-stall.png',
-    description: 'Ideal for markets, festivals, and busy thoroughfares. Compact, efficient, and high visibility.',
-    features: ['Compact setup', 'High visibility', 'Lower upfront cost', 'Festival & event ready', 'Basic equipment pack'],
-    bestFor: 'First-time operators',
-    highlighted: false,
-  },
-  {
-    icon: ShoppingBag,
-    name: 'Mall Kiosk',
+    name: 'Street Stall & Kiosk',
     price: '€0',
     image: '/model-kiosk.png',
-    description: 'Perfect for shopping centres and retail environments with consistent footfall and strong branding.',
-    features: ['Premium location', 'Digital menu board', 'Strong brand presence', 'Moderate footprint', 'Mall-ready design'],
-    bestFor: 'Retail-focused owners',
-    highlighted: true,
-  },
-  {
-    icon: Container,
-    name: 'Shipping Container',
-    price: '€0',
-    image: '/model-restaurant.png',
-    description: 'Best for car parks, retail hubs, and destination-style locations where a bold visual presence wins.',
-    features: ['Unique visual impact', 'Permanent/semi-permanent', 'Custom branding', 'Higher capacity', 'Instagram-worthy'],
-    bestFor: 'Destination locations',
+    description: 'A compact, flexible format for markets, festivals, malls, and high-footfall streets. Low overhead and fast to launch.',
+    features: ['Compact setup', 'High visibility', 'Festival & event ready', 'Mall-ready design', 'Digital menu board'],
+    bestFor: 'First-time operators',
     highlighted: false,
   },
   {
@@ -42,14 +22,24 @@ const models = [
     bestFor: 'Experienced operators',
     highlighted: false,
   },
+  {
+    icon: Cloud,
+    name: 'Ghost Kitchen',
+    price: '€0',
+    image: '/model-stall.png',
+    description: 'Delivery and pickup-only kitchen with minimal front-of-house costs. Built for online ordering and dark kitchens.',
+    features: ['Delivery-first model', 'Low rent overhead', 'Online-ordering ready', 'Shared prep space friendly', 'Fast city expansion'],
+    bestFor: 'Digital-first operators',
+    highlighted: true,
+  },
 ]
 
 const comparisonFeatures = [
-  { name: 'Franchise fee', stall: '€0', kiosk: '€0', container: '€0', restaurant: '€0' },
-  { name: 'Footprint', stall: '2–4 sqm', kiosk: '6–10 sqm', container: '15–30 sqm', restaurant: '50+ sqm' },
-  { name: 'Staff needed', stall: '1–2', kiosk: '2–3', container: '2–4', restaurant: '5+' },
-  { name: 'Menu range', stall: 'Core menu', kiosk: 'Core + combos', container: 'Full menu', restaurant: 'Full + drinks' },
-  { name: 'Territory', stall: 'Event-based', kiosk: 'Mall unit', container: 'Site-specific', restaurant: 'Protected area' },
+  { name: 'Franchise fee', compact: '€0', restaurant: '€0', ghost: '€0' },
+  { name: 'Footprint', compact: '2–10 sqm', restaurant: '50+ sqm', ghost: '10–30 sqm kitchen' },
+  { name: 'Staff needed', compact: '1–3', restaurant: '5+', ghost: '2–4' },
+  { name: 'Menu range', compact: 'Core menu', restaurant: 'Full + drinks', ghost: 'Delivery-optimized' },
+  { name: 'Customer channels', compact: 'Walk-in & events', restaurant: 'Dine-in', ghost: 'Online & delivery' },
 ]
 
 export default function Models() {
@@ -63,8 +53,8 @@ export default function Models() {
             <br />
             <span className="gradient-text">fits your ambition</span>
           </h1>
-          <p className="page-hero-subtitle">
-            From a compact street stall to a full restaurant — every joint-venture model starts at €0 franchise fee. We grow together through revenue sharing.
+            <p className="page-hero-subtitle">
+            From street stalls to ghost kitchens — every joint-venture model starts at €0 franchise fee. We grow together through revenue sharing.
           </p>
         </div>
 
@@ -233,20 +223,18 @@ export default function Models() {
               <thead>
                 <tr>
                   <th>Feature</th>
-                  <th>Street Stall</th>
-                  <th>Mall Kiosk</th>
-                  <th>Container</th>
-                  <th>Restaurant</th>
+                  <th>Street Stall & Kiosk</th>
+                  <th>Full Restaurant</th>
+                  <th>Ghost Kitchen</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonFeatures.map((row) => (
                   <tr key={row.name}>
                     <td>{row.name}</td>
-                    <td>{row.stall}</td>
-                    <td>{row.kiosk}</td>
-                    <td>{row.container}</td>
+                    <td>{row.compact}</td>
                     <td>{row.restaurant}</td>
+                    <td>{row.ghost}</td>
                   </tr>
                 ))}
               </tbody>

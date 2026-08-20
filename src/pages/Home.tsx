@@ -307,32 +307,32 @@ export default function Home() {
           <span className="badge">Joint Venture</span>
           <h2 className="section-title">Choose your format</h2>
           <p className="section-subtitle">
-            From compact stalls to full restaurants — pick the model that fits your location and ambition. No franchise fees; we grow through revenue sharing.
+            From compact stalls to ghost kitchens — pick the model that fits your location and ambition. No franchise fees; we grow through revenue sharing.
           </p>
 
           <div className="grid-3">
             <div className="card model-preview-card">
               <div className="model-preview-image">
-                <img src="/model-stall.png" alt="Food stall model" />
+                <img src="/model-kiosk.png" alt="Street stall and kiosk model" />
               </div>
-              <h3 className="card-title">Street Stall</h3>
-              <p className="card-text">Markets, festivals, and high-footfall streets.</p>
+              <h3 className="card-title">Street Stall & Kiosk</h3>
+              <p className="card-text">Markets, festivals, malls, and high-footfall streets.</p>
               <span className="model-price">€0</span>
             </div>
             <div className="card model-preview-card">
               <div className="model-preview-image">
-                <img src="/model-kiosk.png" alt="Mall kiosk model" />
+                <img src="/model-restaurant.png" alt="Full restaurant model" />
               </div>
-              <h3 className="card-title">Mall Kiosk</h3>
-              <p className="card-text">Shopping centres and retail environments.</p>
-              <span className="model-price">€0</span>
-            </div>
-            <div className="card model-preview-card">
-              <div className="model-preview-image">
-                <img src="/model-restaurant.png" alt="Restaurant model" />
-              </div>
-              <h3 className="card-title">Restaurant</h3>
+              <h3 className="card-title">Full Restaurant</h3>
               <p className="card-text">Full dine-in with broader menu and longer hours.</p>
+              <span className="model-price">€0</span>
+            </div>
+            <div className="card model-preview-card">
+              <div className="model-preview-image">
+                <img src="/model-stall.png" alt="Ghost kitchen model" />
+              </div>
+              <h3 className="card-title">Ghost Kitchen</h3>
+              <p className="card-text">Delivery and pickup-only with minimal front-of-house costs.</p>
               <span className="model-price">€0</span>
             </div>
           </div>
