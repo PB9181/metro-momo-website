@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: 'Can I use the Fewa operations app later?',
-    answer: 'Yes. As the network grows, partners will be able to connect to the same operations platform that powers modern restaurant teams — covering POS, ordering, kitchen, and back-office tools.',
+    answer: 'Yes. As the network grows, partners will be able to connect to the same operations platform that powers modern restaurant teams — covering ordering, kitchen, inventory, and back-office tools.'
   },
   {
     question: 'How long does it take to open?',

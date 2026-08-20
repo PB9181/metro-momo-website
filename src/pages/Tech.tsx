@@ -132,7 +132,7 @@ export default function Tech() {
             <span className="gradient-text">operating system</span>
           </h1>
           <p className="page-hero-subtitle">
-            Every METRO MOMO partner gets access to the same operations platform that runs modern restaurant teams — covering POS, ordering, kitchen, inventory, and back-office in one place.
+            Every METRO MOMO partner gets access to the same operations platform that runs modern restaurant teams — covering ordering, kitchen, inventory, and back-office in one place.
           </p>
         </div>
 
