@@ -8,7 +8,6 @@ import {
   QrCode,
   Smartphone,
   ClipboardCheck,
-  ChefHat,
   Truck,
   ArrowRight,
   Sparkles,
@@ -93,16 +92,6 @@ const techCategories = [
       'Temperature log tracking',
       'Cleaning schedule alerts',
       'Audit-ready documentation',
-    ],
-  },
-  {
-    icon: ChefHat,
-    title: 'Kitchen Display System',
-    features: [
-      'Order routing to screens',
-      'Prep-time tracking',
-      'Course and timing control',
-      'Allergy and dietary flags',
     ],
   },
   {
