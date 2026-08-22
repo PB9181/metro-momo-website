@@ -137,21 +137,21 @@ export default function Home() {
             position: relative;
             border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transform: rotate(2deg);
-            transition: transform 0.3s ease;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            padding: 8px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: transparent;
           }
           .hero-image-wrapper:hover {
-            transform: rotate(0deg) scale(1.02);
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
           }
           .hero-image-wrapper img {
-            border-radius: calc(var(--radius-xl) - 8px);
+            border-radius: var(--radius-xl);
             width: 100%;
             max-width: 540px;
             aspect-ratio: 16/9;
             object-fit: cover;
+            display: block;
           }
           .hero-image-badge {
             position: absolute;
@@ -187,7 +187,6 @@ export default function Home() {
               justify-content: center;
             }
             .hero-image-wrapper {
-              transform: rotate(0deg);
               max-width: 100%;
             }
             .hero-image-badge {
