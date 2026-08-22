@@ -1,62 +1,27 @@
 import { useState } from 'react'
 import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../i18n/index.ts'
 
-const faqs = [
-  {
-    question: 'Do I need restaurant experience?',
-    answer: 'No. Our model is designed to be accessible for first-time operators as well as experienced business owners. We provide training, playbooks, and ongoing support so you can run the business confidently from day one.',
-  },
-  {
-    question: 'Do I need a chef?',
-    answer: 'No. METRO MOMO uses pre-portioned recipes and a simple preparation process that reduces kitchen complexity. Your team can be trained to produce consistent, high-quality MOMO without traditional chef experience.'
-  },
-  {
-    question: 'What joint-venture formats are available?',
-    answer: 'We offer three formats: Street Stall & Kiosk, Full Restaurant, and Virtual & Ghost Kitchens. Each has a different footprint and operational profile, with a €0 franchise fee and a revenue-sharing model. Visit our Models page to compare them.'
-  },
-  {
-    question: 'What support will I receive?',
-    answer: 'You receive onboarding, site selection guidance, training, supply chain access, marketing support, operational coaching, and launch assistance. Support continues after opening with reviews, menu updates, and community access.',
-  },
-  {
-    question: 'How do I choose the right territory?',
-    answer: 'Our team evaluates footfall, local competition, demographic fit, and your budget with you. We then protect your agreed territory so you can build your customer base without internal competition.',
-  },
-  {
-    question: 'What is the application process?',
-    answer: 'Submit your interest, attend a discovery meeting, complete an application and site review, sign the agreement and secure your territory, complete training, and launch. The full process is outlined on our How It Works page.',
-  },
-  {
-    question: 'What technology is included?',
-    answer: 'Every partner gets access to the Fewa restaurant operating system, including a central HQ dashboard, inventory and cost control, QR and online ordering, table booking, kitchen display, employee scheduling, and HACCP / hygiene checklists.',
-  },
-  {
-    question: 'Can I use the Fewa operations app later?',
-    answer: 'Yes. As the network grows, partners will be able to connect to the same operations platform that powers modern restaurant teams — covering ordering, kitchen, inventory, and back-office tools.'
-  },
-  {
-    question: 'How long does it take to open?',
-    answer: 'Timeline depends on the format. A street stall/kiosk or virtual/ghost kitchen can be ready in 6–10 weeks, while a full restaurant typically takes 3–6 months including site works, permits, and training.',
-  },
-]
+type FaqItem = { question: string; answer: string }
 
 export default function FAQ() {
+  const { t, getArray } = useTranslation()
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  const faqs = getArray('faq.items') as FaqItem[]
 
   return (
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">FAQ</span>
+          <span className="badge">{t('faq.hero.badge')}</span>
           <h1 className="page-hero-title display-text">
-            Questions?
+            {t('faq.hero.title')}
             <br />
-            <span className="gradient-text">We have answers.</span>
+            <span className="gradient-text">{t('faq.hero.titleHighlight')}</span>
           </h1>
-          <p className="page-hero-subtitle">
-            Everything you need to know about becoming a METRO MOMO partner.
-          </p>
+          <p className="page-hero-subtitle">{t('faq.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -86,10 +51,10 @@ export default function FAQ() {
             <div className="faq-sidebar">
               <div className="faq-contact-card">
                 <HelpCircle size={40} />
-                <h3>Still have questions?</h3>
-                <p>Our partnership team is happy to talk through your specific situation.</p>
+                <h3>{t('faq.sidebar.title')}</h3>
+                <p>{t('faq.sidebar.text')}</p>
                 <Link to="/contact" className="btn btn-primary">
-                  Contact Us <ArrowRight size={18} />
+                  {t('faq.sidebar.cta')} <ArrowRight size={18} />
                 </Link>
               </div>
             </div>

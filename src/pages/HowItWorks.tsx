@@ -1,59 +1,35 @@
 import { ClipboardList, MapPinned, FileCheck, Handshake, GraduationCap, Rocket } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../i18n/index.ts'
 
-const steps = [
-  {
-    step: '01',
-    icon: ClipboardList,
-    title: 'Submit Interest',
-    text: 'Tell us your preferred location, format, and goals. We review every application personally.'
-  },
-  {
-    step: '02',
-    icon: MapPinned,
-    title: 'Discovery Meeting',
-    text: 'Meet our team to understand the concept, operations, and whether the fit is mutual.',
-  },
-  {
-    step: '03',
-    icon: FileCheck,
-    title: 'Application & Review',
-    text: 'Complete the application, site review, and financial model together.',
-  },
-  {
-    step: '04',
-    icon: Handshake,
-    title: 'Agreement & Territory',
-    text: 'Secure your protected area, sign the agreement, and begin setup.',
-  },
-  {
-    step: '05',
-    icon: GraduationCap,
-    title: 'Training',
-    text: 'Intensive operations, product, and customer-experience training for you and your team — plus setup of the Fewa tech platform.'
-  },
-  {
-    step: '06',
-    icon: Rocket,
-    title: 'Launch Day',
-    text: 'Open with grand-opening support, marketing push, and a field team on standby.',
-  },
-]
+const stepIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
+  ClipboardList,
+  MapPinned,
+  FileCheck,
+  Handshake,
+  GraduationCap,
+  Rocket,
+}
+
+type StepItem = { iconKey: string; step: string; title: string; text: string }
 
 export default function HowItWorks() {
+  const { t, getArray } = useTranslation()
+
+  const steps = getArray('howItWorks.steps') as StepItem[]
+  const supportList = getArray('howItWorks.support.list') as string[]
+
   return (
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">How It Works</span>
+          <span className="badge">{t('howItWorks.hero.badge')}</span>
           <h1 className="page-hero-title display-text">
-            From application to
+            {t('howItWorks.hero.title')}
             <br />
-            <span className="gradient-text">opening day</span>
+            <span className="gradient-text">{t('howItWorks.hero.titleHighlight')}</span>
           </h1>
-          <p className="page-hero-subtitle">
-            A clear, six-step path for owners who want to move fast and build something lasting.
-          </p>
+          <p className="page-hero-subtitle">{t('howItWorks.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -80,21 +56,24 @@ export default function HowItWorks() {
       <section className="section steps-section">
         <div className="container">
           <div className="steps-timeline">
-            {steps.map((item, index) => (
-              <div className="step-row" key={item.title}>
-                <div className="step-number-column">
-                  <div className="step-number-bubble">{item.step}</div>
-                  {index < steps.length - 1 && <div className="step-line" />}
-                </div>
-                <div className="step-card">
-                  <div className="step-icon">
-                    <item.icon size={28} />
+            {steps.map((item, index) => {
+              const IconComponent = stepIcons[item.iconKey]
+              return (
+                <div className="step-row" key={item.title}>
+                  <div className="step-number-column">
+                    <div className="step-number-bubble">{item.step}</div>
+                    {index < steps.length - 1 && <div className="step-line" />}
                   </div>
-                  <h3 className="step-title">{item.title}</h3>
-                  <p className="step-text">{item.text}</p>
+                  <div className="step-card">
+                    <div className="step-icon">
+                      {IconComponent && <IconComponent size={28} />}
+                    </div>
+                    <h3 className="step-title">{item.title}</h3>
+                    <p className="step-text">{item.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
@@ -197,24 +176,18 @@ export default function HowItWorks() {
         <div className="container">
           <div className="support-grid">
             <div className="support-content">
-              <span className="badge badge-gold">Ongoing Support</span>
-              <h2 className="section-title">We stay with you after launch</h2>
-              <p className="section-subtitle">
-                Launch is just the beginning. Our partnership team provides continuous support — and the tech platform keeps evolving with your business.
-              </p>
+              <span className="badge badge-gold">{t('howItWorks.support.badge')}</span>
+              <h2 className="section-title">{t('howItWorks.support.title')}</h2>
+              <p className="section-subtitle">{t('howItWorks.support.subtitle')}</p>
               <ul className="support-list">
-                <li>Monthly performance reviews</li>
-                <li>New product and menu updates</li>
-                <li>Marketing campaigns and seasonal promotions</li>
-                <li>Supply chain and procurement support</li>
-                <li>Operations coaching and mystery-shop programs</li>
-                <li>Access to the METRO MOMO owner community</li>
-                <li>Platform updates: inventory, ordering, bookings, and compliance</li>
+                {supportList.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="support-image">
               <div className="image-card">
-                <img src="/model-restaurant.png" alt="METRO MOMO restaurant support" />
+                <img src="/model-restaurant.png" alt={t('howItWorks.support.imageAlt')} />
               </div>
             </div>
           </div>
@@ -276,12 +249,10 @@ export default function HowItWorks() {
       <section className="section cta-section">
         <div className="container">
           <div className="cta-card">
-            <h2 className="cta-title">Ready to start your journey?</h2>
-            <p className="cta-text">
-              Submit your interest and our team will walk you through every step.
-            </p>
+            <h2 className="cta-title">{t('howItWorks.cta.title')}</h2>
+            <p className="cta-text">{t('howItWorks.cta.text')}</p>
             <Link to="/contact" className="btn btn-gold">
-              Submit Interest <Rocket size={18} />
+              {t('howItWorks.cta.cta')} <Rocket size={18} />
             </Link>
           </div>
         </div>

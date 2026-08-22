@@ -17,18 +17,20 @@ const translations: Record<Language, Record<string, unknown>> = {
   fr,
 }
 
-function getNestedValue(obj: Record<string, unknown>, key: string): string | string[] | Record<string, unknown> | undefined {
+function getRawValue(obj: Record<string, unknown>, key: string): unknown {
   return key.split('.').reduce<unknown>((acc, part) => {
     if (acc === null || acc === undefined) return undefined
     if (typeof acc !== 'object') return undefined
     return (acc as Record<string, unknown>)[part]
-  }, obj) as string | string[] | Record<string, unknown> | undefined
+  }, obj)
 }
 
 export type I18nContextValue = {
   language: Language
   setLanguage: (language: Language) => void
   t: (key: string) => string
+  getArray: (key: string) => unknown[]
+  getObject: (key: string) => Record<string, unknown>
 }
 
 const I18nContext = createContext<I18nContextValue | null>(null)
@@ -56,17 +58,31 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const resolve = (key: string): unknown => {
+    const value = getRawValue(translations[language], key)
+    if (value !== undefined) return value
+    return getRawValue(translations.en, key)
+  }
+
   const t = (key: string): string => {
-    const value = getNestedValue(translations[language], key)
+    const value = resolve(key)
     if (typeof value === 'string') return value
-    if (typeof value === 'undefined') {
-      const fallback = getNestedValue(translations.en, key)
-      if (typeof fallback === 'string') return fallback
-    }
     return key
   }
 
-  return <I18nContext.Provider value={{ language, setLanguage, t }}>{children}</I18nContext.Provider>
+  const getArray = (key: string): unknown[] => {
+    const value = resolve(key)
+    if (Array.isArray(value)) return value
+    return []
+  }
+
+  const getObject = (key: string): Record<string, unknown> => {
+    const value = resolve(key)
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) return value as Record<string, unknown>
+    return {}
+  }
+
+  return <I18nContext.Provider value={{ language, setLanguage, t, getArray, getObject }}>{children}</I18nContext.Provider>
 }
 
 export function useTranslation(): I18nContextValue {

@@ -1,20 +1,21 @@
 import { Home } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../i18n/index.ts'
 
 export default function NotFound() {
+  const { t } = useTranslation()
+
   return (
     <section className="section not-found">
       <div className="container">
         <div className="not-found-content">
           <div className="not-found-emoji">🥟</div>
-          <h1 className="not-found-title">404</h1>
-          <h2 className="not-found-subtitle">This momo rolled away</h2>
-          <p className="not-found-text">
-            We could not find the page you were looking for. But there is plenty of MOMO back home.
-          </p>
+          <h1 className="not-found-title">{t('notFound.title')}</h1>
+          <h2 className="not-found-subtitle">{t('notFound.subtitle')}</h2>
+          <p className="not-found-text">{t('notFound.text')}</p>
           <Link to="/" className="btn btn-primary">
             <Home size={18} />
-            Back to Home
+            {t('notFound.cta')}
           </Link>
         </div>
       </div>

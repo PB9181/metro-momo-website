@@ -1,7 +1,13 @@
 import { useState, FormEvent } from 'react'
 import { Send, CheckCircle, MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { useTranslation } from '../i18n/index.ts'
+
+type ContactDetail = { label: string; value: string }
+type SelectOption = { value: string; label: string }
+type FormField = { label: string; placeholder?: string; options?: SelectOption[] }
 
 export default function Contact() {
+  const { t, getArray, getObject } = useTranslation()
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e: FormEvent) => {
@@ -9,19 +15,24 @@ export default function Contact() {
     setSubmitted(true)
   }
 
+  const benefits = getArray('contact.benefits.items') as string[]
+  const details = getObject('contact.details') as Record<string, ContactDetail>
+  const formFields = getObject('contact.form.fields') as Record<string, FormField>
+
+  const detailIcons = [MapPin, Phone, Mail, Clock]
+  const detailKeys = ['headOffice', 'phone', 'email', 'response'] as const
+
   return (
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">Apply Now</span>
+          <span className="badge">{t('contact.hero.badge')}</span>
           <h1 className="page-hero-title display-text">
-            Start your
+            {t('contact.hero.title')}
             <br />
-            <span className="gradient-text">partnership journey</span>
+            <span className="gradient-text">{t('contact.hero.titleHighlight')}</span>
           </h1>
-          <p className="page-hero-subtitle">
-            Tell us about yourself and your target market. Our team will reach out within 48 hours.
-          </p>
+          <p className="page-hero-subtitle">{t('contact.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -49,59 +60,32 @@ export default function Contact() {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-info">
-              <span className="badge badge-gold">Why METRO MOMO?</span>
-              <h2 className="section-title">What you get as a partner</h2>
-              <p className="section-subtitle">
-                No prior restaurant experience required for all entry models. We are looking for owners who care about great food and community.
-              </p>
+              <span className="badge badge-gold">{t('contact.benefits.badge')}</span>
+              <h2 className="section-title">{t('contact.benefits.title')}</h2>
+              <p className="section-subtitle">{t('contact.benefits.subtitle')}</p>
               <ul className="contact-checklist">
-                <li>
-                  <CheckCircle size={22} />
-                  Protected territory and exclusive rights
-                </li>
-                <li>
-                  <CheckCircle size={22} />
-                  Flexible formats: stall, kiosk, container, restaurant
-                </li>
-                <li>
-                  <CheckCircle size={22} />
-                  Training, supply chain, and marketing support
-                </li>
-                <li>
-                  <CheckCircle size={22} />
-                  Full Fewa tech platform access (inventory, ordering, bookings, staff, HACCP)
-                </li>
+                {benefits.map((item, index) => (
+                  <li key={index}>
+                    <CheckCircle size={22} />
+                    {item}
+                  </li>
+                ))}
               </ul>
 
               <div className="contact-details">
-                <div className="contact-detail">
-                  <MapPin size={20} />
-                  <div>
-                    <strong>Head Office</strong>
-                    <span>Metro Momo HQ, Your City</span>
-                  </div>
-                </div>
-                <div className="contact-detail">
-                  <Phone size={20} />
-                  <div>
-                    <strong>Phone</strong>
-                    <span>+46 12 345 67 89</span>
-                  </div>
-                </div>
-                <div className="contact-detail">
-                  <Mail size={20} />
-                  <div>
-                    <strong>Email</strong>
-                    <span>hello@metromomo.com</span>
-                  </div>
-                </div>
-                <div className="contact-detail">
-                  <Clock size={20} />
-                  <div>
-                    <strong>Response time</strong>
-                    <span>Within 48 hours</span>
-                  </div>
-                </div>
+                {detailKeys.map((key, index) => {
+                  const detail = details[key]
+                  const IconComponent = detailIcons[index]
+                  return (
+                    <div className="contact-detail" key={key}>
+                      <IconComponent size={20} />
+                      <div>
+                        <strong>{detail.label}</strong>
+                        <span>{detail.value}</span>
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             </div>
 
@@ -111,62 +95,56 @@ export default function Contact() {
                   <div className="contact-success-icon">
                     <CheckCircle size={48} />
                   </div>
-                  <h3>Application received!</h3>
-                  <p>We will review your details and contact you within 48 hours.</p>
+                  <h3>{t('contact.success.title')}</h3>
+                  <p>{t('contact.success.text')}</p>
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
-                  <h3 className="form-title">Submit your interest</h3>
+                  <h3 className="form-title">{t('contact.form.title')}</h3>
                   <div className="form-row">
                     <label className="form-field">
-                      <span>Full name</span>
-                      <input type="text" placeholder="Your name" required />
+                      <span>{formFields.name.label}</span>
+                      <input type="text" placeholder={formFields.name.placeholder} required />
                     </label>
                     <label className="form-field">
-                      <span>Email</span>
-                      <input type="email" placeholder="you@example.com" required />
+                      <span>{formFields.email.label}</span>
+                      <input type="email" placeholder={formFields.email.placeholder} required />
                     </label>
                   </div>
                   <div className="form-row">
                     <label className="form-field">
-                      <span>Phone</span>
-                      <input type="tel" placeholder="+46 70 123 4567" />
+                      <span>{formFields.phone.label}</span>
+                      <input type="tel" placeholder={formFields.phone.placeholder} />
                     </label>
                     <label className="form-field">
-                      <span>City / Territory</span>
-                      <input type="text" placeholder="Where you want to open" required />
+                      <span>{formFields.city.label}</span>
+                      <input type="text" placeholder={formFields.city.placeholder} required />
                     </label>
                   </div>
                   <label className="form-field">
-                    <span>Preferred model</span>
+                    <span>{formFields.model.label}</span>
                     <select>
-                      <option value="">Select a format</option>
-                      <option value="compact">Street Stall & Kiosk</option>
-                      <option value="restaurant">Full Restaurant</option>
-                      <option value="ghost">Virtual & Ghost Kitchens</option>
-                      <option value="unsure">Not sure yet</option>
+                      {formFields.model.options?.map((option) => (
+                        <option key={option.value} value={option.value}>{option.label}</option>
+                      ))}
                     </select>
                   </label>
                   <label className="form-field">
-                    <span>Restaurant or business experience</span>
+                    <span>{formFields.experience.label}</span>
                     <select>
-                      <option value="">Select experience level</option>
-                      <option value="none">New to hospitality</option>
-                      <option value="some">Some restaurant experience</option>
-                      <option value="owner">Current restaurant owner</option>
-                      <option value="multi">Multi-unit operator</option>
+                      {formFields.experience.options?.map((option) => (
+                        <option key={option.value} value={option.value}>{option.label}</option>
+                      ))}
                     </select>
                   </label>
                   <label className="form-field">
-                    <span>Message</span>
-                    <textarea rows={4} placeholder="Tell us about your vision, budget range, or questions..." />
+                    <span>{formFields.message.label}</span>
+                    <textarea rows={4} placeholder={formFields.message.placeholder} />
                   </label>
                   <button type="submit" className="btn btn-primary contact-submit">
-                    Submit Application <Send size={18} />
+                    {t('contact.form.submit')} <Send size={18} />
                   </button>
-                  <p className="form-disclaimer">
-                    By submitting, you agree to be contacted by the METRO MOMO partnership team.
-                  </p>
+                  <p className="form-disclaimer">{t('contact.form.disclaimer')}</p>
                 </form>
               )}
             </div>

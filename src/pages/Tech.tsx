@@ -12,117 +12,41 @@ import {
   ArrowRight,
   Sparkles,
 } from 'lucide-react'
+import { useTranslation } from '../i18n/index.ts'
 
-const techCategories = [
-  {
-    icon: LayoutDashboard,
-    title: 'Central Command',
-    features: [
-      'Multi-unit HQ dashboard',
-      'Real-time sales analytics',
-      'Franchise standards tracker',
-      'Performance scorecards',
-    ],
-  },
-  {
-    icon: Users,
-    title: 'Workforce Management',
-    features: [
-      'Staff scheduling & shifts',
-      'Role-based access control',
-      'Training & learning library',
-      'Clock-in / attendance tracking',
-    ],
-  },
-  {
-    icon: PackageSearch,
-    title: 'Inventory & Procurement',
-    features: [
-      'Live stock levels across units',
-      'Automated reorder alerts',
-      'Supplier & purchase tracking',
-      'Waste and shrinkage logs',
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: 'Cost Analysis',
-    features: [
-      'Recipe-level COGS',
-      'Dynamic menu profitability',
-      'Labor vs. revenue ratios',
-      'Unit economics reporting',
-    ],
-  },
-  {
-    icon: CalendarCheck,
-    title: 'Table Booking',
-    features: [
-      'Online reservation widget',
-      'Table and floor management',
-      'Guest notes and history',
-      'Waitlist & cancellation flow',
-    ],
-  },
-  {
-    icon: QrCode,
-    title: 'QR Code Ordering',
-    features: [
-      'Scan-to-order at the table',
-      'Menu synced to kitchen',
-      'Split-bill ready',
-      'No extra hardware needed',
-    ],
-  },
-  {
-    icon: Smartphone,
-    title: 'Online Ordering',
-    features: [
-      'Web ordering page',
-      'Pickup and delivery flow',
-      'Customer CRM & marketing',
-      'Integrated payment-ready',
-    ],
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'HACCP & Hygiene',
-    features: [
-      'Digital checklist routines',
-      'Temperature log tracking',
-      'Cleaning schedule alerts',
-      'Audit-ready documentation',
-    ],
-  },
-  {
-    icon: Truck,
-    title: 'Supply Chain',
-    features: [
-      'Central supplier catalog',
-      'Stock transfers between units',
-      'Delivery receipt capture',
-      'Franchise buying power',
-    ],
-  },
-]
+const techIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
+  LayoutDashboard,
+  Users,
+  PackageSearch,
+  TrendingUp,
+  CalendarCheck,
+  QrCode,
+  Smartphone,
+  ClipboardCheck,
+  Truck,
+}
+
+type TechCategory = { iconKey: string; title: string; features: string[] }
 
 export default function Tech() {
+  const { t, getArray } = useTranslation()
+
+  const techCategories = getArray('tech.categories') as TechCategory[]
+
   return (
     <>
       <section className="section page-hero">
         <div className="container">
           <span className="badge">
             <Sparkles size={16} />
-            Tech-Powered Growth
+            {t('tech.hero.badge')}
           </span>
           <h1 className="page-hero-title display-text">
-            Built on a restaurant
+            {t('tech.hero.title')}
             <br />
-            <span className="gradient-text">operating system</span>
+            <span className="gradient-text">{t('tech.hero.titleHighlight')}</span>
           </h1>
-          <p className="page-hero-subtitle">
-            Every METRO MOMO partner gets access to the same operations platform that runs modern restaurant teams — covering ordering, kitchen, inventory, and back-office in one place.
-          </p>
+          <p className="page-hero-subtitle">{t('tech.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -149,24 +73,27 @@ export default function Tech() {
       <section className="section tech-grid-section">
         <div className="container">
           <div className="grid-3">
-            {techCategories.map((category) => (
-              <div className="card tech-card" key={category.title}>
-                <div className="tech-card-header">
-                  <div className="tech-card-icon">
-                    <category.icon size={28} />
+            {techCategories.map((category) => {
+              const IconComponent = techIcons[category.iconKey]
+              return (
+                <div className="card tech-card" key={category.title}>
+                  <div className="tech-card-header">
+                    <div className="tech-card-icon">
+                      {IconComponent && <IconComponent size={28} />}
+                    </div>
+                    <h3 className="card-title">{category.title}</h3>
                   </div>
-                  <h3 className="card-title">{category.title}</h3>
+                  <ul className="tech-card-list">
+                    {category.features.map((feature) => (
+                      <li key={feature}>
+                        <span className="tech-card-bullet" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="tech-card-list">
-                  {category.features.map((feature) => (
-                    <li key={feature}>
-                      <span className="tech-card-bullet" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
@@ -242,12 +169,10 @@ export default function Tech() {
       <section className="section tech-cta">
         <div className="container">
           <div className="cta-card">
-            <h2 className="cta-title">Tech that scales with every format</h2>
-            <p className="cta-text">
-              Whether you start with a street stall or a full restaurant, the platform grows with you. No separate software bills, no disconnected spreadsheets — one system from day one.
-            </p>
+            <h2 className="cta-title">{t('tech.cta.title')}</h2>
+            <p className="cta-text">{t('tech.cta.text')}</p>
             <Link to="/models" className="btn btn-gold">
-              See the Models <ArrowRight size={18} />
+              {t('tech.cta.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>

@@ -1,61 +1,48 @@
 import { Check, ArrowRight, Store, Building2, Cloud } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../i18n/index.ts'
 
-const models = [
-  {
-    icon: Store,
-    name: 'Street Stall & Kiosk',
-    price: '€0',
-    image: '/model-kiosk.png',
-    description: 'A compact, flexible format for markets, festivals, malls, and high-footfall streets. Low overhead and fast to launch.',
-    features: ['Compact setup', 'High visibility', 'Festival & event ready', 'Mall-ready design', 'Digital menu board'],
-    bestFor: 'First-time operators',
-    highlighted: false,
-  },
-  {
-    icon: Building2,
-    name: 'Full Restaurant',
-    price: '€0',
-    image: '/model-restaurant.png',
-    description: 'A complete dine-in concept with broader menu options, longer hours, and long-term growth potential.',
-    features: ['Full dining room', 'Expanded menu', 'Higher revenue potential', 'Event hosting', 'Territory exclusivity'],
-    bestFor: 'Experienced operators',
-    highlighted: false,
-  },
-  {
-    icon: Cloud,
-    name: 'Virtual & Ghost Kitchens',
-    price: '€0',
-    image: '/model-stall.png',
-    description: 'Delivery and pickup-only kitchen with minimal front-of-house costs. Built for online ordering, dark kitchens, and fast market expansion.',
-    features: ['Delivery-first model', 'Low rent overhead', 'Online-ordering ready', 'Shared prep space friendly', 'Fast city expansion'],
-    bestFor: 'Digital-first operators',
-    highlighted: true,
-  },
-]
+const modelIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
+  Store,
+  Building2,
+  Cloud,
+}
 
-const comparisonFeatures = [
-  { name: 'Franchise fee', compact: '€0', restaurant: '€0', ghost: '€0' },
-  { name: 'Footprint', compact: '2–10 sqm', restaurant: '50+ sqm', ghost: '10–30 sqm kitchen' },
-  { name: 'Staff needed', compact: '1–3', restaurant: '5+', ghost: '2–4' },
-  { name: 'Menu range', compact: 'Core menu', restaurant: 'Full + drinks', ghost: 'Delivery-optimized' },
-  { name: 'Customer channels', compact: 'Walk-in & events', restaurant: 'Dine-in', ghost: 'Online & delivery' },
-]
+type ModelItem = {
+  iconKey: string
+  name: string
+  price: string
+  src: string
+  description: string
+  features: string[]
+  bestFor: string
+}
+
+type ComparisonRow = {
+  name: string
+  compact: string
+  restaurant: string
+  ghost: string
+}
 
 export default function Models() {
+  const { t, getArray, getObject } = useTranslation()
+
+  const models = getArray('models.items') as ModelItem[]
+  const comparisonHeaders = getObject('models.comparison.headers') as { feature: string; compact: string; restaurant: string; ghost: string }
+  const comparisonRows = getArray('models.comparison.rows') as ComparisonRow[]
+
   return (
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">Joint Venture</span>
+          <span className="badge">{t('models.hero.badge')}</span>
           <h1 className="page-hero-title display-text">
-            Pick the format that
+            {t('models.hero.title')}
             <br />
-            <span className="gradient-text">fits your ambition</span>
+            <span className="gradient-text">{t('models.hero.titleHighlight')}</span>
           </h1>
-            <p className="page-hero-subtitle">
-            From street stalls to ghost kitchens — every joint-venture model starts at €0 franchise fee. We grow together through revenue sharing.
-          </p>
+          <p className="page-hero-subtitle">{t('models.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -82,34 +69,38 @@ export default function Models() {
       <section className="section models-list">
         <div className="container">
           <div className="grid-3">
-            {models.map((model) => (
-              <div className={`card model-card ${model.highlighted ? 'model-card-highlighted' : ''}`} key={model.name}>
-                <div className="model-card-image">
-                  <img src={model.image} alt={model.name} />
-                  <span className="model-card-price">{model.price}</span>
-                </div>
-                <div className="model-card-content">
-                  <div className="model-card-header">
-                    <div className="model-card-icon">
-                      <model.icon size={28} />
-                    </div>
-                    <div>
-                      <h3 className="card-title">{model.name}</h3>
-                      <span className="model-card-bestfor">Best for: {model.bestFor}</span>
-                    </div>
+            {models.map((model, index) => {
+              const IconComponent = modelIcons[model.iconKey]
+              const highlighted = index === models.length - 1
+              return (
+                <div className={`card model-card ${highlighted ? 'model-card-highlighted' : ''}`} key={model.name}>
+                  <div className="model-card-image">
+                    <img src={model.src} alt={model.name} />
+                    <span className="model-card-price">{model.price}</span>
                   </div>
-                  <p className="card-text">{model.description}</p>
-                  <ul className="model-card-features">
-                    {model.features.map((feature) => (
-                      <li key={feature}>
-                        <Check size={18} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="model-card-content">
+                    <div className="model-card-header">
+                      <div className="model-card-icon">
+                        {IconComponent && <IconComponent size={28} />}
+                      </div>
+                      <div>
+                        <h3 className="card-title">{model.name}</h3>
+                        <span className="model-card-bestfor">{t('models.bestForPrefix')} {model.bestFor}</span>
+                      </div>
+                    </div>
+                    <p className="card-text">{model.description}</p>
+                    <ul className="model-card-features">
+                      {model.features.map((feature) => (
+                        <li key={feature}>
+                          <Check size={18} />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
@@ -245,26 +236,26 @@ export default function Models() {
 
       <section className="section comparison">
         <div className="container">
-          <span className="badge">Compare</span>
-          <h2 className="section-title">Model comparison</h2>
-          <p className="section-subtitle">Quick overview of what each joint-venture format includes.</p>
+          <span className="badge">{t('models.comparison.badge')}</span>
+          <h2 className="section-title">{t('models.comparison.title')}</h2>
+          <p className="section-subtitle">{t('models.comparison.subtitle')}</p>
 
           <div className="tech-included-banner">
-            <strong>Tech included in every format:</strong> central dashboard, inventory, ordering, bookings, staff tools, and HACCP checklists.
+            <strong>{t('models.comparison.techBanner')}</strong> {t('models.comparison.techBannerText')}
           </div>
 
           <div className="comparison-table-wrapper">
             <table className="comparison-table">
               <thead>
                 <tr>
-                  <th>Feature</th>
-                  <th>Street Stall & Kiosk</th>
-                  <th>Full Restaurant</th>
-                  <th>Virtual & Ghost Kitchens</th>
+                  <th>{comparisonHeaders.feature}</th>
+                  <th>{comparisonHeaders.compact}</th>
+                  <th>{comparisonHeaders.restaurant}</th>
+                  <th>{comparisonHeaders.ghost}</th>
                 </tr>
               </thead>
               <tbody>
-                {comparisonFeatures.map((row) => (
+                {comparisonRows.map((row) => (
                   <tr key={row.name}>
                     <td>{row.name}</td>
                     <td>{row.compact}</td>
@@ -364,12 +355,10 @@ export default function Models() {
       <section className="section models-cta">
         <div className="container">
           <div className="cta-card">
-            <h2 className="cta-title">Not sure which model is right for you?</h2>
-            <p className="cta-text">
-              Our partnership team will help you choose based on your territory and goals.
-            </p>
+            <h2 className="cta-title">{t('models.cta.title')}</h2>
+            <p className="cta-text">{t('models.cta.text')}</p>
             <Link to="/contact" className="btn btn-gold">
-              Book a Discovery Call <ArrowRight size={18} />
+              {t('models.cta.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Menu, X, Globe } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from './Logo.tsx'
-import { useTranslation, LANGUAGES, type Language } from '../i18n/index.ts'
+import { useTranslation, type Language } from '../i18n/index.ts'
 
 export default function Nav() {
   const { t, language, setLanguage } = useTranslation()

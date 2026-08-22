@@ -2,8 +2,30 @@ import { ArrowRight, MapPin, Utensils, Users, ChefHat, LayoutDashboard, PackageS
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee.tsx'
 import StatsCounter from '../components/StatsCounter.tsx'
+import { useTranslation } from '../i18n/index.ts'
+
+const techIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
+  LayoutDashboard,
+  PackageSearch,
+  QrCode,
+  Smartphone,
+  Users,
+  ClipboardCheck,
+}
+
+type ImageItem = { src: string; alt: string }
+type ModelPreviewItem = { src: string; alt: string; name: string; description: string; price: string }
+type TechPreviewItem = { iconKey: string; title: string; text: string }
+type StatItem = { value: number; suffix: string; prefix: string; label: string }
 
 export default function Home() {
+  const { t, getArray } = useTranslation()
+
+  const marqueeImages = getArray('home.marquee.images') as ImageItem[]
+  const modelItems = getArray('home.modelsPreview.items') as ModelPreviewItem[]
+  const techItems = getArray('home.techPreview.items') as TechPreviewItem[]
+  const stats = getArray('home.stats.items') as StatItem[]
+
   return (
     <>
       <section className="hero">
@@ -13,38 +35,35 @@ export default function Home() {
           <div className="hero-content">
             <span className="badge">
               <Utensils size={16} />
-              Authentic Himalayan Street Food
+              {t('home.hero.badge')}
             </span>
             <h1 className="hero-title display-text">
-              Bring the Taste of Himalayas
+              {t('home.hero.title')}
               <br />
-              <span className="gradient-text text-shadow-pop">to Your City</span>
+              <span className="gradient-text text-shadow-pop">{t('home.hero.titleHighlight')}</span>
             </h1>
-            <p className="hero-subtitle">
-              Launch a METRO MOMO joint venture — a fast-growing MOMO concept built for simplicity,
-              scalability, and serious brand appeal. From street stalls to full restaurants.
-            </p>
+            <p className="hero-subtitle">{t('home.hero.subtitle')}</p>
             <div className="hero-actions">
               <Link to="/contact" className="btn btn-primary">
-                Apply Now <ArrowRight size={18} />
+                {t('home.hero.ctaPrimary')} <ArrowRight size={18} />
               </Link>
               <Link to="/models" className="btn btn-secondary">
-                See Models
+                {t('home.hero.ctaSecondary')}
               </Link>
             </div>
             <div className="hero-stats">
               <div className="hero-stat">
                 <Users className="hero-stat-icon" size={24} />
                 <div>
-                  <strong>Owner-first</strong>
-                  <span>Built by restaurant owners</span>
+                  <strong>{t('home.hero.stat1Label')}</strong>
+                  <span>{t('home.hero.stat1Sublabel')}</span>
                 </div>
               </div>
               <div className="hero-stat">
                 <MapPin className="hero-stat-icon" size={24} />
                 <div>
-                  <strong>Multi-format</strong>
-                  <span>Stall, kiosk, or restaurant</span>
+                  <strong>{t('home.hero.stat2Label')}</strong>
+                  <span>{t('home.hero.stat2Sublabel')}</span>
                 </div>
               </div>
             </div>
@@ -52,10 +71,10 @@ export default function Home() {
 
           <div className="hero-visual">
             <div className="hero-image-wrapper">
-              <img src="/hero-momos.png" alt="Steaming METRO MOMO dumplings on a red plate" />
+              <img src="/hero-momos.png" alt={t('home.hero.imageAlt')} />
               <div className="hero-image-badge">
                 <ChefHat size={20} />
-                <span>No chef required</span>
+                <span>{t('home.hero.imageBadge')}</span>
               </div>
             </div>
           </div>
@@ -237,22 +256,10 @@ export default function Home() {
 
       <section className="section marquee-section">
         <div className="container marquee-header">
-          <span className="badge">Food that sells itself</span>
-          <h2 className="section-title">Real MOMO, real flavor</h2>
+          <span className="badge">{t('home.marquee.badge')}</span>
+          <h2 className="section-title">{t('home.marquee.title')}</h2>
         </div>
-        <Marquee
-          images={[
-            { src: '/hero-momos.png', alt: 'Steaming MOMO' },
-            { src: '/jhol-momo.png', alt: 'Jhol MOMO in broth' },
-            { src: '/menu-fried-momo.png', alt: 'Fried chili MOMO' },
-            { src: '/13363.png', alt: 'MOMO platter' },
-            { src: '/IMG_0138.png', alt: 'MOMO close-up' },
-            { src: '/about-community.png', alt: 'People enjoying MOMO' },
-            { src: '/model-restaurant.png', alt: 'METRO MOMO restaurant' },
-            { src: '/model-stall.png', alt: 'Street food stall' },
-          ]}
-          speed={40}
-        />
+        <Marquee images={marqueeImages} speed={40} />
 
         <style>{`
           .marquee-section {
@@ -277,27 +284,20 @@ export default function Home() {
           <div className="intro-grid">
             <div className="intro-image">
               <div className="image-card">
-                <img src="/about-community.png" alt="People enjoying MOMO together" />
+                <img src="/about-community.png" alt={t('home.intro.imageAlt')} />
               </div>
             </div>
             <div className="intro-content">
-              <span className="badge">The Himalayan Soup Dumpling</span>
+              <span className="badge">{t('home.intro.badge')}</span>
               <h2 className="section-title">
-                More than food.
+                {t('home.intro.title')}
                 <br />
-                <span className="gradient-text">A community ritual.</span>
+                <span className="gradient-text">{t('home.intro.titleHighlight')}</span>
               </h2>
-              <p className="section-subtitle">
-                METRO MOMO was created to bring one of Nepal's most loved comfort foods to a wider audience.
-                MOMO represents warmth, sharing, and the joy of eating together.
-              </p>
-              <p className="intro-body">
-                While global cuisines have thrived, authentic Himalayan flavours have remained underrepresented.
-                We are building a network of enterpreneurs that combines cultural authenticity with modern food-service simplicity —
-                so every owner can serve something real.
-              </p>
+              <p className="section-subtitle">{t('home.intro.body1')}</p>
+              <p className="intro-body">{t('home.intro.body2')}</p>
               <Link to="/about" className="btn btn-secondary">
-                Read Our Story
+                {t('home.intro.cta')}
               </Link>
             </div>
           </div>
@@ -344,42 +344,26 @@ export default function Home() {
 
       <section className="section models-preview">
         <div className="container">
-          <span className="badge">Joint Venture</span>
-          <h2 className="section-title">Choose your format</h2>
-          <p className="section-subtitle">
-            From compact stalls to ghost kitchens — pick the model that fits your location and ambition. No franchise fees; we grow through revenue sharing.
-          </p>
+          <span className="badge">{t('home.modelsPreview.badge')}</span>
+          <h2 className="section-title">{t('home.modelsPreview.title')}</h2>
+          <p className="section-subtitle">{t('home.modelsPreview.subtitle')}</p>
 
           <div className="grid-3">
-            <div className="card model-preview-card">
-              <div className="model-preview-image">
-                <img src="/model-kiosk.png" alt="Street stall and kiosk model" />
+            {modelItems.map((model) => (
+              <div className="card model-preview-card" key={model.name}>
+                <div className="model-preview-image">
+                  <img src={model.src} alt={model.alt} />
+                </div>
+                <h3 className="card-title">{model.name}</h3>
+                <p className="card-text">{model.description}</p>
+                <span className="model-price">{model.price}</span>
               </div>
-              <h3 className="card-title">Street Stall & Kiosk</h3>
-              <p className="card-text">Markets, festivals, malls, and high-footfall streets.</p>
-              <span className="model-price">€0</span>
-            </div>
-            <div className="card model-preview-card">
-              <div className="model-preview-image">
-                <img src="/model-restaurant.png" alt="Full restaurant model" />
-              </div>
-              <h3 className="card-title">Full Restaurant</h3>
-              <p className="card-text">Full dine-in with broader menu and longer hours.</p>
-              <span className="model-price">€0</span>
-            </div>
-            <div className="card model-preview-card">
-              <div className="model-preview-image">
-                <img src="/model-stall.png" alt="Ghost kitchen model" />
-              </div>
-              <h3 className="card-title">Virtual & Ghost Kitchens</h3>
-              <p className="card-text">Delivery and pickup-only with minimal front-of-house costs.</p>
-              <span className="model-price">€0</span>
-            </div>
+            ))}
           </div>
 
           <div className="models-preview-cta">
             <Link to="/models" className="btn btn-primary">
-              Compare All Models <ArrowRight size={18} />
+              {t('home.modelsPreview.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -430,60 +414,28 @@ export default function Home() {
 
       <section className="section tech-preview">
         <div className="container">
-          <span className="badge">Tech-Powered</span>
-          <h2 className="section-title">One platform for every location</h2>
-          <p className="section-subtitle">
-            Every partner gets access to the Fewa restaurant operating system — inventory, ordering, bookings, staff, and compliance in one place.
-          </p>
+          <span className="badge">{t('home.techPreview.badge')}</span>
+          <h2 className="section-title">{t('home.techPreview.title')}</h2>
+          <p className="section-subtitle">{t('home.techPreview.subtitle')}</p>
 
           <div className="grid-3">
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <LayoutDashboard size={28} />
-              </div>
-              <h3 className="card-title">Central Command</h3>
-              <p className="card-text">HQ dashboard, sales analytics, and franchise standards across all units.</p>
-            </div>
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <PackageSearch size={28} />
-              </div>
-              <h3 className="card-title">Inventory & Cost</h3>
-              <p className="card-text">Live stock, recipe COGS, and automated reorder alerts.</p>
-            </div>
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <QrCode size={28} />
-              </div>
-              <h3 className="card-title">QR Ordering</h3>
-              <p className="card-text">Scan-to-order at the table, synced straight to the kitchen.</p>
-            </div>
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <Smartphone size={28} />
-              </div>
-              <h3 className="card-title">Online Ordering</h3>
-              <p className="card-text">Web orders, pickup, delivery, and customer CRM.</p>
-            </div>
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <Users size={28} />
-              </div>
-              <h3 className="card-title">Workforce</h3>
-              <p className="card-text">Scheduling, access control, training, and attendance.</p>
-            </div>
-            <div className="card tech-preview-card">
-              <div className="tech-preview-icon">
-                <ClipboardCheck size={28} />
-              </div>
-              <h3 className="card-title">HACCP & Hygiene</h3>
-              <p className="card-text">Digital checklists, temperature logs, and audit-ready docs.</p>
-            </div>
+            {techItems.map((item) => {
+              const IconComponent = techIcons[item.iconKey]
+              return (
+                <div className="card tech-preview-card" key={item.title}>
+                  <div className="tech-preview-icon">
+                    {IconComponent && <IconComponent size={28} />}
+                  </div>
+                  <h3 className="card-title">{item.title}</h3>
+                  <p className="card-text">{item.text}</p>
+                </div>
+              )
+            })}
           </div>
 
           <div className="tech-preview-cta">
             <Link to="/tech" className="btn btn-secondary">
-              Explore the Full Tech Stack <ArrowRight size={18} />
+              {t('home.techPreview.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -535,10 +487,10 @@ export default function Home() {
       <section className="section stats-section">
         <div className="container">
           <div className="stats-section-header">
-            <span className="badge">By the numbers</span>
-            <h2 className="section-title">Built to scale</h2>
+            <span className="badge">{t('home.stats.badge')}</span>
+            <h2 className="section-title">{t('home.stats.title')}</h2>
           </div>
-          <StatsCounter />
+          <StatsCounter stats={stats} />
         </div>
 
         <style>{`
@@ -558,12 +510,10 @@ export default function Home() {
       <section className="section cta-section">
         <div className="container">
           <div className="cta-card">
-            <h2 className="cta-title">Ready to bring MOMO to your city?</h2>
-            <p className="cta-text">
-              Join the partnership network built for owners who want to serve something authentic and scalable.
-            </p>
+            <h2 className="cta-title">{t('home.cta.title')}</h2>
+            <p className="cta-text">{t('home.cta.text')}</p>
             <Link to="/contact" className="btn btn-gold">
-              Start Your Application <ArrowRight size={18} />
+              {t('home.cta.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>

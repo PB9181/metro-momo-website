@@ -1,52 +1,34 @@
 import { Heart, Globe, ChefHat, Sparkles, Target, HandHeart } from 'lucide-react'
+import { useTranslation } from '../i18n/index.ts'
 
-const values = [
-  {
-    icon: ChefHat,
-    title: 'Authentic Recipes',
-    text: 'Handed-down fillings and dough techniques, standardized for consistency across every location.',
-  },
-  {
-    icon: Globe,
-    title: 'Scalable Brand',
-    text: 'One recognizable identity, flexible enough for local markets and global ambitions.',
-  },
-  {
-    icon: Heart,
-    title: 'Owner-first',
-    text: 'Built by people who have run kitchens. You keep your store, your team, and your community.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Modern Experience',
-    text: 'Tech, design, and operations that feel contemporary without losing the soul of the food.',
-  },
-  {
-    icon: Target,
-    title: 'Proven Systems',
-    text: 'Playbooks, training, and supply chains that remove the guesswork from opening day.',
-  },
-  {
-    icon: HandHeart,
-    title: 'Shared Success',
-    text: 'We grow when our partners grow. Support — and the shared tech platform — does not end after the agreement is signed.'
-  },
-]
+const valueIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
+  ChefHat,
+  Globe,
+  Heart,
+  Sparkles,
+  Target,
+  HandHeart,
+}
+
+type ValueItem = { iconKey: string; title: string; text: string }
 
 export default function About() {
+  const { t, getArray } = useTranslation()
+
+  const storyParagraphs = getArray('about.story.paragraphs') as string[]
+  const values = getArray('about.values.items') as ValueItem[]
+
   return (
     <>
       <section className="section page-hero">
         <div className="container">
-          <span className="badge">About Us</span>
+          <span className="badge">{t('about.hero.badge')}</span>
           <h1 className="page-hero-title display-text">
-            A movement for
+            {t('about.hero.title')}
             <br />
-            <span className="gradient-text">MOMO and owners</span>
+            <span className="gradient-text">{t('about.hero.titleHighlight')}</span>
           </h1>
-          <p className="page-hero-subtitle">
-            METRO MOMO was born from a simple belief: great dumplings deserve a great system.
-          </p>
+          <p className="page-hero-subtitle">{t('about.hero.subtitle')}</p>
         </div>
 
         <style>{`
@@ -79,22 +61,11 @@ export default function About() {
               </div>
             </div>
             <div className="about-story-content">
-              <span className="badge badge-gold">Our Story</span>
-              <h2 className="section-title">Why we started METRO MOMO</h2>
-              <p className="about-story-body">
-                We grew up watching MOMO bring people together — around street carts, family kitchens, and festival stalls.
-                They are not just a snack; they are a reason to pause, share, and connect.
-              </p>
-              <p className="about-story-body">
-                When we looked at the food landscape, we saw two extremes: generic fast-food chains and beautiful
-                but unscalable independents. METRO MOMO sits in the middle — a brand with real cultural roots and the operational
-                backbone to grow across cities without losing its heart.
-              </p>
-              <p className="about-story-body">
-                Today, we are building an umbrella that brings independent owners together under one proven system.
-                Every partner keeps their local identity while gaining the brand, supply, training, and technology
-                usually reserved for much larger chains.
-              </p>
+              <span className="badge badge-gold">{t('about.story.badge')}</span>
+              <h2 className="section-title">{t('about.story.title')}</h2>
+              {storyParagraphs.map((paragraph, index) => (
+                <p className="about-story-body" key={index}>{paragraph}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -137,22 +108,23 @@ export default function About() {
 
       <section className="section values">
         <div className="container">
-          <span className="badge">What We Believe</span>
-          <h2 className="section-title">Our values</h2>
-          <p className="section-subtitle">
-            The principles that guide every decision we make as a partnership network.
-          </p>
+          <span className="badge">{t('about.values.badge')}</span>
+          <h2 className="section-title">{t('about.values.title')}</h2>
+          <p className="section-subtitle">{t('about.values.subtitle')}</p>
 
           <div className="grid-3">
-            {values.map((value) => (
-              <div className="card value-card" key={value.title}>
-                <div className="card-icon">
-                  <value.icon size={28} />
+            {values.map((value) => {
+              const IconComponent = valueIcons[value.iconKey]
+              return (
+                <div className="card value-card" key={value.title}>
+                  <div className="card-icon">
+                    {IconComponent && <IconComponent size={28} />}
+                  </div>
+                  <h3 className="card-title">{value.title}</h3>
+                  <p className="card-text">{value.text}</p>
                 </div>
-                <h3 className="card-title">{value.title}</h3>
-                <p className="card-text">{value.text}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
