@@ -16,7 +16,7 @@ export default function Home() {
               Authentic Himalayan Street Food
             </span>
             <h1 className="hero-title display-text">
-              Bring the Taste of Nepal
+              Bring the Taste of Himalayas
               <br />
               <span className="gradient-text text-shadow-pop">to Your City</span>
             </h1>
@@ -293,7 +293,7 @@ export default function Home() {
               </p>
               <p className="intro-body">
                 While global cuisines have thrived, authentic Himalayan flavours have remained underrepresented.
-                We are building a franchise that combines cultural authenticity with modern food-service simplicity —
+                We are building a network of enterpreneurs that combines cultural authenticity with modern food-service simplicity —
                 so every owner can serve something real.
               </p>
               <Link to="/about" className="btn btn-secondary">
