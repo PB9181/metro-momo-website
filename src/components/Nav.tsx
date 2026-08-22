@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import { Menu, X, Globe } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from './Logo.tsx'
 import { useTranslation, type Language } from '../i18n/index.ts'
 
+const languageOptions: { code: Language; label: string }[] = [
+  { code: 'en', label: 'English' },
+  { code: 'nl', label: 'Nederlands' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'fr', label: 'Français' },
+]
+
 export default function Nav() {
   const { t, language, setLanguage } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   const navLinks = [
     { label: t('nav.home'), href: '/' },
@@ -19,12 +28,19 @@ export default function Nav() {
 
   const handleNavClick = () => setMobileOpen(false)
 
-  const languageButtons: { code: Language; label: string }[] = [
-    { code: 'en', label: 'EN' },
-    { code: 'nl', label: 'NL' },
-    { code: 'de', label: 'DE' },
-    { code: 'fr', label: 'FR' },
-  ]
+  const activeLabel = languageOptions.find((option) => option.code === language)?.label ?? language.toUpperCase()
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    if (dropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [dropdownOpen])
 
   return (
     <header className="nav">
@@ -45,22 +61,35 @@ export default function Nav() {
             </NavLink>
           ))}
 
-          <div className="language-switcher" aria-label="Select language">
-            <Globe size={16} className="language-switcher-icon" aria-hidden="true" />
-            {languageButtons.map(({ code, label }) => (
-              <button
-                key={code}
-                className={`lang-btn ${language === code ? 'active' : ''}`}
-                onClick={() => {
-                  setLanguage(code)
-                  handleNavClick()
-                }}
-                aria-label={t(`language.${code}`)}
-                aria-pressed={language === code}
-              >
-                {label}
-              </button>
-            ))}
+          <div className="language-switcher" ref={dropdownRef} aria-label="Select language">
+            <button
+              className="language-dropdown-toggle"
+              onClick={() => setDropdownOpen((open) => !open)}
+              aria-expanded={dropdownOpen}
+              aria-haspopup="listbox"
+            >
+              <Globe size={16} className="language-switcher-icon" aria-hidden="true" />
+              <span>{activeLabel}</span>
+              <ChevronDown size={16} className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} aria-hidden="true" />
+            </button>
+            {dropdownOpen && (
+              <ul className="language-dropdown-menu" role="listbox">
+                {languageOptions.map(({ code, label }) => (
+                  <li key={code} role="option" aria-selected={language === code}>
+                    <button
+                      className={`language-dropdown-option ${language === code ? 'active' : ''}`}
+                      onClick={() => {
+                        setLanguage(code)
+                        setDropdownOpen(false)
+                        handleNavClick()
+                      }}
+                    >
+                      {label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <Link to="/contact" className="btn btn-primary nav-cta" onClick={handleNavClick}>
@@ -131,41 +160,76 @@ export default function Nav() {
           width: 100%;
         }
         .language-switcher {
+          position: relative;
           display: inline-flex;
           align-items: center;
-          gap: 4px;
-          background: rgba(217, 4, 41, 0.08);
+        }
+        .language-dropdown-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 12px;
           border-radius: 999px;
-          padding: 4px;
+          background: rgba(217, 4, 41, 0.08);
           border: 1px solid rgba(217, 4, 41, 0.15);
+          color: var(--color-text);
+          font-weight: 700;
+          font-size: 0.85rem;
+          transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+          cursor: pointer;
+        }
+        .language-dropdown-toggle:hover {
+          background: rgba(217, 4, 41, 0.14);
+          border-color: rgba(217, 4, 41, 0.3);
+          box-shadow: 0 2px 8px rgba(217, 4, 41, 0.12);
         }
         .language-switcher-icon {
           color: var(--color-primary);
-          margin: 0 4px 0 8px;
           flex-shrink: 0;
         }
-        .lang-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 32px;
-          height: 28px;
-          padding: 0 8px;
-          border-radius: 999px;
-          font-weight: 800;
-          font-size: 0.75rem;
+        .dropdown-chevron {
+          color: var(--color-primary);
+          transition: transform 0.2s ease;
+          flex-shrink: 0;
+        }
+        .dropdown-chevron.open {
+          transform: rotate(180deg);
+        }
+        .language-dropdown-menu {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          min-width: 140px;
+          background: white;
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-lg);
+          border: 1px solid var(--mm-border);
+          list-style: none;
+          padding: 6px;
+          margin: 0;
+          z-index: 101;
+          overflow: hidden;
+          animation: pop-in 0.2s ease;
+        }
+        .language-dropdown-option {
+          width: 100%;
+          text-align: left;
+          padding: 10px 12px;
+          border-radius: var(--radius-sm);
+          font-weight: 700;
+          font-size: 0.85rem;
           color: var(--color-text);
           background: transparent;
-          transition: color 0.2s ease, background-color 0.2s ease;
+          transition: background-color 0.2s ease, color 0.2s ease;
+          cursor: pointer;
         }
-        .lang-btn:hover {
-          color: var(--color-primary);
+        .language-dropdown-option:hover,
+        .language-dropdown-option.active {
           background: rgba(217, 4, 41, 0.08);
+          color: var(--color-primary);
         }
-        .lang-btn.active {
-          background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-          color: white;
-          box-shadow: 0 2px 8px rgba(217, 4, 41, 0.25);
+        .language-dropdown-option.active {
+          font-weight: 900;
         }
         .nav-cta {
           padding: 10px 22px;
@@ -214,13 +278,24 @@ export default function Nav() {
             padding: 12px 0;
           }
           .language-switcher {
+            width: 100%;
             margin-top: 8px;
-            padding: 6px;
           }
-          .lang-btn {
-            min-width: 40px;
-            height: 34px;
-            font-size: 0.85rem;
+          .language-dropdown-toggle {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 16px;
+            font-size: 1rem;
+          }
+          .language-dropdown-menu {
+            position: static;
+            width: 100%;
+            margin-top: 8px;
+            box-shadow: var(--shadow-md);
+          }
+          .language-dropdown-option {
+            padding: 12px 16px;
+            font-size: 1rem;
           }
           .nav-cta {
             margin-top: 16px;
@@ -233,10 +308,6 @@ export default function Nav() {
           .nav-logo svg {
             width: 100px !important;
             height: auto !important;
-          }
-          .language-switcher {
-            width: 100%;
-            justify-content: center;
           }
         }
       `}</style>
