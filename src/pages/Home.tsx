@@ -247,7 +247,6 @@ export default function Home() {
             { src: '/menu-fried-momo.png', alt: 'Fried chili MOMO' },
             { src: '/13363.png', alt: 'MOMO platter' },
             { src: '/IMG_0138.png', alt: 'MOMO close-up' },
-            { src: '/IMG_0142.png', alt: 'MOMO dish' },
             { src: '/about-community.png', alt: 'People enjoying MOMO' },
             { src: '/model-restaurant.png', alt: 'METRO MOMO restaurant' },
             { src: '/model-stall.png', alt: 'Street food stall' },
