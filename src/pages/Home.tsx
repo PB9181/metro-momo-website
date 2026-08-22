@@ -137,13 +137,11 @@ export default function Home() {
             position: relative;
             border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             background: transparent;
+            transition: transform 0.3s ease;
           }
           .hero-image-wrapper:hover {
             transform: scale(1.02);
-            box-shadow: var(--shadow-lg);
           }
           .hero-image-wrapper img {
             border-radius: var(--radius-xl);
