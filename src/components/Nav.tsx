@@ -1,26 +1,35 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from './Logo.tsx'
-
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Models', href: '/models' },
-  { label: 'How it Works', href: '/how-it-works' },
-  { label: 'Tech', href: '/tech' },
-  { label: 'FAQ', href: '/faq' },
-]
+import { useTranslation, LANGUAGES, type Language } from '../i18n/index.ts'
 
 export default function Nav() {
+  const { t, language, setLanguage } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
+  const navLinks = [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.about'), href: '/about' },
+    { label: t('nav.models'), href: '/models' },
+    { label: t('nav.howItWorks'), href: '/how-it-works' },
+    { label: t('nav.tech'), href: '/tech' },
+    { label: t('nav.faq'), href: '/faq' },
+  ]
+
   const handleNavClick = () => setMobileOpen(false)
+
+  const languageButtons: { code: Language; label: string }[] = [
+    { code: 'en', label: 'EN' },
+    { code: 'nl', label: 'NL' },
+    { code: 'de', label: 'DE' },
+    { code: 'fr', label: 'FR' },
+  ]
 
   return (
     <header className="nav">
       <div className="container nav-inner">
-        <Link to="/" className="nav-logo" aria-label="METRO MOMO home">
+        <Link to="/" className="nav-logo" aria-label={t('nav.logoAlt')}>
           <Logo width={120} variant="dark" />
         </Link>
 
@@ -35,15 +44,34 @@ export default function Nav() {
               {link.label}
             </NavLink>
           ))}
+
+          <div className="language-switcher" aria-label="Select language">
+            <Globe size={16} className="language-switcher-icon" aria-hidden="true" />
+            {languageButtons.map(({ code, label }) => (
+              <button
+                key={code}
+                className={`lang-btn ${language === code ? 'active' : ''}`}
+                onClick={() => {
+                  setLanguage(code)
+                  handleNavClick()
+                }}
+                aria-label={t(`language.${code}`)}
+                aria-pressed={language === code}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
           <Link to="/contact" className="btn btn-primary nav-cta" onClick={handleNavClick}>
-            Apply Now
+            {t('nav.cta')}
           </Link>
         </nav>
 
         <button
           className="nav-toggle"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-label={mobileOpen ? t('nav.menuClose') : t('nav.menuOpen')}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
@@ -102,6 +130,43 @@ export default function Nav() {
         .nav-link.active::after {
           width: 100%;
         }
+        .language-switcher {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: rgba(217, 4, 41, 0.08);
+          border-radius: 999px;
+          padding: 4px;
+          border: 1px solid rgba(217, 4, 41, 0.15);
+        }
+        .language-switcher-icon {
+          color: var(--color-primary);
+          margin: 0 4px 0 8px;
+          flex-shrink: 0;
+        }
+        .lang-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 32px;
+          height: 28px;
+          padding: 0 8px;
+          border-radius: 999px;
+          font-weight: 800;
+          font-size: 0.75rem;
+          color: var(--color-text);
+          background: transparent;
+          transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        .lang-btn:hover {
+          color: var(--color-primary);
+          background: rgba(217, 4, 41, 0.08);
+        }
+        .lang-btn.active {
+          background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+          color: white;
+          box-shadow: 0 2px 8px rgba(217, 4, 41, 0.25);
+        }
         .nav-cta {
           padding: 10px 22px;
           font-size: 0.85rem;
@@ -148,6 +213,15 @@ export default function Nav() {
             font-size: 1.2rem;
             padding: 12px 0;
           }
+          .language-switcher {
+            margin-top: 8px;
+            padding: 6px;
+          }
+          .lang-btn {
+            min-width: 40px;
+            height: 34px;
+            font-size: 0.85rem;
+          }
           .nav-cta {
             margin-top: 16px;
             width: 100%;
@@ -159,6 +233,10 @@ export default function Nav() {
           .nav-logo svg {
             width: 100px !important;
             height: auto !important;
+          }
+          .language-switcher {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

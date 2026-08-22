@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 
-const stats = [
-  { value: 7, suffix: '+', label: 'Momo varieties', prefix: '' },
-  { value: 3, suffix: '', label: 'Joint-venture formats', prefix: '' },
-  { value: 100, suffix: '%', label: 'Owner support', prefix: '' },
-  { value: 1, suffix: '', label: 'Dream to launch', prefix: '<' },
-]
+type StatItem = {
+  value: number
+  suffix: string
+  label: string
+  prefix: string
+}
+
+type StatsCounterProps = {
+  stats: StatItem[]
+}
 
 function CountUp({ target, suffix, prefix }: { target: number; suffix: string; prefix: string }) {
   const [count, setCount] = useState(0)
@@ -50,7 +54,7 @@ function CountUp({ target, suffix, prefix }: { target: number; suffix: string; p
   )
 }
 
-export default function StatsCounter() {
+export default function StatsCounter({ stats }: StatsCounterProps) {
   return (
     <div className="stats-counter">
       {stats.map((stat) => (

@@ -1,42 +1,43 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo.tsx'
 import { Instagram, Facebook, Twitter, Mail, Phone } from 'lucide-react'
-
-const footerLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Models', href: '/models' },
-  { label: 'How it Works', href: '/how-it-works' },
-  { label: 'Tech', href: '/tech' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Apply', href: '/contact' },
-]
+import { useTranslation } from '../i18n/index.ts'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
+  const footerLinks = [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.about'), href: '/about' },
+    { label: t('nav.models'), href: '/models' },
+    { label: t('nav.howItWorks'), href: '/how-it-works' },
+    { label: t('nav.tech'), href: '/tech' },
+    { label: t('nav.faq'), href: '/faq' },
+    { label: t('nav.apply'), href: '/contact' },
+  ]
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
             <Logo width={160} variant="white" />
-            <p className="footer-tagline">
-              Authentic MOMO, modern joint venture. Built for owners who want to grow.
-            </p>
+            <p className="footer-tagline">{t('footer.tagline')}</p>
             <div className="footer-socials">
-              <a href="#" aria-label="Instagram">
+              <a href="#" aria-label={t('footer.instagram')}>
                 <Instagram size={20} />
               </a>
-              <a href="#" aria-label="Facebook">
+              <a href="#" aria-label={t('footer.facebook')}>
                 <Facebook size={20} />
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="#" aria-label={t('footer.twitter')}>
                 <Twitter size={20} />
               </a>
             </div>
           </div>
 
           <div className="footer-nav">
-            <h4>Explore</h4>
+            <h4>{t('footer.explore')}</h4>
             <ul>
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -47,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-contact">
-            <h4>Contact</h4>
+            <h4>{t('footer.contact')}</h4>
             <ul>
               <li>
                 <a href="mailto:hello@metromomo.com">
@@ -66,10 +67,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} METRO MOMO. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} METRO MOMO. {t('footer.copyright')}.</p>
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">{t('footer.privacy')}</a>
+            <a href="#">{t('footer.terms')}</a>
           </div>
         </div>
       </div>

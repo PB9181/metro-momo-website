@@ -1,0 +1,436 @@
+{
+  "language": {
+    "en": "English",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "models": "Modèles",
+    "howItWorks": "Comment ça marche",
+    "tech": "Tech",
+    "faq": "FAQ",
+    "apply": "Postuler",
+    "cta": "Postuler maintenant",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "logoAlt": "Accueil METRO MOMO"
+  },
+  "footer": {
+    "tagline": "MOMO authentique, joint venture moderne. Conçu pour les propriétaires qui veulent se développer.",
+    "explore": "Explorer",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "twitter": "Twitter"
+  },
+  "home": {
+    "hero": {
+      "badge": "Street Food Himalayenne Authentique",
+      "title": "Apportez le Goût du Népal",
+      "titleHighlight": "dans Votre Ville",
+      "subtitle": "Lancez un joint venture METRO MOMO — un concept MOMO en pleine croissance conçu pour la simplicité, l'évolutivité et un fort pouvoir d'attraction de marque. Des stands de rue aux restaurants complets.",
+      "ctaPrimary": "Postuler maintenant",
+      "ctaSecondary": "Voir les modèles",
+      "stat1Label": "Propriétaire d'abord",
+      "stat1Sublabel": "Créé par des propriétaires de restaurant",
+      "stat2Label": "Multi-format",
+      "stat2Sublabel": "Stand, kiosque ou restaurant",
+      "imageAlt": "Dumplings METRO MOMO fumants sur une assiette rouge",
+      "imageBadge": "Aucun chef requis"
+    },
+    "marquee": {
+      "badge": "Une nourriture qui se vend toute seule",
+      "title": "Du MOMO authentique, du vrai goût",
+      "images": [
+        { "src": "/hero-momos.png", "alt": "MOMO fumant" },
+        { "src": "/jhol-momo.png", "alt": "Jhol MOMO en bouillon" },
+        { "src": "/menu-fried-momo.png", "alt": "MOMO frit au chili" },
+        { "src": "/13363.png", "alt": "Plat de MOMO" },
+        { "src": "/IMG_0138.png", "alt": "Gros plan sur MOMO" },
+        { "src": "/about-community.png", "alt": "Des gens profitant de MOMO" },
+        { "src": "/model-restaurant.png", "alt": "Restaurant METRO MOMO" },
+        { "src": "/model-stall.png", "alt": "Stand de street food" }
+      ]
+    },
+    "intro": {
+      "badge": "Le Dumpling Himalayen en Soupe",
+      "title": "Plus qu'une nourriture.",
+      "titleHighlight": "Un rituel communautaire.",
+      "body1": "METRO MOMO a été créé pour amener l'un des plats de réconfort les plus appréciés du Népal à un public plus large. Le MOMO représente la chaleur, le partage et la joie de manger ensemble.",
+      "body2": "Alors que les cuisines mondiales se sont épanouies, les saveurs himalayennes authentiques sont restées sous-représentées. Nous construisons une franchise qui allie authenticité culturelle et simplicité moderne du service alimentaire — pour que chaque propriétaire puisse servir quelque chose de réel.",
+      "imageAlt": "Des gens profitant ensemble de MOMO",
+      "cta": "Lire notre histoire"
+    },
+    "modelsPreview": {
+      "badge": "Joint Venture",
+      "title": "Choisissez votre format",
+      "subtitle": "Des stands compacts aux ghost kitchens — choisissez le modèle qui correspond à votre emplacement et à vos ambitions. Pas de frais de franchise ; nous grandissons par le partage des revenus.",
+      "items": [
+        {
+          "src": "/model-kiosk.png",
+          "alt": "Modèle stand de rue et kiosque",
+          "name": "Stand de Rue & Kiosque",
+          "description": "Marchés, festivals, centres commerciaux et rues à fort passage.",
+          "price": "€0"
+        },
+        {
+          "src": "/model-restaurant.png",
+          "alt": "Modèle restaurant complet",
+          "name": "Restaurant Complet",
+          "description": "Dine-in complet avec menu plus large et heures d'ouverture plus longues.",
+          "price": "€0"
+        },
+        {
+          "src": "/model-stall.png",
+          "alt": "Modèle ghost kitchen",
+          "name": "Cuisines Virtuelles & Ghost Kitchens",
+          "description": "Livraison et retrait uniquement avec des coûts front-of-house minimaux.",
+          "price": "€0"
+        }
+      ],
+      "cta": "Comparer tous les modèles"
+    },
+    "techPreview": {
+      "badge": "Propulsé par la Tech",
+      "title": "Une plateforme pour chaque emplacement",
+      "subtitle": "Chaque partenaire accède au système d'exploitation Fewa — inventaire, commandes, réservations, personnel et conformité en un seul endroit.",
+      "items": [
+        { "iconKey": "LayoutDashboard", "title": "Commande Centrale", "text": "Tableau de bord HQ, analyses de ventes et normes de franchise sur tous les sites." },
+        { "iconKey": "PackageSearch", "title": "Inventaire & Coûts", "text": "Stocks en temps réel, COGS des recettes et alertes de réapprovisionnement automatiques." },
+        { "iconKey": "QrCode", "title": "Commande QR", "text": "Scan-pour-commander à table, synchronisé directement avec la cuisine." },
+        { "iconKey": "Smartphone", "title": "Commande en Ligne", "text": "Commandes web, retrait, livraison et CRM client." },
+        { "iconKey": "Users", "title": "Ressources Humaines", "text": "Planification, contrôle d'accès, formation et présence." },
+        { "iconKey": "ClipboardCheck", "title": "HACCP & Hygiène", "text": "Checklists numériques, logs de température et documents prêts pour l'audit." }
+      ],
+      "cta": "Explorer la stack tech complète"
+    },
+    "stats": {
+      "badge": "En chiffres",
+      "title": "Conçu pour évoluer",
+      "items": [
+        { "value": 7, "suffix": "+", "prefix": "", "label": "Variétés de momo" },
+        { "value": 3, "suffix": "", "prefix": "", "label": "Formats de joint venture" },
+        { "value": 100, "suffix": "%", "prefix": "", "label": "Support propriétaire" },
+        { "value": 1, "suffix": "", "prefix": "<", "label": "Du rêve au lancement" }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à amener le MOMO dans votre ville ?",
+      "text": "Rejoignez le réseau de partenariat conçu pour les propriétaires qui veulent servir quelque chose d'authentique et d'évolutif.",
+      "cta": "Démarrer votre candidature"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "À propos de nous",
+      "title": "Un mouvement pour",
+      "titleHighlight": "MOMO et les propriétaires",
+      "subtitle": "METRO MOMO est né d'une conviction simple : les bons dumplings méritent un excellent système."
+    },
+    "story": {
+      "badge": "Notre Histoire",
+      "title": "Pourquoi nous avons créé METRO MOMO",
+      "paragraphs": [
+        "Nous avons grandi en voyant le MOMO rassembler les gens — autour des chariots de rue, des cuisines familiales et des stands de festival. Ce ne sont pas seulement des collations ; c'est une raison de s'arrêter, de partager et de se connecter.",
+        "Quand nous avons regardé le paysage culinaire, nous avons vu deux extrêmes : les chaînes de fast-food génériques et les indépendants beaux mais non évolutifs. METRO MOMO se situe au milieu — une marque avec de vraies racines culturelles et l'épine dorsale opérationnelle pour se développer à travers les villes sans perdre son cœur.",
+        "Aujourd'hui, nous construisons un parapluie qui rassemble les propriétaires indépendants sous un seul système éprouvé. Chaque partenaire conserve son identité locale tout en acquérant la marque, l'approvisionnement, la formation et la technologie généralement réservés aux chaînes beaucoup plus grandes."
+      ]
+    },
+    "values": {
+      "badge": "Ce en quoi nous croyons",
+      "title": "Nos valeurs",
+      "subtitle": "Les principes qui guident chaque décision que nous prenons en tant que réseau de partenariat.",
+      "items": [
+        { "iconKey": "ChefHat", "title": "Recettes Authentiques", "text": "Garnitures et techniques de pâte transmises, standardisées pour la cohérence sur chaque site." },
+        { "iconKey": "Globe", "title": "Marque Évolutive", "text": "Une identité reconnaissable, assez flexible pour les marchés locaux et les ambitions mondiales." },
+        { "iconKey": "Heart", "title": "Propriétaire d'abord", "text": "Conçu par des gens qui ont dirigé des cuisines. Vous gardez votre commerce, votre équipe et votre communauté." },
+        { "iconKey": "Sparkles", "title": "Expérience Moderne", "text": "La tech, le design et les opérations qui se sentent contemporains sans perdre l'âme de la nourriture." },
+        { "iconKey": "Target", "title": "Systèmes Éprouvés", "text": "Playbooks, formation et chaînes d'approvisionnement qui éliminent l'incertitude du jour de l'ouverture." },
+        { "iconKey": "HandHeart", "title": "Succès Partagé", "text": "Nous grandissons quand nos partenaires grandissent. Le support — et la plateforme tech partagée — ne se termine pas après la signature du contrat." }
+      ]
+    }
+  },
+  "models": {
+    "hero": {
+      "badge": "Joint Venture",
+      "title": "Choisissez le format qui",
+      "titleHighlight": "correspond à vos ambitions",
+      "subtitle": "Des stands de rue aux ghost kitchens — chaque modèle de joint venture commence avec 0 € de frais de franchise. Nous grandissons ensemble par le partage des revenus."
+    },
+    "items": [
+      {
+        "iconKey": "Store",
+        "name": "Stand de Rue & Kiosque",
+        "price": "€0",
+        "src": "/model-kiosk.png",
+        "description": "Un format compact et flexible pour les marchés, festivals, centres commerciaux et rues à fort passage. Faibles coûts fixes et rapide à lancer.",
+        "features": ["Installation compacte", "Haute visibilité", "Prêt pour festivals & événements", "Design adapté aux centres commerciaux", "Menu board numérique"],
+        "bestFor": "Opérateurs débutants"
+      },
+      {
+        "iconKey": "Building2",
+        "name": "Restaurant Complet",
+        "price": "€0",
+        "src": "/model-restaurant.png",
+        "description": "Un concept dine-in complet avec des options de menu plus larges, des heures d'ouverture plus longues et un potentiel de croissance à long terme.",
+        "features": ["Salle à manger complète", "Menu étendu", "Potentiel de revenus plus élevé", "Hébergement d'événements", "Exclusivité territoriale"],
+        "bestFor": "Opérateurs expérimentés"
+      },
+      {
+        "iconKey": "Cloud",
+        "name": "Cuisines Virtuelles & Ghost Kitchens",
+        "price": "€0",
+        "src": "/model-stall.png",
+        "description": "Cuisine livraison et retrait uniquement avec des coûts front-of-house minimaux. Conçue pour la commande en ligne, les dark kitchens et l'expansion rapide du marché.",
+        "features": ["Modèle axé sur la livraison", "Faibles loyers", "Prêt pour la commande en ligne", "Compatible avec espaces de prépartion partagés", "Expansion urbaine rapide"],
+        "bestFor": "Opérateurs digital-first"
+      }
+    ],
+    "bestForPrefix": "Idéal pour :",
+    "comparison": {
+      "badge": "Comparer",
+      "title": "Comparaison des modèles",
+      "subtitle": "Aperçu rapide de ce que comprend chaque format de joint venture.",
+      "techBanner": "Tech incluse dans chaque format :",
+      "techBannerText": "tableau de bord central, inventaire, commandes, réservations, outils du personnel et checklists HACCP.",
+      "headers": {
+        "feature": "Caractéristique",
+        "compact": "Stand de Rue & Kiosque",
+        "restaurant": "Restaurant Complet",
+        "ghost": "Cuisines Virtuelles & Ghost Kitchens"
+      },
+      "rows": [
+        { "name": "Frais de franchise", "compact": "€0", "restaurant": "€0", "ghost": "€0" },
+        { "name": "Empreinte", "compact": "2–10 m²", "restaurant": "50+ m²", "ghost": "10–30 m² cuisine" },
+        { "name": "Personnel requis", "compact": "1–3", "restaurant": "5+", "ghost": "2–4" },
+        { "name": "Gamme de menu", "compact": "Menu de base", "restaurant": "Complet + boissons", "ghost": "Optimisé pour la livraison" },
+        { "name": "Canaux clients", "compact": "Sur place & événements", "restaurant": "Dine-in", "ghost": "En ligne & livraison" }
+      ]
+    },
+    "cta": {
+      "title": "Pas sûr du modèle qui vous convient ?",
+      "text": "Notre équipe de partenariat vous aidera à choisir en fonction de votre territoire et de vos objectifs.",
+      "cta": "Réserver un appel de découverte"
+    }
+  },
+  "howItWorks": {
+    "hero": {
+      "badge": "Comment ça marche",
+      "title": "De la candidature au",
+      "titleHighlight": "jour de l'ouverture",
+      "subtitle": "Un parcours clair en six étapes pour les propriétaires qui veulent avancer vite et construire quelque chose de durable."
+    },
+    "steps": [
+      { "iconKey": "ClipboardList", "step": "01", "title": "Soumettre son intérêt", "text": "Dites-nous votre emplacement préféré, votre format et vos objectifs. Nous examinons chaque candidature personnellement." },
+      { "iconKey": "MapPinned", "step": "02", "title": "Réunion de découverte", "text": "Rencontrez notre équipe pour comprendre le concept, les opérations et si l'adéquation est mutuelle." },
+      { "iconKey": "FileCheck", "step": "03", "title": "Candidature & Examen", "text": "Complétez ensemble la candidature, l'évaluation du site et le modèle financier." },
+      { "iconKey": "Handshake", "step": "04", "title": "Contrat & Territoire", "text": "Sécurisez votre zone protégée, signez le contrat et commencez la mise en place." },
+      { "iconKey": "GraduationCap", "step": "05", "title": "Formation", "text": "Formation intensive sur les opérations, le produit et l'expérience client pour vous et votre équipe — plus la configuration de la plateforme tech Fewa." },
+      { "iconKey": "Rocket", "step": "06", "title": "Jour de l'Ouverture", "text": "Ouvrez avec le soutien du lancement, une poussée marketing et une équipe sur le terrain en standby." }
+    ],
+    "support": {
+      "badge": "Support Continu",
+      "title": "Nous restons avec vous après le lancement",
+      "subtitle": "Le lancement n'est que le début. Notre équipe de partenariat fournit un support continu — et la plateforme tech continue d'évoluer avec votre entreprise.",
+      "imageAlt": "Support restaurant METRO MOMO",
+      "list": [
+        "Revue de performance mensuelle",
+        "Nouveaux produits et mises à jour de menu",
+        "Campagnes marketing et promotions saisonnières",
+        "Support supply chain et approvisionnement",
+        "Coaching opérationnel et programmes mystery-shop",
+        "Accès à la communauté des propriétaires METRO MOMO",
+        "Mises à jour de plateforme : inventaire, commandes, réservations et conformité"
+      ]
+    },
+    "cta": {
+      "title": "Prêt à commencer votre parcours ?",
+      "text": "Soumettez votre intérêt et notre équipe vous accompagnera à chaque étape.",
+      "cta": "Soumettre son intérêt"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "title": "Des questions ?",
+      "titleHighlight": "Nous avons les réponses.",
+      "subtitle": "Tout ce que vous devez savoir pour devenir partenaire METRO MOMO."
+    },
+    "sidebar": {
+      "title": "Vous avez encore des questions ?",
+      "text": "Notre équipe de partenariat se fera un plaisir de discuter de votre situation spécifique.",
+      "cta": "Contactez-nous"
+    },
+    "items": [
+      {
+        "question": "Dois-je avoir une expérience en restauration ?",
+        "answer": "Non. Notre modèle est conçu pour être accessible aux opérateurs débutants ainsi qu'aux propriétaires d'expérience. Nous fournissons une formation, des playbooks et un support continu pour que vous puissiez gérer l'entreprise en confiance dès le premier jour."
+      },
+      {
+        "question": "Ai-je besoin d'un chef ?",
+        "answer": "Non. METRO MOMO utilise des recettes préportionnées et un processus de préparation simple qui réduit la complexité en cuisine. Votre équipe peut être formée pour produire des MOMO constants et de haute qualité sans expérience traditionnelle de chef."
+      },
+      {
+        "question": "Quels formats de joint venture sont disponibles ?",
+        "answer": "Nous proposons trois formats : Stand de Rue & Kiosque, Restaurant Complet, et Cuisines Virtuelles & Ghost Kitchens. Chacun a une empreinte et un profil opérationnel différents, avec 0 € de frais de franchise et un modèle de partage de revenus. Visitez notre page Modèles pour les comparer."
+      },
+      {
+        "question": "Quel support vais-je recevoir ?",
+        "answer": "Vous recevez un onboarding, un accompagnement au choix du site, une formation, un accès à la supply chain, un support marketing, un coaching opérationnel et une assistance au lancement. Le support continue après l'ouverture avec des revues, des mises à jour de menu et un accès à la communauté."
+      },
+      {
+        "question": "Comment choisir le bon territoire ?",
+        "answer": "Notre équipe évalue avec vous le passage, la concurrence locale, l'adéquation démographique et votre budget. Nous protégeons ensuite votre territoire convenu pour que vous puissiez construire votre clientèle sans concurrence interne."
+      },
+      {
+        "question": "Quel est le processus de candidature ?",
+        "answer": "Soumettez votre intérêt, assistez à une réunion de découverte, complétez une candidature et une évaluation de site, signez le contrat et sécurisez votre territoire, suivez la formation et lancez. Le processus complet est décrit sur notre page Comment ça marche."
+      },
+      {
+        "question": "Quelle technologie est incluse ?",
+        "answer": "Chaque partenaire accède au système d'exploitation Fewa, incluant un tableau de bord HQ central, le contrôle des stocks et des coûts, la commande QR et en ligne, la réservation de tables, l'affichage cuisine, la planification du personnel et les checklists HACCP / hygiène."
+      },
+      {
+        "question": "Puis-je utiliser l'app Fewa operations plus tard ?",
+        "answer": "Oui. Au fur et à mesure que le réseau se développe, les partenaires pourront se connecter à la même plateforme opérationnelle qui alimente les équipes modernes de restaurants — couvrant commandes, cuisine, inventaire et outils back-office."
+      },
+      {
+        "question": "Combien de temps faut-il pour ouvrir ?",
+        "answer": "Le délai dépend du format. Un stand de rue/kiosque ou une cuisine virtuelle/ghost kitchen peut être prêt en 6 à 10 semaines, tandis qu'un restaurant complet prend généralement 3 à 6 mois, incluant les travaux, les permis et la formation."
+      }
+    ]
+  },
+  "tech": {
+    "hero": {
+      "badge": "Croissance Propulsée par la Tech",
+      "title": "Construit sur un système d'exploitation",
+      "titleHighlight": "restaurant",
+      "subtitle": "Chaque partenaire METRO MOMO accède à la même plateforme opérationnelle qui fait fonctionner les équipes modernes de restaurants — couvrant commandes, cuisine, inventaire et back-office en un seul endroit."
+    },
+    "categories": [
+      {
+        "iconKey": "LayoutDashboard",
+        "title": "Commande Centrale",
+        "features": ["Tableau de bord HQ multi-sites", "Analyses de ventes en temps réel", "Suivi des normes de franchise", "Scorecards de performance"]
+      },
+      {
+        "iconKey": "Users",
+        "title": "Gestion de la Main-d'œuvre",
+        "features": ["Planification du personnel & quarts", "Contrôle d'accès basé sur les rôles", "Bibliothèque de formation & apprentissage", "Pointage / suivi de présence"]
+      },
+      {
+        "iconKey": "PackageSearch",
+        "title": "Inventaire & Approvisionnement",
+        "features": ["Niveaux de stock en temps réel sur les sites", "Alertes de réapprovisionnement automatiques", "Suivi fournisseurs & achats", "Logs de waste et shrinkage"]
+      },
+      {
+        "iconKey": "TrendingUp",
+        "title": "Analyse des Coûts",
+        "features": ["COGS au niveau des recettes", "Rentabilité dynamique du menu", "Ratios main-d'œuvre vs. revenus", "Reporting d'unit economics"]
+      },
+      {
+        "iconKey": "CalendarCheck",
+        "title": "Réservation de Tables",
+        "features": ["Widget de réservation en ligne", "Gestion des tables et de la salle", "Notes et historique clients", "Liste d'attente & flux d'annulation"]
+      },
+      {
+        "iconKey": "QrCode",
+        "title": "Commande par QR Code",
+        "features": ["Scan-pour-commander à table", "Menu synchronisé avec la cuisine", "Split-bill ready", "Aucun matériel supplémentaire requis"]
+      },
+      {
+        "iconKey": "Smartphone",
+        "title": "Commande en Ligne",
+        "features": ["Page de commande web", "Flux retrait et livraison", "CRM client & marketing", "Prêt pour paiement intégré"]
+      },
+      {
+        "iconKey": "ClipboardCheck",
+        "title": "HACCP & Hygiène",
+        "features": ["Routines de checklists numériques", "Suivi des logs de température", "Alertes de planning de nettoyage", "Documentation prête pour l'audit"]
+      },
+      {
+        "iconKey": "Truck",
+        "title": "Supply Chain",
+        "features": ["Catalogue central de fournisseurs", "Transferts de stock entre sites", "Capture des bons de livraison", "Pouvoir d'achat de la franchise"]
+      }
+    ],
+    "cta": {
+      "title": "Une tech qui évolue avec chaque format",
+      "text": "Que vous commenciez par un stand de rue ou un restaurant complet, la plateforme grandit avec vous. Pas de factures logicielles séparées, pas de tableurs déconnectés — un seul système dès le premier jour.",
+      "cta": "Voir les modèles"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Postuler maintenant",
+      "title": "Commencez votre",
+      "titleHighlight": "parcours de partenariat",
+      "subtitle": "Parlez-nous de vous et de votre marché cible. Notre équipe vous répondra sous 48 heures."
+    },
+    "benefits": {
+      "badge": "Pourquoi METRO MOMO ?",
+      "title": "Ce que vous obtenez en tant que partenaire",
+      "subtitle": "Aucune expérience préalable en restauration requise pour tous les modèles d'entrée. Nous recherchons des propriétaires qui se soucient de la bonne nourriture et de la communauté.",
+      "items": [
+        "Territoire protégé et droits exclusifs",
+        "Formats flexibles : stand, kiosque, container, restaurant",
+        "Formation, supply chain et support marketing",
+        "Accès complet à la plateforme tech Fewa (inventaire, commandes, réservations, personnel, HACCP)"
+      ]
+    },
+    "details": {
+      "headOffice": { "label": "Siège Social", "value": "Metro Momo HQ, Votre Ville" },
+      "phone": { "label": "Téléphone", "value": "+46 12 345 67 89" },
+      "email": { "label": "E-mail", "value": "hello@metromomo.com" },
+      "response": { "label": "Délai de réponse", "value": "Sous 48 heures" }
+    },
+    "form": {
+      "title": "Soumettre son intérêt",
+      "fields": {
+        "name": { "label": "Nom complet", "placeholder": "Votre nom" },
+        "email": { "label": "E-mail", "placeholder": "vous@exemple.com" },
+        "phone": { "label": "Téléphone", "placeholder": "+46 70 123 4567" },
+        "city": { "label": "Ville / Territoire", "placeholder": "Où vous souhaitez ouvrir" },
+        "model": {
+          "label": "Modèle préféré",
+          "options": [
+            { "value": "", "label": "Sélectionnez un format" },
+            { "value": "compact", "label": "Stand de Rue & Kiosque" },
+            { "value": "restaurant", "label": "Restaurant Complet" },
+            { "value": "ghost", "label": "Cuisines Virtuelles & Ghost Kitchens" },
+            { "value": "unsure", "label": "Pas encore sûr" }
+          ]
+        },
+        "experience": {
+          "label": "Expérience en restauration ou en affaires",
+          "options": [
+            { "value": "", "label": "Sélectionnez un niveau d'expérience" },
+            { "value": "none", "label": "Nouveau dans la restauration" },
+            { "value": "some", "label": "Quelque expérience en restaurant" },
+            { "value": "owner", "label": "Propriétaire de restaurant actuel" },
+            { "value": "multi", "label": "Opérateur multi-sites" }
+          ]
+        },
+        "message": { "label": "Message", "placeholder": "Parlez-nous de votre vision, de votre fourchette budgétaire ou de vos questions..." }
+      },
+      "submit": "Soumettre la candidature",
+      "disclaimer": "En soumettant, vous acceptez d'être contacté par l'équipe de partenariat METRO MOMO."
+    },
+    "success": {
+      "title": "Candidature reçue !",
+      "text": "Nous examinerons vos informations et vous contacterons sous 48 heures."
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Ce momo a roulé loin",
+    "text": "Nous n'avons pas trouvé la page que vous cherchiez. Mais il y a plein de MOMO à la maison.",
+    "cta": "Retour à l'accueil"
+  }
+}
