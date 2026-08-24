@@ -7,42 +7,68 @@
   },
   "nav": {
     "home": "Home",
+    "menu": "Menu",
+    "locations": "Locaties",
     "about": "Over ons",
     "models": "Modellen",
     "howItWorks": "Hoe het werkt",
     "tech": "Tech",
     "faq": "FAQ",
     "apply": "Aanmelden",
-    "cta": "Nu aanmelden",
+    "cta": "Bekijk menu",
     "menuOpen": "Menu openen",
     "menuClose": "Menu sluiten",
-    "logoAlt": "METRO MOMO home"
+    "logoAlt": "METRO MOMO home",
+    "company": {
+      "title": "Bedrijf",
+      "story": "Ons verhaal",
+      "howItWorks": "Hoe het werkt",
+      "tech": "Technologie",
+      "models": "Modellen",
+      "faq": "FAQ",
+      "franchise": "Franchise"
+    }
   },
   "footer": {
-    "tagline": "Authentieke MOMO, modern joint venture. Gebouwd voor eigenaren die willen groeien.",
-    "explore": "Verkennen",
+    "tagline": "Handgeplooidde dumplings, grote smaken en een merk dat aanvoelt als je favoriete buurtplek.",
+    "restaurant": "Restaurant",
+    "company": "Bedrijf",
     "contact": "Contact",
+    "address": "123 Flavor Street, Food District, Jouw Stad",
     "copyright": "Alle rechten voorbehouden",
     "privacy": "Privacybeleid",
     "terms": "Algemene voorwaarden",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "twitter": "Twitter"
+    "twitter": "Twitter",
+    "companyLinks": {
+      "story": "Ons verhaal",
+      "howItWorks": "Hoe het werkt",
+      "tech": "Technologie",
+      "models": "Modellen",
+      "faq": "FAQ",
+      "franchise": "Franchise",
+      "business": "Zakelijke informatie",
+      "contact": "Contact opnemen"
+    }
   },
   "home": {
     "hero": {
-      "badge": "Authentiek Himalayaans Straatvoedsel",
-      "title": "Breng de Smaak van Nepal",
-      "titleHighlight": "naar Jouw Stad",
-      "subtitle": "Lanceer een METRO MOMO joint venture — een snelgroeiend MOMO-concept gebouwd voor eenvoud, schaalbaarheid en sterk merkap...peel. Van straatkramen tot volwaardige restaurants.",
-      "ctaPrimary": "Nu aanmelden",
-      "ctaSecondary": "Bekijk modellen",
-      "stat1Label": "Eigenaar eerst",
-      "stat1Sublabel": "Ontwikkeld door restaurateureigenaren",
-      "stat2Label": "Multi-format",
-      "stat2Sublabel": "Kraam, kiosk of restaurant",
+      "badge": "Handgeplooid & gestoomd",
+      "title": "Dumplings die het",
+      "titleHighlight": "feest brengen",
+      "subtitle": "Metro Momo is een speelse, moderne momo-tent waar Himalayaanse smaken samenkomen met een opvallend design, goede vibes en serieus lekkere dumplings.",
+      "ctaPrimary": "Verken het menu",
+      "ctaSecondary": "Vind ons",
+      "stat1Label": "Vers gemaakt",
+      "stat1Sublabel": "Dagelijks op bestelling gestoomd",
+      "stat2Label": "Gave smaken",
+      "stat2Sublabel": "Huisgemaakte sauzen",
       "imageAlt": "Stomende METRO MOMO dumplings op een rood bord",
-      "imageBadge": "Geen chefkok nodig"
+      "smallAlt1": "Jhol MOMO in warme bouillon",
+      "smallAlt2": "Krokante gefrituurde chili MOMO",
+      "imageBadge": "VERS",
+      "stickerHot": "VERS"
     },
     "marquee": {
       "badge": "Eten dat zichzelf verkoopt",
@@ -58,86 +84,120 @@
         { "src": "/model-stall.png", "alt": "Straatvoedsel kraam" }
       ]
     },
-    "intro": {
-      "badge": "De Himalayaanse Soepdumpling",
-      "title": "Meer dan eten.",
-      "titleHighlight": "Een gemeenschapsritueel.",
-      "body1": "METRO MOMO is ontstaan om een van Nepal's meest geliefde comfortfoods naar een breder publiek te brengen. MOMO staat voor warmte, delen en het plezier van samen eten.",
-      "body2": "Terwijl wereldkeukens zijn gefloreerd, bleven authentieke Himalayaanse smaken ondervertegenwoordigd. We bouwen een franchise die culturele authenticiteit combineert met moderne eenvoud in de foodservice — zodat elke eigenaar iets echts kan serveren.",
+    "bestSellers": {
+      "badge": "Bestsellers",
+      "title": "De favorieten van iedereen",
+      "subtitle": "Begin met de dumplings die onze naam hebben opgebouwd. Handgeplooid, vol smaak en onmogelijk om er maar één te eten.",
+      "cta": "Bekijk het volledige menu"
+    },
+    "story": {
+      "badge": "Ons verhaal",
+      "title": "Niet zomaar een",
+      "titleHighlight": "dumpling",
+      "body1": "Metro Momo begon met een simpel idee: de wereld heeft meer voedsel nodig dat mensen doet glimlachen. We namen de Himalayaanse momo — warm, troostend, gemaakt om te delen — en gaven het een frisse, moderne draai.",
+      "body2": "Elke dumpling is met de hand geplooid, elke saus is huisgemaakt en elke locatie is ontworpen om aanvoelen als de coolste hangout van de buurt. We bouwen een merk dat zich net zo goed aanvoelt als het smaakt.",
       "imageAlt": "Mensen genieten samen van MOMO",
-      "cta": "Lees ons verhaal"
+      "imageAlt2": "Close-up van een kleurrijk MOMO bord",
+      "cta": "Lees ons verhaal",
+      "sticker": "GELOVEFD"
     },
-    "modelsPreview": {
-      "badge": "Joint Venture",
-      "title": "Kies je formaat",
-      "subtitle": "Van compacte kramen tot ghost kitchens — kies het model dat past bij jouw locatie en ambitie. Geen franchisekosten; we groeien via omzetdeling.",
-      "items": [
-        {
-          "src": "/model-kiosk.png",
-          "alt": "Straatkraam- en kioskmodel",
-          "name": "Straatkraam & Kiosk",
-          "description": "Markten, festivals, winkelcentra en drukke straten.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-restaurant.png",
-          "alt": "Volledig restaurantmodel",
-          "name": "Volledig Restaurant",
-          "description": "Volledig dine-in met uitgebreidere menukaart en langere openingstijden.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-stall.png",
-          "alt": "Ghost kitchen model",
-          "name": "Virtuele & Ghost Kitchens",
-          "description": "Alleen bezorgen en afhalen met minimale front-of-house kosten.",
-          "price": "€0"
-        }
-      ],
-      "cta": "Vergelijk alle modellen"
-    },
-    "techPreview": {
-      "badge": "Tech-aangedreven",
-      "title": "Eén platform voor elke locatie",
-      "subtitle": "Elke partner krijgt toegang tot het Fewa restaurant operating system — voorraad, bestellingen, reserveringen, personeel en compliance op één plek.",
-      "items": [
-        { "iconKey": "LayoutDashboard", "title": "Centrale Commandopost", "text": "HQ-dashboard, verkoopanalyses en franchise-standaarden voor alle locaties." },
-        { "iconKey": "PackageSearch", "title": "Voorraad & Kosten", "text": "Actuele voorraad, recept COGS en geautomatiseerde herbestelalerts." },
-        { "iconKey": "QrCode", "title": "QR Bestellen", "text": "Scan-om-te-bestellen aan tafel, rechtstreeks gesynchroniseerd met de keuken." },
-        { "iconKey": "Smartphone", "title": "Online Bestellen", "text": "Webbestellingen, afhalen, bezorgen en klant-CRM." },
-        { "iconKey": "Users", "title": "Werknemers", "text": "Rostering, toegangsbeheer, training en aanwezigheid." },
-        { "iconKey": "ClipboardCheck", "title": "HACCP & Hygiëne", "text": "Digitale checklists, temperatuurlogs en audit-ready documenten." }
-      ],
-      "cta": "Verken de volledige tech stack"
+    "visit": {
+      "badge": "Bezoek ons",
+      "title": "Kom voor de momos",
+      "titleHighlight": "blijf voor de vibe",
+      "text": "Onze eerste locatie is open voor dine-in, afhalen en gezellig hangen. Vind ons, neem vrienden mee en ontdek waarom Metro Momo snel de favoriete momo-tent wordt.",
+      "ctaPrimary": "Plan je bezoek",
+      "ctaSecondary": "Bekijk menu",
+      "imageAlt": "Kleurrijk interieur van Metro Momo restaurant",
+      "sticker": "NU OPEN"
     },
     "stats": {
       "badge": "In cijfers",
-      "title": "Gebouwd om te schalen",
+      "title": "Gebouwd met smaak",
       "items": [
         { "value": 7, "suffix": "+", "prefix": "", "label": "Momo variëteiten" },
-        { "value": 3, "suffix": "", "prefix": "", "label": "Joint-venture formats" },
-        { "value": 100, "suffix": "%", "prefix": "", "label": "Eigenaarsondersteuning" },
-        { "value": 1, "suffix": "", "prefix": "<", "label": "Droom tot lancering" }
+        { "value": 4, "suffix": "", "prefix": "", "label": "Huis sauzen" },
+        { "value": 100, "suffix": "%", "prefix": "", "label": "Handgemaakt" },
+        { "value": 5, "suffix": "", "prefix": "", "label": "Sterren vibe" }
       ]
     },
     "cta": {
-      "title": "Klaar om MOMO naar jouw stad te brengen?",
-      "text": "Sluit je aan bij het partnerschapsnetwerk voor eigenaren die iets authentieks en schaalbaars willen serveren.",
-      "cta": "Start je aanmelding"
+      "title": "Klaar voor een smaakexplosie?",
+      "text": "Verken het menu, vind de dichtstbijzijnde Metro Momo of breng het merk naar jouw stad.",
+      "cta": "Bestellen / Bezoeken",
+      "sticker1": "LEKKER",
+      "sticker2": "NIEUW"
+    }
+  },
+  "menu": {
+    "hero": {
+      "badge": "Het menu",
+      "title": "Dumplings, bowls",
+      "titleHighlight": "& good times",
+      "subtitle": "Een fictieve preview van de Metro Momo ervaring. Grote smaken, speelse namen en prijzen die bij de vibe passen.",
+      "ctaPrimary": "Vind een locatie",
+      "ctaSecondary": "Partner worden",
+      "sticker1": "PIKANT",
+      "sticker2": "VERS",
+      "sticker3": "LEKKER"
+    },
+    "cta": {
+      "title": "Honger in stijgende lijn?",
+      "text": "Het menu is pas het begin. Bezoek ons of breng Metro Momo naar jouw stad.",
+      "cta": "Bezoek / Partner"
+    }
+  },
+  "locations": {
+    "hero": {
+      "badge": "Vind ons",
+      "title": "Waar de momo's",
+      "titleHighlight": "rollen",
+      "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken, steden en landen.",
+      "ctaPrimary": "Plan je bezoek",
+      "ctaSecondary": "Partner worden",
+      "sticker1": "FLAGSHIP",
+      "sticker2": "MEER Binnenkort"
+    },
+    "feature": {
+      "badge": "Flagship",
+      "name": "Metro Momo Central",
+      "description": "Onze eerste thuis. Kleurrijk, bruisend en gebouwd voor momo-liefhebbers. Kom voor dine-in, afhalen of gewoon om de energie op te snuiven.",
+      "imageAlt": "Metro Momo flagship restaurant",
+      "imageSticker": "EERSTE LOCATIE",
+      "addressLabel": "Adres",
+      "address": "123 Flavor Street, Food District, Jouw Stad",
+      "hoursLabel": "Openingstijden",
+      "hours": "Ma–Zo: 11:00 – 22:00",
+      "phoneLabel": "Telefoon",
+      "phone": "+46 12 345 67 89",
+      "emailLabel": "E-mail",
+      "email": "hello@metromomo.com"
+    },
+    "services": {
+      "dineIn": { "title": "Dine-in", "text": "Kleurrijke zitplaatsen, snelle service en momos vers uit de stoompan." },
+      "delivery": { "title": "Bezorgen", "text": "Bestel via je favoriete apps en laat Metro Momo bij je thuisbezorgen." },
+      "events": { "title": "Evenementen", "text": "We hosten groepsdiners, bedrijfslunches en momo-workshops." }
+    },
+    "coming": {
+      "sticker1": "BINNENKORT",
+      "sticker2": "DOE MEE",
+      "title": "Binnenkort meer locaties",
+      "text": "Metro Momo is gebouwd om te groeien. Wil je er een openen in jouw stad? Laten we praten.",
+      "cta": "Partner worden"
     }
   },
   "about": {
     "hero": {
       "badge": "Over ons",
-      "title": "Een beweging voor",
+      "title": "Een movement voor",
       "titleHighlight": "MOMO en eigenaren",
-      "subtitle": "METRO MOMO is ontstaan uit een simpele overtuiging: geweldige dumplings verdienen een geweldig systeem."
+      "subtitle": "METRO MOMO was born from a simple belief: great dumplings deserve a great system."
     },
     "story": {
       "badge": "Ons Verhaal",
       "title": "Waarom we METRO MOMO startten",
       "paragraphs": [
-        "We groeiden op met MOMO die mensen bij elkaar bracht — rond straatkarren, familiekeukens en festivalkramen. Het zijn niet zomaar snacks; het is een reden om te pauzeren, te delen en te verbinden.",
+        "We groeiden op met MOMO die mensen bij elkaar bracht — rond straatkarren, familiekeukens en festivalkramen. Ze zijn niet zomaar een snack; ze zijn een reden om te pauzeren, te delen en te verbinden.",
         "Toen we naar het foodlandschap keken, zagen we twee extremen: generieke fast-food ketens en mooie maar niet-schaalbare independents. METRO MOMO zit in het midden — een merk met echte culturele wortels en de operationele ruggengraat om over steden heen te groeien zonder zijn hart te verliezen.",
         "Vandaag bouwen we een paraplu die onafhankelijke eigenaren samenbrengt onder één bewezen systeem. Elke partner behoudt zijn lokale identiteit en krijgt tegelijk het merk, de supply chain, de training en de technologie die normaal voor veel grotere ketens zijn weggelegd."
       ]
@@ -161,7 +221,7 @@
       "badge": "Joint Venture",
       "title": "Kies het formaat dat",
       "titleHighlight": "bij jouw ambitie past",
-      "subtitle": "Van straatkramen tot ghost kitchens — elk joint-venture model start met €0 franchisekosten. We groeien samen via omzetdeling."
+      "subtitle": "Van compacte kramen tot ghost kitchens — kies het model dat past bij jouw locatie en ambitie. Geen franchisekosten; we groeien door omzetdeling."
     },
     "items": [
       {
@@ -169,27 +229,27 @@
         "name": "Straatkraam & Kiosk",
         "price": "€0",
         "src": "/model-kiosk.png",
-        "description": "Een compact, flexibel formaat voor markten, festivals, winkelcentra en drukke straten. Lage overhead en snel te lanceren.",
-        "features": ["Compacte opzet", "Hoge zichtbaarheid", "Klaar voor festivals & evenementen", "Geschikt voor winkelcentra", "Digitaal menu board"],
-        "bestFor": "Beginnende ondernemers"
+        "description": "Markten, festivals, malls en high-footfall streets. Low overhead and fast to launch.",
+        "features": ["Compacte opzet", "Hoge zichtbaarheid", "Festival & event ready", "Mall-ready design", "Digital menu board"],
+        "bestFor": "First-time operators"
       },
       {
         "iconKey": "Building2",
         "name": "Volledig Restaurant",
         "price": "€0",
         "src": "/model-restaurant.png",
-        "description": "Een compleet dine-in concept met uitgebreidere menu-opties, langere openingstijden en langetermijngroeipotentieel.",
-        "features": ["Volledige eetzaal", "Uitgebreid menu", "Hoger omzetpotentieel", "Evenementen hosten", "Territorium exclusiviteit"],
-        "bestFor": "Ervaren ondernemers"
+        "description": "Full dine-in with broader menu and longer hours.",
+        "features": ["Full dining room", "Expanded menu", "Higher revenue potential", "Event hosting", "Territory exclusivity"],
+        "bestFor": "Experienced operators"
       },
       {
         "iconKey": "Cloud",
         "name": "Virtuele & Ghost Kitchens",
         "price": "€0",
         "src": "/model-stall.png",
-        "description": "Keuken alleen voor bezorgen en afhalen met minimale front-of-house kosten. Gebouwd voor online bestellen, dark kitchens en snelle marktuitbreiding.",
-        "features": ["Bezorg-gedreven model", "Lage huurkosten", "Klaar voor online bestellen", "Geschikt voor gedeelde prep-ruimtes", "Snelle stadsuitbreiding"],
-        "bestFor": "Digital-first ondernemers"
+        "description": "Delivery and pickup-only with minimal front-of-house costs.",
+        "features": ["Delivery-first model", "Low rent overhead", "Online-ordering ready", "Shared prep space friendly", "Fast city expansion"],
+        "bestFor": "Digital-first operators"
       }
     ],
     "bestForPrefix": "Geschikt voor:",
@@ -198,7 +258,7 @@
       "title": "Modelvergelijking",
       "subtitle": "Snel overzicht van wat elk joint-venture format omvat.",
       "techBanner": "Tech inbegrepen in elk format:",
-      "techBannerText": "centraal dashboard, voorraad, bestellingen, reserveringen, personeelstools en HACCP-checklists.",
+      "techBannerText": "centraal dashboard, inventory, ordering, bookings, staff tools, en HACCP checklists.",
       "headers": {
         "feature": "Kenmerk",
         "compact": "Straatkraam & Kiosk",
@@ -206,15 +266,15 @@
         "ghost": "Virtuele & Ghost Kitchens"
       },
       "rows": [
-        { "name": "Franchisekosten", "compact": "€0", "restaurant": "€0", "ghost": "€0" },
-        { "name": "Vloeroppervlak", "compact": "2–10 m²", "restaurant": "50+ m²", "ghost": "10–30 m² keuken" },
-        { "name": "Personeel nodig", "compact": "1–3", "restaurant": "5+", "ghost": "2–4" },
-        { "name": "Menu bereik", "compact": "Kernmenu", "restaurant": "Volledig + dranken", "ghost": "Geoptimaliseerd voor bezorgen" },
-        { "name": "Klantkanalen", "compact": "Walk-in & evenementen", "restaurant": "Dine-in", "ghost": "Online & bezorgen" }
+        { "name": "Franchise fee", "compact": "€0", "restaurant": "€0", "ghost": "€0" },
+        { "name": "Footprint", "compact": "2–10 m²", "restaurant": "50+ m²", "ghost": "10–30 m² keuken" },
+        { "name": "Staff needed", "compact": "1–3", "restaurant": "5+", "ghost": "2–4" },
+        { "name": "Menu range", "compact": "Core menu", "restaurant": "Full + drinks", "ghost": "Delivery-optimized" },
+        { "name": "Customer channels", "compact": "Walk-in & events", "restaurant": "Dine-in", "ghost": "Online & delivery" }
       ]
     },
     "cta": {
-      "title": "Niet zeker welk model bij jou past?",
+      "title": "Niet zeker welk model het beste bij jou past?",
       "text": "Ons partnership team helpt je kiezen op basis van jouw territorium en doelen.",
       "cta": "Plan een kennismakingsgesprek"
     }
@@ -223,30 +283,30 @@
     "hero": {
       "badge": "Hoe het werkt",
       "title": "Van aanmelding tot",
-      "titleHighlight": "openingsdag",
+      "titleHighlight": "opening day",
       "subtitle": "Een duidelijk, zes-stappenpad voor eigenaren die snel willen bewegen en iets blijvends willen bouwen."
     },
     "steps": [
-      { "iconKey": "ClipboardList", "step": "01", "title": "Interesse indienen", "text": "Vertel ons je gewenste locatie, format en doelen. We beoordelen elke aanmelding persoonlijk." },
-      { "iconKey": "MapPinned", "step": "02", "title": "Kennismakingsgesprek", "text": "Ontmoet ons team om het concept, de operatie en de wederzijdse fit te begrijpen." },
-      { "iconKey": "FileCheck", "step": "03", "title": "Aanmelding & Beoordeling", "text": "Vul de aanmelding, locatiebeoordeling en financieel model samen in." },
-      { "iconKey": "Handshake", "step": "04", "title": "Overeenkomst & Territorium", "text": "Verzeker je van je beschermd gebied, teken de overeenkomst en begin met de opzet." },
-      { "iconKey": "GraduationCap", "step": "05", "title": "Training", "text": "Intensieve training in operatie, product en klantbeleving voor jou en je team — plus setup van het Fewa tech platform." },
-      { "iconKey": "Rocket", "step": "06", "title": "Openingsdag", "text": "Open met openingsondersteuning, marketingpush en een veldteam op standby." }
+      { "iconKey": "ClipboardList", "step": "01", "title": "Interesse indienen", "text": "Vertel ons je gewenste locatie, format en goals. We reviewen elke aanmelding persoonlijk." },
+      { "iconKey": "MapPinned", "step": "02", "title": "Discovery Meeting", "text": "Meet ons team om het concept, de operatie en de wederzijdse fit te begrijpen." },
+      { "iconKey": "FileCheck", "step": "03", "title": "Application & Review", "text": "Vul de aanmelding, site review en financieel model samen in." },
+      { "iconKey": "Handshake", "step": "04", "title": "Agreement & Territory", "text": "Beveilig je beschermd gebied, teken de overeenkomst en begin met de opzet." },
+      { "iconKey": "GraduationCap", "step": "05", "title": "Training", "text": "Intensieve training in operatie, product en customer experience voor jou en je team — plus setup van het Fewa tech platform." },
+      { "iconKey": "Rocket", "step": "06", "title": "Launch Day", "text": "Open met grand-opening support, marketing push en een field team op standby." }
     ],
     "support": {
-      "badge": "Doorlopende Ondersteuning",
-      "title": "We blijven bij je na de lancering",
-      "subtitle": "Lancering is pas het begin. Ons partnership team biedt continue ondersteuning — en het tech platform blijft evolueren met je bedrijf.",
-      "imageAlt": "METRO MOMO restaurant ondersteuning",
+      "badge": "Ongoing Support",
+      "title": "We stay with you after launch",
+      "subtitle": "Launch is pas het begin. Ons partnership team biedt continue ondersteuning — en het tech platform blijft evolueren met je business.",
+      "imageAlt": "METRO MOMO restaurant support",
       "list": [
-        "Maandelijkse performance reviews",
-        "Nieuwe producten en menu-updates",
-        "Marketingcampagnes en seizoenspromoties",
-        "Supply chain en inkoopondersteuning",
-        "Operations coaching en mystery-shop programma's",
-        "Toegang tot de METRO MOMO eigenarencommunity",
-        "Platform updates: voorraad, bestellingen, reserveringen en compliance"
+        "Monthly performance reviews",
+        "New product and menu updates",
+        "Marketing campaigns and seasonal promotions",
+        "Supply chain and procurement support",
+        "Operations coaching and mystery-shop programs",
+        "Access to the METRO MOMO owner community",
+        "Platform updates: inventory, ordering, bookings, and compliance"
       ]
     },
     "cta": {
@@ -259,178 +319,178 @@
     "hero": {
       "badge": "FAQ",
       "title": "Vragen?",
-      "titleHighlight": "Wij hebben antwoorden.",
+      "titleHighlight": "We have answers.",
       "subtitle": "Alles wat je moet weten over het worden van een METRO MOMO partner."
     },
     "sidebar": {
-      "title": "Nog vragen?",
-      "text": "Ons partnership team bespreekt graag jouw specifieke situatie.",
-      "cta": "Neem contact op"
+      "title": "Still have questions?",
+      "text": "Our partnership team is happy to talk through your specific situation.",
+      "cta": "Contact Us"
     },
     "items": [
       {
         "question": "Heb ik restaurant ervaring nodig?",
-        "answer": "Nee. Ons model is ontworpen om toegankelijk te zijn voor zowel beginnende als ervaren ondernemers. We bieden training, playbooks en doorlopende ondersteuning zodat je het bedrijf vanaf dag één met vertrouwen kunt runnen."
+        "answer": "No. Our model is designed to be accessible for first-time operators as well as experienced business owners. We provide training, playbooks, and ongoing support so you can run the business confidently from day one."
       },
       {
-        "question": "Heb ik een chefkok nodig?",
-        "answer": "Nee. METRO MOMO gebruikt voorgeportioneerde recepten en een eenvoudig bereidingsproces dat de complexiteit in de keuken vermindert. Je team kan worden opgeleid om consistente, hoogwaardige MOMO te produceren zonder traditionele chefkok-ervaring."
+        "question": "Do I need a chef?",
+        "answer": "No. METRO MOMO uses pre-portioned recipes and a simple preparation process that reduces kitchen complexity. Your team can be trained to produce consistent, high-quality MOMO without traditional chef experience."
       },
       {
-        "question": "Welke joint-venture formats zijn beschikbaar?",
-        "answer": "We bieden drie formats: Straatkraam & Kiosk, Volledig Restaurant, en Virtuele & Ghost Kitchens. Elk heeft een ander footprint en operationeel profiel, met €0 franchisekosten en een omzetdelingsmodel. Bezoek onze Modellen pagina om ze te vergelijken."
+        "question": "What joint-venture formats are available?",
+        "answer": "We offer three formats: Street Stall & Kiosk, Full Restaurant, and Virtual & Ghost Kitchens. Each has a different footprint and operational profile, with a €0 franchise fee and a revenue-sharing model. Visit our Models page to compare them."
       },
       {
-        "question": "Welke ondersteuning krijg ik?",
-        "answer": "Je ontvangt onboarding, begeleiding bij locatiekeuze, training, toegang tot de supply chain, marketingondersteuning, operations coaching en lanceringshulp. Ondersteuning gaat door na de opening met reviews, menu-updates en community toegang."
+        "question": "What support will I receive?",
+        "answer": "You receive onboarding, site selection guidance, training, supply chain access, marketing support, operational coaching, and launch assistance. Support continues after opening with reviews, menu updates, and community access."
       },
       {
-        "question": "Hoe kies ik het juiste territorium?",
-        "answer": "Ons team evalueert samen met jou het voetverkeer, lokale concurrentie, demografische fit en je budget. Vervolgens beschermen we het afgesproken territorium zodat je je klantenbestand kunt opbouwen zonder interne concurrentie."
+        "question": "How do I choose the right territory?",
+        "answer": "Our team evaluates footfall, local competition, demographic fit, and your budget with you. We then protect your agreed territory so you can build your customer base without internal competition."
       },
       {
-        "question": "Hoe ziet het aanmeldingsproces eruit?",
-        "answer": "Dien je interesse in, woon een kennismakingsgesprek bij, voltooi een aanmelding en locatiebeoordeling, teken de overeenkomst en verzeker je territorium, voltooi de training en lanceer. Het volledige proces wordt uiteengezet op onze Hoe het Werkt pagina."
+        "question": "What is the application process?",
+        "answer": "Submit your interest, attend a discovery meeting, complete an application and site review, sign the agreement and secure your territory, complete training, and launch. The full process is outlined on our How It Works page."
       },
       {
-        "question": "Welke technologie is inbegrepen?",
-        "answer": "Elke partner krijgt toegang tot het Fewa restaurant operating system, inclusief een centraal HQ dashboard, voorraad- en kostenbeheer, QR en online bestellen, tafelreserveringen, keukendisplay, personeelsplanning en HACCP / hygiëne checklists."
+        "question": "What technology is included?",
+        "answer": "Every partner gets access to the Fewa restaurant operating system, including a central HQ dashboard, inventory and cost control, QR and online ordering, table booking, kitchen display, employee scheduling, and HACCP / hygiene checklists."
       },
       {
-        "question": "Kan ik later de Fewa operations app gebruiken?",
-        "answer": "Ja. Naarmate het netwerk groeit, kunnen partners verbinding maken met hetzelfde operations platform dat moderne restaurantteams ondersteunt — voor bestellen, keuken, voorraad en back-office tools."
+        "question": "Can I use the Fewa operations app later?",
+        "answer": "Yes. As the network grows, partners will be able to connect to the same operations platform that powers modern restaurant teams — covering ordering, kitchen, inventory, and back-office tools."
       },
       {
-        "question": "Hoe lang duurt het om te openen?",
-        "answer": "De tijdlijn hangt af van het format. Een straatkraam/kiosk of virtuele/ghost kitchen kan in 6–10 weken klaar zijn, terwijl een volledig restaurant meestal 3–6 maanden duurt inclusief bouwwerk, vergunningen en training."
+        "question": "How long does it take to open?",
+        "answer": "Timeline depends on the format. A street stall/kiosk or virtual/ghost kitchen can be ready in 6–10 weeks, while a full restaurant typically takes 3–6 months including site works, permits, and training."
       }
     ]
   },
   "tech": {
     "hero": {
       "badge": "Tech-aangedreven Groei",
-      "title": "Gebouwd op een restaurant",
+      "title": "Built on a restaurant",
       "titleHighlight": "operating system",
-      "subtitle": "Elke METRO MOMO partner krijgt toegang tot hetzelfde operations platform dat moderne restaurantteams draait — voor bestellen, keuken, voorraad en back-office op één plek."
+      "subtitle": "Every METRO MOMO partner gets access to the same operations platform that runs modern restaurant teams — covering ordering, kitchen, inventory, and back-office in one place."
     },
     "categories": [
       {
         "iconKey": "LayoutDashboard",
-        "title": "Centrale Commandopost",
-        "features": ["Multi-unit HQ dashboard", "Real-time verkoopanalyses", "Franchise standaarden tracker", "Performance scorecards"]
+        "title": "Central Command",
+        "features": ["Multi-unit HQ dashboard", "Real-time sales analytics", "Franchise standards tracker", "Performance scorecards"]
       },
       {
         "iconKey": "Users",
-        "title": "Werknemersmanagement",
-        "features": ["Personeelsplanning & ploegen", "Rolgebaseerd toegangsbeheer", "Training & leerbibliotheek", "Clock-in / aanwezigheidsregistratie"]
+        "title": "Workforce Management",
+        "features": ["Staff scheduling & shifts", "Role-based access control", "Training & learning library", "Clock-in / attendance tracking"]
       },
       {
         "iconKey": "PackageSearch",
-        "title": "Voorraad & Inkoop",
-        "features": ["Actuele voorraadniveaus over locaties", "Geautomatiseerde herbestelalerts", "Leverancier- & inkooptracking", "Waste en shrinkage logs"]
+        "title": "Inventory & Procurement",
+        "features": ["Live stock levels across units", "Automated reorder alerts", "Supplier & purchase tracking", "Waste and shrinkage logs"]
       },
       {
         "iconKey": "TrendingUp",
-        "title": "Kostenanalyse",
-        "features": ["Recept-level COGS", "Dynamische menu winstgevendheid", "Arbeid vs. omzet ratio's", "Unit economics rapportage"]
+        "title": "Cost Analysis",
+        "features": ["Recipe-level COGS", "Dynamic menu profitability", "Labor vs. revenue ratios", "Unit economics reporting"]
       },
       {
         "iconKey": "CalendarCheck",
-        "title": "Tafelreserveringen",
-        "features": ["Online reserveringswidget", "Tafel- en zaalbeheer", "Gastennotities en geschiedenis", "Wachtlijst & annuleringsflow"]
+        "title": "Table Booking",
+        "features": ["Online reservation widget", "Table and floor management", "Guest notes and history", "Waitlist & cancellation flow"]
       },
       {
         "iconKey": "QrCode",
-        "title": "QR Code Bestellen",
-        "features": ["Scan-om-te-bestellen aan tafel", "Menu gesynchroniseerd met keuken", "Split-bill ready", "Geen extra hardware nodig"]
+        "title": "QR Code Ordering",
+        "features": ["Scan-to-order at the table", "Menu synced to kitchen", "Split-bill ready", "No extra hardware needed"]
       },
       {
         "iconKey": "Smartphone",
-        "title": "Online Bestellen",
-        "features": ["Web bestelpagina", "Afhalen- en bezorgflow", "Klant CRM & marketing", "Payment-ready geïntegreerd"]
+        "title": "Online Ordering",
+        "features": ["Web ordering page", "Pickup and delivery flow", "Customer CRM & marketing", "Integrated payment-ready"]
       },
       {
         "iconKey": "ClipboardCheck",
-        "title": "HACCP & Hygiëne",
-        "features": ["Digitale checklist routines", "Temperatuur log tracking", "Schoonmaakschema alerts", "Audit-ready documentatie"]
+        "title": "HACCP & Hygiene",
+        "features": ["Digital checklist routines", "Temperature log tracking", "Cleaning schedule alerts", "Audit-ready documentation"]
       },
       {
         "iconKey": "Truck",
         "title": "Supply Chain",
-        "features": ["Centraal leverancierscatalogus", "Voorraad transfers tussen locaties", "Leverbon capture", "Franchise inkoopkracht"]
+        "features": ["Central supplier catalog", "Stock transfers between units", "Delivery receipt capture", "Franchise buying power"]
       }
     ],
     "cta": {
-      "title": "Tech die schaalt met elk format",
-      "text": "Of je nu start met een straatkraam of een volledig restaurant, het platform groeit met je mee. Geen aparte softwarefacturen, geen losse spreadsheets — één systeem vanaf dag één.",
-      "cta": "Bekijk de modellen"
+      "title": "Tech that scales with every format",
+      "text": "Whether you start with a street stall or a full restaurant, the platform grows with you. No separate software bills, no disconnected spreadsheets — one system from day one.",
+      "cta": "See the Models"
     }
   },
   "contact": {
     "hero": {
-      "badge": "Nu aanmelden",
-      "title": "Start jouw",
-      "titleHighlight": "partnerschapsreis",
-      "subtitle": "Vertel ons over jezelf en je doelmarkt. Ons team neemt binnen 48 uur contact op."
+      "badge": "Partner With Us",
+      "title": "Bring Metro Momo",
+      "titleHighlight": "to your city",
+      "subtitle": "Tell us about yourself and your target market. Our partnership team will reach out within 48 hours."
     },
     "benefits": {
-      "badge": "Waarom METRO MOMO?",
-      "title": "Wat je krijgt als partner",
-      "subtitle": "Geen voorafgaande restaurantervaring vereist voor alle instapmodellen. We zoeken eigenaren die om goed eten en gemeenschap geven.",
+      "badge": "Why METRO MOMO?",
+      "title": "What you get as a partner",
+      "subtitle": "No prior restaurant experience required for all entry models. We are looking for owners who care about great food and community.",
       "items": [
-        "Beschermd territorium en exclusieve rechten",
-        "Flexibele formats: kraam, kiosk, container, restaurant",
-        "Training, supply chain en marketingondersteuning",
-        "Volledige toegang tot het Fewa tech platform (voorraad, bestellen, reserveringen, personeel, HACCP)"
+        "Protected territory and exclusive rights",
+        "Flexible formats: stall, kiosk, container, restaurant",
+        "Training, supply chain, and marketing support",
+        "Full Fewa tech platform access (inventory, ordering, bookings, staff, HACCP)"
       ]
     },
     "details": {
-      "headOffice": { "label": "Hoofdkantoor", "value": "Metro Momo HQ, Jouw Stad" },
-      "phone": { "label": "Telefoon", "value": "+46 12 345 67 89" },
-      "email": { "label": "E-mail", "value": "hello@metromomo.com" },
-      "response": { "label": "Reactietijd", "value": "Binnen 48 uur" }
+      "headOffice": { "label": "Head Office", "value": "Metro Momo HQ, Your City" },
+      "phone": { "label": "Phone", "value": "+46 12 345 67 89" },
+      "email": { "label": "Email", "value": "hello@metromomo.com" },
+      "response": { "label": "Response time", "value": "Within 48 hours" }
     },
     "form": {
-      "title": "Dien je interesse in",
+      "title": "Submit your interest",
       "fields": {
-        "name": { "label": "Volledige naam", "placeholder": "Je naam" },
-        "email": { "label": "E-mail", "placeholder": "jij@voorbeeld.com" },
-        "phone": { "label": "Telefoon", "placeholder": "+46 70 123 4567" },
-        "city": { "label": "Stad / Territorium", "placeholder": "Waar je wilt openen" },
+        "name": { "label": "Full name", "placeholder": "Your name" },
+        "email": { "label": "Email", "placeholder": "you@example.com" },
+        "phone": { "label": "Phone", "placeholder": "+46 70 123 4567" },
+        "city": { "label": "City / Territory", "placeholder": "Where you want to open" },
         "model": {
-          "label": "Gewenst model",
+          "label": "Preferred model",
           "options": [
-            { "value": "", "label": "Selecteer een format" },
-            { "value": "compact", "label": "Straatkraam & Kiosk" },
-            { "value": "restaurant", "label": "Volledig Restaurant" },
-            { "value": "ghost", "label": "Virtuele & Ghost Kitchens" },
-            { "value": "unsure", "label": "Nog niet zeker" }
+            { "value": "", "label": "Select a format" },
+            { "value": "compact", "label": "Street Stall & Kiosk" },
+            { "value": "restaurant", "label": "Full Restaurant" },
+            { "value": "ghost", "label": "Virtual & Ghost Kitchens" },
+            { "value": "unsure", "label": "Not sure yet" }
           ]
         },
         "experience": {
-          "label": "Restaurant- of zakelijke ervaring",
+          "label": "Restaurant or business experience",
           "options": [
-            { "value": "", "label": "Selecteer ervaringsniveau" },
-            { "value": "none", "label": "Nieuw in hospitality" },
-            { "value": "some", "label": "Enige restaurantervaring" },
-            { "value": "owner", "label": "Huidig restaurateureigenaar" },
+            { "value": "", "label": "Select experience level" },
+            { "value": "none", "label": "New to hospitality" },
+            { "value": "some", "label": "Some restaurant experience" },
+            { "value": "owner", "label": "Current restaurant owner" },
             { "value": "multi", "label": "Multi-unit operator" }
           ]
         },
-        "message": { "label": "Bericht", "placeholder": "Vertel ons over je visie, budgetrange of vragen..." }
+        "message": { "label": "Message", "placeholder": "Tell us about your vision, budget range, or questions..." }
       },
-      "submit": "Aanmelding indienen",
-      "disclaimer": "Door te versturen stem je ermee in dat het METRO MOMO partnership team contact met je opneemt."
+      "submit": "Submit Application",
+      "disclaimer": "By submitting, you agree to be contacted by the METRO MOMO partnership team."
     },
     "success": {
-      "title": "Aanmelding ontvangen!",
-      "text": "We beoordelen je gegevens en nemen binnen 48 uur contact met je op."
+      "title": "Application received!",
+      "text": "We will review your details and contact you within 48 hours."
     }
   },
   "notFound": {
     "title": "404",
     "subtitle": "Deze momo is weggerold",
     "text": "We konden de pagina die je zocht niet vinden. Maar er is genoeg MOMO thuis.",
-    "cta": "Terug naar Home"
+    "cta": "Back to Home"
   }
 }
