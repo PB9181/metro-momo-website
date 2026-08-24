@@ -55,24 +55,25 @@
   "home": {
     "hero": {
       "badge": "Hand-pleated & steamed",
-      "title": "Dumplings that bring",
-      "titleHighlight": "the party",
-      "subtitle": "Metro Momo is a playful, modern momo joint where Himalayan flavors meet bold design, good vibes, and seriously tasty dumplings.",
+      "title": "Dumplings that",
+      "titleHighlight": "break the internet",
+      "subtitle": "Metro Momo is a playful, modern momo joint where Himalayan flavors meet bold design, good vibes, and seriously tasty dumplings. Made for sharing, snapping, and coming back for more.",
       "ctaPrimary": "Explore the Menu",
       "ctaSecondary": "Find Us",
       "stat1Label": "Made fresh",
       "stat1Sublabel": "Steamed to order daily",
       "stat2Label": "Bold flavors",
       "stat2Sublabel": "Sauces made in-house",
-      "imageAlt": "Steaming METRO MOMO dumplings on a red plate",
-      "smallAlt1": "Jhol MOMO swimming in warm broth",
-      "smallAlt2": "Crispy fried chili MOMO",
+      "imageAlt": "Loaded MOMO spread with dumplings, bowls, and loaded fries",
+      "smallAlt1": "Loaded Mexican style fries with salsa, guacamole, and jalapeños",
+      "smallAlt2": "Pulled loaded fries drizzled with chipotle sauce",
+      "smallAlt3": "Steaming MOMO platter ready to share",
       "imageBadge": "FRESH",
-      "stickerHot": "FRESH"
+      "stickerHot": "VIRAL"
     },
     "marquee": {
       "badge": "Food that sells itself",
-      "title": "Real MOMO, real flavor",
+      "title": "MOMO content you can taste",
       "images": [
         { "src": "/hero-momos.png", "alt": "Steaming MOMO" },
         { "src": "/jhol-momo.png", "alt": "Jhol MOMO in broth" },
@@ -89,6 +90,44 @@
       "title": "The ones everyone orders",
       "subtitle": "Start with the dumplings that built our name. Hand-pleated, packed with flavor, and impossible to eat just one.",
       "cta": "See full menu"
+    },
+    "dietary": {
+      "badge": "For everyone",
+      "title": "Eat your way",
+      "subtitle": "Vegan, gluten-free, dairy-free, nut-free — we got you. No compromise on flavor.",
+      "veganLabel": "Vegan",
+      "veganText": "Plant-based momos and bowls that hit hard.",
+      "glutenFreeLabel": "Gluten-Free",
+      "glutenFreeText": "Rice-based and carefully prepped options available.",
+      "dairyFreeLabel": "Dairy-Free",
+      "dairyFreeText": "Creamy sauces without the lactose.",
+      "nutFreeLabel": "Nut-Free",
+      "nutFreeText": "Worry-free snacking for nut-sensitive crews."
+    },
+    "drop": {
+      "badge": "This week's drop",
+      "sticker1": "NEW",
+      "sticker2": "HOT",
+      "title": "Spicy Chili Crunch",
+      "titleHighlight": "MOMO",
+      "text": "Our latest viral creation: crispy-edged dumplings tossed in house chili crunch oil, scallions, and lime. Limited run, maximum flavor.",
+      "cta": "Grab it on the menu"
+    },
+    "gallery": {
+      "badge": "On the gram",
+      "title": "MOMO moments",
+      "subtitle": "Real food, real people, real vibes. Tag @metromomo and show us your spread.",
+      "cta": "Come make memories",
+      "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Loaded MOMO spread flat lay" },
+        { "src": "/Mexican.jpg", "alt": "Loaded Mexican style fries" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled loaded fries" },
+        { "src": "/hero-momos.png", "alt": "Steaming MOMO platter" },
+        { "src": "/jhol-momo.png", "alt": "Jhol MOMO in broth" },
+        { "src": "/menu-fried-momo.png", "alt": "Crispy fried chili MOMO" },
+        { "src": "/13363.png", "alt": "MOMO close-up" },
+        { "src": "/IMG_0138.png", "alt": "MOMO on a plate" }
+      ]
     },
     "story": {
       "badge": "Our story",
@@ -123,10 +162,11 @@
     },
     "cta": {
       "title": "Ready to get saucy?",
-      "text": "Explore the menu, find your nearest Metro Momo, or bring the brand to your city.",
+      "text": "Explore the menu, find your nearest Metro Momo, or bring the brand to your city. Your feed will thank you.",
       "cta": "Order / Visit",
       "sticker1": "YUM",
-      "sticker2": "NEW"
+      "sticker2": "NEW",
+      "sticker3": "ICONIC"
     }
   },
   "menu": {

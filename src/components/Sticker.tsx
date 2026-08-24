@@ -1,6 +1,6 @@
 import { Sparkles, Flame, Star, Heart, Zap } from 'lucide-react'
 
-type StickerVariant = 'red' | 'gold' | 'fresh' | 'play' | 'outline'
+type StickerVariant = 'red' | 'gold' | 'fresh' | 'play' | 'outline' | 'neon' | 'electric' | 'hot'
 type StickerIcon = 'sparkles' | 'flame' | 'star' | 'heart' | 'zap'
 
 type StickerProps = {

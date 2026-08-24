@@ -55,33 +55,34 @@
   "home": {
     "hero": {
       "badge": "Handgeplooid & gestoomd",
-      "title": "Dumplings die het",
-      "titleHighlight": "feest brengen",
-      "subtitle": "Metro Momo is een speelse, moderne momo-tent waar Himalayaanse smaken samenkomen met een opvallend design, goede vibes en serieus lekkere dumplings.",
+      "title": "Dumplings die",
+      "titleHighlight": "het internet breken",
+      "subtitle": "Metro Momo is een speelse, moderne momo-tent waar Himalayaanse smaken samenkomen met een opvallend design, goede vibes en serieus lekkere dumplings. Gemaakt om te delen, te fotograferen en steeds opnieuw te bestellen.",
       "ctaPrimary": "Verken het menu",
       "ctaSecondary": "Vind ons",
       "stat1Label": "Vers gemaakt",
       "stat1Sublabel": "Dagelijks op bestelling gestoomd",
       "stat2Label": "Gave smaken",
       "stat2Sublabel": "Huisgemaakte sauzen",
-      "imageAlt": "Stomende METRO MOMO dumplings op een rood bord",
-      "smallAlt1": "Jhol MOMO in warme bouillon",
-      "smallAlt2": "Krokante gefrituurde chili MOMO",
+      "imageAlt": "Geladen MOMO spread met dumplings, bowls en loaded fries",
+      "smallAlt1": "Geladen Mexicaanse style fries met salsa, guacamole en jalapeños",
+      "smallAlt2": "Pulled loaded fries met chipotle saus",
+      "smallAlt3": "Stomende MOMO plateau om te delen",
       "imageBadge": "VERS",
-      "stickerHot": "VERS"
+      "stickerHot": "VIRAAL"
     },
     "marquee": {
       "badge": "Eten dat zichzelf verkoopt",
-      "title": "Echte MOMO, echte smaak",
+      "title": "MOMO content die je proeft",
       "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Geladen MOMO spread flat lay" },
+        { "src": "/Mexican.jpg", "alt": "Geladen Mexicaanse style fries" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled loaded fries" },
         { "src": "/hero-momos.png", "alt": "Stomende MOMO" },
         { "src": "/jhol-momo.png", "alt": "Jhol MOMO in bouillon" },
         { "src": "/menu-fried-momo.png", "alt": "Gefrituurde chili MOMO" },
         { "src": "/13363.png", "alt": "MOMO schotel" },
-        { "src": "/IMG_0138.png", "alt": "MOMO close-up" },
-        { "src": "/about-community.png", "alt": "Mensen genieten van MOMO" },
-        { "src": "/model-restaurant.png", "alt": "METRO MOMO restaurant" },
-        { "src": "/model-stall.png", "alt": "Straatvoedsel kraam" }
+        { "src": "/IMG_0138.png", "alt": "MOMO close-up" }
       ]
     },
     "bestSellers": {
@@ -89,6 +90,44 @@
       "title": "De favorieten van iedereen",
       "subtitle": "Begin met de dumplings die onze naam hebben opgebouwd. Handgeplooid, vol smaak en onmogelijk om er maar één te eten.",
       "cta": "Bekijk het volledige menu"
+    },
+    "dietary": {
+      "badge": "Voor iedereen",
+      "title": "Eet op jouw manier",
+      "subtitle": "Veganistisch, glutenvrij, lactosevrij, notenvrij — wij regelen het. Zonder in te leveren op smaak.",
+      "veganLabel": "Vegan",
+      "veganText": "Plant-based momos en bowls die vol smaak zitten.",
+      "glutenFreeLabel": "Glutenvrij",
+      "glutenFreeText": "Rijst-gebaseerde en zorgvuldig bereide opties beschikbaar.",
+      "dairyFreeLabel": "Lactosevrij",
+      "dairyFreeText": "Creamy sauzen zonder de lactose.",
+      "nutFreeLabel": "Notenvrij",
+      "nutFreeText": "Zorgeloos snacken voor noten-gevoelige crews."
+    },
+    "drop": {
+      "badge": "Deze week",
+      "sticker1": "NIEUW",
+      "sticker2": "HOT",
+      "title": "Spicy Chili Crunch",
+      "titleHighlight": "MOMO",
+      "text": "Onze nieuwste virale creatie: krokante dumplings met huisgemaakte chili crunch olie, lente-ui en limoen. Beperkte oplage, maximale smaak.",
+      "cta": "Snel naar het menu"
+    },
+    "gallery": {
+      "badge": "Op de gram",
+      "title": "MOMO momenten",
+      "subtitle": "Echt eten, echte mensen, echte vibes. Tag @metromomo en laat ons je spread zien.",
+      "cta": "Kom herinneringen maken",
+      "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Geladen MOMO spread flat lay" },
+        { "src": "/Mexican.jpg", "alt": "Geladen Mexicaanse style fries" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled loaded fries" },
+        { "src": "/hero-momos.png", "alt": "Stomende MOMO" },
+        { "src": "/jhol-momo.png", "alt": "Jhol MOMO in bouillon" },
+        { "src": "/menu-fried-momo.png", "alt": "Gefrituurde chili MOMO" },
+        { "src": "/13363.png", "alt": "MOMO schotel" },
+        { "src": "/IMG_0138.png", "alt": "MOMO close-up" }
+      ]
     },
     "story": {
       "badge": "Ons verhaal",
@@ -123,10 +162,11 @@
     },
     "cta": {
       "title": "Klaar voor een smaakexplosie?",
-      "text": "Verken het menu, vind de dichtstbijzijnde Metro Momo of breng het merk naar jouw stad.",
+      "text": "Verken het menu, vind de dichtstbijzijnde Metro Momo of breng het merk naar jouw stad. Je feed zal je dankbaar zijn.",
       "cta": "Bestellen / Bezoeken",
       "sticker1": "LEKKER",
-      "sticker2": "NIEUW"
+      "sticker2": "NIEUW",
+      "sticker3": "ICONIC"
     }
   },
   "menu": {
