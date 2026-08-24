@@ -7,42 +7,68 @@
   },
   "nav": {
     "home": "Home",
+    "menu": "Menu",
+    "locations": "Locations",
     "about": "About",
     "models": "Models",
     "howItWorks": "How it Works",
     "tech": "Tech",
     "faq": "FAQ",
     "apply": "Apply",
-    "cta": "Apply Now",
+    "cta": "View Menu",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
-    "logoAlt": "METRO MOMO home"
+    "logoAlt": "METRO MOMO home",
+    "company": {
+      "title": "Company",
+      "story": "Our Story",
+      "howItWorks": "How It Works",
+      "tech": "Technology",
+      "models": "Models",
+      "faq": "FAQ",
+      "franchise": "Franchise"
+    }
   },
   "footer": {
-    "tagline": "Authentic MOMO, modern joint venture. Built for owners who want to grow.",
-    "explore": "Explore",
+    "tagline": "Hand-pleated dumplings, big flavors, and a brand that feels like your favorite neighborhood spot.",
+    "restaurant": "Restaurant",
+    "company": "Company",
     "contact": "Contact",
+    "address": "123 Flavor Street, Food District, Your City",
     "copyright": "All rights reserved",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "twitter": "Twitter"
+    "twitter": "Twitter",
+    "companyLinks": {
+      "story": "Our Story",
+      "howItWorks": "How It Works",
+      "tech": "Technology",
+      "models": "Models",
+      "faq": "FAQ",
+      "franchise": "Franchise",
+      "business": "Business Information",
+      "contact": "Contact Us"
+    }
   },
   "home": {
     "hero": {
-      "badge": "Authentic Himalayan Street Food",
-      "title": "Bring the Taste of Himalayas",
-      "titleHighlight": "to Your City",
-      "subtitle": "Launch a METRO MOMO joint venture — a fast-growing MOMO concept built for simplicity, scalability, and serious brand appeal. From street stalls to full restaurants.",
-      "ctaPrimary": "Apply Now",
-      "ctaSecondary": "See Models",
-      "stat1Label": "Owner-first",
-      "stat1Sublabel": "Built by restaurant owners",
-      "stat2Label": "Multi-format",
-      "stat2Sublabel": "Stall, kiosk, or restaurant",
+      "badge": "Hand-pleated & steamed",
+      "title": "Dumplings that bring",
+      "titleHighlight": "the party",
+      "subtitle": "Metro Momo is a playful, modern momo joint where Himalayan flavors meet bold design, good vibes, and seriously tasty dumplings.",
+      "ctaPrimary": "Explore the Menu",
+      "ctaSecondary": "Find Us",
+      "stat1Label": "Made fresh",
+      "stat1Sublabel": "Steamed to order daily",
+      "stat2Label": "Bold flavors",
+      "stat2Sublabel": "Sauces made in-house",
       "imageAlt": "Steaming METRO MOMO dumplings on a red plate",
-      "imageBadge": "No chef required"
+      "smallAlt1": "Jhol MOMO swimming in warm broth",
+      "smallAlt2": "Crispy fried chili MOMO",
+      "imageBadge": "FRESH",
+      "stickerHot": "FRESH"
     },
     "marquee": {
       "badge": "Food that sells itself",
@@ -58,72 +84,106 @@
         { "src": "/model-stall.png", "alt": "Street food stall" }
       ]
     },
-    "intro": {
-      "badge": "The Himalayan Soup Dumpling",
-      "title": "More than food.",
-      "titleHighlight": "A community ritual.",
-      "body1": "METRO MOMO was created to bring one of Nepal's most loved comfort foods to a wider audience. MOMO represents warmth, sharing, and the joy of eating together.",
-      "body2": "While global cuisines have thrived, authentic Himalayan flavours have remained underrepresented. We are building a joint venture that combines cultural authenticity with modern food-service simplicity — so every owner can serve something real.",
+    "bestSellers": {
+      "badge": "Bestsellers",
+      "title": "The ones everyone orders",
+      "subtitle": "Start with the dumplings that built our name. Hand-pleated, packed with flavor, and impossible to eat just one.",
+      "cta": "See full menu"
+    },
+    "story": {
+      "badge": "Our story",
+      "title": "Not your average",
+      "titleHighlight": "dumpling",
+      "body1": "Metro Momo started with a simple idea: the world needs more food that makes people smile. We took the Himalayan momo — warm, comforting, made for sharing — and gave it a fresh, modern twist.",
+      "body2": "Every dumpling is hand-pleated, every sauce is made in-house, and every location is designed to feel like your neighborhood's coolest hangout. We're building a brand that feels as good as it tastes.",
       "imageAlt": "People enjoying MOMO together",
-      "cta": "Read Our Story"
+      "imageAlt2": "Close-up of colorful MOMO platter",
+      "cta": "Read our story",
+      "sticker": "LOVED"
     },
-    "modelsPreview": {
-      "badge": "Joint Venture",
-      "title": "Choose your format",
-      "subtitle": "From compact stalls to ghost kitchens — pick the model that fits your location and ambition. No franchise fees; we grow through revenue sharing.",
-      "items": [
-        {
-          "src": "/model-kiosk.png",
-          "alt": "Street stall and kiosk model",
-          "name": "Street Stall & Kiosk",
-          "description": "Markets, festivals, malls, and high-footfall streets.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-restaurant.png",
-          "alt": "Full restaurant model",
-          "name": "Full Restaurant",
-          "description": "Full dine-in with broader menu and longer hours.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-stall.png",
-          "alt": "Ghost kitchen model",
-          "name": "Virtual & Ghost Kitchens",
-          "description": "Delivery and pickup-only with minimal front-of-house costs.",
-          "price": "€0"
-        }
-      ],
-      "cta": "Compare All Models"
-    },
-    "techPreview": {
-      "badge": "Tech-Powered",
-      "title": "One platform for every location",
-      "subtitle": "Every partner gets access to our restaurant operating system — inventory, ordering, bookings, staff, and compliance in one place.",
-      "items": [
-        { "iconKey": "LayoutDashboard", "title": "Central Command", "text": "HQ dashboard, sales analytics, and franchise standards across all units." },
-        { "iconKey": "PackageSearch", "title": "Inventory & Cost", "text": "Live stock, recipe COGS, and automated reorder alerts." },
-        { "iconKey": "QrCode", "title": "QR Ordering", "text": "Scan-to-order at the table, synced straight to the kitchen." },
-        { "iconKey": "Smartphone", "title": "Online Ordering", "text": "Web orders, pickup, delivery, and customer CRM." },
-        { "iconKey": "Users", "title": "Workforce", "text": "Scheduling, access control, training, and attendance." },
-        { "iconKey": "ClipboardCheck", "title": "HACCP & Hygiene", "text": "Digital checklists, temperature logs, and audit-ready docs." }
-      ],
-      "cta": "Explore the Full Tech Stack"
+    "visit": {
+      "badge": "Visit us",
+      "title": "Come for the momos",
+      "titleHighlight": "stay for the vibe",
+      "text": "Our flagship spot is open for dine-in, takeaway, and hanging out. Find us, bring friends, and discover why Metro Momo is fast becoming the go-to momo joint.",
+      "ctaPrimary": "Plan your visit",
+      "ctaSecondary": "Browse menu",
+      "imageAlt": "Bright Metro Momo restaurant interior",
+      "sticker": "OPEN NOW"
     },
     "stats": {
       "badge": "By the numbers",
-      "title": "Built to scale",
+      "title": "Built with flavor",
       "items": [
         { "value": 7, "suffix": "+", "prefix": "", "label": "Momo varieties" },
-        { "value": 3, "suffix": "", "prefix": "", "label": "Joint-venture formats" },
-        { "value": 100, "suffix": "%", "prefix": "", "label": "Owner support" },
-        { "value": 1, "suffix": "", "prefix": "<", "label": "Dream to launch" }
+        { "value": 4, "suffix": "", "prefix": "", "label": "House sauces" },
+        { "value": 100, "suffix": "%", "prefix": "", "label": "Handmade" },
+        { "value": 5, "suffix": "", "prefix": "", "label": "Star vibe" }
       ]
     },
     "cta": {
-      "title": "Ready to bring MOMO to your city?",
-      "text": "Join the partnership network built for owners who want to serve something authentic and scalable.",
-      "cta": "Start Your Application"
+      "title": "Ready to get saucy?",
+      "text": "Explore the menu, find your nearest Metro Momo, or bring the brand to your city.",
+      "cta": "Order / Visit",
+      "sticker1": "YUM",
+      "sticker2": "NEW"
+    }
+  },
+  "menu": {
+    "hero": {
+      "badge": "The menu",
+      "title": "Dumplings, bowls",
+      "titleHighlight": "& good times",
+      "subtitle": "A fictional preview of the Metro Momo experience. Big flavors, playful names, and prices that match the vibe.",
+      "ctaPrimary": "Find a location",
+      "ctaSecondary": "Partner with us",
+      "sticker1": "SPICY",
+      "sticker2": "FRESH",
+      "sticker3": "YUM"
+    },
+    "cta": {
+      "title": "Hunger level rising?",
+      "text": "The menu is just the beginning. Visit us in person or bring Metro Momo to your city.",
+      "cta": "Visit / Partner"
+    }
+  },
+  "locations": {
+    "hero": {
+      "badge": "Find us",
+      "title": "Where the momos",
+      "titleHighlight": "are rolling",
+      "subtitle": "One flagship location today. More neighborhoods, cities, and countries coming soon.",
+      "ctaPrimary": "Plan your visit",
+      "ctaSecondary": "Partner with us",
+      "sticker1": "FLAGSHIP",
+      "sticker2": "MORE SOON"
+    },
+    "feature": {
+      "badge": "Flagship",
+      "name": "Metro Momo Central",
+      "description": "Our first home. Bright, buzzing, and built for momo lovers. Come for dine-in, grab-and-go, or just to soak up the energy.",
+      "imageAlt": "Metro Momo flagship restaurant",
+      "imageSticker": "FIRST SPOT",
+      "addressLabel": "Address",
+      "address": "123 Flavor Street, Food District, Your City",
+      "hoursLabel": "Hours",
+      "hours": "Mon–Sun: 11:00 – 22:00",
+      "phoneLabel": "Phone",
+      "phone": "+46 12 345 67 89",
+      "emailLabel": "Email",
+      "email": "hello@metromomo.com"
+    },
+    "services": {
+      "dineIn": { "title": "Dine-in", "text": "Colorful seating, quick service, and momos served fresh from the steamer." },
+      "delivery": { "title": "Delivery", "text": "Order through your favorite apps and get Metro Momo delivered to your door." },
+      "events": { "title": "Events", "text": "We host group dinners, office lunches, and momo-making workshops." }
+    },
+    "coming": {
+      "sticker1": "COMING SOON",
+      "sticker2": "JOIN US",
+      "title": "More locations coming soon",
+      "text": "Metro Momo is built to grow. Want to open one in your city? Let's talk.",
+      "cta": "Partner with us"
     }
   },
   "about": {
@@ -368,10 +428,10 @@
   },
   "contact": {
     "hero": {
-      "badge": "Apply Now",
-      "title": "Start your",
-      "titleHighlight": "partnership journey",
-      "subtitle": "Tell us about yourself and your target market. Our team will reach out within 48 hours."
+      "badge": "Partner With Us",
+      "title": "Bring Metro Momo",
+      "titleHighlight": "to your city",
+      "subtitle": "Tell us about yourself and your target market. Our partnership team will reach out within 48 hours."
     },
     "benefits": {
       "badge": "Why METRO MOMO?",

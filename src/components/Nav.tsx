@@ -11,22 +11,34 @@ const languageOptions: { code: Language; label: string }[] = [
   { code: 'fr', label: 'Français' },
 ]
 
+type NavLinkItem = {
+  label: string
+  href: string
+}
+
 export default function Nav() {
   const { t, language, setLanguage } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [companyOpen, setCompanyOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const companyRef = useRef<HTMLDivElement>(null)
 
-  const navLinks = [
+  const primaryLinks: NavLinkItem[] = [
     { label: t('nav.home'), href: '/' },
+    { label: t('nav.menu'), href: '/menu' },
+    { label: t('nav.locations'), href: '/locations' },
     { label: t('nav.about'), href: '/about' },
-    { label: t('nav.models'), href: '/models' },
-    { label: t('nav.howItWorks'), href: '/how-it-works' },
-    { label: t('nav.tech'), href: '/tech' },
-    { label: t('nav.faq'), href: '/faq' },
   ]
 
-  const handleNavClick = () => setMobileOpen(false)
+  const companyLinks: NavLinkItem[] = [
+    { label: t('nav.company.story'), href: '/about#story' },
+    { label: t('nav.company.howItWorks'), href: '/how-it-works' },
+    { label: t('nav.company.tech'), href: '/tech' },
+    { label: t('nav.company.models'), href: '/models' },
+    { label: t('nav.company.faq'), href: '/faq' },
+    { label: t('nav.company.franchise'), href: '/contact' },
+  ]
 
   const activeLabel = languageOptions.find((option) => option.code === language)?.label ?? language.toUpperCase()
 
@@ -35,22 +47,27 @@ export default function Nav() {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false)
       }
+      if (companyRef.current && !companyRef.current.contains(event.target as Node)) {
+        setCompanyOpen(false)
+      }
     }
-    if (dropdownOpen) {
+    if (dropdownOpen || companyOpen) {
       document.addEventListener('mousedown', handleClickOutside)
       return () => document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [dropdownOpen])
+  }, [dropdownOpen, companyOpen])
+
+  const handleNavClick = () => setMobileOpen(false)
 
   return (
     <header className="nav">
       <div className="container nav-inner">
         <Link to="/" className="nav-logo" aria-label={t('nav.logoAlt')}>
-          <Logo width={120} variant="dark" />
+          <Logo width={120} variant="color" />
         </Link>
 
         <nav className={`nav-links ${mobileOpen ? 'open' : ''}`} aria-label="Main navigation">
-          {navLinks.map((link) => (
+          {primaryLinks.map((link) => (
             <NavLink
               key={link.href}
               to={link.href}
@@ -60,6 +77,37 @@ export default function Nav() {
               {link.label}
             </NavLink>
           ))}
+
+          <div className="nav-dropdown" ref={companyRef}>
+            <button
+              className={`nav-dropdown-toggle ${companyOpen ? 'open' : ''}`}
+              onClick={() => setCompanyOpen((open) => !open)}
+              aria-expanded={companyOpen}
+              aria-haspopup="true"
+            >
+              <span>{t('nav.company.title')}</span>
+              <ChevronDown size={16} className="nav-dropdown-chevron" aria-hidden="true" />
+            </button>
+            {companyOpen && (
+              <ul className="nav-dropdown-menu" role="menu">
+                {companyLinks.map((link) => (
+                  <li key={link.href} role="none">
+                    <Link
+                      to={link.href}
+                      className="nav-dropdown-link"
+                      onClick={() => {
+                        handleNavClick()
+                        setCompanyOpen(false)
+                      }}
+                      role="menuitem"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
 
           <div className="language-switcher" ref={dropdownRef} aria-label="Select language">
             <button
@@ -92,7 +140,7 @@ export default function Nav() {
             )}
           </div>
 
-          <Link to="/contact" className="btn btn-primary nav-cta" onClick={handleNavClick}>
+          <Link to="/menu" className="btn btn-primary nav-cta" onClick={handleNavClick}>
             {t('nav.cta')}
           </Link>
         </nav>
@@ -112,9 +160,9 @@ export default function Nav() {
           position: sticky;
           top: 0;
           z-index: 100;
-          background: rgba(255, 250, 245, 0.95);
-          backdrop-filter: blur(12px);
-          border-bottom: 1px solid var(--mm-border);
+          background: rgba(255, 251, 247, 0.92);
+          backdrop-filter: blur(14px);
+          border-bottom: 2px dashed var(--mm-border);
         }
         .nav-inner {
           display: flex;
@@ -126,23 +174,30 @@ export default function Nav() {
           display: flex;
           align-items: center;
           flex-shrink: 0;
+          transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .nav-logo:hover {
+          transform: rotate(-2deg) scale(1.05);
         }
         .nav-links {
           display: flex;
           align-items: center;
-          gap: 32px;
+          gap: 28px;
         }
         .nav-link {
-          font-weight: 700;
+          font-weight: 900;
           font-size: 0.95rem;
           color: var(--color-text);
-          transition: color 0.2s ease;
+          transition: color 0.2s ease, transform 0.2s ease;
           position: relative;
           padding: 8px 0;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
         }
         .nav-link:hover,
         .nav-link.active {
           color: var(--color-primary);
+          transform: translateY(-2px);
         }
         .nav-link::after {
           content: '';
@@ -150,14 +205,74 @@ export default function Nav() {
           left: 0;
           bottom: 0;
           width: 0;
-          height: 3px;
-          background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-          border-radius: 3px;
-          transition: width 0.2s ease;
+          height: 4px;
+          background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+          border-radius: 4px;
+          transition: width 0.25s ease;
         }
         .nav-link:hover::after,
         .nav-link.active::after {
           width: 100%;
+        }
+        .nav-dropdown {
+          position: relative;
+        }
+        .nav-dropdown-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-weight: 900;
+          font-size: 0.95rem;
+          color: var(--color-text);
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          padding: 8px 0;
+          transition: color 0.2s ease;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        .nav-dropdown-toggle:hover,
+        .nav-dropdown-toggle.open {
+          color: var(--color-primary);
+        }
+        .nav-dropdown-chevron {
+          transition: transform 0.2s ease;
+          color: var(--color-primary);
+        }
+        .nav-dropdown-toggle.open .nav-dropdown-chevron {
+          transform: rotate(180deg);
+        }
+        .nav-dropdown-menu {
+          position: absolute;
+          top: calc(100% + 12px);
+          right: 0;
+          min-width: 220px;
+          background: white;
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-lg);
+          border: 2px solid var(--mm-border);
+          list-style: none;
+          padding: 8px;
+          margin: 0;
+          z-index: 101;
+          overflow: hidden;
+          animation: pop-in 0.2s ease;
+        }
+        .nav-dropdown-link {
+          display: block;
+          padding: 12px 14px;
+          border-radius: var(--radius-sm);
+          font-weight: 800;
+          font-size: 0.9rem;
+          color: var(--color-text);
+          transition: background-color 0.2s ease, color 0.2s ease;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+        }
+        .nav-dropdown-link:hover {
+          background: rgba(232, 23, 43, 0.08);
+          color: var(--color-primary);
         }
         .language-switcher {
           position: relative;
@@ -169,26 +284,26 @@ export default function Nav() {
           align-items: center;
           gap: 8px;
           padding: 8px 12px;
-          border-radius: 999px;
-          background: rgba(217, 4, 41, 0.08);
-          border: 1px solid rgba(217, 4, 41, 0.15);
+          border-radius: var(--radius-round);
+          background: rgba(6, 203, 164, 0.1);
+          border: 1px solid rgba(6, 203, 164, 0.2);
           color: var(--color-text);
-          font-weight: 700;
+          font-weight: 800;
           font-size: 0.85rem;
           transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
           cursor: pointer;
         }
         .language-dropdown-toggle:hover {
-          background: rgba(217, 4, 41, 0.14);
-          border-color: rgba(217, 4, 41, 0.3);
-          box-shadow: 0 2px 8px rgba(217, 4, 41, 0.12);
+          background: rgba(6, 203, 164, 0.18);
+          border-color: rgba(6, 203, 164, 0.35);
+          box-shadow: 0 2px 8px rgba(6, 203, 164, 0.12);
         }
         .language-switcher-icon {
-          color: var(--color-primary);
+          color: var(--color-fresh);
           flex-shrink: 0;
         }
         .dropdown-chevron {
-          color: var(--color-primary);
+          color: var(--color-fresh);
           transition: transform 0.2s ease;
           flex-shrink: 0;
         }
@@ -216,29 +331,39 @@ export default function Nav() {
           text-align: left;
           padding: 10px 12px;
           border-radius: var(--radius-sm);
-          font-weight: 700;
+          font-weight: 800;
           font-size: 0.85rem;
           color: var(--color-text);
           background: transparent;
           transition: background-color 0.2s ease, color 0.2s ease;
           cursor: pointer;
+          border: none;
         }
         .language-dropdown-option:hover,
         .language-dropdown-option.active {
-          background: rgba(217, 4, 41, 0.08);
-          color: var(--color-primary);
+          background: rgba(6, 203, 164, 0.1);
+          color: var(--color-fresh-dark);
         }
         .language-dropdown-option.active {
           font-weight: 900;
         }
         .nav-cta {
-          padding: 10px 22px;
+          padding: 12px 24px;
           font-size: 0.85rem;
         }
         .nav-toggle {
           display: none;
           background: transparent;
           color: var(--color-text);
+        }
+        @media (max-width: 1024px) {
+          .nav-links {
+            gap: 20px;
+          }
+          .nav-link,
+          .nav-dropdown-toggle {
+            font-size: 0.85rem;
+          }
         }
         @media (max-width: 900px) {
           .nav-inner {
@@ -259,14 +384,15 @@ export default function Nav() {
             height: calc(100dvh - 80px);
             background: var(--color-bg);
             flex-direction: column;
-            gap: 24px;
-            padding: 32px 24px;
+            gap: 8px;
+            padding: 24px;
             transform: translateX(100%);
             transition: transform 0.3s ease, visibility 0.3s ease;
             align-items: flex-start;
             visibility: hidden;
             overflow-x: hidden;
             display: none;
+            overflow-y: auto;
           }
           .nav-links.open {
             display: flex;
@@ -274,8 +400,31 @@ export default function Nav() {
             visibility: visible;
           }
           .nav-link {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             padding: 12px 0;
+            width: 100%;
+          }
+          .nav-dropdown {
+            width: 100%;
+          }
+          .nav-dropdown-toggle {
+            width: 100%;
+            justify-content: space-between;
+            font-size: 1.25rem;
+            padding: 12px 0;
+          }
+          .nav-dropdown-menu {
+            position: static;
+            width: 100%;
+            box-shadow: none;
+            border: none;
+            background: var(--color-surface);
+            animation: none;
+            margin-top: 4px;
+          }
+          .nav-dropdown-link {
+            padding: 14px 16px;
+            font-size: 1rem;
           }
           .language-switcher {
             width: 100%;

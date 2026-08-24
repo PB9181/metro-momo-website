@@ -7,42 +7,68 @@
   },
   "nav": {
     "home": "Accueil",
+    "menu": "Menu",
+    "locations": "Lieux",
     "about": "À propos",
     "models": "Modèles",
     "howItWorks": "Comment ça marche",
     "tech": "Tech",
     "faq": "FAQ",
     "apply": "Postuler",
-    "cta": "Postuler maintenant",
+    "cta": "Voir le menu",
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
-    "logoAlt": "Accueil METRO MOMO"
+    "logoAlt": "Accueil METRO MOMO",
+    "company": {
+      "title": "Entreprise",
+      "story": "Notre histoire",
+      "howItWorks": "Comment ça marche",
+      "tech": "Technologie",
+      "models": "Modèles",
+      "faq": "FAQ",
+      "franchise": "Franchise"
+    }
   },
   "footer": {
-    "tagline": "MOMO authentique, joint venture moderne. Conçu pour les propriétaires qui veulent se développer.",
-    "explore": "Explorer",
+    "tagline": "Dumplings plissés à la main, grandes saveurs et une marque qui ressemble à votre spot de quartier préféré.",
+    "restaurant": "Restaurant",
+    "company": "Entreprise",
     "contact": "Contact",
+    "address": "123 Flavor Street, Food District, Votre Ville",
     "copyright": "Tous droits réservés",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "twitter": "Twitter"
+    "twitter": "Twitter",
+    "companyLinks": {
+      "story": "Notre histoire",
+      "howItWorks": "Comment ça marche",
+      "tech": "Technologie",
+      "models": "Modèles",
+      "faq": "FAQ",
+      "franchise": "Franchise",
+      "business": "Informations commerciales",
+      "contact": "Nous contacter"
+    }
   },
   "home": {
     "hero": {
-      "badge": "Street Food Himalayenne Authentique",
-      "title": "Apportez le Goût du Népal",
-      "titleHighlight": "dans Votre Ville",
-      "subtitle": "Lancez un joint venture METRO MOMO — un concept MOMO en pleine croissance conçu pour la simplicité, l'évolutivité et un fort pouvoir d'attraction de marque. Des stands de rue aux restaurants complets.",
-      "ctaPrimary": "Postuler maintenant",
-      "ctaSecondary": "Voir les modèles",
-      "stat1Label": "Propriétaire d'abord",
-      "stat1Sublabel": "Créé par des propriétaires de restaurant",
-      "stat2Label": "Multi-format",
-      "stat2Sublabel": "Stand, kiosque ou restaurant",
+      "badge": "Plissés à la main & vapeur",
+      "title": "Des dumplings qui",
+      "titleHighlight": "mètent la fête",
+      "subtitle": "Metro Momo est un momo-joint moderne et ludique où les saveurs himalayennes rencontrent un design audacieux, une ambiance joyeuse et des dumplings délicieusement savoureux.",
+      "ctaPrimary": "Explorer le menu",
+      "ctaSecondary": "Nous trouver",
+      "stat1Label": "Frais",
+      "stat1Sublabel": "Cuits à la vapeur sur commande",
+      "stat2Label": "Saveurs audacieuses",
+      "stat2Sublabel": "Sauces maison",
       "imageAlt": "Dumplings METRO MOMO fumants sur une assiette rouge",
-      "imageBadge": "Aucun chef requis"
+      "smallAlt1": "Jhol MOMO en bouillon",
+      "smallAlt2": "MOMO frit croustillant au chili",
+      "imageBadge": "FRAIS",
+      "stickerHot": "FRAIS"
     },
     "marquee": {
       "badge": "Une nourriture qui se vend toute seule",
@@ -58,72 +84,106 @@
         { "src": "/model-stall.png", "alt": "Stand de street food" }
       ]
     },
-    "intro": {
-      "badge": "Le Dumpling Himalayen en Soupe",
-      "title": "Plus qu'une nourriture.",
-      "titleHighlight": "Un rituel communautaire.",
-      "body1": "METRO MOMO a été créé pour amener l'un des plats de réconfort les plus appréciés du Népal à un public plus large. Le MOMO représente la chaleur, le partage et la joie de manger ensemble.",
-      "body2": "Alors que les cuisines mondiales se sont épanouies, les saveurs himalayennes authentiques sont restées sous-représentées. Nous construisons une franchise qui allie authenticité culturelle et simplicité moderne du service alimentaire — pour que chaque propriétaire puisse servir quelque chose de réel.",
+    "bestSellers": {
+      "badge": "Best-sellers",
+      "title": "Les préférés de tous",
+      "subtitle": "Commencez par les dumplings qui ont bâti notre nom. Plissés à la main, pleins de saveur et impossible d'en manger qu'un seul.",
+      "cta": "Voir le menu complet"
+    },
+    "story": {
+      "badge": "Notre histoire",
+      "title": "Pas un dumpling",
+      "titleHighlight": "comme les autres",
+      "body1": "Metro Momo est né d'une idée simple : le monde a besoin de plus de nourriture qui fait sourire les gens. Nous avons pris le momo himalayen — chaud, réconfortant, fait pour être partagé — et lui avons donné une touche moderne et fraîche.",
+      "body2": "Chaque dumpling est plissé à la main, chaque sauce est faite maison et chaque lieu est conçu pour ressembler au hangout le plus cool du quartier. Nous construisons une marque qui se sent aussi bien qu'elle est bonne.",
       "imageAlt": "Des gens profitant ensemble de MOMO",
-      "cta": "Lire notre histoire"
+      "imageAlt2": "Gros plan sur un plat de MOMO coloré",
+      "cta": "Lire notre histoire",
+      "sticker": "ADORÉ"
     },
-    "modelsPreview": {
-      "badge": "Joint Venture",
-      "title": "Choisissez votre format",
-      "subtitle": "Des stands compacts aux ghost kitchens — choisissez le modèle qui correspond à votre emplacement et à vos ambitions. Pas de frais de franchise ; nous grandissons par le partage des revenus.",
-      "items": [
-        {
-          "src": "/model-kiosk.png",
-          "alt": "Modèle stand de rue et kiosque",
-          "name": "Stand de Rue & Kiosque",
-          "description": "Marchés, festivals, centres commerciaux et rues à fort passage.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-restaurant.png",
-          "alt": "Modèle restaurant complet",
-          "name": "Restaurant Complet",
-          "description": "Dine-in complet avec menu plus large et heures d'ouverture plus longues.",
-          "price": "€0"
-        },
-        {
-          "src": "/model-stall.png",
-          "alt": "Modèle ghost kitchen",
-          "name": "Cuisines Virtuelles & Ghost Kitchens",
-          "description": "Livraison et retrait uniquement avec des coûts front-of-house minimaux.",
-          "price": "€0"
-        }
-      ],
-      "cta": "Comparer tous les modèles"
-    },
-    "techPreview": {
-      "badge": "Propulsé par la Tech",
-      "title": "Une plateforme pour chaque emplacement",
-      "subtitle": "Chaque partenaire accède au système d'exploitation Fewa — inventaire, commandes, réservations, personnel et conformité en un seul endroit.",
-      "items": [
-        { "iconKey": "LayoutDashboard", "title": "Commande Centrale", "text": "Tableau de bord HQ, analyses de ventes et normes de franchise sur tous les sites." },
-        { "iconKey": "PackageSearch", "title": "Inventaire & Coûts", "text": "Stocks en temps réel, COGS des recettes et alertes de réapprovisionnement automatiques." },
-        { "iconKey": "QrCode", "title": "Commande QR", "text": "Scan-pour-commander à table, synchronisé directement avec la cuisine." },
-        { "iconKey": "Smartphone", "title": "Commande en Ligne", "text": "Commandes web, retrait, livraison et CRM client." },
-        { "iconKey": "Users", "title": "Ressources Humaines", "text": "Planification, contrôle d'accès, formation et présence." },
-        { "iconKey": "ClipboardCheck", "title": "HACCP & Hygiène", "text": "Checklists numériques, logs de température et documents prêts pour l'audit." }
-      ],
-      "cta": "Explorer la stack tech complète"
+    "visit": {
+      "badge": "Visitez-nous",
+      "title": "Venez pour les momos",
+      "titleHighlight": "restez pour l'ambiance",
+      "text": "Notre flagship est ouvert pour le dine-in, le takeaway et flâner entre amis. Trouvez-nous, amenez des amis et découvrez pourquoi Metro Momo devient rapidement le momo-joint incontournable.",
+      "ctaPrimary": "Planifier votre visite",
+      "ctaSecondary": "Parcourir le menu",
+      "imageAlt": "Intérieur coloré du restaurant Metro Momo",
+      "sticker": "OUVERT"
     },
     "stats": {
       "badge": "En chiffres",
-      "title": "Conçu pour évoluer",
+      "title": "Construit avec du goût",
       "items": [
         { "value": 7, "suffix": "+", "prefix": "", "label": "Variétés de momo" },
-        { "value": 3, "suffix": "", "prefix": "", "label": "Formats de joint venture" },
-        { "value": 100, "suffix": "%", "prefix": "", "label": "Support propriétaire" },
-        { "value": 1, "suffix": "", "prefix": "<", "label": "Du rêve au lancement" }
+        { "value": 4, "suffix": "", "prefix": "", "label": "Sauces maison" },
+        { "value": 100, "suffix": "%", "prefix": "", "label": "Fait main" },
+        { "value": 5, "suffix": "", "prefix": "", "label": "Ambiance 5 étoiles" }
       ]
     },
     "cta": {
-      "title": "Prêt à amener le MOMO dans votre ville ?",
-      "text": "Rejoignez le réseau de partenariat conçu pour les propriétaires qui veulent servir quelque chose d'authentique et d'évolutif.",
-      "cta": "Démarrer votre candidature"
+      "title": "Prêt à mettre du piquant ?",
+      "text": "Explorez le menu, trouvez le Metro Momo le plus proche ou apportez la marque dans votre ville.",
+      "cta": "Commander / Visiter",
+      "sticker1": "DÉLICE",
+      "sticker2": "NOUVEAU"
+    }
+  },
+  "menu": {
+    "hero": {
+      "badge": "Le menu",
+      "title": "Dumplings, bowls",
+      "titleHighlight": "& bons moments",
+      "subtitle": "Un aperçu fictif de l'expérience Metro Momo. Grandes saveurs, noms ludiques et prix qui collent à l'ambiance.",
+      "ctaPrimary": "Trouver un lieu",
+      "ctaSecondary": "Devenir partenaire",
+      "sticker1": "ÉPICÉ",
+      "sticker2": "FRAIS",
+      "sticker3": "DÉLICE"
+    },
+    "cta": {
+      "title": "L'appétit monte ?",
+      "text": "Le menu n'est que le début. Visitez-nous en personne ou apportez Metro Momo dans votre ville.",
+      "cta": "Visiter / Partenaire"
+    }
+  },
+  "locations": {
+    "hero": {
+      "badge": "Nous trouver",
+      "title": "Là où les momos",
+      "titleHighlight": "roulent",
+      "subtitle": "Aujourd'hui un flagship. Bientôt plus de quartiers, de villes et de pays.",
+      "ctaPrimary": "Planifier votre visite",
+      "ctaSecondary": "Devenir partenaire",
+      "sticker1": "FLAGSHIP",
+      "sticker2": "PLUS BIENTÔT"
+    },
+    "feature": {
+      "badge": "Flagship",
+      "name": "Metro Momo Central",
+      "description": "Notre premier foyer. Coloré, dynamique et conçu pour les amateurs de momo. Venez en dine-in, takeaway ou simplement pour absorber l'énergie.",
+      "imageAlt": "Restaurant flagship Metro Momo",
+      "imageSticker": "PREMIER LIEU",
+      "addressLabel": "Adresse",
+      "address": "123 Flavor Street, Food District, Votre Ville",
+      "hoursLabel": "Horaires",
+      "hours": "Lun–Dim : 11h00 – 22h00",
+      "phoneLabel": "Téléphone",
+      "phone": "+46 12 345 67 89",
+      "emailLabel": "E-mail",
+      "email": "hello@metromomo.com"
+    },
+    "services": {
+      "dineIn": { "title": "Dine-in", "text": "Sièges colorés, service rapide et momos servis frais du panier vapeur." },
+      "delivery": { "title": "Livraison", "text": "Commandez via vos applications préférées et faites-vous livrer Metro Momo à domicile." },
+      "events": { "title": "Événements", "text": "Nous accueillons dîners de groupe, déjeuners d'entreprise et ateliers de fabrication de momo." }
+    },
+    "coming": {
+      "sticker1": "BIENTÔT",
+      "sticker2": "REJOIGNEZ-NOUS",
+      "title": "Plus de lieux bientôt",
+      "text": "Metro Momo est conçu pour grandir. Vous voulez en ouvrir un dans votre ville ? Parlons-en.",
+      "cta": "Devenir partenaire"
     }
   },
   "about": {
@@ -161,7 +221,7 @@
       "badge": "Joint Venture",
       "title": "Choisissez le format qui",
       "titleHighlight": "correspond à vos ambitions",
-      "subtitle": "Des stands de rue aux ghost kitchens — chaque modèle de joint venture commence avec 0 € de frais de franchise. Nous grandissons ensemble par le partage des revenus."
+      "subtitle": "Des stands compacts aux ghost kitchens — chaque modèle de joint venture commence avec 0 € de frais de franchise. Nous grandissons ensemble par le partage des revenus."
     },
     "items": [
       {
@@ -188,7 +248,7 @@
         "price": "€0",
         "src": "/model-stall.png",
         "description": "Cuisine livraison et retrait uniquement avec des coûts front-of-house minimaux. Conçue pour la commande en ligne, les dark kitchens et l'expansion rapide du marché.",
-        "features": ["Modèle axé sur la livraison", "Faibles loyers", "Prêt pour la commande en ligne", "Compatible avec espaces de prépartion partagés", "Expansion urbaine rapide"],
+        "features": ["Modèle axé sur la livraison", "Faibles loyers", "Prêt pour la commande en ligne", "Compatible avec espaces de préparation partagés", "Expansion urbaine rapide"],
         "bestFor": "Opérateurs digital-first"
       }
     ],
@@ -368,69 +428,69 @@
   },
   "contact": {
     "hero": {
-      "badge": "Postuler maintenant",
-      "title": "Commencez votre",
-      "titleHighlight": "parcours de partenariat",
-      "subtitle": "Parlez-nous de vous et de votre marché cible. Notre équipe vous répondra sous 48 heures."
+      "badge": "Partner With Us",
+      "title": "Bring Metro Momo",
+      "titleHighlight": "to your city",
+      "subtitle": "Tell us about yourself and your target market. Our partnership team will reach out within 48 hours."
     },
     "benefits": {
-      "badge": "Pourquoi METRO MOMO ?",
-      "title": "Ce que vous obtenez en tant que partenaire",
-      "subtitle": "Aucune expérience préalable en restauration requise pour tous les modèles d'entrée. Nous recherchons des propriétaires qui se soucient de la bonne nourriture et de la communauté.",
+      "badge": "Why METRO MOMO?",
+      "title": "What you get as a partner",
+      "subtitle": "No prior restaurant experience required for all entry models. We are looking for owners who care about great food and community.",
       "items": [
-        "Territoire protégé et droits exclusifs",
-        "Formats flexibles : stand, kiosque, container, restaurant",
-        "Formation, supply chain et support marketing",
-        "Accès complet à la plateforme tech Fewa (inventaire, commandes, réservations, personnel, HACCP)"
+        "Protected territory and exclusive rights",
+        "Flexible formats: stall, kiosk, container, restaurant",
+        "Training, supply chain, and marketing support",
+        "Full Fewa tech platform access (inventory, ordering, bookings, staff, HACCP)"
       ]
     },
     "details": {
-      "headOffice": { "label": "Siège Social", "value": "Metro Momo HQ, Votre Ville" },
-      "phone": { "label": "Téléphone", "value": "+46 12 345 67 89" },
-      "email": { "label": "E-mail", "value": "hello@metromomo.com" },
-      "response": { "label": "Délai de réponse", "value": "Sous 48 heures" }
+      "headOffice": { "label": "Head Office", "value": "Metro Momo HQ, Your City" },
+      "phone": { "label": "Phone", "value": "+46 12 345 67 89" },
+      "email": { "label": "Email", "value": "hello@metromomo.com" },
+      "response": { "label": "Response time", "value": "Within 48 hours" }
     },
     "form": {
-      "title": "Soumettre son intérêt",
+      "title": "Submit your interest",
       "fields": {
-        "name": { "label": "Nom complet", "placeholder": "Votre nom" },
-        "email": { "label": "E-mail", "placeholder": "vous@exemple.com" },
-        "phone": { "label": "Téléphone", "placeholder": "+46 70 123 4567" },
-        "city": { "label": "Ville / Territoire", "placeholder": "Où vous souhaitez ouvrir" },
+        "name": { "label": "Full name", "placeholder": "Your name" },
+        "email": { "label": "Email", "placeholder": "you@example.com" },
+        "phone": { "label": "Phone", "placeholder": "+46 70 123 4567" },
+        "city": { "label": "City / Territory", "placeholder": "Where you want to open" },
         "model": {
-          "label": "Modèle préféré",
+          "label": "Preferred model",
           "options": [
-            { "value": "", "label": "Sélectionnez un format" },
-            { "value": "compact", "label": "Stand de Rue & Kiosque" },
-            { "value": "restaurant", "label": "Restaurant Complet" },
-            { "value": "ghost", "label": "Cuisines Virtuelles & Ghost Kitchens" },
-            { "value": "unsure", "label": "Pas encore sûr" }
+            { "value": "", "label": "Select a format" },
+            { "value": "compact", "label": "Street Stall & Kiosk" },
+            { "value": "restaurant", "label": "Full Restaurant" },
+            { "value": "ghost", "label": "Virtual & Ghost Kitchens" },
+            { "value": "unsure", "label": "Not sure yet" }
           ]
         },
         "experience": {
-          "label": "Expérience en restauration ou en affaires",
+          "label": "Restaurant or business experience",
           "options": [
-            { "value": "", "label": "Sélectionnez un niveau d'expérience" },
-            { "value": "none", "label": "Nouveau dans la restauration" },
-            { "value": "some", "label": "Quelque expérience en restaurant" },
-            { "value": "owner", "label": "Propriétaire de restaurant actuel" },
-            { "value": "multi", "label": "Opérateur multi-sites" }
+            { "value": "", "label": "Select experience level" },
+            { "value": "none", "label": "New to hospitality" },
+            { "value": "some", "label": "Some restaurant experience" },
+            { "value": "owner", "label": "Current restaurant owner" },
+            { "value": "multi", "label": "Multi-unit operator" }
           ]
         },
-        "message": { "label": "Message", "placeholder": "Parlez-nous de votre vision, de votre fourchette budgétaire ou de vos questions..." }
+        "message": { "label": "Message", "placeholder": "Tell us about your vision, budget range, or questions..." }
       },
-      "submit": "Soumettre la candidature",
-      "disclaimer": "En soumettant, vous acceptez d'être contacté par l'équipe de partenariat METRO MOMO."
+      "submit": "Submit Application",
+      "disclaimer": "By submitting, you agree to be contacted by the METRO MOMO partnership team."
     },
     "success": {
-      "title": "Candidature reçue !",
-      "text": "Nous examinerons vos informations et vous contacterons sous 48 heures."
+      "title": "Application received!",
+      "text": "We will review your details and contact you within 48 hours."
     }
   },
   "notFound": {
     "title": "404",
     "subtitle": "Ce momo a roulé loin",
     "text": "Nous n'avons pas trouvé la page que vous cherchiez. Mais il y a plein de MOMO à la maison.",
-    "cta": "Retour à l'accueil"
+    "cta": "Back to Home"
   }
 }
