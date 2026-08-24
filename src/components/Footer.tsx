@@ -241,12 +241,33 @@ export default function Footer() {
         }
         @media (max-width: 768px) {
           .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+          }
+          .footer-brand {
+            grid-column: 1 / -1;
+          }
+          .footer-contact {
+            grid-column: 1 / -1;
+          }
+          .footer-nav h4,
+          .footer-contact h4 {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+          }
+          .footer-nav a,
+          .footer-contact a {
+            font-size: 0.95rem;
+            white-space: nowrap;
+          }
+          .footer-tagline {
+            max-width: 100%;
+            margin-bottom: 16px;
           }
           .footer-bottom {
             flex-direction: column;
             text-align: center;
+            gap: 12px;
           }
         }
       `}</style>

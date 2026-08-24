@@ -20,7 +20,7 @@ export default function Home() {
   const vibeImages = getArray('home.vibe.images') as ImageItem[]
 
   const signatureCategory = menuCategories.find((c) => c.id === 'signatures')
-  const bestSellers = signatureCategory?.items.slice(0, 4) ?? []
+  const bestSellers = signatureCategory?.items.slice(0, 3) ?? []
 
   const dietaryItems: DietaryItem[] = [
     { key: 'vegan', icon: Leaf, label: t('home.dietary.veganLabel'), text: t('home.dietary.veganText') },
@@ -312,20 +312,21 @@ export default function Home() {
             .hero-inner {
               grid-template-columns: 1fr;
               text-align: center;
-              gap: 48px;
+              gap: 28px;
             }
             .hero-content {
               max-width: 100%;
             }
             .hero-actions {
               justify-content: center;
+              margin-bottom: 24px;
             }
             .hero-stats {
-              justify-content: center;
+              display: none;
             }
             .hero-photo-wall {
               max-width: 100%;
-              height: 420px;
+              height: 360px;
             }
             .hero-sticker-top {
               left: 0;
@@ -345,7 +346,7 @@ export default function Home() {
               padding: 40px 0 32px;
             }
             .hero-inner {
-              gap: 36px;
+              gap: 20px;
             }
             .hero-title {
               font-size: clamp(2.25rem, 10vw, 3rem);
@@ -356,23 +357,17 @@ export default function Home() {
             .hero-actions {
               flex-direction: column;
               align-items: center;
+              margin-bottom: 16px;
             }
             .hero-actions .btn {
               width: 100%;
               max-width: 320px;
             }
             .hero-stats {
-              flex-direction: column;
-              gap: 20px;
-              align-items: center;
-            }
-            .hero-stat {
-              flex-direction: column;
-              text-align: center;
-              gap: 8px;
+              display: none;
             }
             .hero-photo-wall {
-              height: 360px;
+              height: 320px;
             }
             .photo-wall-side {
               width: 34%;
@@ -472,7 +467,7 @@ export default function Home() {
           }
           .best-sellers-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             margin-bottom: 48px;
           }
@@ -638,7 +633,28 @@ export default function Home() {
           }
           @media (max-width: 480px) {
             .dietary-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 12px;
+            }
+            .dietary-card {
+              padding: 20px 16px;
+            }
+            .dietary-icon {
+              width: 48px;
+              height: 48px;
+              margin-bottom: 12px;
+            }
+            .dietary-icon svg {
+              width: 22px;
+              height: 22px;
+            }
+            .dietary-label {
+              font-size: 1rem;
+              margin-bottom: 4px;
+            }
+            .dietary-text {
+              font-size: 0.85rem;
+              line-height: 1.45;
             }
           }
         `}</style>
@@ -775,8 +791,8 @@ export default function Home() {
                 <br />
                 <span className="gradient-text">{t('home.story.titleHighlight')}</span>
               </h2>
-              <p className="section-subtitle">{t('home.story.body1')}</p>
-              <p className="story-body">{t('home.story.body2')}</p>
+          <p className="section-subtitle">{t('home.story.body1')}</p>
+          <p className="story-body story-body-2">{t('home.story.body2')}</p>
               <Link to="/about" className="btn btn-secondary">
                 {t('home.story.cta')} <ArrowRight size={18} />
               </Link>
@@ -865,6 +881,11 @@ export default function Home() {
               right: 0;
             }
             .story-starburst {
+              display: none;
+            }
+          }
+          @media (max-width: 768px) {
+            .story-body-2 {
               display: none;
             }
           }
@@ -969,13 +990,27 @@ export default function Home() {
           @media (max-width: 768px) {
             .vibe-wall {
               grid-template-columns: repeat(2, 1fr);
-              gap: 14px;
+              gap: 10px;
+            }
+            .vibe-item {
+              aspect-ratio: 1 / 1;
+              border-width: 2px;
+            }
+            .vibe-item:hover {
+              transform: scale(1.02);
+              z-index: 1;
+            }
+            .vibe-item:hover img {
+              transform: scale(1.05);
             }
           }
           @media (max-width: 480px) {
             .vibe-wall {
               grid-template-columns: repeat(2, 1fr);
-              gap: 12px;
+              gap: 8px;
+            }
+            .vibe-item {
+              border-radius: var(--radius-md);
             }
             .vibe-cta {
               margin-top: 36px;
