@@ -109,20 +109,38 @@
         }
       ]
     },
-    "mood": {
-      "badge": "La vibe",
-      "title": "Mood board",
-      "subtitle": "Un avant-goût de ce qui arrive quand les saveurs himalayennes rencontrent l'énergie nocturne, le néon et zéro filtre.",
-      "sticker1": "SPICY",
-      "sticker2": "LOADED",
-      "sticker3": "HANDMADE",
-      "alt1": "Momos pan-frits sur une assiette sombre avec sauces colorées",
-      "alt2": "Cocktail néon vert-bleu dans un grand verre",
-      "alt3": "Mocktail rafraîchissant à la pastèque rouge dans un panier métallique avec menthe",
-      "alt4": "Momos vapeur dans un panier bambou avec sauces",
-      "alt5": "Deux cocktails tropicaux colorés sur un bar",
-      "alt6": "Momos pan-frits gourmet avec trait de sauce",
-      "alt7": "Mains pliant des momos frais un par un"
+    "vibe": {
+      "badge": "Sur le gram",
+      "title": "MOMO Mood Wall",
+      "subtitle": "La saveur, les couleurs, l'énergie nocturne. De vrais moments MOMO faits pour défiler.",
+      "cta": "Voir le menu",
+      "sticker": "HOT",
+      "images": [
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Momos pan-frits sur une assiette sombre avec sauces colorées"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Deux cocktails tropicaux colorés sur un bar"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Cocktail néon vert-bleu dans un grand verre"
+        },
+        {
+          "src": "/New_Photos/bar7.jpg",
+          "alt": "Mocktail rafraîchissant à la pastèque rouge dans un panier métallique avec menthe"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Momos vapeur dans un panier bambou avec sauces"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Mains pliant des momos frais un par un"
+        }
+      ]
     },
     "bestSellers": {
       "badge": "Best-sellers",
@@ -151,46 +169,6 @@
       "titleHighlight": "MOMO",
       "text": "Notre dernière création virale : des dumplings aux bords croustillants, enrobés d'huile chili crunch maison, ciboulette et citron vert. Série limitée, saveur maximale.",
       "cta": "L'attraper au menu"
-    },
-    "gallery": {
-      "badge": "Sur le gram",
-      "title": "MOMO moments",
-      "subtitle": "Vraie nourriture, vraies personnes, vraies vibes. Tag @metromomo et montre-nous ta table.",
-      "cta": "Venez créer des souvenirs",
-      "images": [
-        {
-          "src": "/New_Photos/poster.jpg",
-          "alt": "Spread MOMO généreux flat lay"
-        },
-        {
-          "src": "/New_Photos/momo4.jpg",
-          "alt": "Momos pan-frits sur une assiette sombre avec sauces colorées"
-        },
-        {
-          "src": "/New_Photos/bar4.jpg",
-          "alt": "Cocktail rouge vibrant avec glace pilée et garniture aux agrumes"
-        },
-        {
-          "src": "/New_Photos/bar2.jpg",
-          "alt": "Deux cocktails tropicaux colorés sur un bar"
-        },
-        {
-          "src": "/New_Photos/momo5.jpg",
-          "alt": "Momos vapeur dans un panier bambou avec sauces"
-        },
-        {
-          "src": "/New_Photos/bar6.jpg",
-          "alt": "Cocktail néon vert-bleu dans un grand verre"
-        },
-        {
-          "src": "/New_Photos/momo3.jpg",
-          "alt": "Momos pan-frits gourmet avec trait de sauce"
-        },
-        {
-          "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Mains pliant des momos frais un par un"
-        }
-      ]
     },
     "story": {
       "badge": "Notre histoire",
@@ -250,21 +228,6 @@
       "sticker1": "DÉLICE",
       "sticker2": "NOUVEAU",
       "sticker3": "ICONIC"
-    },
-    "mood": {
-      "badge": "L'ambiance",
-      "title": "Mood board",
-      "subtitle": "Un aperçu de ce qui arrive quand les saveurs himalayennes rencontrent l'énergie nocturne, le néon et zéro filtre.",
-      "sticker1": "ÉPICÉ",
-      "sticker2": "LOADED",
-      "sticker3": "FAIT MAIN",
-      "alt1": "Momos pan-frits sur une assiette sombre avec sauces colorées",
-      "alt2": "Cocktail néon vert-bleu dans un grand verre",
-      "alt3": "Fries loaded avec protéine végétale, sauces et coriandre",
-      "alt4": "Momos vapeur dans un panier bambou avec sauces",
-      "alt5": "Deux cocktails tropicaux colorés sur un bar",
-      "alt6": "Momos pan-frits gourmet avec trait de sauce",
-      "alt7": "Mains pliant des momos frais un par un"
     }
   },
   "menu": {

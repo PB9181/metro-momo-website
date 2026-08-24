@@ -5,7 +5,6 @@ import StatsCounter from '../components/StatsCounter.tsx'
 import Sticker from '../components/Sticker.tsx'
 import Squiggle from '../components/Squiggle.tsx'
 import Starburst from '../components/Starburst.tsx'
-import Gallery from '../components/Gallery.tsx'
 import { menuCategories } from '../data/menuData.ts'
 import { useTranslation } from '../i18n/index.ts'
 
@@ -18,7 +17,7 @@ export default function Home() {
 
   const marqueeImages = getArray('home.marquee.images') as ImageItem[]
   const stats = getArray('home.stats.items') as StatItem[]
-  const galleryImages = getArray('home.gallery.images') as ImageItem[]
+  const vibeImages = getArray('home.vibe.images') as ImageItem[]
 
   const signatureCategory = menuCategories.find((c) => c.id === 'signatures')
   const bestSellers = signatureCategory?.items.slice(0, 4) ?? []
@@ -412,136 +411,6 @@ export default function Home() {
           }
           .marquee-section .section-title {
             margin: 0 auto 12px;
-          }
-        `}</style>
-      </section>
-
-      <section className="section mood-section">
-        <div className="container">
-          <div className="mood-header">
-            <span className="badge badge-hot">
-              <Sparkles size={16} />
-              {t('home.mood.badge')}
-            </span>
-            <h2 className="section-title">{t('home.mood.title')}</h2>
-            <p className="section-subtitle">{t('home.mood.subtitle')}</p>
-            <Squiggle color="var(--mm-hot-pink)" width={160} height={24} strokeWidth={5} />
-          </div>
-
-          <div className="mood-bento">
-            <div className="mood-item mood-item-large">
-              <img src="/New_Photos/momo4.jpg" alt={t('home.mood.alt1')} loading="lazy" />
-              <div className="mood-caption">
-                <Sticker variant="hot" icon="flame" rotate={-8}>{t('home.mood.sticker1')}</Sticker>
-              </div>
-            </div>
-            <div className="mood-item">
-              <img src="/New_Photos/bar6.jpg" alt={t('home.mood.alt2')} loading="lazy" />
-            </div>
-            <div className="mood-item">
-              <img src="/New_Photos/bar7.jpg" alt={t('home.mood.alt3')} loading="lazy" />
-              <div className="mood-caption">
-                <Sticker variant="neon" rotate={6}>{t('home.mood.sticker2')}</Sticker>
-              </div>
-            </div>
-            <div className="mood-item mood-item-wide">
-              <img src="/New_Photos/momo5.jpg" alt={t('home.mood.alt4')} loading="lazy" />
-            </div>
-            <div className="mood-item">
-              <img src="/New_Photos/bar2.jpg" alt={t('home.mood.alt5')} loading="lazy" />
-            </div>
-            <div className="mood-item">
-              <img src="/New_Photos/momo3.jpg" alt={t('home.mood.alt6')} loading="lazy" />
-            </div>
-            <div className="mood-item mood-item-wide">
-              <img src="/New_Photos/Momo 2.jpeg" alt={t('home.mood.alt7')} loading="lazy" />
-              <div className="mood-caption">
-                <Sticker variant="electric" icon="sparkles" rotate={-6}>{t('home.mood.sticker3')}</Sticker>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <style>{`
-          .mood-section {
-            background: var(--color-bg);
-          }
-          .mood-header {
-            text-align: center;
-            margin-bottom: 48px;
-          }
-          .mood-header .badge {
-            margin-bottom: 16px;
-          }
-          .mood-header .section-subtitle {
-            margin: 0 auto 16px;
-          }
-          .mood-bento {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 220px;
-            gap: 20px;
-          }
-          .mood-item {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-            border: 3px solid rgba(255, 255, 255, 0.85);
-          }
-          .mood-item:hover {
-            transform: translateY(-10px) rotate(-1deg) scale(1.02);
-            box-shadow: var(--shadow-lg), 0 0 60px rgba(255, 42, 140, 0.2);
-            z-index: 2;
-          }
-          .mood-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-          }
-          .mood-item:hover img {
-            transform: scale(1.1);
-          }
-          .mood-item-large {
-            grid-column: span 2;
-            grid-row: span 2;
-          }
-          .mood-item-wide {
-            grid-column: span 2;
-            grid-row: span 1;
-          }
-          .mood-caption {
-            position: absolute;
-            bottom: 16px;
-            left: 16px;
-            z-index: 2;
-          }
-          @media (max-width: 1024px) {
-            .mood-bento {
-              grid-template-columns: repeat(2, 1fr);
-              grid-auto-rows: 180px;
-            }
-            .mood-item-large {
-              grid-column: span 2;
-              grid-row: span 2;
-            }
-          }
-          @media (max-width: 480px) {
-            .mood-bento {
-              grid-template-columns: 1fr 1fr;
-              grid-auto-rows: 150px;
-              gap: 12px;
-            }
-            .mood-item:nth-child(n) {
-              grid-column: span 1;
-              grid-row: span 1;
-            }
-            .mood-item-large {
-              grid-column: span 2;
-              grid-row: span 2;
-            }
           }
         `}</style>
       </section>
@@ -1002,42 +871,118 @@ export default function Home() {
         `}</style>
       </section>
 
-      <section className="section gallery-section">
+      <section className="section vibe-section">
         <div className="container">
-          <div className="gallery-header">
+          <div className="vibe-header">
             <span className="badge badge-play">
               <Instagram size={16} />
-              {t('home.gallery.badge')}
+              {t('home.vibe.badge')}
             </span>
-            <h2 className="section-title">{t('home.gallery.title')}</h2>
-            <p className="section-subtitle">{t('home.gallery.subtitle')}</p>
+            <h2 className="section-title">{t('home.vibe.title')}</h2>
+            <p className="section-subtitle">{t('home.vibe.subtitle')}</p>
             <Squiggle color="var(--mm-hot-pink)" width={160} height={24} strokeWidth={5} />
           </div>
-          <Gallery images={galleryImages} />
-          <div className="gallery-cta">
-            <Link to="/locations" className="btn btn-primary">
-              {t('home.gallery.cta')} <ArrowRight size={18} />
+
+          <div className="vibe-wall">
+            {vibeImages.map((image) => (
+              <div className="vibe-item" key={image.src}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+              </div>
+            ))}
+            <div className="vibe-sticker">
+              <Sticker variant="hot" icon="flame" rotate={-8}>{t('home.vibe.sticker')}</Sticker>
+            </div>
+          </div>
+
+          <div className="vibe-cta">
+            <Link to="/menu" className="btn btn-primary">
+              {t('home.vibe.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
 
+        <Starburst color="var(--mm-electric-blue)" size={96} className="vibe-starburst" />
+
         <style>{`
-          .gallery-section {
+          .vibe-section {
             background: var(--color-bg);
+            position: relative;
+            overflow: hidden;
           }
-          .gallery-header {
+          .vibe-header {
             text-align: center;
             margin-bottom: 48px;
           }
-          .gallery-header .badge {
+          .vibe-header .badge {
             margin-bottom: 16px;
           }
-          .gallery-header .section-subtitle {
+          .vibe-header .section-subtitle {
             margin: 0 auto 16px;
           }
-          .gallery-cta {
+          .vibe-wall {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            position: relative;
+          }
+          .vibe-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+            border: 3px solid rgba(255, 255, 255, 0.85);
+            aspect-ratio: 1 / 1;
+          }
+          .vibe-item:hover {
+            transform: translateY(-10px) rotate(-1deg) scale(1.02);
+            box-shadow: var(--shadow-lg), 0 0 60px rgba(255, 42, 140, 0.2);
+            z-index: 2;
+          }
+          .vibe-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+          }
+          .vibe-item:hover img {
+            transform: scale(1.1);
+          }
+          .vibe-sticker {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+          }
+          .vibe-cta {
             text-align: center;
             margin-top: 48px;
+          }
+          .vibe-starburst {
+            position: absolute;
+            bottom: 10%;
+            right: -20px;
+            animation: spin-slow 16s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+          }
+          @media (max-width: 768px) {
+            .vibe-wall {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 14px;
+            }
+          }
+          @media (max-width: 480px) {
+            .vibe-wall {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 12px;
+            }
+            .vibe-cta {
+              margin-top: 36px;
+            }
+            .vibe-starburst {
+              display: none;
+            }
           }
         `}</style>
       </section>
