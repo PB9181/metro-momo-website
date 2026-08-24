@@ -27,6 +27,16 @@
       "models": "Modèles",
       "faq": "FAQ",
       "franchise": "Franchise"
+    },
+    "order": {
+      "title": "Commander",
+      "pickup": "Commander à emporter",
+      "delivery": "Livraison",
+      "comingSoon": "Bientôt",
+      "uberEats": "Uber Eats",
+      "doorDash": "DoorDash",
+      "deliveryHero": "Delivery Hero",
+      "deliveroo": "Deliveroo"
     }
   },
   "footer": {
