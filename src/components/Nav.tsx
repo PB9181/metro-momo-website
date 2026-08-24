@@ -1,168 +1,344 @@
-import { useEffect, useRef, useState } from 'react'
-import { Menu, X, Globe, ChevronDown } from 'lucide-react'
-import { Link, NavLink } from 'react-router-dom'
-import Logo from './Logo.tsx'
-import { useTranslation, type Language } from '../i18n/index.ts'
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "./Logo.tsx";
+import { useTranslation, type Language } from "../i18n/index.ts";
 
 const languageOptions: { code: Language; label: string }[] = [
-  { code: 'en', label: 'English' },
-  { code: 'nl', label: 'Nederlands' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'fr', label: 'Français' },
-]
+  { code: "en", label: "English" },
+  { code: "nl", label: "Nederlands" },
+  { code: "de", label: "Deutsch" },
+  { code: "fr", label: "Français" },
+];
 
 type NavLinkItem = {
-  label: string
-  href: string
+  label: string;
+  href: string;
+};
+
+type OrderPartner = "uberEats" | "doorDash" | "deliveryHero" | "deliveroo";
+
+function OrderPartnerLogo({ partner }: { partner: OrderPartner }) {
+  if (partner === "uberEats") {
+    return (
+      <svg viewBox="0 0 108 24" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="18" fontSize="16" fontWeight="900" fill="currentColor">
+          uber
+        </text>
+        <text x="42" y="18" fontSize="16" fontWeight="900" fill="#06CBA4">
+          eats
+        </text>
+      </svg>
+    );
+  }
+  if (partner === "doorDash") {
+    return (
+      <svg viewBox="0 0 116 24" xmlns="http://www.w3.org/2000/svg">
+        <text
+          x="0"
+          y="18"
+          fontSize="15"
+          fontWeight="900"
+          fill="#FF3008"
+          letterSpacing="-0.5"
+        >
+          DoorDash
+        </text>
+      </svg>
+    );
+  }
+  if (partner === "deliveryHero") {
+    return (
+      <svg viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="18" fontSize="13" fontWeight="900" fill="#F57F1E">
+          delivery
+        </text>
+        <text x="64" y="18" fontSize="13" fontWeight="900" fill="#E01F26">
+          hero
+        </text>
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 110 24" xmlns="http://www.w3.org/2000/svg">
+      <text
+        x="0"
+        y="18"
+        fontSize="16"
+        fontWeight="900"
+        fill="#00CCBC"
+        letterSpacing="-1"
+      >
+        deliveroo
+      </text>
+    </svg>
+  );
 }
 
 export default function Nav() {
-  const { t, language, setLanguage } = useTranslation()
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [companyOpen, setCompanyOpen] = useState(false)
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const companyRef = useRef<HTMLDivElement>(null)
+  const { t, language, setLanguage } = useTranslation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
+  const [orderOpen, setOrderOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const companyRef = useRef<HTMLDivElement>(null);
+  const orderRef = useRef<HTMLDivElement>(null);
 
   const primaryLinks: NavLinkItem[] = [
-    { label: t('nav.home'), href: '/' },
-    { label: t('nav.menu'), href: '/menu' },
-    { label: t('nav.locations'), href: '/locations' },
-    { label: t('nav.about'), href: '/about' },
-  ]
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.menu"), href: "/menu" },
+    { label: t("nav.locations"), href: "/locations" },
+    { label: t("nav.about"), href: "/about" },
+  ];
 
   const companyLinks: NavLinkItem[] = [
-    { label: t('nav.company.story'), href: '/about#story' },
-    { label: t('nav.company.howItWorks'), href: '/how-it-works' },
-    { label: t('nav.company.tech'), href: '/tech' },
-    { label: t('nav.company.models'), href: '/models' },
-    { label: t('nav.company.faq'), href: '/faq' },
-    { label: t('nav.company.franchise'), href: '/contact' },
-  ]
+    { label: t("nav.company.story"), href: "/about#story" },
+    { label: t("nav.company.howItWorks"), href: "/how-it-works" },
+    { label: t("nav.company.tech"), href: "/tech" },
+    { label: t("nav.company.models"), href: "/models" },
+    { label: t("nav.company.faq"), href: "/faq" },
+    { label: t("nav.company.franchise"), href: "/contact" },
+  ];
 
-  const activeLabel = languageOptions.find((option) => option.code === language)?.label ?? language.toUpperCase()
+  const activeLabel =
+    languageOptions.find((option) => option.code === language)?.label ??
+    language.toUpperCase();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setDropdownOpen(false)
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
       }
-      if (companyRef.current && !companyRef.current.contains(event.target as Node)) {
-        setCompanyOpen(false)
+      if (
+        companyRef.current &&
+        !companyRef.current.contains(event.target as Node)
+      ) {
+        setCompanyOpen(false);
       }
+      if (
+        orderRef.current &&
+        !orderRef.current.contains(event.target as Node)
+      ) {
+        setOrderOpen(false);
+      }
+    };
+    if (dropdownOpen || companyOpen || orderOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () =>
+        document.removeEventListener("mousedown", handleClickOutside);
     }
-    if (dropdownOpen || companyOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-      return () => document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [dropdownOpen, companyOpen])
+  }, [dropdownOpen, companyOpen, orderOpen]);
 
-  const handleNavClick = () => setMobileOpen(false)
+  const handleNavClick = () => setMobileOpen(false);
 
   return (
-    <header className="nav">
-      <div className="container nav-inner">
-        <Link to="/" className="nav-logo" aria-label={t('nav.logoAlt')}>
-          <Logo width={120} variant="color" />
-        </Link>
+    <>
+      <header className="nav">
+        <div className="container nav-inner">
+          <Link to="/" className="nav-logo" aria-label={t("nav.logoAlt")}>
+            <Logo width={120} variant="color" />
+          </Link>
 
-        <nav className={`nav-links ${mobileOpen ? 'open' : ''}`} aria-label="Main navigation">
-          {primaryLinks.map((link) => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={handleNavClick}
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          <nav
+            className={`nav-links ${mobileOpen ? "open" : ""}`}
+            aria-label="Main navigation"
+          >
+            {primaryLinks.map((link) => (
+              <NavLink
+                key={link.href}
+                to={link.href}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+                onClick={handleNavClick}
+              >
+                {link.label}
+              </NavLink>
+            ))}
 
-          <div className="nav-dropdown" ref={companyRef}>
-            <button
-              className={`nav-dropdown-toggle ${companyOpen ? 'open' : ''}`}
-              onClick={() => setCompanyOpen((open) => !open)}
-              aria-expanded={companyOpen}
-              aria-haspopup="true"
-            >
-              <span>{t('nav.company.title')}</span>
-              <ChevronDown size={16} className="nav-dropdown-chevron" aria-hidden="true" />
-            </button>
-            {companyOpen && (
-              <ul className="nav-dropdown-menu" role="menu">
-                {companyLinks.map((link) => (
-                  <li key={link.href} role="none">
+            <div className="nav-dropdown" ref={companyRef}>
+              <button
+                className={`nav-dropdown-toggle ${companyOpen ? "open" : ""}`}
+                onClick={() => setCompanyOpen((open) => !open)}
+                aria-expanded={companyOpen}
+                aria-haspopup="true"
+              >
+                <span>{t("nav.company.title")}</span>
+                <ChevronDown
+                  size={16}
+                  className="nav-dropdown-chevron"
+                  aria-hidden="true"
+                />
+              </button>
+              {companyOpen && (
+                <ul className="nav-dropdown-menu" role="menu">
+                  {companyLinks.map((link) => (
+                    <li key={link.href} role="none">
+                      <Link
+                        to={link.href}
+                        className="nav-dropdown-link"
+                        onClick={() => {
+                          handleNavClick();
+                          setCompanyOpen(false);
+                        }}
+                        role="menuitem"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <div className="nav-dropdown nav-order-dropdown" ref={orderRef}>
+              <button
+                className={`nav-dropdown-toggle ${orderOpen ? "open" : ""}`}
+                onClick={() => setOrderOpen((open) => !open)}
+                aria-expanded={orderOpen}
+                aria-haspopup="true"
+              >
+                <span>{t("nav.order.title")}</span>
+                <ChevronDown
+                  size={16}
+                  className="nav-dropdown-chevron"
+                  aria-hidden="true"
+                />
+              </button>
+              {orderOpen && (
+                <ul className="nav-dropdown-menu nav-order-menu" role="menu">
+                  <li className="nav-order-group" role="none">
+                    <span className="nav-order-section-label">
+                      {t("nav.order.pickup")}
+                    </span>
                     <Link
-                      to={link.href}
-                      className="nav-dropdown-link"
+                      to="/menu"
+                      className="nav-dropdown-link nav-order-link"
                       onClick={() => {
-                        handleNavClick()
-                        setCompanyOpen(false)
+                        handleNavClick();
+                        setOrderOpen(false);
                       }}
                       role="menuitem"
                     >
-                      {link.label}
+                      {t("nav.order.pickup")}
                     </Link>
                   </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          <div className="language-switcher" ref={dropdownRef} aria-label="Select language">
-            <button
-              className="language-dropdown-toggle"
-              onClick={() => setDropdownOpen((open) => !open)}
-              aria-expanded={dropdownOpen}
-              aria-haspopup="listbox"
-            >
-              <Globe size={16} className="language-switcher-icon" aria-hidden="true" />
-              <span>{activeLabel}</span>
-              <ChevronDown size={16} className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} aria-hidden="true" />
-            </button>
-            {dropdownOpen && (
-              <ul className="language-dropdown-menu" role="listbox">
-                {languageOptions.map(({ code, label }) => (
-                  <li key={code} role="option" aria-selected={language === code}>
-                    <button
-                      className={`language-dropdown-option ${language === code ? 'active' : ''}`}
-                      onClick={() => {
-                        setLanguage(code)
-                        setDropdownOpen(false)
-                        handleNavClick()
-                      }}
-                    >
-                      {label}
-                    </button>
+                  <li className="nav-order-divider" aria-hidden="true" />
+                  <li className="nav-order-group" role="none">
+                    <span className="nav-order-section-label">
+                      {t("nav.order.delivery")}
+                    </span>
+                    {(
+                      [
+                        "uberEats",
+                        "doorDash",
+                        "deliveryHero",
+                        "deliveroo",
+                      ] as const
+                    ).map((partner) => (
+                      <button
+                        key={partner}
+                        className="nav-order-partner"
+                        type="button"
+                        disabled
+                        aria-label={`${t(`nav.order.${partner}`)} — ${t("nav.order.comingSoon")}`}
+                      >
+                        <span className="nav-order-logo" aria-hidden="true">
+                          <OrderPartnerLogo partner={partner} />
+                        </span>
+                        <span className="nav-order-badge">
+                          {t("nav.order.comingSoon")}
+                        </span>
+                      </button>
+                    ))}
                   </li>
-                ))}
-              </ul>
-            )}
-          </div>
+                </ul>
+              )}
+            </div>
 
-          <Link to="/menu" className="btn btn-primary nav-cta" onClick={handleNavClick}>
-            {t('nav.cta')}
-          </Link>
-        </nav>
+            <div
+              className="language-switcher"
+              ref={dropdownRef}
+              aria-label="Select language"
+            >
+              <button
+                className="language-dropdown-toggle"
+                onClick={() => setDropdownOpen((open) => !open)}
+                aria-expanded={dropdownOpen}
+                aria-haspopup="listbox"
+              >
+                <Globe
+                  size={16}
+                  className="language-switcher-icon"
+                  aria-hidden="true"
+                />
+                <span>{activeLabel}</span>
+                <ChevronDown
+                  size={16}
+                  className={`dropdown-chevron ${dropdownOpen ? "open" : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {dropdownOpen && (
+                <ul className="language-dropdown-menu" role="listbox">
+                  {languageOptions.map(({ code, label }) => (
+                    <li
+                      key={code}
+                      role="option"
+                      aria-selected={language === code}
+                    >
+                      <button
+                        className={`language-dropdown-option ${language === code ? "active" : ""}`}
+                        onClick={() => {
+                          setLanguage(code);
+                          setDropdownOpen(false);
+                          handleNavClick();
+                        }}
+                      >
+                        {label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
-        <button
-          className="nav-toggle"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? t('nav.menuClose') : t('nav.menuOpen')}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+            <Link
+              to="/menu"
+              className="btn btn-primary nav-cta"
+              onClick={handleNavClick}
+            >
+              {t("nav.cta")}
+            </Link>
+          </nav>
 
-      <style>{`
+          <button
+            className="nav-toggle"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? t("nav.menuClose") : t("nav.menuOpen")}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        <style>{`
         .nav {
-          position: sticky;
+          position: fixed;
           top: 0;
+          left: 0;
+          right: 0;
           z-index: 100;
           background: rgba(255, 251, 247, 0.92);
           backdrop-filter: blur(14px);
           border-bottom: 2px dashed var(--mm-border);
+        }
+        .nav-spacer {
+          height: 96px;
         }
         .nav-inner {
           display: flex;
@@ -273,6 +449,74 @@ export default function Nav() {
         .nav-dropdown-link:hover {
           background: rgba(232, 23, 43, 0.08);
           color: var(--color-primary);
+        }
+        .nav-order-menu {
+          min-width: 240px;
+          padding: 12px;
+        }
+        .nav-order-group {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .nav-order-section-label {
+          display: block;
+          font-size: 0.7rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--color-muted);
+          padding: 4px 8px;
+        }
+        .nav-order-link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .nav-order-divider {
+          height: 1px;
+          background: var(--mm-border);
+          margin: 8px 0;
+        }
+        .nav-order-partner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          width: 100%;
+          padding: 10px 12px;
+          border-radius: var(--radius-sm);
+          background: transparent;
+          border: none;
+          cursor: not-allowed;
+          opacity: 0.75;
+          transition: background-color 0.2s ease;
+        }
+        .nav-order-partner:hover {
+          background: rgba(6, 203, 164, 0.06);
+        }
+        .nav-order-logo {
+          display: inline-flex;
+          width: 100px;
+          height: 20px;
+          color: var(--color-text);
+        }
+        .nav-order-logo svg {
+          width: 100%;
+          height: 100%;
+        }
+        .nav-order-badge {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px 8px;
+          border-radius: var(--radius-round);
+          background: rgba(255, 210, 63, 0.2);
+          color: #B07D00;
+          font-size: 0.65rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          white-space: nowrap;
         }
         .language-switcher {
           position: relative;
@@ -426,6 +670,33 @@ export default function Nav() {
             padding: 14px 16px;
             font-size: 1rem;
           }
+          .nav-order-menu {
+            position: static;
+            width: 100%;
+            box-shadow: none;
+            border: none;
+            background: var(--color-surface);
+            animation: none;
+            margin-top: 4px;
+            padding: 10px;
+          }
+          .nav-order-section-label {
+            font-size: 0.75rem;
+            padding: 6px 8px;
+          }
+          .nav-order-partner {
+            padding: 12px 14px;
+          }
+          .nav-order-logo {
+            width: 110px;
+            height: 24px;
+          }
+          .nav-order-badge {
+            font-size: 0.7rem;
+          }
+          .nav-spacer {
+            height: 80px;
+          }
           .language-switcher {
             width: 100%;
             margin-top: 8px;
@@ -460,6 +731,8 @@ export default function Nav() {
           }
         }
       `}</style>
-    </header>
-  )
+      </header>
+      <div className="nav-spacer" aria-hidden="true" />
+    </>
+  );
 }
