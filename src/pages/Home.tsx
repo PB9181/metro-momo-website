@@ -85,7 +85,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-photo-wall">
               <div className="photo-wall-main photo-frame">
-                <img src="/Eatable_33435.jpg" alt={t('home.hero.imageAlt')} />
+                <img src="/New_Photos/poster.jpg" alt={t('home.hero.imageAlt')} />
                 <div className="hero-sticker-top">
                   <Sticker variant="hot" icon="flame" rotate={-12}>{t('home.hero.stickerHot')}</Sticker>
                 </div>
