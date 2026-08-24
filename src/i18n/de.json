@@ -109,20 +109,38 @@
         }
       ]
     },
-    "mood": {
-      "badge": "Die Vibe",
-      "title": "Mood board",
-      "subtitle": "Ein Geschmack dessen, was passiert, wenn Himalaya-Aromen auf Spätabend-Energie, Neon und null Filter treffen.",
-      "sticker1": "SPICY",
-      "sticker2": "LOADED",
-      "sticker3": "HANDMADE",
-      "alt1": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen",
-      "alt2": "Neon grün-bluer Cocktail in einem hohen Glas",
-      "alt3": "Erfrischender roter Wassermelonen-Mocktail im Metallkorb mit Minze",
-      "alt4": "Gedämpfte Momos im Bambuskorb mit Dips",
-      "alt5": "Zwei bunte tropische Cocktails an einer Bar",
-      "alt6": "Gourmet pan-frittierte Momos mit Sauce-Swipe",
-      "alt7": "Hände, die frische Momos eins nach dem anderen falten"
+    "vibe": {
+      "badge": "Auf dem Gram",
+      "title": "MOMO Mood Wall",
+      "subtitle": "Der Geschmack, die Farben, die Late-Night-Energie. Echte MOMO-Momente, gemacht zum Scrollen.",
+      "cta": "Menü ansehen",
+      "sticker": "HOT",
+      "images": [
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Zwei bunte tropische Cocktails an einer Bar"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Neon grün-bluer Cocktail in einem hohen Glas"
+        },
+        {
+          "src": "/New_Photos/bar7.jpg",
+          "alt": "Erfrischender roter Wassermelonen-Mocktail im Metallkorb mit Minze"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Gedämpfte Momos im Bambuskorb mit Dips"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Hände, die frische Momos eins nach dem anderen falten"
+        }
+      ]
     },
     "bestSellers": {
       "badge": "Bestseller",
@@ -151,46 +169,6 @@
       "titleHighlight": "MOMO",
       "text": "Unsere neueste virale Kreation: knusprige Dumplings mit hausgemachtem Chili-Crunch-Öl, Frühlingszwiebeln und Limette. Limitierte Auflage, maximaler Geschmack.",
       "cta": "Schnell zum Menü"
-    },
-    "gallery": {
-      "badge": "Auf dem Gram",
-      "title": "MOMO Momente",
-      "subtitle": "Echtes Essen, echte Menschen, echte Vibes. Tag @metromomo und zeig uns deinen Spread.",
-      "cta": "Komm Erinnerungen machen",
-      "images": [
-        {
-          "src": "/New_Photos/poster.jpg",
-          "alt": "Geladene MOMO Spread Flat Lay"
-        },
-        {
-          "src": "/New_Photos/momo4.jpg",
-          "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
-        },
-        {
-          "src": "/New_Photos/bar4.jpg",
-          "alt": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur"
-        },
-        {
-          "src": "/New_Photos/bar2.jpg",
-          "alt": "Zwei bunte tropische Cocktails an einer Bar"
-        },
-        {
-          "src": "/New_Photos/momo5.jpg",
-          "alt": "Gedämpfte Momos im Bambuskorb mit Dips"
-        },
-        {
-          "src": "/New_Photos/bar6.jpg",
-          "alt": "Neon grün-bluer Cocktail in einem hohen Glas"
-        },
-        {
-          "src": "/New_Photos/momo3.jpg",
-          "alt": "Gourmet pan-frittierte Momos mit Sauce-Swipe"
-        },
-        {
-          "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Hände, die frische Momos eins nach dem anderen falten"
-        }
-      ]
     },
     "story": {
       "badge": "Unsere Geschichte",
@@ -250,21 +228,6 @@
       "sticker1": "LECKER",
       "sticker2": "NEU",
       "sticker3": "ICONIC"
-    },
-    "mood": {
-      "badge": "Die Vibe",
-      "title": "Mood board",
-      "subtitle": "Ein Vorgeschmack darauf, was passiert, wenn Himalaya-Aromen auf Late-Night-Energie, Neon und keine Filter treffen.",
-      "sticker1": "SCHARF",
-      "sticker2": "LOADED",
-      "sticker3": "HANDGEMACHT",
-      "alt1": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen",
-      "alt2": "Neon grün-bluer Cocktail in einem hohen Glas",
-      "alt3": "Geladene Fries mit pflanzlichem Protein, Saucen und Koriander",
-      "alt4": "Gedämpfte Momos im Bambuskorb mit Dips",
-      "alt5": "Zwei bunte tropische Cocktails an einer Bar",
-      "alt6": "Gourmet pan-frittierte Momos mit Sauce-Swipe",
-      "alt7": "Hände, die frische Momos eins nach dem anderen falten"
     }
   },
   "menu": {

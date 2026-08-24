@@ -71,20 +71,38 @@
       "imageBadge": "FRESH",
       "stickerHot": "VIRAL"
     },
-    "mood": {
-      "badge": "The vibe",
-      "title": "Mood board",
-      "subtitle": "A taste of what happens when Himalayan flavors meet late-night energy, neon, and zero filters.",
-      "sticker1": "SPICY",
-      "sticker2": "LOADED",
-      "sticker3": "HANDMADE",
-      "alt1": "Pan-fried momos on a dark plate with colorful sauces",
-      "alt2": "Neon green and blue cocktail in a tall glass",
-      "alt3": "Refreshing red watermelon mocktail in a metal mesh basket with fresh mint",
-      "alt4": "Steamed momos in a bamboo basket with dipping sauces",
-      "alt5": "Two colorful tropical cocktails on a bar counter",
-      "alt6": "Gourmet pan-fried momos with sauce swoosh",
-      "alt7": "Hands folding fresh momos one by one"
+    "vibe": {
+      "badge": "On the gram",
+      "title": "MOMO Mood Wall",
+      "subtitle": "The flavor, the colors, the late-night energy. Real MOMO moments made to scroll.",
+      "cta": "See the menu",
+      "sticker": "HOT",
+      "images": [
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Pan-fried momos on a dark plate with colorful sauces"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Two colorful tropical cocktails on a bar counter"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Neon green and blue cocktail in a tall glass"
+        },
+        {
+          "src": "/New_Photos/bar7.jpg",
+          "alt": "Refreshing red watermelon mocktail in a metal mesh basket with fresh mint"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Steamed momos in a bamboo basket with dipping sauces"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Hands folding fresh momos one by one"
+        }
+      ]
     },
     "marquee": {
       "badge": "Food that sells itself",
@@ -151,46 +169,6 @@
       "titleHighlight": "MOMO",
       "text": "Our latest viral creation: crispy-edged dumplings tossed in house chili crunch oil, scallions, and lime. Limited run, maximum flavor.",
       "cta": "Grab it on the menu"
-    },
-    "gallery": {
-      "badge": "On the gram",
-      "title": "MOMO moments",
-      "subtitle": "Real food, real people, real vibes. Tag @metromomo and show us your spread.",
-      "cta": "Come make memories",
-      "images": [
-        {
-          "src": "/New_Photos/poster.jpg",
-          "alt": "Loaded MOMO spread flat lay"
-        },
-        {
-          "src": "/New_Photos/momo4.jpg",
-          "alt": "Pan-fried momos on a dark plate with colorful sauces"
-        },
-        {
-          "src": "/New_Photos/bar4.jpg",
-          "alt": "Vibrant red cocktail with crushed ice and citrus garnish"
-        },
-        {
-          "src": "/New_Photos/bar2.jpg",
-          "alt": "Two colorful tropical cocktails on a bar counter"
-        },
-        {
-          "src": "/New_Photos/momo5.jpg",
-          "alt": "Steamed momos in a bamboo basket with dipping sauces"
-        },
-        {
-          "src": "/New_Photos/bar6.jpg",
-          "alt": "Neon green and blue cocktail in a tall glass"
-        },
-        {
-          "src": "/New_Photos/momo3.jpg",
-          "alt": "Gourmet pan-fried momos with sauce swoosh"
-        },
-        {
-          "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Hands folding fresh momos one by one"
-        }
-      ]
     },
     "story": {
       "badge": "Our story",

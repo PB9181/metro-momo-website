@@ -109,20 +109,38 @@
         }
       ]
     },
-    "mood": {
-      "badge": "De vibe",
-      "title": "Mood board",
-      "subtitle": "Een voorproefje van wat er gebeurt wanneer Himalayaanse smaken samenkomen met late-night energie, neon en zero filters.",
-      "sticker1": "SPICY",
-      "sticker2": "LOADED",
-      "sticker3": "HANDMADE",
-      "alt1": "Pan-gebraden momos op een donker bord met kleurrijke sauzen",
-      "alt2": "Neon groen-blauwe cocktail in een hoog glas",
-      "alt3": "Verfrissende rode watermeloen mocktail in een metalen mandje met munt",
-      "alt4": "Gestoomde momos in een bamboe mandje met dipsauzen",
-      "alt5": "Twee kleurrijke tropische cocktails op een bar",
-      "alt6": "Gourmet pan-gebraden momos met saus swipe",
-      "alt7": "Handen die verse momos één voor één vouwen"
+    "vibe": {
+      "badge": "Op de gram",
+      "title": "MOMO Mood Wall",
+      "subtitle": "De smaak, de kleuren, de late-night energie. Echte MOMO momenten gemaakt om te scrollen.",
+      "cta": "Bekijk het menu",
+      "sticker": "HOT",
+      "images": [
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Pan-gebraden momos op een donker bord met kleurrijke sauzen"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Twee kleurrijke tropische cocktails op een bar"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Neon groen-blauwe cocktail in een hoog glas"
+        },
+        {
+          "src": "/New_Photos/bar7.jpg",
+          "alt": "Verfrissende rode watermeloen mocktail in een metalen mandje met munt"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Gestoomde momos in een bamboe mandje met dipsauzen"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Handen die verse momos één voor één vouwen"
+        }
+      ]
     },
     "bestSellers": {
       "badge": "Bestsellers",
@@ -151,46 +169,6 @@
       "titleHighlight": "MOMO",
       "text": "Onze nieuwste virale creatie: krokante dumplings met huisgemaakte chili crunch olie, lente-ui en limoen. Beperkte oplage, maximale smaak.",
       "cta": "Snel naar het menu"
-    },
-    "gallery": {
-      "badge": "Op de gram",
-      "title": "MOMO momenten",
-      "subtitle": "Echt eten, echte mensen, echte vibes. Tag @metromomo en laat ons je spread zien.",
-      "cta": "Kom herinneringen maken",
-      "images": [
-        {
-          "src": "/New_Photos/poster.jpg",
-          "alt": "Geladen MOMO spread flat lay"
-        },
-        {
-          "src": "/New_Photos/momo4.jpg",
-          "alt": "Pan-gebraden momos op een donker bord met kleurrijke sauzen"
-        },
-        {
-          "src": "/New_Photos/bar4.jpg",
-          "alt": "Levendige rode cocktail met crushed ice en citrus garnering"
-        },
-        {
-          "src": "/New_Photos/bar2.jpg",
-          "alt": "Twee kleurrijke tropische cocktails op een bar"
-        },
-        {
-          "src": "/New_Photos/momo5.jpg",
-          "alt": "Gestoomde momos in een bamboe mandje met dipsauzen"
-        },
-        {
-          "src": "/New_Photos/bar6.jpg",
-          "alt": "Neon groen-blauwe cocktail in een hoog glas"
-        },
-        {
-          "src": "/New_Photos/momo3.jpg",
-          "alt": "Gourmet pan-gebraden momos met saus swipe"
-        },
-        {
-          "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Handen die verse momos één voor één vouwen"
-        }
-      ]
     },
     "story": {
       "badge": "Ons verhaal",
@@ -250,21 +228,6 @@
       "sticker1": "LEKKER",
       "sticker2": "NIEUW",
       "sticker3": "ICONIC"
-    },
-    "mood": {
-      "badge": "De vibe",
-      "title": "Mood board",
-      "subtitle": "Een voorproefje van wat er gebeurt als Himalayaanse smaken samenkomen met late-night energie, neon en geen filters.",
-      "sticker1": "PIKANT",
-      "sticker2": "LOADED",
-      "sticker3": "HANDGEMAAKT",
-      "alt1": "Pan-gebraden momos op een donker bord met kleurrijke sauzen",
-      "alt2": "Neon groen-blauwe cocktail in een hoog glas",
-      "alt3": "Geladen fries met plantaardige proteïne, sauzen en koriander",
-      "alt4": "Gestoomde momos in een bamboe mandje met dipsauzen",
-      "alt5": "Twee kleurrijke tropische cocktails op een bar",
-      "alt6": "Gourmet pan-gebraden momos met saus swipe",
-      "alt7": "Handen die verse momos één voor één vouwen"
     }
   },
   "menu": {
