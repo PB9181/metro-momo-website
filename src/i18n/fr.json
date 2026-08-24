@@ -56,32 +56,33 @@
     "hero": {
       "badge": "Plissés à la main & vapeur",
       "title": "Des dumplings qui",
-      "titleHighlight": "mètent la fête",
-      "subtitle": "Metro Momo est un momo-joint moderne et ludique où les saveurs himalayennes rencontrent un design audacieux, une ambiance joyeuse et des dumplings délicieusement savoureux.",
+      "titleHighlight": "cassent internet",
+      "subtitle": "Metro Momo est un momo-joint moderne et ludique où les saveurs himalayennes rencontrent un design audacieux, une ambiance joyeuse et des dumplings délicieusement savoureux. Faits pour être partagés, photographiés et recommandés.",
       "ctaPrimary": "Explorer le menu",
       "ctaSecondary": "Nous trouver",
       "stat1Label": "Frais",
       "stat1Sublabel": "Cuits à la vapeur sur commande",
       "stat2Label": "Saveurs audacieuses",
       "stat2Sublabel": "Sauces maison",
-      "imageAlt": "Dumplings METRO MOMO fumants sur une assiette rouge",
-      "smallAlt1": "Jhol MOMO en bouillon",
-      "smallAlt2": "MOMO frit croustillant au chili",
+      "imageAlt": "Spread MOMO généreux avec dumplings, bowls et loaded fries",
+      "smallAlt1": "Loaded fries style mexicain avec salsa, guacamole et jalapeños",
+      "smallAlt2": "Pulled loaded fries nappées de sauce chipotle",
+      "smallAlt3": "Plateau de MOMO fumants à partager",
       "imageBadge": "FRAIS",
-      "stickerHot": "FRAIS"
+      "stickerHot": "VIRAL"
     },
     "marquee": {
       "badge": "Une nourriture qui se vend toute seule",
-      "title": "Du MOMO authentique, du vrai goût",
+      "title": "Du contenu MOMO qu'on dévore",
       "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Spread MOMO généreux flat lay" },
+        { "src": "/Mexican.jpg", "alt": "Loaded fries style mexicain" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled loaded fries" },
         { "src": "/hero-momos.png", "alt": "MOMO fumant" },
         { "src": "/jhol-momo.png", "alt": "Jhol MOMO en bouillon" },
         { "src": "/menu-fried-momo.png", "alt": "MOMO frit au chili" },
         { "src": "/13363.png", "alt": "Plat de MOMO" },
-        { "src": "/IMG_0138.png", "alt": "Gros plan sur MOMO" },
-        { "src": "/about-community.png", "alt": "Des gens profitant de MOMO" },
-        { "src": "/model-restaurant.png", "alt": "Restaurant METRO MOMO" },
-        { "src": "/model-stall.png", "alt": "Stand de street food" }
+        { "src": "/IMG_0138.png", "alt": "Gros plan sur MOMO" }
       ]
     },
     "bestSellers": {
@@ -89,6 +90,44 @@
       "title": "Les préférés de tous",
       "subtitle": "Commencez par les dumplings qui ont bâti notre nom. Plissés à la main, pleins de saveur et impossible d'en manger qu'un seul.",
       "cta": "Voir le menu complet"
+    },
+    "dietary": {
+      "badge": "Pour tout le monde",
+      "title": "Mange à ta façon",
+      "subtitle": "Végétalien, sans gluten, sans lactose, sans noix — on s'occupe de tout. Sans compromis sur le goût.",
+      "veganLabel": "Vegan",
+      "veganText": "Momos et bols 100% végétaux, pleins de caractère.",
+      "glutenFreeLabel": "Sans Gluten",
+      "glutenFreeText": "Options à base de riz et préparations soignées disponibles.",
+      "dairyFreeLabel": "Sans Lactose",
+      "dairyFreeText": "Sauces crémeuses sans le lactose.",
+      "nutFreeLabel": "Sans Noix",
+      "nutFreeText": "Snacking sans souci pour les crews sensibles aux noix."
+    },
+    "drop": {
+      "badge": "La sortie de la semaine",
+      "sticker1": "NOUVEAU",
+      "sticker2": "HOT",
+      "title": "Spicy Chili Crunch",
+      "titleHighlight": "MOMO",
+      "text": "Notre dernière création virale : des dumplings aux bords croustillants, enrobés d'huile chili crunch maison, ciboulette et citron vert. Série limitée, saveur maximale.",
+      "cta": "L'attraper au menu"
+    },
+    "gallery": {
+      "badge": "Sur le gram",
+      "title": "MOMO moments",
+      "subtitle": "Vraie nourriture, vraies personnes, vraies vibes. Tag @metromomo et montre-nous ta table.",
+      "cta": "Venez créer des souvenirs",
+      "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Spread MOMO généreux flat lay" },
+        { "src": "/Mexican.jpg", "alt": "Loaded fries style mexicain" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled loaded fries" },
+        { "src": "/hero-momos.png", "alt": "MOMO fumant" },
+        { "src": "/jhol-momo.png", "alt": "Jhol MOMO en bouillon" },
+        { "src": "/menu-fried-momo.png", "alt": "MOMO frit au chili" },
+        { "src": "/13363.png", "alt": "Plat de MOMO" },
+        { "src": "/IMG_0138.png", "alt": "Gros plan sur MOMO" }
+      ]
     },
     "story": {
       "badge": "Notre histoire",
@@ -123,10 +162,11 @@
     },
     "cta": {
       "title": "Prêt à mettre du piquant ?",
-      "text": "Explorez le menu, trouvez le Metro Momo le plus proche ou apportez la marque dans votre ville.",
+      "text": "Explorez le menu, trouvez le Metro Momo le plus proche ou apportez la marque dans votre ville. Votre feed vous remerciera.",
       "cta": "Commander / Visiter",
       "sticker1": "DÉLICE",
-      "sticker2": "NOUVEAU"
+      "sticker2": "NOUVEAU",
+      "sticker3": "ICONIC"
     }
   },
   "menu": {

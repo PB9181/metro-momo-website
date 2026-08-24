@@ -56,32 +56,33 @@
     "hero": {
       "badge": "Handgeplattet & gedämpft",
       "title": "Dumplings, die",
-      "titleHighlight": "die Party bringen",
-      "subtitle": "Metro Momo ist eine verspielte, moderne Momo-Bude, in der Himalaya-Aromen auf kühnes Design, gute Vibes und ernsthaft leckere Dumplings treffen.",
+      "titleHighlight": "das Internet brechen",
+      "subtitle": "Metro Momo ist eine verspielte, moderne Momo-Bude, in der Himalaya-Aromen auf kühnes Design, gute Vibes und ernsthaft leckere Dumplings treffen. Zum Teilen, Fotografieren und Wiederkommen.",
       "ctaPrimary": "Menü erkunden",
       "ctaSecondary": "Finde uns",
       "stat1Label": "Frisch gemacht",
       "stat1Sublabel": "Täglich auf Bestellung gedämpft",
       "stat2Label": "Kühne Aromen",
       "stat2Sublabel": "Hausgemachte Saucen",
-      "imageAlt": "Dampfende METRO MOMO Dumplings auf einem roten Teller",
-      "smallAlt1": "Jhol MOMO in Brühe",
-      "smallAlt2": "Krosse gebratene Chili-MOMO",
+      "imageAlt": "Geladene MOMO Spread mit Dumplings, Bowls und Loaded Fries",
+      "smallAlt1": "Geladene Mexican-Style Fries mit Salsa, Guacamole und Jalapeños",
+      "smallAlt2": "Pulled Loaded Fries mit Chipotle-Sauce",
+      "smallAlt3": "Dampfende MOMO Platte zum Teilen",
       "imageBadge": "FRISCH",
-      "stickerHot": "FRISCH"
+      "stickerHot": "VIRAL"
     },
     "marquee": {
       "badge": "Essen, das sich selbst verkauft",
-      "title": "Echte MOMO, echter Geschmack",
+      "title": "MOMO Content, den man schmeckt",
       "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Geladene MOMO Spread Flat Lay" },
+        { "src": "/Mexican.jpg", "alt": "Geladene Mexican-Style Fries" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled Loaded Fries" },
         { "src": "/hero-momos.png", "alt": "Dampfende MOMO" },
         { "src": "/jhol-momo.png", "alt": "Jhol MOMO in Brühe" },
         { "src": "/menu-fried-momo.png", "alt": "Frittierte Chili-MOMO" },
         { "src": "/13363.png", "alt": "MOMO Platte" },
-        { "src": "/IMG_0138.png", "alt": "MOMO Nahaufnahme" },
-        { "src": "/about-community.png", "alt": "Menschen genießen MOMO" },
-        { "src": "/model-restaurant.png", "alt": "METRO MOMO Restaurant" },
-        { "src": "/model-stall.png", "alt": "Straßenimbiss-Stand" }
+        { "src": "/IMG_0138.png", "alt": "MOMO Nahaufnahme" }
       ]
     },
     "bestSellers": {
@@ -89,6 +90,44 @@
       "title": "Die Favoriten aller",
       "subtitle": "Beginne mit den Dumplings, die unseren Namen aufgebaut haben. Handgeplattet, aromatisch und unmöglich, nur einen zu essen.",
       "cta": "Gesamtes Menü ansehen"
+    },
+    "dietary": {
+      "badge": "Für alle",
+      "title": "Iss auf deine Art",
+      "subtitle": "Vegan, glutenfrei, laktosefrei, nussfrei — wir haben dich. Ohne Geschmackskompromisse.",
+      "veganLabel": "Vegan",
+      "veganText": "Pflanzliche Momos und Bowls mit vollem Geschmack.",
+      "glutenFreeLabel": "Glutenfrei",
+      "glutenFreeText": "Reisbasierte und sorgfältig zubereitete Optionen verfügbar.",
+      "dairyFreeLabel": "Laktosefrei",
+      "dairyFreeText": "Cremige Saucen ohne die Laktose.",
+      "nutFreeLabel": "Nussfrei",
+      "nutFreeText": "Sorgenfreier Snack für nuss-empfindliche Crews."
+    },
+    "drop": {
+      "badge": "Diese Woche",
+      "sticker1": "NEU",
+      "sticker2": "HOT",
+      "title": "Spicy Chili Crunch",
+      "titleHighlight": "MOMO",
+      "text": "Unsere neueste virale Kreation: knusprige Dumplings mit hausgemachtem Chili-Crunch-Öl, Frühlingszwiebeln und Limette. Limitierte Auflage, maximaler Geschmack.",
+      "cta": "Schnell zum Menü"
+    },
+    "gallery": {
+      "badge": "Auf dem Gram",
+      "title": "MOMO Momente",
+      "subtitle": "Echtes Essen, echte Menschen, echte Vibes. Tag @metromomo und zeig uns deinen Spread.",
+      "cta": "Komm Erinnerungen machen",
+      "images": [
+        { "src": "/Eatable_33435.jpg", "alt": "Geladene MOMO Spread Flat Lay" },
+        { "src": "/Mexican.jpg", "alt": "Geladene Mexican-Style Fries" },
+        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled Loaded Fries" },
+        { "src": "/hero-momos.png", "alt": "Dampfende MOMO" },
+        { "src": "/jhol-momo.png", "alt": "Jhol MOMO in Brühe" },
+        { "src": "/menu-fried-momo.png", "alt": "Frittierte Chili-MOMO" },
+        { "src": "/13363.png", "alt": "MOMO Platte" },
+        { "src": "/IMG_0138.png", "alt": "MOMO Nahaufnahme" }
+      ]
     },
     "story": {
       "badge": "Unsere Geschichte",
@@ -123,10 +162,11 @@
     },
     "cta": {
       "title": "Bereit für Geschmacksexplosion?",
-      "text": "Erkunde das Menü, finde den nächsten Metro Momo oder bring die Marke in deine Stadt.",
+      "text": "Erkunde das Menü, finde den nächsten Metro Momo oder bring die Marke in deine Stadt. Dein Feed wird es dir danken.",
       "cta": "Bestellen / Besuchen",
       "sticker1": "LECKER",
-      "sticker2": "NEU"
+      "sticker2": "NEU",
+      "sticker3": "ICONIC"
     }
   },
   "menu": {

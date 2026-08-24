@@ -1,24 +1,34 @@
-import { ArrowRight, MapPin, ChefHat, Sparkles, Flame, Star, Utensils } from 'lucide-react'
+import { ArrowRight, MapPin, ChefHat, Sparkles, Flame, Star, Utensils, Leaf, WheatOff, MilkOff, NutOff, Instagram } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee.tsx'
 import StatsCounter from '../components/StatsCounter.tsx'
 import Sticker from '../components/Sticker.tsx'
 import Squiggle from '../components/Squiggle.tsx'
 import Starburst from '../components/Starburst.tsx'
+import Gallery from '../components/Gallery.tsx'
 import { menuCategories } from '../data/menuData.ts'
 import { useTranslation } from '../i18n/index.ts'
 
 type ImageItem = { src: string; alt: string }
 type StatItem = { value: number; suffix: string; prefix: string; label: string }
+type DietaryItem = { key: string; icon: React.ComponentType<{ size?: number | string }>; label: string; text: string }
 
 export default function Home() {
   const { t, getArray } = useTranslation()
 
   const marqueeImages = getArray('home.marquee.images') as ImageItem[]
   const stats = getArray('home.stats.items') as StatItem[]
+  const galleryImages = getArray('home.gallery.images') as ImageItem[]
 
   const signatureCategory = menuCategories.find((c) => c.id === 'signatures')
   const bestSellers = signatureCategory?.items.slice(0, 4) ?? []
+
+  const dietaryItems: DietaryItem[] = [
+    { key: 'vegan', icon: Leaf, label: t('home.dietary.veganLabel'), text: t('home.dietary.veganText') },
+    { key: 'glutenFree', icon: WheatOff, label: t('home.dietary.glutenFreeLabel'), text: t('home.dietary.glutenFreeText') },
+    { key: 'dairyFree', icon: MilkOff, label: t('home.dietary.dairyFreeLabel'), text: t('home.dietary.dairyFreeText') },
+    { key: 'nutFree', icon: NutOff, label: t('home.dietary.nutFreeLabel'), text: t('home.dietary.nutFreeText') },
+  ]
 
   return (
     <>
@@ -71,24 +81,28 @@ export default function Home() {
           </div>
 
           <div className="hero-visual">
-            <div className="hero-image-collage">
-              <div className="hero-image-main">
-                <img src="/hero-momos.png" alt={t('home.hero.imageAlt')} />
+            <div className="hero-photo-wall">
+              <div className="photo-wall-main photo-frame">
+                <img src="/Eatable_33435.jpg" alt={t('home.hero.imageAlt')} />
                 <div className="hero-sticker-top">
-                  <Sticker variant="red" icon="flame" rotate={-12}>{t('home.hero.stickerHot')}</Sticker>
+                  <Sticker variant="hot" icon="flame" rotate={-12}>{t('home.hero.stickerHot')}</Sticker>
                 </div>
               </div>
-              <div className="hero-image-small hero-image-small-1">
-                <img src="/jhol-momo.png" alt={t('home.hero.smallAlt1')} />
+              <div className="photo-wall-side photo-wall-side-1 photo-frame">
+                <img src="/Mexican.jpg" alt={t('home.hero.smallAlt1')} />
               </div>
-              <div className="hero-image-small hero-image-small-2">
-                <img src="/menu-fried-momo.png" alt={t('home.hero.smallAlt2')} />
+              <div className="photo-wall-side photo-wall-side-2 photo-frame">
+                <img src="/Pulled_beefg_fries.jpg" alt={t('home.hero.smallAlt2')} />
+              </div>
+              <div className="photo-wall-side photo-wall-side-3 photo-frame">
+                <img src="/hero-momos.png" alt={t('home.hero.smallAlt3')} />
               </div>
               <div className="hero-image-badge">
                 <Utensils size={20} />
                 <span>{t('home.hero.imageBadge')}</span>
               </div>
-              <Starburst color="var(--mm-gold)" size={64} className="hero-starburst" />
+              <Starburst color="var(--mm-gold)" size={72} className="hero-starburst" />
+              <Starburst color="var(--mm-electric-blue)" size={48} className="hero-starburst-2" />
             </div>
           </div>
         </div>
@@ -113,7 +127,7 @@ export default function Home() {
           }
           .hero-inner {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 48px;
             align-items: center;
             position: relative;
@@ -181,73 +195,53 @@ export default function Home() {
             justify-content: center;
             position: relative;
           }
-          .hero-image-collage {
+          .hero-photo-wall {
             position: relative;
             width: 100%;
-            max-width: 540px;
-            height: 460px;
+            max-width: 560px;
+            height: 560px;
           }
-          .hero-image-main {
+          .photo-wall-main {
             position: absolute;
             top: 0;
+            left: 0;
+            width: 62%;
+            height: 72%;
+            transform: rotate(-2deg);
+            z-index: 2;
+          }
+          .photo-wall-side {
+            position: absolute;
+            width: 36%;
+            z-index: 3;
+          }
+          .photo-wall-side-1 {
+            top: 8%;
             right: 0;
-            width: 80%;
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
+            transform: rotate(4deg);
+          }
+          .photo-wall-side-2 {
+            bottom: 8%;
+            right: 4%;
+            transform: rotate(-5deg);
+          }
+          .photo-wall-side-3 {
+            bottom: 2%;
+            left: 12%;
+            width: 40%;
             transform: rotate(3deg);
-            transition: transform 0.3s ease;
-            background: white;
-            border: 6px solid white;
-          }
-          .hero-image-collage:hover .hero-image-main {
-            transform: rotate(1deg) scale(1.02);
-          }
-          .hero-image-main img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            aspect-ratio: 4/3;
+            z-index: 1;
           }
           .hero-sticker-top {
             position: absolute;
-            top: -20px;
-            left: -20px;
-            z-index: 2;
-          }
-          .hero-image-small {
-            position: absolute;
-            width: 42%;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 4px solid white;
-            transition: transform 0.3s ease;
-          }
-          .hero-image-small:hover {
-            transform: scale(1.08) rotate(-2deg);
-            z-index: 10;
-          }
-          .hero-image-small-1 {
-            bottom: 40px;
-            left: 0;
-            transform: rotate(-6deg);
-          }
-          .hero-image-small-2 {
-            bottom: -20px;
-            left: 28%;
-            transform: rotate(5deg);
-          }
-          .hero-image-small img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            aspect-ratio: 1/1;
+            top: -18px;
+            left: -18px;
+            z-index: 4;
           }
           .hero-image-badge {
             position: absolute;
-            bottom: -16px;
-            right: 16px;
+            bottom: 10%;
+            right: 2%;
             background: white;
             padding: 12px 20px;
             border-radius: 999px;
@@ -258,15 +252,23 @@ export default function Home() {
             font-weight: 900;
             color: var(--color-primary);
             animation: pulse-soft 3s ease-in-out infinite;
-            z-index: 2;
+            z-index: 4;
             text-transform: uppercase;
             font-size: 0.85rem;
           }
           .hero-starburst {
             position: absolute;
-            top: -40px;
-            right: 60px;
+            top: -30px;
+            right: 30%;
             animation: spin-slow 16s linear infinite;
+            z-index: 0;
+          }
+          .hero-starburst-2 {
+            position: absolute;
+            bottom: 20%;
+            left: -10px;
+            animation: spin-slow 12s linear infinite reverse;
+            z-index: 0;
           }
           @media (max-width: 900px) {
             .hero {
@@ -286,9 +288,9 @@ export default function Home() {
             .hero-stats {
               justify-content: center;
             }
-            .hero-image-collage {
+            .hero-photo-wall {
               max-width: 100%;
-              height: 380px;
+              height: 420px;
             }
             .hero-sticker-top {
               left: 0;
@@ -297,6 +299,9 @@ export default function Home() {
               right: 0;
             }
             .hero-starburst {
+              display: none;
+            }
+            .hero-starburst-2 {
               display: none;
             }
           }
@@ -331,14 +336,17 @@ export default function Home() {
               text-align: center;
               gap: 8px;
             }
-            .hero-image-collage {
-              height: 320px;
+            .hero-photo-wall {
+              height: 360px;
             }
-            .hero-image-small {
+            .photo-wall-side {
+              width: 34%;
+            }
+            .photo-wall-side-3 {
               width: 38%;
             }
             .hero-image-badge {
-              bottom: -12px;
+              bottom: 6%;
               padding: 10px 16px;
               font-size: 0.8rem;
             }
@@ -352,7 +360,7 @@ export default function Home() {
           <h2 className="section-title">{t('home.marquee.title')}</h2>
           <Squiggle color="var(--mm-fresh)" width={140} height={24} strokeWidth={5} />
         </div>
-        <Marquee images={marqueeImages} speed={40} />
+        <Marquee images={marqueeImages} speed={28} />
 
         <style>{`
           .marquee-section {
@@ -391,8 +399,12 @@ export default function Home() {
                 <h3 className="best-seller-name">{item.name}</h3>
                 <p className="best-seller-description">{item.description}</p>
                 <div className="best-seller-tags">
-                  {item.spicy && <span className="best-seller-tag spicy">Spicy</span>}
-                  {item.veg && <span className="best-seller-tag veg">Veg</span>}
+                  {item.vegan && <span className="dietary-badge dietary-badge-vegan"><Leaf size={12} /> Vegan</span>}
+                  {item.glutenFree && <span className="dietary-badge dietary-badge-gluten-free"><WheatOff size={12} /> GF</span>}
+                  {item.dairyFree && <span className="dietary-badge dietary-badge-dairy-free"><MilkOff size={12} /> DF</span>}
+                  {item.nutFree && <span className="dietary-badge dietary-badge-nut-free"><NutOff size={12} /> NF</span>}
+                  {item.spicy && <span className="dietary-badge dietary-badge-spicy"><Flame size={12} /> Spicy</span>}
+                  {item.new && <span className="dietary-badge dietary-badge-new"><Sparkles size={12} /> New</span>}
                   {item.tags?.slice(0, 2).map((tag) => <span className="best-seller-tag" key={tag}>{tag}</span>)}
                 </div>
               </div>
@@ -484,14 +496,6 @@ export default function Home() {
             background: var(--color-light);
             color: var(--color-text);
           }
-          .best-seller-tag.spicy {
-            background: rgba(232, 23, 43, 0.1);
-            color: var(--color-primary);
-          }
-          .best-seller-tag.veg {
-            background: rgba(6, 203, 164, 0.12);
-            color: var(--color-fresh-dark);
-          }
           .best-sellers-cta {
             text-align: center;
           }
@@ -511,14 +515,217 @@ export default function Home() {
         `}</style>
       </section>
 
+      <section className="section dietary">
+        <div className="container">
+          <div className="dietary-header">
+            <span className="badge badge-fresh">{t('home.dietary.badge')}</span>
+            <h2 className="section-title">{t('home.dietary.title')}</h2>
+            <p className="section-subtitle">{t('home.dietary.subtitle')}</p>
+            <Squiggle color="var(--mm-fresh)" width={160} height={24} strokeWidth={5} />
+          </div>
+
+          <div className="dietary-grid">
+            {dietaryItems.map((item) => {
+              const Icon = item.icon
+              return (
+                <div className="dietary-card" key={item.key}>
+                  <div className="dietary-icon">
+                    <Icon size={28} />
+                  </div>
+                  <h3 className="dietary-label">{item.label}</h3>
+                  <p className="dietary-text">{item.text}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <style>{`
+          .dietary {
+            background: var(--color-surface);
+          }
+          .dietary-header {
+            text-align: center;
+            margin-bottom: 48px;
+          }
+          .dietary-header .badge {
+            margin-bottom: 16px;
+          }
+          .dietary-header .section-subtitle {
+            margin: 0 auto 16px;
+          }
+          .dietary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+          }
+          .dietary-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+          }
+          .dietary-card:hover {
+            transform: translateY(-10px) rotate(-1deg) scale(1.02);
+            box-shadow: var(--shadow-md), 0 0 40px rgba(6, 203, 164, 0.15);
+            border-color: var(--color-fresh);
+          }
+          .dietary-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-fresh) 0%, var(--color-electric) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-fresh);
+          }
+          .dietary-label {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+          }
+          .dietary-text {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+          @media (max-width: 1024px) {
+            .dietary-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          @media (max-width: 480px) {
+            .dietary-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
+      </section>
+
+      <section className="section drop">
+        <div className="container">
+          <div className="drop-card">
+            <div className="drop-stickers">
+              <Sticker variant="electric" icon="sparkles" rotate={-8}>{t('home.drop.sticker1')}</Sticker>
+              <Sticker variant="hot" icon="flame" rotate={6}>{t('home.drop.sticker2')}</Sticker>
+            </div>
+            <span className="badge badge-dark">{t('home.drop.badge')}</span>
+            <h2 className="drop-title">
+              {t('home.drop.title')}
+              <br />
+              <span className="gradient-text-slow">{t('home.drop.titleHighlight')}</span>
+            </h2>
+            <p className="drop-text">{t('home.drop.text')}</p>
+            <Link to="/menu" className="btn btn-gold">
+              {t('home.drop.cta')} <ArrowRight size={18} />
+            </Link>
+            <Starburst color="var(--mm-electric-blue)" size={80} className="drop-starburst" />
+          </div>
+        </div>
+
+        <style>{`
+          .drop {
+            background: var(--color-bg);
+          }
+          .drop-card {
+            background: linear-gradient(135deg, var(--color-text) 0%, #2D2525 100%);
+            color: white;
+            border-radius: var(--radius-xl);
+            padding: 72px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+          }
+          .drop-card::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--color-hot);
+            opacity: 0.15;
+          }
+          .drop-card::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--color-electric);
+            opacity: 0.12;
+          }
+          .drop-stickers {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+          }
+          .drop-card .badge {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+          }
+          .drop-title {
+            font-size: clamp(2.25rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            line-height: 0.95;
+          }
+          .drop-text {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 560px;
+            margin: 0 auto 32px;
+            position: relative;
+            z-index: 1;
+          }
+          .drop-card .btn {
+            position: relative;
+            z-index: 1;
+          }
+          .drop-starburst {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            animation: spin-slow 14s linear infinite;
+            z-index: 0;
+          }
+          @media (max-width: 768px) {
+            .drop-card {
+              padding: 48px 24px;
+            }
+            .drop-starburst {
+              display: none;
+            }
+          }
+        `}</style>
+      </section>
+
       <section className="section story">
         <div className="container">
           <div className="story-grid">
             <div className="story-images">
-              <div className="story-image story-image-1">
+              <div className="story-image story-image-1 photo-frame">
                 <img src="/about-community.png" alt={t('home.story.imageAlt')} />
               </div>
-              <div className="story-image story-image-2">
+              <div className="story-image story-image-2 photo-frame">
                 <img src="/13363.png" alt={t('home.story.imageAlt2')} />
               </div>
               <div className="story-sticker">
@@ -562,7 +769,6 @@ export default function Home() {
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-md);
-            border: 6px solid white;
             transition: transform 0.3s ease;
           }
           .story-image:hover {
@@ -630,6 +836,46 @@ export default function Home() {
         `}</style>
       </section>
 
+      <section className="section gallery-section">
+        <div className="container">
+          <div className="gallery-header">
+            <span className="badge badge-play">
+              <Instagram size={16} />
+              {t('home.gallery.badge')}
+            </span>
+            <h2 className="section-title">{t('home.gallery.title')}</h2>
+            <p className="section-subtitle">{t('home.gallery.subtitle')}</p>
+            <Squiggle color="var(--mm-hot-pink)" width={160} height={24} strokeWidth={5} />
+          </div>
+          <Gallery images={galleryImages} />
+          <div className="gallery-cta">
+            <Link to="/locations" className="btn btn-primary">
+              {t('home.gallery.cta')} <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+
+        <style>{`
+          .gallery-section {
+            background: var(--color-bg);
+          }
+          .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+          }
+          .gallery-header .badge {
+            margin-bottom: 16px;
+          }
+          .gallery-header .section-subtitle {
+            margin: 0 auto 16px;
+          }
+          .gallery-cta {
+            text-align: center;
+            margin-top: 48px;
+          }
+        `}</style>
+      </section>
+
       <section className="section visit">
         <div className="container">
           <div className="visit-card">
@@ -653,7 +899,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="visit-visual">
+            <div className="visit-visual photo-frame">
               <img src="/model-restaurant.png" alt={t('home.visit.imageAlt')} />
               <div className="visit-sticker">
                 <Sticker variant="gold" rotate={8}>{t('home.visit.sticker')}</Sticker>
@@ -727,10 +973,7 @@ export default function Home() {
           .visit-visual {
             position: relative;
             z-index: 1;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
             transform: rotate(3deg);
-            border: 8px solid white;
             box-shadow: var(--shadow-md);
           }
           .visit-visual img {
@@ -801,6 +1044,7 @@ export default function Home() {
             <div className="cta-stickers">
               <Sticker variant="red" icon="flame" rotate={-10}>{t('home.cta.sticker1')}</Sticker>
               <Sticker variant="gold" rotate={6}>{t('home.cta.sticker2')}</Sticker>
+              <Sticker variant="neon" rotate={-4}>{t('home.cta.sticker3')}</Sticker>
             </div>
             <h2 className="cta-title">{t('home.cta.title')}</h2>
             <p className="cta-text">{t('home.cta.text')}</p>
@@ -853,6 +1097,7 @@ export default function Home() {
             margin-bottom: 24px;
             position: relative;
             z-index: 1;
+            flex-wrap: wrap;
           }
           .cta-title {
             font-size: clamp(2.25rem, 6vw, 4rem);

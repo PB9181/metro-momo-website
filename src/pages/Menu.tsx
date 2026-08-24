@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Flame, Leaf, Sparkles, ArrowRight, ChefHat } from 'lucide-react'
+import { Flame, Leaf, Sparkles, ArrowRight, ChefHat, WheatOff, MilkOff, NutOff } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { menuCategories } from '../data/menuData.ts'
 import Sticker from '../components/Sticker.tsx'
@@ -168,9 +168,29 @@ export default function Menu() {
                               <Flame size={14} /> Spicy
                             </span>
                           )}
-                          {item.veg && (
+                          {item.veg && !item.vegan && (
                             <span className="menu-tag menu-tag-veg">
                               <Leaf size={14} /> Veg
+                            </span>
+                          )}
+                          {item.vegan && (
+                            <span className="dietary-badge dietary-badge-vegan">
+                              <Leaf size={12} /> Vegan
+                            </span>
+                          )}
+                          {item.glutenFree && (
+                            <span className="dietary-badge dietary-badge-gluten-free">
+                              <WheatOff size={12} /> GF
+                            </span>
+                          )}
+                          {item.dairyFree && (
+                            <span className="dietary-badge dietary-badge-dairy-free">
+                              <MilkOff size={12} /> DF
+                            </span>
+                          )}
+                          {item.nutFree && (
+                            <span className="dietary-badge dietary-badge-nut-free">
+                              <NutOff size={12} /> NF
                             </span>
                           )}
                           {item.new && (
