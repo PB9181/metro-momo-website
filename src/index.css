@@ -621,6 +621,11 @@ button {
   50% { transform: scale(1.15) rotate(-2deg); }
 }
 
+@keyframes hero-pulse {
+  0%, 100% { transform: scale(1.05); }
+  50% { transform: scale(1.08); }
+}
+
 @keyframes spin-pop {
   0% { transform: scale(1) rotate(0deg); }
   50% { transform: scale(1.2) rotate(180deg); }

@@ -33,6 +33,8 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <div className="hero-bg" aria-hidden="true" />
+        <div className="hero-overlay" aria-hidden="true" />
         <div className="blob blob-red" />
         <div className="blob blob-orange" />
         <div className="blob blob-fresh" />
@@ -89,10 +91,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="photo-wall-side photo-wall-side-1 photo-frame">
-                <img src="/Mexican.jpg" alt={t('home.hero.smallAlt1')} />
+                <img src="/New_Photos/momo3.jpg" alt={t('home.hero.smallAlt1')} />
               </div>
               <div className="photo-wall-side photo-wall-side-2 photo-frame">
-                <img src="/Pulled_beefg_fries.jpg" alt={t('home.hero.smallAlt2')} />
+                <img src="/New_Photos/bar4.jpg" alt={t('home.hero.smallAlt2')} />
               </div>
               <div className="photo-wall-side photo-wall-side-3 photo-frame">
                 <img src="/hero-momos.png" alt={t('home.hero.smallAlt3')} />
@@ -117,13 +119,37 @@ export default function Home() {
           .hero {
             position: relative;
             overflow: hidden;
-            padding: 90px 0 60px;
-            background: var(--color-bg);
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #0d0a0a;
+            color: white;
+          }
+          .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('/New_Photos/poster.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.55;
+            transform: scale(1.05);
+            animation: hero-pulse 10s ease-in-out infinite;
+          }
+          .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 40%, rgba(232, 23, 43, 0.25) 0%, transparent 60%),
+                        linear-gradient(180deg, rgba(13, 10, 10, 0.3) 0%, rgba(13, 10, 10, 0.85) 100%);
+            backdrop-filter: blur(1px);
           }
           .hero-pattern {
             position: absolute;
             inset: 0;
             pointer-events: none;
+            opacity: 0.08;
+            background-image: radial-gradient(circle, var(--color-hot) 2px, transparent 2px);
+            background-size: 24px 24px;
           }
           .hero-inner {
             display: grid;
@@ -131,21 +157,26 @@ export default function Home() {
             gap: 48px;
             align-items: center;
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            width: 100%;
           }
           .hero-content {
-            max-width: 600px;
+            max-width: 640px;
           }
           .hero-title {
-            font-size: clamp(2.75rem, 7vw, 5.5rem);
+            font-size: clamp(3rem, 8vw, 6.5rem);
             font-weight: 900;
-            line-height: 0.95;
+            line-height: 0.92;
             margin: 24px 0 20px;
             letter-spacing: -0.04em;
+            color: white;
+          }
+          .hero-title .gradient-text {
+            filter: drop-shadow(0 0 20px rgba(255, 42, 140, 0.6)) drop-shadow(0 4px 12px rgba(232, 23, 43, 0.4));
           }
           .hero-subtitle {
             font-size: 1.25rem;
-            color: var(--color-muted);
+            color: rgba(255, 255, 255, 0.82);
             margin-bottom: 32px;
             line-height: 1.6;
           }
@@ -165,29 +196,34 @@ export default function Home() {
             align-items: center;
             gap: 12px;
             font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 10px 16px;
+            border-radius: 999px;
+            backdrop-filter: blur(8px);
           }
           .hero-stat-icon {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-fresh) 0%, var(--color-violet) 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--color-hot) 0%, var(--color-electric) 100%);
+            color: var(--color-text);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            box-shadow: var(--shadow-fresh);
+            box-shadow: 0 0 24px rgba(255, 42, 140, 0.4);
           }
           .hero-stat strong {
             display: block;
             font-weight: 900;
-            color: var(--color-text);
+            color: white;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
           }
           .hero-stat span {
-            color: var(--color-muted);
-            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.8rem;
           }
           .hero-visual {
             display: flex;
@@ -376,6 +412,136 @@ export default function Home() {
           }
           .marquee-section .section-title {
             margin: 0 auto 12px;
+          }
+        `}</style>
+      </section>
+
+      <section className="section mood-section">
+        <div className="container">
+          <div className="mood-header">
+            <span className="badge badge-hot">
+              <Sparkles size={16} />
+              {t('home.mood.badge')}
+            </span>
+            <h2 className="section-title">{t('home.mood.title')}</h2>
+            <p className="section-subtitle">{t('home.mood.subtitle')}</p>
+            <Squiggle color="var(--mm-hot-pink)" width={160} height={24} strokeWidth={5} />
+          </div>
+
+          <div className="mood-bento">
+            <div className="mood-item mood-item-large">
+              <img src="/New_Photos/momo4.jpg" alt={t('home.mood.alt1')} loading="lazy" />
+              <div className="mood-caption">
+                <Sticker variant="hot" icon="flame" rotate={-8}>{t('home.mood.sticker1')}</Sticker>
+              </div>
+            </div>
+            <div className="mood-item">
+              <img src="/New_Photos/bar6.jpg" alt={t('home.mood.alt2')} loading="lazy" />
+            </div>
+            <div className="mood-item">
+              <img src="/New_Photos/bar7.jpg" alt={t('home.mood.alt3')} loading="lazy" />
+              <div className="mood-caption">
+                <Sticker variant="neon" rotate={6}>{t('home.mood.sticker2')}</Sticker>
+              </div>
+            </div>
+            <div className="mood-item mood-item-wide">
+              <img src="/New_Photos/momo5.jpg" alt={t('home.mood.alt4')} loading="lazy" />
+            </div>
+            <div className="mood-item">
+              <img src="/New_Photos/bar2.jpg" alt={t('home.mood.alt5')} loading="lazy" />
+            </div>
+            <div className="mood-item">
+              <img src="/New_Photos/momo3.jpg" alt={t('home.mood.alt6')} loading="lazy" />
+            </div>
+            <div className="mood-item mood-item-wide">
+              <img src="/New_Photos/Momo 2.jpeg" alt={t('home.mood.alt7')} loading="lazy" />
+              <div className="mood-caption">
+                <Sticker variant="electric" icon="sparkles" rotate={-6}>{t('home.mood.sticker3')}</Sticker>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>{`
+          .mood-section {
+            background: var(--color-bg);
+          }
+          .mood-header {
+            text-align: center;
+            margin-bottom: 48px;
+          }
+          .mood-header .badge {
+            margin-bottom: 16px;
+          }
+          .mood-header .section-subtitle {
+            margin: 0 auto 16px;
+          }
+          .mood-bento {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 220px;
+            gap: 20px;
+          }
+          .mood-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+            border: 3px solid rgba(255, 255, 255, 0.85);
+          }
+          .mood-item:hover {
+            transform: translateY(-10px) rotate(-1deg) scale(1.02);
+            box-shadow: var(--shadow-lg), 0 0 60px rgba(255, 42, 140, 0.2);
+            z-index: 2;
+          }
+          .mood-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+          }
+          .mood-item:hover img {
+            transform: scale(1.1);
+          }
+          .mood-item-large {
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          .mood-item-wide {
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          .mood-caption {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            z-index: 2;
+          }
+          @media (max-width: 1024px) {
+            .mood-bento {
+              grid-template-columns: repeat(2, 1fr);
+              grid-auto-rows: 180px;
+            }
+            .mood-item-large {
+              grid-column: span 2;
+              grid-row: span 2;
+            }
+          }
+          @media (max-width: 480px) {
+            .mood-bento {
+              grid-template-columns: 1fr 1fr;
+              grid-auto-rows: 150px;
+              gap: 12px;
+            }
+            .mood-item:nth-child(n) {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+            .mood-item-large {
+              grid-column: span 2;
+              grid-row: span 2;
+            }
           }
         `}</style>
       </section>

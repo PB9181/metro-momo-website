@@ -65,8 +65,8 @@
       "stat2Label": "Kühne Aromen",
       "stat2Sublabel": "Hausgemachte Saucen",
       "imageAlt": "Geladene MOMO Spread mit Dumplings, Bowls und Loaded Fries",
-      "smallAlt1": "Geladene Mexican-Style Fries mit Salsa, Guacamole und Jalapeños",
-      "smallAlt2": "Pulled Loaded Fries mit Chipotle-Sauce",
+      "smallAlt1": "Gourmet pan-frittierte Momos mit buntem Sauce-Swipe",
+      "smallAlt2": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur",
       "smallAlt3": "Dampfende MOMO Platte zum Teilen",
       "imageBadge": "FRISCH",
       "stickerHot": "VIRAL"
@@ -75,15 +75,54 @@
       "badge": "Essen, das sich selbst verkauft",
       "title": "MOMO Content, den man schmeckt",
       "images": [
-        { "src": "/Eatable_33435.jpg", "alt": "Geladene MOMO Spread Flat Lay" },
-        { "src": "/Mexican.jpg", "alt": "Geladene Mexican-Style Fries" },
-        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled Loaded Fries" },
-        { "src": "/hero-momos.png", "alt": "Dampfende MOMO" },
-        { "src": "/jhol-momo.png", "alt": "Jhol MOMO in Brühe" },
-        { "src": "/menu-fried-momo.png", "alt": "Frittierte Chili-MOMO" },
-        { "src": "/13363.png", "alt": "MOMO Platte" },
-        { "src": "/IMG_0138.png", "alt": "MOMO Nahaufnahme" }
+        {
+          "src": "/New_Photos/poster.jpg",
+          "alt": "Geladene MOMO Spread Flat Lay"
+        },
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
+        },
+        {
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Zwei bunte tropische Cocktails an einer Bar"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Gedämpfte Momos im Bambuskorb mit Dips"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Neon grün-bluer Cocktail in einem hohen Glas"
+        },
+        {
+          "src": "/New_Photos/momo3.jpg",
+          "alt": "Gourmet pan-frittierte Momos mit Sauce-Swipe"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Hände, die frische Momos eins nach dem anderen falten"
+        }
       ]
+    },
+    "mood": {
+      "badge": "Die Vibe",
+      "title": "Mood board",
+      "subtitle": "Ein Geschmack dessen, was passiert, wenn Himalaya-Aromen auf Spätabend-Energie, Neon und null Filter treffen.",
+      "sticker1": "SPICY",
+      "sticker2": "LOADED",
+      "sticker3": "HANDMADE",
+      "alt1": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen",
+      "alt2": "Neon grün-bluer Cocktail in einem hohen Glas",
+      "alt3": "Erfrischender roter Wassermelonen-Mocktail im Metallkorb mit Minze",
+      "alt4": "Gedämpfte Momos im Bambuskorb mit Dips",
+      "alt5": "Zwei bunte tropische Cocktails an einer Bar",
+      "alt6": "Gourmet pan-frittierte Momos mit Sauce-Swipe",
+      "alt7": "Hände, die frische Momos eins nach dem anderen falten"
     },
     "bestSellers": {
       "badge": "Bestseller",
@@ -119,14 +158,38 @@
       "subtitle": "Echtes Essen, echte Menschen, echte Vibes. Tag @metromomo und zeig uns deinen Spread.",
       "cta": "Komm Erinnerungen machen",
       "images": [
-        { "src": "/Eatable_33435.jpg", "alt": "Geladene MOMO Spread Flat Lay" },
-        { "src": "/Mexican.jpg", "alt": "Geladene Mexican-Style Fries" },
-        { "src": "/Pulled_beefg_fries.jpg", "alt": "Pulled Loaded Fries" },
-        { "src": "/hero-momos.png", "alt": "Dampfende MOMO" },
-        { "src": "/jhol-momo.png", "alt": "Jhol MOMO in Brühe" },
-        { "src": "/menu-fried-momo.png", "alt": "Frittierte Chili-MOMO" },
-        { "src": "/13363.png", "alt": "MOMO Platte" },
-        { "src": "/IMG_0138.png", "alt": "MOMO Nahaufnahme" }
+        {
+          "src": "/New_Photos/poster.jpg",
+          "alt": "Geladene MOMO Spread Flat Lay"
+        },
+        {
+          "src": "/New_Photos/momo4.jpg",
+          "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
+        },
+        {
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur"
+        },
+        {
+          "src": "/New_Photos/bar2.jpg",
+          "alt": "Zwei bunte tropische Cocktails an einer Bar"
+        },
+        {
+          "src": "/New_Photos/momo5.jpg",
+          "alt": "Gedämpfte Momos im Bambuskorb mit Dips"
+        },
+        {
+          "src": "/New_Photos/bar6.jpg",
+          "alt": "Neon grün-bluer Cocktail in einem hohen Glas"
+        },
+        {
+          "src": "/New_Photos/momo3.jpg",
+          "alt": "Gourmet pan-frittierte Momos mit Sauce-Swipe"
+        },
+        {
+          "src": "/New_Photos/Momo 2.jpeg",
+          "alt": "Hände, die frische Momos eins nach dem anderen falten"
+        }
       ]
     },
     "story": {
@@ -154,10 +217,30 @@
       "badge": "In Zahlen",
       "title": "Mit Geschmack gebaut",
       "items": [
-        { "value": 7, "suffix": "+", "prefix": "", "label": "Momo Varianten" },
-        { "value": 4, "suffix": "", "prefix": "", "label": "Haus Saucen" },
-        { "value": 100, "suffix": "%", "prefix": "", "label": "Handgemacht" },
-        { "value": 5, "suffix": "", "prefix": "", "label": "Sternen-Vibe" }
+        {
+          "value": 7,
+          "suffix": "+",
+          "prefix": "",
+          "label": "Momo Varianten"
+        },
+        {
+          "value": 4,
+          "suffix": "",
+          "prefix": "",
+          "label": "Haus Saucen"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "prefix": "",
+          "label": "Handgemacht"
+        },
+        {
+          "value": 5,
+          "suffix": "",
+          "prefix": "",
+          "label": "Sternen-Vibe"
+        }
       ]
     },
     "cta": {
@@ -167,6 +250,21 @@
       "sticker1": "LECKER",
       "sticker2": "NEU",
       "sticker3": "ICONIC"
+    },
+    "mood": {
+      "badge": "Die Vibe",
+      "title": "Mood board",
+      "subtitle": "Ein Vorgeschmack darauf, was passiert, wenn Himalaya-Aromen auf Late-Night-Energie, Neon und keine Filter treffen.",
+      "sticker1": "SCHARF",
+      "sticker2": "LOADED",
+      "sticker3": "HANDGEMACHT",
+      "alt1": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen",
+      "alt2": "Neon grün-bluer Cocktail in einem hohen Glas",
+      "alt3": "Geladene Fries mit pflanzlichem Protein, Saucen und Koriander",
+      "alt4": "Gedämpfte Momos im Bambuskorb mit Dips",
+      "alt5": "Zwei bunte tropische Cocktails an einer Bar",
+      "alt6": "Gourmet pan-frittierte Momos mit Sauce-Swipe",
+      "alt7": "Hände, die frische Momos eins nach dem anderen falten"
     }
   },
   "menu": {
@@ -214,9 +312,18 @@
       "email": "hello@metromomo.com"
     },
     "services": {
-      "dineIn": { "title": "Dine-in", "text": "Bunte Sitzplätze, schneller Service und Momos frisch aus dem Dampfkorb." },
-      "delivery": { "title": "Lieferung", "text": "Bestelle über deine Lieblings-Apps und lass dir Metro Momo nach Hause liefern." },
-      "events": { "title": "Events", "text": "Wir hosten Gruppen-Dinners, Firmen-Mittagessen und Momo-Workshops." }
+      "dineIn": {
+        "title": "Dine-in",
+        "text": "Bunte Sitzplätze, schneller Service und Momos frisch aus dem Dampfkorb."
+      },
+      "delivery": {
+        "title": "Lieferung",
+        "text": "Bestelle über deine Lieblings-Apps und lass dir Metro Momo nach Hause liefern."
+      },
+      "events": {
+        "title": "Events",
+        "text": "Wir hosten Gruppen-Dinners, Firmen-Mittagessen und Momo-Workshops."
+      }
     },
     "coming": {
       "sticker1": "DEMNÄCHST",
@@ -247,12 +354,36 @@
       "title": "Unsere Werte",
       "subtitle": "Die Prinzipien, die jede Entscheidung leiten, die wir als Partnerschaftsnetzwerk treffen.",
       "items": [
-        { "iconKey": "ChefHat", "title": "Authentische Rezepte", "text": "Weitergegebene Füllungen und Teigtechniken, standardisiert für Konsistenz an jedem Standort." },
-        { "iconKey": "Globe", "title": "Skalierbare Marke", "text": "Eine wiedererkennbare Identität, flexibel genug für lokale Märkte und globale Ambitionen." },
-        { "iconKey": "Heart", "title": "Eigentümer-zuerst", "text": "Gebaut von Menschen, die Küchen geführt haben. Du behältst dein Geschäft, dein Team und deine Gemeinschaft." },
-        { "iconKey": "Sparkles", "title": "Modernes Erlebnis", "text": "Tech, Design und Operationen, die zeitgemäß wirken, ohne die Seele des Essens zu verlieren." },
-        { "iconKey": "Target", "title": "Bewährte Systeme", "text": "Playbooks, Schulung und Supply Chains, die das Raten am Eröffnungstag überflüssig machen." },
-        { "iconKey": "HandHeart", "title": "Geteilter Erfolg", "text": "Wir wachsen, wenn unsere Partner wachsen. Support — und die gemeinsame Tech-Plattform — enden nicht nach Vertragsunterzeichnung." }
+        {
+          "iconKey": "ChefHat",
+          "title": "Authentische Rezepte",
+          "text": "Weitergegebene Füllungen und Teigtechniken, standardisiert für Konsistenz an jedem Standort."
+        },
+        {
+          "iconKey": "Globe",
+          "title": "Skalierbare Marke",
+          "text": "Eine wiedererkennbare Identität, flexibel genug für lokale Märkte und globale Ambitionen."
+        },
+        {
+          "iconKey": "Heart",
+          "title": "Eigentümer-zuerst",
+          "text": "Gebaut von Menschen, die Küchen geführt haben. Du behältst dein Geschäft, dein Team und deine Gemeinschaft."
+        },
+        {
+          "iconKey": "Sparkles",
+          "title": "Modernes Erlebnis",
+          "text": "Tech, Design und Operationen, die zeitgemäß wirken, ohne die Seele des Essens zu verlieren."
+        },
+        {
+          "iconKey": "Target",
+          "title": "Bewährte Systeme",
+          "text": "Playbooks, Schulung und Supply Chains, die das Raten am Eröffnungstag überflüssig machen."
+        },
+        {
+          "iconKey": "HandHeart",
+          "title": "Geteilter Erfolg",
+          "text": "Wir wachsen, wenn unsere Partner wachsen. Support — und die gemeinsame Tech-Plattform — enden nicht nach Vertragsunterzeichnung."
+        }
       ]
     }
   },
@@ -270,7 +401,13 @@
         "price": "€0",
         "src": "/model-kiosk.png",
         "description": "Ein kompaktes, flexibles Format für Märkte, Festivals, Einkaufszentren und Fußgängerzonen mit hohem Verkehr. Niedrige Overhead-Kosten und schnell zu starten.",
-        "features": ["Kompakter Aufbau", "Hohe Sichtbarkeit", "Festival- & Event-ready", "Einkaufszentrum-tauglich", "Digitales Menüboard"],
+        "features": [
+          "Kompakter Aufbau",
+          "Hohe Sichtbarkeit",
+          "Festival- & Event-ready",
+          "Einkaufszentrum-tauglich",
+          "Digitales Menüboard"
+        ],
         "bestFor": "Erstbetreiber"
       },
       {
@@ -279,7 +416,13 @@
         "price": "€0",
         "src": "/model-restaurant.png",
         "description": "Ein komplettes Dine-in-Konzept mit breiteren Menüoptionen, längeren Öffnungszeiten und langfristigem Wachstumspotenzial.",
-        "features": ["Vollständiger Speisesaal", "Erweitertes Menü", "Höheres Umsatzpotenzial", "Veranstaltungs-Hosting", "Gebiets-Exklusivität"],
+        "features": [
+          "Vollständiger Speisesaal",
+          "Erweitertes Menü",
+          "Höheres Umsatzpotenzial",
+          "Veranstaltungs-Hosting",
+          "Gebiets-Exklusivität"
+        ],
         "bestFor": "Erfahrene Betreiber"
       },
       {
@@ -288,7 +431,13 @@
         "price": "€0",
         "src": "/model-stall.png",
         "description": "Liefer- und Abholküche mit minimalen Front-of-House-Kosten. Gebaut für Online-Bestellung, Dark Kitchens und schnelle Marktexpansion.",
-        "features": ["Lieferfokussiertes Modell", "Niedrige Mietkosten", "Online-Bestellbereit", "Freundlich für gemeinsame Prep-Flächen", "Schnelle Stadtexpansion"],
+        "features": [
+          "Lieferfokussiertes Modell",
+          "Niedrige Mietkosten",
+          "Online-Bestellbereit",
+          "Freundlich für gemeinsame Prep-Flächen",
+          "Schnelle Stadtexpansion"
+        ],
         "bestFor": "Digital-first Betreiber"
       }
     ],
@@ -306,11 +455,36 @@
         "ghost": "Virtuelle & Ghost Kitchens"
       },
       "rows": [
-        { "name": "Franchise-Gebühr", "compact": "€0", "restaurant": "€0", "ghost": "€0" },
-        { "name": "Fläche", "compact": "2–10 m²", "restaurant": "50+ m²", "ghost": "10–30 m² Küche" },
-        { "name": "Benötigtes Personal", "compact": "1–3", "restaurant": "5+", "ghost": "2–4" },
-        { "name": "Menüumfang", "compact": "Kernmenü", "restaurant": "Vollständig + Getränke", "ghost": "Liefer-optimiert" },
-        { "name": "Kundenkanäle", "compact": "Walk-in & Events", "restaurant": "Dine-in", "ghost": "Online & Lieferung" }
+        {
+          "name": "Franchise-Gebühr",
+          "compact": "€0",
+          "restaurant": "€0",
+          "ghost": "€0"
+        },
+        {
+          "name": "Fläche",
+          "compact": "2–10 m²",
+          "restaurant": "50+ m²",
+          "ghost": "10–30 m² Küche"
+        },
+        {
+          "name": "Benötigtes Personal",
+          "compact": "1–3",
+          "restaurant": "5+",
+          "ghost": "2–4"
+        },
+        {
+          "name": "Menüumfang",
+          "compact": "Kernmenü",
+          "restaurant": "Vollständig + Getränke",
+          "ghost": "Liefer-optimiert"
+        },
+        {
+          "name": "Kundenkanäle",
+          "compact": "Walk-in & Events",
+          "restaurant": "Dine-in",
+          "ghost": "Online & Lieferung"
+        }
       ]
     },
     "cta": {
@@ -327,12 +501,42 @@
       "subtitle": "Ein klarer, sechsstufiger Weg für Eigentümer, die schnell vorankommen und etwas Nachhaltiges aufbauen wollen."
     },
     "steps": [
-      { "iconKey": "ClipboardList", "step": "01", "title": "Interesse einreichen", "text": "Teile uns deinen gewünschten Standort, das Format und deine Ziele mit. Wir prüfen jede Bewerbung persönlich." },
-      { "iconKey": "MapPinned", "step": "02", "title": "Discovery-Meeting", "text": "Triff unser Team, um das Konzept, die Operationen und die gegenseitige Passform zu verstehen." },
-      { "iconKey": "FileCheck", "step": "03", "title": "Bewerbung & Prüfung", "text": "Vervollständige gemeinsam die Bewerbung, Standortprüfung und das Finanzmodell." },
-      { "iconKey": "Handshake", "step": "04", "title": "Vertrag & Gebiet", "text": "Sichere dein geschütztes Gebiet, unterschreibe den Vertrag und beginne mit dem Aufbau." },
-      { "iconKey": "GraduationCap", "step": "05", "title": "Schulung", "text": "Intensive Schulung in Operation, Produkt und Kundenerlebnis für dich und dein Team — plus Setup der Fewa Tech-Plattform." },
-      { "iconKey": "Rocket", "step": "06", "title": "Eröffnungstag", "text": "Eröffne mit Grand-Opening-Support, Marketing-Push und einem Field-Team im Hintergrund." }
+      {
+        "iconKey": "ClipboardList",
+        "step": "01",
+        "title": "Interesse einreichen",
+        "text": "Teile uns deinen gewünschten Standort, das Format und deine Ziele mit. Wir prüfen jede Bewerbung persönlich."
+      },
+      {
+        "iconKey": "MapPinned",
+        "step": "02",
+        "title": "Discovery-Meeting",
+        "text": "Triff unser Team, um das Konzept, die Operationen und die gegenseitige Passform zu verstehen."
+      },
+      {
+        "iconKey": "FileCheck",
+        "step": "03",
+        "title": "Bewerbung & Prüfung",
+        "text": "Vervollständige gemeinsam die Bewerbung, Standortprüfung und das Finanzmodell."
+      },
+      {
+        "iconKey": "Handshake",
+        "step": "04",
+        "title": "Vertrag & Gebiet",
+        "text": "Sichere dein geschütztes Gebiet, unterschreibe den Vertrag und beginne mit dem Aufbau."
+      },
+      {
+        "iconKey": "GraduationCap",
+        "step": "05",
+        "title": "Schulung",
+        "text": "Intensive Schulung in Operation, Produkt und Kundenerlebnis für dich und dein Team — plus Setup der Fewa Tech-Plattform."
+      },
+      {
+        "iconKey": "Rocket",
+        "step": "06",
+        "title": "Eröffnungstag",
+        "text": "Eröffne mit Grand-Opening-Support, Marketing-Push und einem Field-Team im Hintergrund."
+      }
     ],
     "support": {
       "badge": "Laufende Unterstützung",
@@ -417,47 +621,92 @@
       {
         "iconKey": "LayoutDashboard",
         "title": "Zentrale Kommandozentrale",
-        "features": ["Multi-Unit HQ-Dashboard", "Real-time Verkaufsanalysen", "Franchise-Standards-Tracker", "Performance-Scorecards"]
+        "features": [
+          "Multi-Unit HQ-Dashboard",
+          "Real-time Verkaufsanalysen",
+          "Franchise-Standards-Tracker",
+          "Performance-Scorecards"
+        ]
       },
       {
         "iconKey": "Users",
         "title": "Workforce Management",
-        "features": ["Mitarbeiterplanung & Schichten", "Rollenbasierte Zugangskontrolle", "Schulungs- & Lernbibliothek", "Clock-in / Anwesenheitstracking"]
+        "features": [
+          "Mitarbeiterplanung & Schichten",
+          "Rollenbasierte Zugangskontrolle",
+          "Schulungs- & Lernbibliothek",
+          "Clock-in / Anwesenheitstracking"
+        ]
       },
       {
         "iconKey": "PackageSearch",
         "title": "Inventar & Beschaffung",
-        "features": ["Live-Bestände über Standorte", "Automatisierte Nachbestellbenachrichtigungen", "Lieferanten- & Einkaufstracking", "Waste- und Shrinkage-Logs"]
+        "features": [
+          "Live-Bestände über Standorte",
+          "Automatisierte Nachbestellbenachrichtigungen",
+          "Lieferanten- & Einkaufstracking",
+          "Waste- und Shrinkage-Logs"
+        ]
       },
       {
         "iconKey": "TrendingUp",
         "title": "Kostenanalyse",
-        "features": ["Rezept-Level COGS", "Dynamische Menü-Profitabilität", "Arbeit vs. Umsatz-Verhältnisse", "Unit-Economics-Reporting"]
+        "features": [
+          "Rezept-Level COGS",
+          "Dynamische Menü-Profitabilität",
+          "Arbeit vs. Umsatz-Verhältnisse",
+          "Unit-Economics-Reporting"
+        ]
       },
       {
         "iconKey": "CalendarCheck",
         "title": "Tischreservierung",
-        "features": ["Online-Reservierungs-Widget", "Tisch- und Saalmanagement", "Gastenotizen und Historie", "Warteliste & Stornierungsflow"]
+        "features": [
+          "Online-Reservierungs-Widget",
+          "Tisch- und Saalmanagement",
+          "Gastenotizen und Historie",
+          "Warteliste & Stornierungsflow"
+        ]
       },
       {
         "iconKey": "QrCode",
         "title": "QR-Code-Bestellung",
-        "features": ["Scan-zum-Bestellen am Tisch", "Menü mit Küche synchronisiert", "Split-Bill ready", "Keine zusätzliche Hardware nötig"]
+        "features": [
+          "Scan-zum-Bestellen am Tisch",
+          "Menü mit Küche synchronisiert",
+          "Split-Bill ready",
+          "Keine zusätzliche Hardware nötig"
+        ]
       },
       {
         "iconKey": "Smartphone",
         "title": "Online Bestellung",
-        "features": ["Web-Bestellseite", "Abhol- und Lieferflow", "Kunden-CRM & Marketing", "Payment-ready integriert"]
+        "features": [
+          "Web-Bestellseite",
+          "Abhol- und Lieferflow",
+          "Kunden-CRM & Marketing",
+          "Payment-ready integriert"
+        ]
       },
       {
         "iconKey": "ClipboardCheck",
         "title": "HACCP & Hygiene",
-        "features": ["Digitale Checklisten-Routinen", "Temperatur-Log-Tracking", "Reinigungsplan-Benachrichtigungen", "Auditbereite Dokumentation"]
+        "features": [
+          "Digitale Checklisten-Routinen",
+          "Temperatur-Log-Tracking",
+          "Reinigungsplan-Benachrichtigungen",
+          "Auditbereite Dokumentation"
+        ]
       },
       {
         "iconKey": "Truck",
         "title": "Supply Chain",
-        "features": ["Zentraler Lieferantenkatalog", "Bestandstransfers zwischen Standorten", "Lieferbeleg-Erfassung", "Franchise-Einkaufskraft"]
+        "features": [
+          "Zentraler Lieferantenkatalog",
+          "Bestandstransfers zwischen Standorten",
+          "Lieferbeleg-Erfassung",
+          "Franchise-Einkaufskraft"
+        ]
       }
     ],
     "cta": {
@@ -485,39 +734,96 @@
       ]
     },
     "details": {
-      "headOffice": { "label": "Head Office", "value": "Metro Momo HQ, Your City" },
-      "phone": { "label": "Phone", "value": "+46 12 345 67 89" },
-      "email": { "label": "Email", "value": "hello@metromomo.com" },
-      "response": { "label": "Response time", "value": "Within 48 hours" }
+      "headOffice": {
+        "label": "Head Office",
+        "value": "Metro Momo HQ, Your City"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+46 12 345 67 89"
+      },
+      "email": {
+        "label": "Email",
+        "value": "hello@metromomo.com"
+      },
+      "response": {
+        "label": "Response time",
+        "value": "Within 48 hours"
+      }
     },
     "form": {
       "title": "Submit your interest",
       "fields": {
-        "name": { "label": "Full name", "placeholder": "Your name" },
-        "email": { "label": "Email", "placeholder": "you@example.com" },
-        "phone": { "label": "Phone", "placeholder": "+46 70 123 4567" },
-        "city": { "label": "City / Territory", "placeholder": "Where you want to open" },
+        "name": {
+          "label": "Full name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@example.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+46 70 123 4567"
+        },
+        "city": {
+          "label": "City / Territory",
+          "placeholder": "Where you want to open"
+        },
         "model": {
           "label": "Preferred model",
           "options": [
-            { "value": "", "label": "Select a format" },
-            { "value": "compact", "label": "Street Stall & Kiosk" },
-            { "value": "restaurant", "label": "Full Restaurant" },
-            { "value": "ghost", "label": "Virtual & Ghost Kitchens" },
-            { "value": "unsure", "label": "Not sure yet" }
+            {
+              "value": "",
+              "label": "Select a format"
+            },
+            {
+              "value": "compact",
+              "label": "Street Stall & Kiosk"
+            },
+            {
+              "value": "restaurant",
+              "label": "Full Restaurant"
+            },
+            {
+              "value": "ghost",
+              "label": "Virtual & Ghost Kitchens"
+            },
+            {
+              "value": "unsure",
+              "label": "Not sure yet"
+            }
           ]
         },
         "experience": {
           "label": "Restaurant or business experience",
           "options": [
-            { "value": "", "label": "Select experience level" },
-            { "value": "none", "label": "New to hospitality" },
-            { "value": "some", "label": "Some restaurant experience" },
-            { "value": "owner", "label": "Current restaurant owner" },
-            { "value": "multi", "label": "Multi-unit operator" }
+            {
+              "value": "",
+              "label": "Select experience level"
+            },
+            {
+              "value": "none",
+              "label": "New to hospitality"
+            },
+            {
+              "value": "some",
+              "label": "Some restaurant experience"
+            },
+            {
+              "value": "owner",
+              "label": "Current restaurant owner"
+            },
+            {
+              "value": "multi",
+              "label": "Multi-unit operator"
+            }
           ]
         },
-        "message": { "label": "Message", "placeholder": "Tell us about your vision, budget range, or questions..." }
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about your vision, budget range, or questions..."
+        }
       },
       "submit": "Submit Application",
       "disclaimer": "By submitting, you agree to be contacted by the METRO MOMO partnership team."
