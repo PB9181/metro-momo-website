@@ -65,8 +65,8 @@
       "stat2Label": "Gave smaken",
       "stat2Sublabel": "Huisgemaakte sauzen",
       "imageAlt": "Geladen MOMO spread met dumplings, bowls en loaded fries",
-      "smallAlt1": "Geladen Mexicaanse style fries met salsa, guacamole en jalapeños",
-      "smallAlt2": "Pulled loaded fries met chipotle saus",
+      "smallAlt1": "Gourmet pan-gebraden momo's met kleurrijke saus swipe",
+      "smallAlt2": "Levendige rode cocktail met crushed ice en citrus garnering",
       "smallAlt3": "Stomende MOMO plateau om te delen",
       "imageBadge": "VERS",
       "stickerHot": "VIRAAL"
@@ -84,8 +84,8 @@
           "alt": "Pan-gebraden momos op een donker bord met kleurrijke sauzen"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Geladen fries met plantaardige proteïne, sauzen en koriander"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Levendige rode cocktail met crushed ice en citrus garnering"
         },
         {
           "src": "/New_Photos/bar2.jpg",
@@ -108,6 +108,21 @@
           "alt": "Handen die verse momos één voor één vouwen"
         }
       ]
+    },
+    "mood": {
+      "badge": "De vibe",
+      "title": "Mood board",
+      "subtitle": "Een voorproefje van wat er gebeurt wanneer Himalayaanse smaken samenkomen met late-night energie, neon en zero filters.",
+      "sticker1": "SPICY",
+      "sticker2": "LOADED",
+      "sticker3": "HANDMADE",
+      "alt1": "Pan-gebraden momos op een donker bord met kleurrijke sauzen",
+      "alt2": "Neon groen-blauwe cocktail in een hoog glas",
+      "alt3": "Verfrissende rode watermeloen mocktail in een metalen mandje met munt",
+      "alt4": "Gestoomde momos in een bamboe mandje met dipsauzen",
+      "alt5": "Twee kleurrijke tropische cocktails op een bar",
+      "alt6": "Gourmet pan-gebraden momos met saus swipe",
+      "alt7": "Handen die verse momos één voor één vouwen"
     },
     "bestSellers": {
       "badge": "Bestsellers",
@@ -152,8 +167,8 @@
           "alt": "Pan-gebraden momos op een donker bord met kleurrijke sauzen"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Geladen fries met plantaardige proteïne, sauzen en koriander"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Levendige rode cocktail met crushed ice en citrus garnering"
         },
         {
           "src": "/New_Photos/bar2.jpg",

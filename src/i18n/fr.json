@@ -65,8 +65,8 @@
       "stat2Label": "Saveurs audacieuses",
       "stat2Sublabel": "Sauces maison",
       "imageAlt": "Spread MOMO généreux avec dumplings, bowls et loaded fries",
-      "smallAlt1": "Loaded fries style mexicain avec salsa, guacamole et jalapeños",
-      "smallAlt2": "Pulled loaded fries nappées de sauce chipotle",
+      "smallAlt1": "Momos pan-frits gourmet avec trait de sauce coloré",
+      "smallAlt2": "Cocktail rouge vibrant avec glace pilée et garniture aux agrumes",
       "smallAlt3": "Plateau de MOMO fumants à partager",
       "imageBadge": "FRAIS",
       "stickerHot": "VIRAL"
@@ -84,8 +84,8 @@
           "alt": "Momos pan-frits sur une assiette sombre avec sauces colorées"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Fries loaded avec protéine végétale, sauces et coriandre"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Cocktail rouge vibrant avec glace pilée et garniture aux agrumes"
         },
         {
           "src": "/New_Photos/bar2.jpg",
@@ -108,6 +108,21 @@
           "alt": "Mains pliant des momos frais un par un"
         }
       ]
+    },
+    "mood": {
+      "badge": "La vibe",
+      "title": "Mood board",
+      "subtitle": "Un avant-goût de ce qui arrive quand les saveurs himalayennes rencontrent l'énergie nocturne, le néon et zéro filtre.",
+      "sticker1": "SPICY",
+      "sticker2": "LOADED",
+      "sticker3": "HANDMADE",
+      "alt1": "Momos pan-frits sur une assiette sombre avec sauces colorées",
+      "alt2": "Cocktail néon vert-bleu dans un grand verre",
+      "alt3": "Mocktail rafraîchissant à la pastèque rouge dans un panier métallique avec menthe",
+      "alt4": "Momos vapeur dans un panier bambou avec sauces",
+      "alt5": "Deux cocktails tropicaux colorés sur un bar",
+      "alt6": "Momos pan-frits gourmet avec trait de sauce",
+      "alt7": "Mains pliant des momos frais un par un"
     },
     "bestSellers": {
       "badge": "Best-sellers",
@@ -152,8 +167,8 @@
           "alt": "Momos pan-frits sur une assiette sombre avec sauces colorées"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Fries loaded avec protéine végétale, sauces et coriandre"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Cocktail rouge vibrant avec glace pilée et garniture aux agrumes"
         },
         {
           "src": "/New_Photos/bar2.jpg",

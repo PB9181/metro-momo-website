@@ -91,10 +91,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="photo-wall-side photo-wall-side-1 photo-frame">
-                <img src="/Mexican.jpg" alt={t('home.hero.smallAlt1')} />
+                <img src="/New_Photos/momo3.jpg" alt={t('home.hero.smallAlt1')} />
               </div>
               <div className="photo-wall-side photo-wall-side-2 photo-frame">
-                <img src="/Pulled_beefg_fries.jpg" alt={t('home.hero.smallAlt2')} />
+                <img src="/New_Photos/bar4.jpg" alt={t('home.hero.smallAlt2')} />
               </div>
               <div className="photo-wall-side photo-wall-side-3 photo-frame">
                 <img src="/hero-momos.png" alt={t('home.hero.smallAlt3')} />
@@ -439,7 +439,7 @@ export default function Home() {
               <img src="/New_Photos/bar6.jpg" alt={t('home.mood.alt2')} loading="lazy" />
             </div>
             <div className="mood-item">
-              <img src="/New_Photos/dirty.jpg" alt={t('home.mood.alt3')} loading="lazy" />
+              <img src="/New_Photos/bar7.jpg" alt={t('home.mood.alt3')} loading="lazy" />
               <div className="mood-caption">
                 <Sticker variant="neon" rotate={6}>{t('home.mood.sticker2')}</Sticker>
               </div>

@@ -65,8 +65,8 @@
       "stat2Label": "Kühne Aromen",
       "stat2Sublabel": "Hausgemachte Saucen",
       "imageAlt": "Geladene MOMO Spread mit Dumplings, Bowls und Loaded Fries",
-      "smallAlt1": "Geladene Mexican-Style Fries mit Salsa, Guacamole und Jalapeños",
-      "smallAlt2": "Pulled Loaded Fries mit Chipotle-Sauce",
+      "smallAlt1": "Gourmet pan-frittierte Momos mit buntem Sauce-Swipe",
+      "smallAlt2": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur",
       "smallAlt3": "Dampfende MOMO Platte zum Teilen",
       "imageBadge": "FRISCH",
       "stickerHot": "VIRAL"
@@ -84,8 +84,8 @@
           "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Geladene Fries mit pflanzlichem Protein, Saucen und Koriander"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur"
         },
         {
           "src": "/New_Photos/bar2.jpg",
@@ -108,6 +108,21 @@
           "alt": "Hände, die frische Momos eins nach dem anderen falten"
         }
       ]
+    },
+    "mood": {
+      "badge": "Die Vibe",
+      "title": "Mood board",
+      "subtitle": "Ein Geschmack dessen, was passiert, wenn Himalaya-Aromen auf Spätabend-Energie, Neon und null Filter treffen.",
+      "sticker1": "SPICY",
+      "sticker2": "LOADED",
+      "sticker3": "HANDMADE",
+      "alt1": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen",
+      "alt2": "Neon grün-bluer Cocktail in einem hohen Glas",
+      "alt3": "Erfrischender roter Wassermelonen-Mocktail im Metallkorb mit Minze",
+      "alt4": "Gedämpfte Momos im Bambuskorb mit Dips",
+      "alt5": "Zwei bunte tropische Cocktails an einer Bar",
+      "alt6": "Gourmet pan-frittierte Momos mit Sauce-Swipe",
+      "alt7": "Hände, die frische Momos eins nach dem anderen falten"
     },
     "bestSellers": {
       "badge": "Bestseller",
@@ -152,8 +167,8 @@
           "alt": "Pan-frittierte Momos auf dunklem Teller mit bunten Saucen"
         },
         {
-          "src": "/New_Photos/dirty.jpg",
-          "alt": "Geladene Fries mit pflanzlichem Protein, Saucen und Koriander"
+          "src": "/New_Photos/bar4.jpg",
+          "alt": "Lebhafter roter Cocktail mit Crushed Ice und Zitrus-Garnitur"
         },
         {
           "src": "/New_Photos/bar2.jpg",
