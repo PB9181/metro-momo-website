@@ -1,5 +1,8 @@
-import { ClipboardList, MapPinned, FileCheck, Handshake, GraduationCap, Rocket } from 'lucide-react'
+import { ClipboardList, MapPinned, FileCheck, Handshake, GraduationCap, Rocket, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Sticker from '../components/Sticker.tsx'
+import Starburst from '../components/Starburst.tsx'
+import Squiggle from '../components/Squiggle.tsx'
 import { useTranslation } from '../i18n/index.ts'
 
 const stepIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
@@ -21,34 +24,188 @@ export default function HowItWorks() {
 
   return (
     <>
-      <section className="section page-hero">
-        <div className="container">
-          <span className="badge">{t('howItWorks.hero.badge')}</span>
-          <h1 className="page-hero-title display-text">
-            {t('howItWorks.hero.title')}
-            <br />
-            <span className="gradient-text">{t('howItWorks.hero.titleHighlight')}</span>
-          </h1>
-          <p className="page-hero-subtitle">{t('howItWorks.hero.subtitle')}</p>
+      <section className="how-it-works-hero">
+        <div className="how-it-works-hero-pattern pattern-arrows" aria-hidden="true" />
+        <div className="how-it-works-hero-path" aria-hidden="true">
+          <svg viewBox="0 0 600 160" preserveAspectRatio="none">
+            <path d="M20 140 C 120 140, 120 20, 220 20 S 320 140, 420 140 S 520 60, 580 60" fill="none" stroke="var(--mm-coral)" strokeWidth="3" strokeDasharray="8 8" />
+            <polygon points="570,50 590,60 570,70" fill="var(--mm-coral)" />
+          </svg>
+        </div>
+        <div className="container how-it-works-hero-inner">
+          <div className="how-it-works-hero-content">
+            <span className="badge badge-fresh">
+              <Rocket size={16} />
+              {t('howItWorks.hero.badge')}
+            </span>
+            <h1 className="how-it-works-hero-title display-text">
+              {t('howItWorks.hero.title')}
+              <br />
+              <span className="gradient-text">{t('howItWorks.hero.titleHighlight')}</span>
+            </h1>
+            <p className="how-it-works-hero-subtitle">{t('howItWorks.hero.subtitle')}</p>
+            <div className="how-it-works-hero-actions">
+              <Link to="/contact" className="btn btn-primary">
+                {t('howItWorks.hero.ctaPrimary')} <ArrowRight size={18} />
+              </Link>
+              <Link to="/models" className="btn btn-secondary">
+                {t('howItWorks.hero.ctaSecondary')}
+              </Link>
+            </div>
+            <Squiggle color="var(--mm-fresh)" width={160} height={24} strokeWidth={5} className="how-it-works-hero-squiggle" />
+          </div>
+
+          <div className="how-it-works-hero-steps">
+            <div className="step-bubble step-bubble-1">01</div>
+            <div className="step-bubble step-bubble-2">02</div>
+            <div className="step-bubble step-bubble-3">03</div>
+            <div className="step-bubble step-bubble-4">04</div>
+            <div className="step-bubble step-bubble-5">05</div>
+            <div className="step-bubble step-bubble-6">06</div>
+            <div className="how-it-works-stickers">
+              <Sticker variant="hot" rotate={-8}>{t('howItWorks.hero.sticker1')}</Sticker>
+              <Sticker variant="gold" rotate={6}>{t('howItWorks.hero.sticker2')}</Sticker>
+              <Sticker variant="fresh" rotate={-4}>{t('howItWorks.hero.sticker3')}</Sticker>
+            </div>
+            <Starburst color="var(--mm-gold)" size={80} className="how-it-works-starburst" />
+          </div>
         </div>
 
         <style>{`
-          .page-hero {
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-            padding: 80px 0 60px;
-            text-align: center;
+          .how-it-works-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 60px;
+            background: var(--color-bg);
+            border-bottom: 4px dashed var(--mm-border);
           }
-          .page-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+          .how-it-works-hero-pattern {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+          }
+          .how-it-works-hero-path {
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            height: 160px;
+            pointer-events: none;
+            opacity: 0.25;
+            z-index: 0;
+          }
+          .how-it-works-hero-path svg {
+            width: 100%;
+            height: 100%;
+          }
+          .how-it-works-hero-path path {
+            animation: border-dance 2s linear infinite;
+          }
+          .how-it-works-hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+          }
+          .how-it-works-hero-content {
+            max-width: 640px;
+          }
+          .how-it-works-hero-title {
+            font-size: clamp(2.75rem, 7vw, 5.5rem);
             font-weight: 900;
-            line-height: 1.05;
-            margin: 20px 0 16px;
+            line-height: 0.95;
+            margin: 24px 0 20px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
           }
-          .page-hero-subtitle {
+          .how-it-works-hero-subtitle {
             font-size: 1.25rem;
             color: var(--color-muted);
-            max-width: 640px;
-            margin: 0 auto;
+            max-width: 540px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+          }
+          .how-it-works-hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+          }
+          .how-it-works-hero-squiggle {
+            margin-top: 8px;
+          }
+          .how-it-works-hero-steps {
+            position: relative;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .step-bubble {
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+            animation: float 5s ease-in-out infinite;
+          }
+          .step-bubble-1 { background: var(--color-primary); top: 8%; left: 10%; animation-delay: 0s; }
+          .step-bubble-2 { background: var(--color-secondary); top: 30%; right: 15%; animation-delay: 0.5s; }
+          .step-bubble-3 { background: var(--color-fresh); top: 52%; left: 25%; animation-delay: 1s; }
+          .step-bubble-4 { background: var(--color-violet); top: 14%; right: 38%; animation-delay: 1.5s; }
+          .step-bubble-5 { background: var(--color-hot); top: 62%; right: 30%; animation-delay: 2s; }
+          .step-bubble-6 { background: var(--color-electric); top: 40%; left: 5%; animation-delay: 2.5s; }
+          .how-it-works-stickers {
+            position: absolute;
+            bottom: 4%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .how-it-works-starburst {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            animation: spin-slow 16s linear infinite;
+          }
+          @media (max-width: 900px) {
+            .how-it-works-hero {
+              padding: 60px 0 40px;
+            }
+            .how-it-works-hero-path {
+              display: none;
+            }
+            .how-it-works-hero-inner {
+              grid-template-columns: 1fr;
+              text-align: center;
+              gap: 32px;
+            }
+            .how-it-works-hero-content {
+              max-width: 100%;
+            }
+            .how-it-works-hero-actions {
+              justify-content: center;
+            }
+            .how-it-works-hero-squiggle {
+              margin: 0 auto;
+            }
+            .how-it-works-hero-steps {
+              height: 320px;
+            }
+            .how-it-works-starburst {
+              display: none;
+            }
           }
         `}</style>
       </section>

@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react'
+import { ChevronDown, HelpCircle, ArrowRight, MessageCircleQuestion } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Sticker from '../components/Sticker.tsx'
+import Starburst from '../components/Starburst.tsx'
 import { useTranslation } from '../i18n/index.ts'
 
 type FaqItem = { question: string; answer: string }
@@ -13,34 +15,135 @@ export default function FAQ() {
 
   return (
     <>
-      <section className="section page-hero">
-        <div className="container">
-          <span className="badge">{t('faq.hero.badge')}</span>
-          <h1 className="page-hero-title display-text">
-            {t('faq.hero.title')}
-            <br />
-            <span className="gradient-text">{t('faq.hero.titleHighlight')}</span>
-          </h1>
-          <p className="page-hero-subtitle">{t('faq.hero.subtitle')}</p>
+      <section className="faq-hero">
+        <div className="faq-hero-pattern pattern-speech" aria-hidden="true" />
+        <div className="faq-hero-bubbles" aria-hidden="true">
+          <div className="faq-bubble faq-bubble-1">?</div>
+          <div className="faq-bubble faq-bubble-2">?</div>
+          <div className="faq-bubble faq-bubble-3">?</div>
+          <div className="faq-bubble faq-bubble-4">?</div>
+        </div>
+        <div className="container faq-hero-inner">
+          <div className="faq-hero-content">
+            <span className="badge badge-play">
+              <MessageCircleQuestion size={16} />
+              {t('faq.hero.badge')}
+            </span>
+            <h1 className="faq-hero-title display-text">
+              {t('faq.hero.title')}
+              <br />
+              <span className="gradient-text">{t('faq.hero.titleHighlight')}</span>
+            </h1>
+            <p className="faq-hero-subtitle">{t('faq.hero.subtitle')}</p>
+            <div className="faq-hero-actions">
+              <Link to="/contact" className="btn btn-primary">
+                {t('faq.hero.ctaPrimary')} <ArrowRight size={18} />
+              </Link>
+              <Link to="/models" className="btn btn-secondary">
+                {t('faq.hero.ctaSecondary')}
+              </Link>
+            </div>
+            <div className="faq-hero-stickers">
+              <Sticker variant="play" rotate={-8}>{t('faq.hero.sticker1')}</Sticker>
+              <Sticker variant="hot" rotate={6}>{t('faq.hero.sticker2')}</Sticker>
+              <Sticker variant="gold" rotate={-4}>{t('faq.hero.sticker3')}</Sticker>
+            </div>
+          </div>
+          <Starburst color="var(--mm-pink)" size={96} className="faq-starburst" />
         </div>
 
         <style>{`
-          .page-hero {
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-            padding: 80px 0 60px;
+          .faq-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #fff0f3 0%, #fff8f0 100%);
+            border-bottom: 4px dashed var(--mm-border);
             text-align: center;
           }
-          .page-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900;
-            line-height: 1.05;
-            margin: 20px 0 16px;
+          .faq-hero-pattern {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
           }
-          .page-hero-subtitle {
+          .faq-hero-bubbles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+          }
+          .faq-bubble {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--mm-pink);
+            color: var(--mm-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            animation: question-bounce 4s ease-in-out infinite;
+          }
+          .faq-bubble-1 { top: 12%; left: 8%; animation-delay: 0s; }
+          .faq-bubble-2 { top: 25%; right: 10%; animation-delay: 1s; }
+          .faq-bubble-3 { bottom: 20%; left: 12%; animation-delay: 2s; }
+          .faq-bubble-4 { bottom: 30%; right: 8%; animation-delay: 0.5s; }
+          .faq-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+          }
+          .faq-hero-title {
+            font-size: clamp(2.75rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 0.95;
+            margin: 24px 0 20px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+          }
+          .faq-hero-subtitle {
             font-size: 1.25rem;
             color: var(--color-muted);
             max-width: 640px;
-            margin: 0 auto;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+          }
+          .faq-hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 28px;
+          }
+          .faq-hero-stickers {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .faq-starburst {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            animation: spin-slow 18s linear infinite;
+            z-index: 0;
+          }
+          @media (max-width: 900px) {
+            .faq-hero {
+              padding: 60px 0 40px;
+            }
+            .faq-bubble {
+              width: 48px;
+              height: 48px;
+              font-size: 1.4rem;
+            }
+            .faq-starburst {
+              display: none;
+            }
           }
         `}</style>
       </section>

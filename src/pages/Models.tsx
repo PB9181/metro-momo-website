@@ -1,5 +1,7 @@
 import { Check, ArrowRight, Store, Building2, Cloud } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Sticker from '../components/Sticker.tsx'
+import Starburst from '../components/Starburst.tsx'
 import { useTranslation } from '../i18n/index.ts'
 
 const modelIcons: Record<string, React.ComponentType<{ size?: number | string }>> = {
@@ -34,34 +36,226 @@ export default function Models() {
 
   return (
     <>
-      <section className="section page-hero">
-        <div className="container">
-          <span className="badge">{t('models.hero.badge')}</span>
-          <h1 className="page-hero-title display-text">
-            {t('models.hero.title')}
-            <br />
-            <span className="gradient-text">{t('models.hero.titleHighlight')}</span>
-          </h1>
-          <p className="page-hero-subtitle">{t('models.hero.subtitle')}</p>
+      <section className="models-hero">
+        <div className="models-hero-pattern pattern-city" aria-hidden="true" />
+        <div className="models-hero-silhouette" aria-hidden="true">
+          <svg viewBox="0 0 800 120" preserveAspectRatio="none">
+            <path d="M0 120 L0 60 L40 60 L40 40 L80 40 L80 80 L120 80 L120 20 L170 20 L170 100 L220 100 L220 50 L260 50 L260 70 L320 70 L320 30 L360 30 L360 120 Z" fill="var(--mm-gold)" opacity="0.08" />
+            <path d="M420 120 L420 70 L460 70 L460 50 L500 50 L500 90 L540 90 L540 35 L590 35 L590 110 L640 110 L640 55 L680 55 L680 75 L740 75 L740 25 L800 25 L800 120 Z" fill="var(--mm-coral)" opacity="0.08" />
+          </svg>
+        </div>
+        <div className="container models-hero-inner">
+          <div className="models-hero-content">
+            <span className="badge badge-gold">
+              <Store size={16} />
+              {t('models.hero.badge')}
+            </span>
+            <h1 className="models-hero-title display-text">
+              {t('models.hero.title')}
+              <br />
+              <span className="gradient-text">{t('models.hero.titleHighlight')}</span>
+            </h1>
+            <p className="models-hero-subtitle">{t('models.hero.subtitle')}</p>
+            <div className="models-hero-actions">
+              <Link to="/contact" className="btn btn-primary">
+                {t('models.hero.ctaSecondary')} <ArrowRight size={18} />
+              </Link>
+              <a href="#model-comparison" className="btn btn-secondary">
+                {t('models.hero.ctaPrimary')}
+              </a>
+            </div>
+            <div className="models-hero-stickers">
+              <Sticker variant="gold" rotate={-8}>{t('models.hero.sticker1')}</Sticker>
+              <Sticker variant="hot" rotate={6}>{t('models.hero.sticker2')}</Sticker>
+              <Sticker variant="fresh" rotate={-4}>{t('models.hero.sticker3')}</Sticker>
+            </div>
+          </div>
+
+          <div className="models-hero-visual">
+            <div className="models-float-card models-float-card-1">
+              <img src="/model-kiosk.png" alt="Street Stall & Kiosk" />
+              <span className="models-float-badge"><Store size={14} /> Kiosk</span>
+            </div>
+            <div className="models-float-card models-float-card-2">
+              <img src="/model-restaurant.png" alt="Full Restaurant" />
+              <span className="models-float-badge"><Building2 size={14} /> Restaurant</span>
+            </div>
+            <div className="models-float-card models-float-card-3">
+              <img src="/model-stall.png" alt="Ghost Kitchen" />
+              <span className="models-float-badge"><Cloud size={14} /> Ghost</span>
+            </div>
+            <Starburst color="var(--mm-gold)" size={80} className="models-starburst" />
+          </div>
         </div>
 
         <style>{`
-          .page-hero {
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-            padding: 80px 0 60px;
-            text-align: center;
+          .models-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #2a1a10 0%, #1f1a1a 100%);
+            color: white;
+            border-bottom: 4px dashed var(--mm-border);
           }
-          .page-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+          .models-hero-pattern {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+          }
+          .models-hero-silhouette {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 120px;
+            pointer-events: none;
+            animation: city-scroll 40s linear infinite;
+          }
+          .models-hero-silhouette svg {
+            width: 100%;
+            height: 100%;
+          }
+          .models-hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+          }
+          .models-hero-content {
+            max-width: 640px;
+          }
+          .models-hero-title {
+            font-size: clamp(2.75rem, 7vw, 5.5rem);
             font-weight: 900;
-            line-height: 1.05;
-            margin: 20px 0 16px;
+            line-height: 0.95;
+            margin: 24px 0 20px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
           }
-          .page-hero-subtitle {
+          .models-hero-subtitle {
             font-size: 1.25rem;
-            color: var(--color-muted);
-            max-width: 720px;
-            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.82);
+            max-width: 540px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+          }
+          .models-hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+          }
+          .models-hero-stickers {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+          .models-hero-visual {
+            position: relative;
+            height: 440px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .models-float-card {
+            position: absolute;
+            width: 220px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: white;
+            padding: 8px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: float-cards 5s ease-in-out infinite;
+          }
+          .models-float-card:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 10;
+          }
+          .models-float-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: calc(var(--radius-lg) - 8px);
+          }
+          .models-float-card-1 {
+            top: 0;
+            left: 0;
+            transform: rotate(-6deg);
+            animation-delay: 0s;
+            z-index: 3;
+          }
+          .models-float-card-2 {
+            top: 25%;
+            right: 0;
+            transform: rotate(4deg);
+            animation-delay: 0.8s;
+            z-index: 2;
+          }
+          .models-float-card-3 {
+            bottom: 5%;
+            left: 15%;
+            transform: rotate(-2deg);
+            animation-delay: 1.6s;
+            z-index: 1;
+          }
+          .models-float-badge {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-primary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            box-shadow: var(--shadow-sm);
+          }
+          .models-starburst {
+            position: absolute;
+            top: -24px;
+            right: 20px;
+            animation: spin-slow 16s linear infinite;
+            z-index: 0;
+          }
+          @media (max-width: 900px) {
+            .models-hero {
+              padding: 60px 0 40px;
+            }
+            .models-hero-inner {
+              grid-template-columns: 1fr;
+              text-align: center;
+              gap: 32px;
+            }
+            .models-hero-content {
+              max-width: 100%;
+            }
+            .models-hero-actions {
+              justify-content: center;
+            }
+            .models-hero-stickers {
+              justify-content: center;
+            }
+            .models-hero-visual {
+              height: 360px;
+            }
+            .models-float-card {
+              width: 180px;
+            }
+            .models-float-card img {
+              height: 110px;
+            }
+            .models-starburst {
+              display: none;
+            }
           }
         `}</style>
       </section>
@@ -234,7 +428,7 @@ export default function Models() {
         `}</style>
       </section>
 
-      <section className="section comparison">
+      <section id="model-comparison" className="section comparison">
         <div className="container">
           <span className="badge">{t('models.comparison.badge')}</span>
           <h2 className="section-title">{t('models.comparison.title')}</h2>

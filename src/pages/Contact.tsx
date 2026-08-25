@@ -1,5 +1,8 @@
 import { useState, FormEvent } from 'react'
-import { Send, CheckCircle, MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { Send, CheckCircle, MapPin, Phone, Mail, Clock, ArrowRight, Handshake } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Sticker from '../components/Sticker.tsx'
+import Starburst from '../components/Starburst.tsx'
 import { useTranslation } from '../i18n/index.ts'
 
 type ContactDetail = { label: string; value: string }
@@ -24,39 +27,205 @@ export default function Contact() {
 
   return (
     <>
-      <section className="section page-hero">
-        <div className="container">
-          <span className="badge">{t('contact.hero.badge')}</span>
-          <h1 className="page-hero-title display-text">
-            {t('contact.hero.title')}
-            <br />
-            <span className="gradient-text">{t('contact.hero.titleHighlight')}</span>
-          </h1>
-          <p className="page-hero-subtitle">{t('contact.hero.subtitle')}</p>
+      <section className="contact-hero">
+        <div className="contact-hero-pattern pattern-dots" aria-hidden="true" />
+        <div className="contact-hero-glow" aria-hidden="true" />
+        <div className="container contact-hero-inner">
+          <div className="contact-hero-content">
+            <span className="badge badge-gold">
+              <Handshake size={16} />
+              {t('contact.hero.badge')}
+            </span>
+            <h1 className="contact-hero-title display-text">
+              {t('contact.hero.title')}
+              <br />
+              <span className="gradient-text">{t('contact.hero.titleHighlight')}</span>
+            </h1>
+            <p className="contact-hero-subtitle">{t('contact.hero.subtitle')}</p>
+            <div className="contact-hero-actions">
+              <a href="#contact-form" className="btn btn-primary">
+                {t('contact.hero.ctaPrimary')} <ArrowRight size={18} />
+              </a>
+              <Link to="/locations" className="btn btn-outline-light">
+                {t('contact.hero.ctaSecondary')}
+              </Link>
+            </div>
+            <div className="contact-hero-stickers">
+              <Sticker variant="gold" rotate={-8}>{t('contact.hero.sticker1')}</Sticker>
+              <Sticker variant="hot" rotate={6}>{t('contact.hero.sticker2')}</Sticker>
+              <Sticker variant="fresh" rotate={-4}>{t('contact.hero.sticker3')}</Sticker>
+            </div>
+          </div>
+
+          <div className="contact-hero-trust">
+            <div className="contact-trust-card">
+              <div className="contact-trust-icon"><Handshake size={32} /></div>
+              <strong>Joint venture</strong>
+              <span>Revenue-sharing partnership</span>
+            </div>
+            <div className="contact-trust-card">
+              <div className="contact-trust-icon"><Clock size={32} /></div>
+              <strong>48-hour reply</strong>
+              <span>Partnership team response</span>
+            </div>
+            <div className="contact-trust-card">
+              <div className="contact-trust-icon"><MapPin size={32} /></div>
+              <strong>Protected territory</strong>
+              <span>Exclusive rights in your area</span>
+            </div>
+            <Starburst color="var(--mm-gold)" size={80} className="contact-starburst" />
+          </div>
         </div>
 
         <style>{`
-          .page-hero {
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-            padding: 80px 0 60px;
-            text-align: center;
+          .contact-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #2a1818 0%, #1f1a1a 100%);
+            color: white;
+            border-bottom: 4px solid var(--mm-gold);
           }
-          .page-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900;
-            line-height: 1.05;
-            margin: 20px 0 16px;
+          .contact-hero-pattern {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image: radial-gradient(circle, var(--mm-gold) 2px, transparent 2px);
+            background-size: 24px 24px;
           }
-          .page-hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--color-muted);
+          .contact-hero-glow {
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 210, 63, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+            animation: blob-morph 6s ease-in-out infinite;
+          }
+          .contact-hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+          }
+          .contact-hero-content {
             max-width: 640px;
-            margin: 0 auto;
+          }
+          .contact-hero-title {
+            font-size: clamp(2.75rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 0.95;
+            margin: 24px 0 20px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+          }
+          .contact-hero-title .gradient-text {
+            filter: drop-shadow(0 0 20px rgba(255, 42, 140, 0.6)) drop-shadow(0 4px 12px rgba(232, 23, 43, 0.4));
+          }
+          .contact-hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.82);
+            max-width: 540px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+          }
+          .contact-hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+          }
+          .contact-hero-stickers {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+          .contact-hero-trust {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+          }
+          .contact-trust-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+          .contact-trust-card:hover {
+            transform: translateY(-6px) rotate(-1deg);
+            background: rgba(255, 255, 255, 0.12);
+          }
+          .contact-trust-card:nth-child(3) {
+            grid-column: span 2;
+          }
+          .contact-trust-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mm-gold) 0%, var(--mm-coral) 100%);
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+          }
+          .contact-trust-card strong {
+            display: block;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+          }
+          .contact-trust-card span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+          }
+          .contact-starburst {
+            position: absolute;
+            top: -24px;
+            right: -24px;
+            animation: spin-slow 16s linear infinite;
+            z-index: 0;
+          }
+          @media (max-width: 900px) {
+            .contact-hero {
+              padding: 60px 0 40px;
+            }
+            .contact-hero-inner {
+              grid-template-columns: 1fr;
+              text-align: center;
+              gap: 40px;
+            }
+            .contact-hero-content {
+              max-width: 100%;
+            }
+            .contact-hero-actions {
+              justify-content: center;
+            }
+            .contact-hero-stickers {
+              justify-content: center;
+            }
+            .contact-hero-trust {
+              max-width: 480px;
+              margin: 0 auto;
+            }
+            .contact-starburst {
+              display: none;
+            }
           }
         `}</style>
       </section>
 
-      <section className="section contact-section">
+      <section id="contact-form" className="section contact-section">
         <div className="container">
           <div className="contact-grid">
             <div className="contact-info">

@@ -263,11 +263,13 @@
       "badge": "Vind ons",
       "title": "Waar de momo's",
       "titleHighlight": "rollen",
-      "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken, steden en landen.",
+      "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken, steden en landen. Vind ons, neem vrienden mee en proef de movement.",
       "ctaPrimary": "Plan je bezoek",
       "ctaSecondary": "Partner worden",
       "sticker1": "FLAGSHIP",
-      "sticker2": "MEER Binnenkort"
+      "sticker2": "MEER Binnenkort",
+      "sticker3": "JOUW STAD?",
+      "mapPinLabel": "Metro Momo Central"
     },
     "feature": {
       "badge": "Flagship",
@@ -311,7 +313,15 @@
       "badge": "Over ons",
       "title": "Een movement voor",
       "titleHighlight": "MOMO en eigenaren",
-      "subtitle": "METRO MOMO was born from a simple belief: great dumplings deserve a great system."
+      "subtitle": "METRO MOMO is ontstaan uit een simpele overtuiging: goede dumplings verdienen een geweldig systeem. We bouwen een merk dat zich net zo goed aanvoelt als het smaakt — één locatie, één eigenaar, één glimlach tegelijk.",
+      "ctaPrimary": "Lees ons verhaal",
+      "ctaSecondary": "Verken het menu",
+      "sticker1": "ONS VERHAAL",
+      "sticker2": "HANDGEMAAKT",
+      "sticker3": "GELOVEFD",
+      "imageAlt1": "Handen die verse momos één voor één vouwen",
+      "imageAlt2": "Kleurrijk momo bord klaar om te delen",
+      "imageAlt3": "Mensen die samen genieten van MOMO aan tafel"
     },
     "story": {
       "badge": "Ons Verhaal",
@@ -365,7 +375,12 @@
       "badge": "Joint Venture",
       "title": "Kies het formaat dat",
       "titleHighlight": "bij jouw ambitie past",
-      "subtitle": "Van compacte kramen tot ghost kitchens — kies het model dat past bij jouw locatie en ambitie. Geen franchisekosten; we groeien door omzetdeling."
+      "subtitle": "Van compacte kramen tot ghost kitchens — kies het model dat past bij jouw locatie en ambitie. Geen franchisekosten; we groeien samen door omzetdeling.",
+      "ctaPrimary": "Vergelijk formaten",
+      "ctaSecondary": "Meld je nu aan",
+      "sticker1": "€0 FEE",
+      "sticker2": "3 FORMATEN",
+      "sticker3": "FLEXIBEL"
     },
     "items": [
       {
@@ -471,7 +486,12 @@
       "badge": "Hoe het werkt",
       "title": "Van aanmelding tot",
       "titleHighlight": "opening day",
-      "subtitle": "Een duidelijk, zes-stappenpad voor eigenaren die snel willen bewegen en iets blijvends willen bouwen."
+      "subtitle": "Een duidelijk, zes-stappenpad voor eigenaren die snel willen bewegen en iets blijvends willen bouwen. We begeleiden je door elke fase — en blijven na de lancering aan je zijde.",
+      "ctaPrimary": "Dien je interesse in",
+      "ctaSecondary": "Bekijk de modellen",
+      "sticker1": "6 STAPPEN",
+      "sticker2": "SNEL SPOOR",
+      "sticker3": "ONDERSTEUND"
     },
     "steps": [
       {
@@ -537,7 +557,12 @@
       "badge": "FAQ",
       "title": "Vragen?",
       "titleHighlight": "We have answers.",
-      "subtitle": "Alles wat je moet weten over het worden van een METRO MOMO partner."
+      "subtitle": "Alles wat je moet weten over het worden van een METRO MOMO partner. Geen vraag is te klein — we helpen je graag om je keuze makkelijk te maken.",
+      "ctaPrimary": "Neem contact op",
+      "ctaSecondary": "Bekijk de modellen",
+      "sticker1": "Q&A",
+      "sticker2": "VRAAG MAAR",
+      "sticker3": "WE HELPEN"
     },
     "sidebar": {
       "title": "Still have questions?",
@@ -588,7 +613,12 @@
       "badge": "Tech-aangedreven Groei",
       "title": "Built on a restaurant",
       "titleHighlight": "operating system",
-      "subtitle": "Every METRO MOMO partner gets access to the same operations platform that runs modern restaurant teams — covering ordering, kitchen, inventory, and back-office in one place."
+      "subtitle": "Elke METRO MOMO partner krijgt toegang tot hetzelfde operationele platform dat moderne restaurantteams draait — bestellingen, keuken, voorraad en back-office op één plek.",
+      "ctaPrimary": "Bekijk de modellen",
+      "ctaSecondary": "Partner worden",
+      "sticker1": "ALLES-IN-ÉÉN",
+      "sticker2": "LIVE DATA",
+      "sticker3": "TOEKOMSTGERIcht"
     },
     "categories": [
       {
@@ -693,7 +723,12 @@
       "badge": "Partner With Us",
       "title": "Bring Metro Momo",
       "titleHighlight": "to your city",
-      "subtitle": "Tell us about yourself and your target market. Our partnership team will reach out within 48 hours."
+      "subtitle": "Vertel ons over jezelf en je doelmarkt. Ons partnership team neemt binnen 48 uur contact op en begeleidt je door de volgende stappen.",
+      "ctaPrimary": "Laten we praten",
+      "ctaSecondary": "Bekijk onze locaties",
+      "sticker1": "LATEN WE PRATEN",
+      "sticker2": "48H REACTIE",
+      "sticker3": "PARTNERSCHAP"
     },
     "benefits": {
       "badge": "Why METRO MOMO?",
@@ -810,6 +845,9 @@
     "title": "404",
     "subtitle": "Deze momo is weggerold",
     "text": "We konden de pagina die je zocht niet vinden. Maar er is genoeg MOMO thuis.",
-    "cta": "Back to Home"
+    "cta": "Back to Home",
+    "sticker1": "OEPS",
+    "searchLabel": "Nog steeds zoeken...",
+    "lostMomoLabel": "Verdwaalde momo"
   }
 }

@@ -12,7 +12,22 @@ export default function Locations() {
       <section className="locations-hero">
         <div className="blob blob-red" />
         <div className="blob blob-orange" />
-        <div className="locations-hero-pattern pattern-grid" aria-hidden="true" />
+        <div className="locations-hero-pattern pattern-map" aria-hidden="true" />
+        <div className="locations-hero-map" aria-hidden="true">
+          <div className="locations-map-pin locations-map-pin-main">
+            <MapPin size={32} />
+            <span>{t('locations.hero.mapPinLabel')}</span>
+          </div>
+          <div className="locations-map-pin locations-map-pin-future">
+            <MapPin size={20} />
+          </div>
+          <div className="locations-map-pin locations-map-pin-future-2">
+            <MapPin size={20} />
+          </div>
+          <svg className="locations-map-route" viewBox="0 0 400 200" preserveAspectRatio="none">
+            <path d="M60 160 Q 120 60, 200 100 T 340 40" fill="none" stroke="var(--mm-coral)" strokeWidth="3" strokeDasharray="8 8" />
+          </svg>
+        </div>
         <div className="container locations-hero-inner">
           <div className="locations-hero-content">
             <span className="badge badge-fresh">
@@ -37,6 +52,7 @@ export default function Locations() {
           <div className="locations-hero-stickers">
             <Sticker variant="red" icon="flame" rotate={-10}>{t('locations.hero.sticker1')}</Sticker>
             <Sticker variant="gold" rotate={6}>{t('locations.hero.sticker2')}</Sticker>
+            <Sticker variant="fresh" rotate={-6}>{t('locations.hero.sticker3')}</Sticker>
             <Starburst color="var(--mm-fresh)" size={80} className="locations-starburst" />
           </div>
         </div>
@@ -53,6 +69,58 @@ export default function Locations() {
             position: absolute;
             inset: 0;
             pointer-events: none;
+          }
+          .locations-hero-map {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+          }
+          .locations-map-pin {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--mm-coral);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            animation: map-pulse 2.5s ease-in-out infinite;
+          }
+          .locations-map-pin-main {
+            top: 25%;
+            right: 18%;
+          }
+          .locations-map-pin-main span {
+            background: white;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-top: 4px;
+            box-shadow: var(--shadow-sm);
+            white-space: nowrap;
+          }
+          .locations-map-pin-future {
+            top: 45%;
+            right: 35%;
+            opacity: 0.5;
+            animation-delay: 0.6s;
+          }
+          .locations-map-pin-future-2 {
+            top: 60%;
+            right: 12%;
+            opacity: 0.4;
+            animation-delay: 1.2s;
+          }
+          .locations-map-route {
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            width: 360px;
+            height: 180px;
+            opacity: 0.25;
+          }
+          .locations-map-route path {
+            animation: border-dance 2s linear infinite;
           }
           .locations-hero-inner {
             display: grid;
@@ -95,6 +163,9 @@ export default function Locations() {
           .locations-hero-stickers .sticker:nth-child(2) {
             align-self: flex-end;
           }
+          .locations-hero-stickers .sticker:nth-child(3) {
+            align-self: center;
+          }
           .locations-starburst {
             position: absolute;
             top: -28px;
@@ -102,6 +173,12 @@ export default function Locations() {
             animation: spin-slow 14s linear infinite;
           }
           @media (max-width: 900px) {
+            .locations-hero {
+              padding: 60px 0 40px;
+            }
+            .locations-hero-map {
+              display: none;
+            }
             .locations-hero-inner {
               grid-template-columns: 1fr;
             }
@@ -110,7 +187,8 @@ export default function Locations() {
               flex-wrap: wrap;
               justify-content: center;
             }
-            .locations-hero-stickers .sticker:nth-child(2) {
+            .locations-hero-stickers .sticker:nth-child(2),
+            .locations-hero-stickers .sticker:nth-child(3) {
               align-self: auto;
             }
             .locations-starburst {
