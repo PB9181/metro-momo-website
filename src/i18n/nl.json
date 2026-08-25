@@ -266,20 +266,23 @@
       "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken, steden en landen. Vind ons, neem vrienden mee en proef de movement.",
       "ctaPrimary": "Plan je bezoek",
       "ctaSecondary": "Partner worden",
-      "sticker1": "FLAGSHIP",
-      "sticker2": "MEER Binnenkort",
-      "sticker3": "JOUW STAD?",
-      "mapPinLabel": "Metro Momo Central",
+      "sticker1": "BINNENKORT",
+      "sticker2": "9 LANDEN",
+      "sticker3": "JOUW LAND?",
+      "mapPinLabel": "Landenkaart van Metro Momo",
       "map": {
-        "flagshipLabel": "Flagship",
         "comingSoonLabel": "Binnenkort",
-        "yourCityLabel": "Jouw stad?",
-        "cities": {
-          "stockholm": "Stockholm",
-          "amsterdam": "Amsterdam",
-          "berlin": "Berlijn",
-          "paris": "Parijs",
-          "london": "Londen"
+        "yourCountryLabel": "Jouw land?",
+        "countries": {
+          "netherlands": "Nederland",
+          "france": "Frankrijk",
+          "portugal": "Portugal",
+          "uk": "VK",
+          "germany": "Duitsland",
+          "norway": "Noorwegen",
+          "finland": "Finland",
+          "belgium": "België",
+          "spain": "Spanje"
         }
       }
     },

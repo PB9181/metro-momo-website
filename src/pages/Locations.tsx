@@ -14,7 +14,7 @@ export default function Locations() {
         <div className="blob blob-orange" />
         <div className="locations-hero-pattern pattern-map" aria-hidden="true" />
         <div className="locations-hero-map" aria-hidden="true">
-          <svg className="locations-europe-map" viewBox="0 0 480 340" role="img" aria-label={t('locations.hero.mapPinLabel')}>
+          <svg className="locations-europe-map" viewBox="0 0 640 420" role="img" aria-label={t('locations.hero.mapPinLabel')}>
             <defs>
               <filter id="map-pin-glow" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -24,45 +24,69 @@ export default function Locations() {
                 </feMerge>
               </filter>
             </defs>
-            <path className="europe-landmass" d="M165 150 L185 135 L210 125 L245 105 L285 110 L315 130 L325 160 L315 195 L290 225 L255 245 L225 235 L200 255 L170 245 L150 220 L155 185 L165 150 Z" />
-            <path className="europe-island" d="M125 145 L150 135 L160 155 L145 170 L125 160 Z" />
-            <path className="europe-island" d="M100 155 L120 150 L115 170 L95 165 Z" />
-            <path className="europe-border" d="M245 105 L240 145 L260 175 M170 150 L215 145 L240 165 M240 210 L255 230" />
-            <path className="europe-route" stroke="var(--mm-coral)" d="M265 115 C 240 130, 200 140, 170 150" />
-            <path className="europe-route" stroke="var(--mm-gold)" d="M265 115 C 285 125, 295 135, 300 150" />
-            <path className="europe-route" stroke="var(--mm-teal)" d="M265 115 C 230 130, 190 155, 155 180" />
-            <path className="europe-route" stroke="var(--mm-electric-blue)" d="M265 115 C 220 120, 170 130, 130 150" />
-            <path className="europe-route" stroke="var(--mm-purple)" d="M265 115 C 270 150, 265 190, 260 225" />
-            <g className="europe-pin europe-pin-flagship">
-              <circle cx="265" cy="115" r="10" fill="var(--mm-red)" filter="url(#map-pin-glow)" />
-              <circle cx="265" cy="115" r="18" fill="none" stroke="var(--mm-red)" strokeWidth="2" className="pin-ring" />
-              <text x="265" y="92" textAnchor="middle" className="pin-label pin-label-main">{t('locations.hero.map.cities.stockholm')}</text>
-              <text x="265" y="80" textAnchor="middle" className="pin-label pin-label-badge">{t('locations.hero.map.flagshipLabel')}</text>
+            <path className="europe-landmass" d="M90 290 L95 230 L150 205 L190 170 L260 160 L330 155 L360 115 L395 75 L475 65 L515 110 L500 170 L455 220 L410 270 L350 320 L260 335 L180 315 Z" />
+            <path className="europe-island" d="M180 160 L185 135 L210 130 L230 145 L220 165 L195 170 Z" />
+            <path className="europe-island" d="M165 150 L170 130 L185 132 L180 155 Z" />
+            <path className="europe-route" stroke="var(--mm-coral)" d="M340 150 L400 175 L400 95 L490 90 L210 145 L155 290 L220 305 L275 225 L315 180 Z" />
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="340" cy="150" r="7" fill="var(--mm-red)" filter="url(#map-pin-glow)" />
+              <circle cx="340" cy="150" r="14" fill="none" stroke="var(--mm-red)" strokeWidth="1.5" className="pin-ring" />
+              <text x="340" y="132" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.netherlands')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
-              <circle cx="170" cy="150" r="6" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
-              <circle cx="170" cy="150" r="12" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
-              <text x="170" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.amsterdam')}</text>
+              <circle cx="315" cy="180" r="7" fill="var(--mm-neon-lime)" filter="url(#map-pin-glow)" />
+              <circle cx="315" cy="180" r="14" fill="none" stroke="var(--mm-neon-lime)" strokeWidth="1.5" className="pin-ring" />
+              <text x="325" y="184" textAnchor="start" className="pin-label">{t('locations.hero.map.countries.belgium')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
-              <circle cx="300" cy="150" r="6" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
-              <circle cx="300" cy="150" r="12" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
-              <text x="300" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.berlin')}</text>
+              <circle cx="275" cy="225" r="7" fill="var(--mm-hot-pink)" filter="url(#map-pin-glow)" />
+              <circle cx="275" cy="225" r="14" fill="none" stroke="var(--mm-hot-pink)" strokeWidth="1.5" className="pin-ring" />
+              <text x="275" y="249" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.france')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
-              <circle cx="155" cy="180" r="6" fill="var(--mm-teal)" filter="url(#map-pin-glow)" />
-              <circle cx="155" cy="180" r="12" fill="none" stroke="var(--mm-teal)" strokeWidth="1.5" className="pin-ring" />
-              <text x="155" y="206" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.paris')}</text>
+              <circle cx="220" cy="305" r="7" fill="var(--mm-coral)" filter="url(#map-pin-glow)" />
+              <circle cx="220" cy="305" r="14" fill="none" stroke="var(--mm-coral)" strokeWidth="1.5" className="pin-ring" />
+              <text x="220" y="329" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.spain')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
-              <circle cx="130" cy="150" r="6" fill="var(--mm-electric-blue)" filter="url(#map-pin-glow)" />
-              <circle cx="130" cy="150" r="12" fill="none" stroke="var(--mm-electric-blue)" strokeWidth="1.5" className="pin-ring" />
-              <text x="130" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.london')}</text>
+              <circle cx="155" cy="290" r="7" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
+              <circle cx="155" cy="290" r="14" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
+              <text x="155" y="314" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.portugal')}</text>
             </g>
-            <g className="europe-pin europe-pin-your-city">
-              <circle cx="260" cy="225" r="6" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
-              <circle cx="260" cy="225" r="12" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
-              <text x="260" y="251" textAnchor="middle" className="pin-label">{t('locations.hero.map.yourCityLabel')}</text>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="210" cy="145" r="7" fill="var(--mm-teal)" filter="url(#map-pin-glow)" />
+              <circle cx="210" cy="145" r="14" fill="none" stroke="var(--mm-teal)" strokeWidth="1.5" className="pin-ring" />
+              <text x="210" y="127" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.uk')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="400" cy="175" r="7" fill="var(--mm-electric-blue)" filter="url(#map-pin-glow)" />
+              <circle cx="400" cy="175" r="14" fill="none" stroke="var(--mm-electric-blue)" strokeWidth="1.5" className="pin-ring" />
+              <text x="410" y="179" textAnchor="start" className="pin-label">{t('locations.hero.map.countries.germany')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="400" cy="95" r="7" fill="var(--mm-pink)" filter="url(#map-pin-glow)" />
+              <circle cx="400" cy="95" r="14" fill="none" stroke="var(--mm-pink)" strokeWidth="1.5" className="pin-ring" />
+              <text x="400" y="77" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.norway')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="490" cy="90" r="7" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
+              <circle cx="490" cy="90" r="14" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
+              <text x="490" y="72" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.finland')}</text>
+            </g>
+            <g className="europe-pin europe-pin-your-country">
+              <circle cx="450" cy="255" r="7" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
+              <circle cx="450" cy="255" r="14" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
+              <text x="450" y="279" textAnchor="middle" className="pin-label">{t('locations.hero.map.yourCountryLabel')}</text>
+            </g>
+            <g className="map-legend">
+              <rect x="24" y="348" width="172" height="56" rx="12" />
+              <circle cx="40" cy="370" r="4" fill="var(--mm-red)" />
+              <circle cx="50" cy="370" r="4" fill="var(--mm-gold)" />
+              <circle cx="60" cy="370" r="4" fill="var(--mm-teal)" />
+              <circle cx="70" cy="370" r="4" fill="var(--mm-electric-blue)" />
+              <text x="84" y="373" textAnchor="start" className="legend-label">{t('locations.hero.map.comingSoonLabel')}</text>
+              <circle cx="40" cy="390" r="4" fill="var(--mm-purple)" />
+              <text x="52" y="393" textAnchor="start" className="legend-label">{t('locations.hero.map.yourCountryLabel')}</text>
             </g>
           </svg>
         </div>
@@ -117,11 +141,11 @@ export default function Locations() {
           .locations-europe-map {
             position: absolute;
             top: 50%;
-            right: -20px;
+            right: -40px;
             transform: translateY(-50%);
-            width: min(540px, 52vw);
+            width: min(760px, 70vw);
             height: auto;
-            opacity: 0.32;
+            opacity: 0.28;
             overflow: visible;
             font-family: var(--font-family);
           }
@@ -175,7 +199,7 @@ export default function Locations() {
             transform-box: fill-box;
           }
           .pin-label {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.02em;
@@ -189,6 +213,18 @@ export default function Locations() {
           .pin-label-badge {
             font-size: 9px;
             fill: var(--mm-coral);
+          }
+          .map-legend rect {
+            fill: rgba(255, 244, 232, 0.72);
+            stroke: rgba(255, 107, 53, 0.18);
+            stroke-width: 1;
+          }
+          .legend-label {
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            fill: var(--mm-dark);
           }
           @keyframes route-dash {
             to { stroke-dashoffset: -22; }
@@ -248,9 +284,9 @@ export default function Locations() {
               padding: 60px 0 40px;
             }
             .locations-europe-map {
-              width: 280px;
-              opacity: 0.12;
-              right: -40px;
+              width: 340px;
+              opacity: 0.14;
+              right: -48px;
               top: 25%;
               transform: translateY(-25%);
             }
@@ -261,6 +297,9 @@ export default function Locations() {
               font-size: 11px;
             }
             .pin-label-badge {
+              font-size: 8px;
+            }
+            .legend-label {
               font-size: 8px;
             }
             .locations-hero-inner {
@@ -281,8 +320,8 @@ export default function Locations() {
           }
           @media (max-width: 480px) {
             .locations-europe-map {
-              width: 220px;
-              right: -60px;
+              width: 280px;
+              right: -64px;
               top: 15%;
             }
           }
