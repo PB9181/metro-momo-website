@@ -21,7 +21,6 @@
     "logoAlt": "METRO MOMO home",
     "company": {
       "title": "Company",
-      "story": "Our Story",
       "howItWorks": "How It Works",
       "tech": "Technology",
       "models": "Models",
@@ -52,7 +51,6 @@
     "facebook": "Facebook",
     "twitter": "Twitter",
     "companyLinks": {
-      "story": "Our Story",
       "howItWorks": "How It Works",
       "tech": "Technology",
       "models": "Models",
