@@ -72,22 +72,20 @@ export default function Footer() {
           <div className="footer-contact">
             <h4>{t('footer.contact')}</h4>
             <ul>
-              <li>
-                <a href="#">
-                  <MapPin size={16} />
-                  {t('footer.address')}
-                </a>
+              <li className="footer-address">
+                <MapPin size={16} />
+                <span>{t('footer.address')}</span>
               </li>
               <li>
                 <a href="mailto:hello@metromomo.com">
                   <Mail size={16} />
-                  hello@metromomo.com
+                  hello@metro-momo.com
                 </a>
               </li>
               <li>
                 <a href="tel:+46123456789">
                   <Phone size={16} />
-                  +46 12 345 67 89
+                  +46 704219811
                 </a>
               </li>
             </ul>
@@ -214,6 +212,17 @@ export default function Footer() {
           color: white;
           transform: translateX(4px);
         }
+        .footer-address {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.5;
+        }
+        .footer-address svg {
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
         .footer-bottom {
           border-top: 1px solid rgba(255, 255, 255, 0.12);
           padding-top: 24px;
@@ -255,10 +264,15 @@ export default function Footer() {
             margin-bottom: 16px;
             font-size: 0.95rem;
           }
-          .footer-nav a,
-          .footer-contact a {
+          .footer-nav a {
             font-size: 0.95rem;
             white-space: nowrap;
+          }
+          .footer-contact a,
+          .footer-address {
+            font-size: 0.95rem;
+            white-space: normal;
+            word-wrap: break-word;
           }
           .footer-tagline {
             max-width: 100%;
