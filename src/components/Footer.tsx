@@ -76,15 +76,15 @@ export default function Footer() {
                 <span>{t('footer.address')}</span>
               </li>
               <li>
-                <a href="mailto:hello@metromomo.com">
+                <a href="mailto:hello@metro-momo.com">
                   <Mail size={16} />
                   hello@metro-momo.com
                 </a>
               </li>
               <li>
-                <a href="tel:+46123456789">
+                <a href="tel:Coming Soon">
                   <Phone size={16} />
-                  +46 704219811
+                  Coming Soon
                 </a>
               </li>
             </ul>
