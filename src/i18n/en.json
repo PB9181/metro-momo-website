@@ -267,7 +267,22 @@
       "sticker1": "COMING SOON",
       "sticker2": "EXPANDING",
       "sticker3": "YOUR CITY?",
-      "mapPinLabel": "Map of Metro Momo locations"
+      "mapPinLabel": "Map of Metro Momo locations",
+      "map": {
+        "comingSoonLabel": "Coming soon",
+        "yourCountryLabel": "Your country?",
+        "countries": {
+          "netherlands": "Netherlands",
+          "france": "France",
+          "portugal": "Portugal",
+          "uk": "UK",
+          "germany": "Germany",
+          "norway": "Norway",
+          "finland": "Finland",
+          "belgium": "Belgium",
+          "spain": "Spain"
+        }
+      }
     },
     "feature": {
       "badge": "Flagship",

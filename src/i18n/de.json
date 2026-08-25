@@ -267,7 +267,22 @@
       "sticker1": "DEMNÄCHST",
       "sticker2": "IM WACHSTUM",
       "sticker3": "DEINE STADT?",
-      "mapPinLabel": "Metro Momo Standortkarte"
+      "mapPinLabel": "Metro Momo Standortkarte",
+      "map": {
+        "comingSoonLabel": "Demnächst",
+        "yourCountryLabel": "Dein Land?",
+        "countries": {
+          "netherlands": "Niederlande",
+          "france": "Frankreich",
+          "portugal": "Portugal",
+          "uk": "Großbritannien",
+          "germany": "Deutschland",
+          "norway": "Norwegen",
+          "finland": "Finnland",
+          "belgium": "Belgien",
+          "spain": "Spanien"
+        }
+      }
     },
     "feature": {
       "badge": "Flagship",

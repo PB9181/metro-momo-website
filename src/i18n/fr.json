@@ -267,7 +267,22 @@
       "sticker1": "BIENTÔT",
       "sticker2": "EXPANSION",
       "sticker3": "VOTRE VILLE ?",
-      "mapPinLabel": "Carte des emplacements de Metro Momo"
+      "mapPinLabel": "Carte des emplacements de Metro Momo",
+      "map": {
+        "comingSoonLabel": "Bientôt",
+        "yourCountryLabel": "Votre pays ?",
+        "countries": {
+          "netherlands": "Pays-Bas",
+          "france": "France",
+          "portugal": "Portugal",
+          "uk": "Royaume-Uni",
+          "germany": "Allemagne",
+          "norway": "Norvège",
+          "finland": "Finlande",
+          "belgium": "Belgique",
+          "spain": "Espagne"
+        }
+      }
     },
     "feature": {
       "badge": "Flagship",
