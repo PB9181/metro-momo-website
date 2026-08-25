@@ -14,18 +14,56 @@ export default function Locations() {
         <div className="blob blob-orange" />
         <div className="locations-hero-pattern pattern-map" aria-hidden="true" />
         <div className="locations-hero-map" aria-hidden="true">
-          <div className="locations-map-pin locations-map-pin-main">
-            <MapPin size={32} />
-            <span>{t('locations.hero.mapPinLabel')}</span>
-          </div>
-          <div className="locations-map-pin locations-map-pin-future">
-            <MapPin size={20} />
-          </div>
-          <div className="locations-map-pin locations-map-pin-future-2">
-            <MapPin size={20} />
-          </div>
-          <svg className="locations-map-route" viewBox="0 0 400 200" preserveAspectRatio="none">
-            <path d="M60 160 Q 120 60, 200 100 T 340 40" fill="none" stroke="var(--mm-coral)" strokeWidth="3" strokeDasharray="8 8" />
+          <svg className="locations-europe-map" viewBox="0 0 480 340" role="img" aria-label={t('locations.hero.mapPinLabel')}>
+            <defs>
+              <filter id="map-pin-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path className="europe-landmass" d="M165 150 L185 135 L210 125 L245 105 L285 110 L315 130 L325 160 L315 195 L290 225 L255 245 L225 235 L200 255 L170 245 L150 220 L155 185 L165 150 Z" />
+            <path className="europe-island" d="M125 145 L150 135 L160 155 L145 170 L125 160 Z" />
+            <path className="europe-island" d="M100 155 L120 150 L115 170 L95 165 Z" />
+            <path className="europe-border" d="M245 105 L240 145 L260 175 M170 150 L215 145 L240 165 M240 210 L255 230" />
+            <path className="europe-route" stroke="var(--mm-coral)" d="M265 115 C 240 130, 200 140, 170 150" />
+            <path className="europe-route" stroke="var(--mm-gold)" d="M265 115 C 285 125, 295 135, 300 150" />
+            <path className="europe-route" stroke="var(--mm-teal)" d="M265 115 C 230 130, 190 155, 155 180" />
+            <path className="europe-route" stroke="var(--mm-electric-blue)" d="M265 115 C 220 120, 170 130, 130 150" />
+            <path className="europe-route" stroke="var(--mm-purple)" d="M265 115 C 270 150, 265 190, 260 225" />
+            <g className="europe-pin europe-pin-flagship">
+              <circle cx="265" cy="115" r="10" fill="var(--mm-red)" filter="url(#map-pin-glow)" />
+              <circle cx="265" cy="115" r="18" fill="none" stroke="var(--mm-red)" strokeWidth="2" className="pin-ring" />
+              <text x="265" y="92" textAnchor="middle" className="pin-label pin-label-main">{t('locations.hero.map.cities.stockholm')}</text>
+              <text x="265" y="80" textAnchor="middle" className="pin-label pin-label-badge">{t('locations.hero.map.flagshipLabel')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="170" cy="150" r="6" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
+              <circle cx="170" cy="150" r="12" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
+              <text x="170" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.amsterdam')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="300" cy="150" r="6" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
+              <circle cx="300" cy="150" r="12" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
+              <text x="300" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.berlin')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="155" cy="180" r="6" fill="var(--mm-teal)" filter="url(#map-pin-glow)" />
+              <circle cx="155" cy="180" r="12" fill="none" stroke="var(--mm-teal)" strokeWidth="1.5" className="pin-ring" />
+              <text x="155" y="206" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.paris')}</text>
+            </g>
+            <g className="europe-pin europe-pin-soon">
+              <circle cx="130" cy="150" r="6" fill="var(--mm-electric-blue)" filter="url(#map-pin-glow)" />
+              <circle cx="130" cy="150" r="12" fill="none" stroke="var(--mm-electric-blue)" strokeWidth="1.5" className="pin-ring" />
+              <text x="130" y="176" textAnchor="middle" className="pin-label">{t('locations.hero.map.cities.london')}</text>
+            </g>
+            <g className="europe-pin europe-pin-your-city">
+              <circle cx="260" cy="225" r="6" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
+              <circle cx="260" cy="225" r="12" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
+              <text x="260" y="251" textAnchor="middle" className="pin-label">{t('locations.hero.map.yourCityLabel')}</text>
+            </g>
           </svg>
         </div>
         <div className="container locations-hero-inner">
@@ -76,51 +114,84 @@ export default function Locations() {
             pointer-events: none;
             z-index: 0;
           }
-          .locations-map-pin {
+          .locations-europe-map {
             position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--mm-coral);
+            top: 50%;
+            right: -20px;
+            transform: translateY(-50%);
+            width: min(540px, 52vw);
+            height: auto;
+            opacity: 0.32;
+            overflow: visible;
+            font-family: var(--font-family);
+          }
+          .europe-landmass {
+            fill: var(--mm-cream);
+            stroke: var(--mm-coral);
+            stroke-width: 2;
+            stroke-dasharray: 6 4;
+            opacity: 0.9;
+            filter: drop-shadow(0 8px 24px rgba(255, 107, 53, 0.15));
+          }
+          .europe-island {
+            fill: var(--mm-cream);
+            stroke: var(--mm-coral);
+            stroke-width: 1.5;
+            stroke-dasharray: 4 3;
+            opacity: 0.85;
+          }
+          .europe-border {
+            fill: none;
+            stroke: var(--mm-coral);
+            stroke-width: 1;
+            stroke-dasharray: 4 4;
+            opacity: 0.45;
+          }
+          .europe-route {
+            fill: none;
+            stroke-width: 2;
+            stroke-dasharray: 6 5;
+            opacity: 0.55;
+            animation: route-dash 2.5s linear infinite;
+          }
+          .europe-pin {
+            animation: map-pulse 2.5s ease-in-out infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+          }
+          .europe-pin-flagship {
+            animation-duration: 2s;
+          }
+          .europe-pin-soon {
+            animation-delay: 0.5s;
+            opacity: 0.85;
+          }
+          .europe-pin-your-city {
+            animation-delay: 1s;
+          }
+          .pin-ring {
+            animation: map-pulse 2.5s ease-in-out infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+          }
+          .pin-label {
+            font-size: 11px;
             font-weight: 900;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            animation: map-pulse 2.5s ease-in-out infinite;
+            letter-spacing: 0.02em;
+            fill: var(--mm-dark);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
           }
-          .locations-map-pin-main {
-            top: 25%;
-            right: 18%;
+          .pin-label-main {
+            font-size: 14px;
+            fill: var(--mm-red);
           }
-          .locations-map-pin-main span {
-            background: white;
-            padding: 4px 10px;
-            border-radius: 999px;
-            margin-top: 4px;
-            box-shadow: var(--shadow-sm);
-            white-space: nowrap;
+          .pin-label-badge {
+            font-size: 9px;
+            fill: var(--mm-coral);
           }
-          .locations-map-pin-future {
-            top: 45%;
-            right: 35%;
-            opacity: 0.5;
-            animation-delay: 0.6s;
-          }
-          .locations-map-pin-future-2 {
-            top: 60%;
-            right: 12%;
-            opacity: 0.4;
-            animation-delay: 1.2s;
-          }
-          .locations-map-route {
-            position: absolute;
-            top: 20%;
-            right: 5%;
-            width: 360px;
-            height: 180px;
-            opacity: 0.25;
-          }
-          .locations-map-route path {
-            animation: border-dance 2s linear infinite;
+          @keyframes route-dash {
+            to { stroke-dashoffset: -22; }
           }
           .locations-hero-inner {
             display: grid;
@@ -176,8 +247,21 @@ export default function Locations() {
             .locations-hero {
               padding: 60px 0 40px;
             }
-            .locations-hero-map {
-              display: none;
+            .locations-europe-map {
+              width: 280px;
+              opacity: 0.12;
+              right: -40px;
+              top: 25%;
+              transform: translateY(-25%);
+            }
+            .pin-label {
+              font-size: 9px;
+            }
+            .pin-label-main {
+              font-size: 11px;
+            }
+            .pin-label-badge {
+              font-size: 8px;
             }
             .locations-hero-inner {
               grid-template-columns: 1fr;
@@ -193,6 +277,13 @@ export default function Locations() {
             }
             .locations-starburst {
               display: none;
+            }
+          }
+          @media (max-width: 480px) {
+            .locations-europe-map {
+              width: 220px;
+              right: -60px;
+              top: 15%;
             }
           }
         `}</style>
