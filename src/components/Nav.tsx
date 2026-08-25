@@ -93,7 +93,6 @@ export default function Nav() {
   ];
 
   const companyLinks: NavLinkItem[] = [
-    { label: t("nav.company.story"), href: "/about#story" },
     { label: t("nav.company.howItWorks"), href: "/how-it-works" },
     { label: t("nav.company.tech"), href: "/tech" },
     { label: t("nav.company.models"), href: "/models" },
