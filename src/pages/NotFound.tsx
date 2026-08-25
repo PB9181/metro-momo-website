@@ -163,6 +163,12 @@ export default function NotFound() {
           .not-found-starburst {
             display: none;
           }
+          .not-found-sticker.sticker {
+            left: -10px;
+            bottom: -8px;
+            font-size: 0.6rem;
+            padding: 4px 8px;
+          }
         }
       `}</style>
     </section>
