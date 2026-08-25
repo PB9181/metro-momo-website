@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom'
 import Nav from './components/Nav.tsx'
 import Footer from './components/Footer.tsx'
+import ScrollToTop from './components/ScrollToTop.tsx'
 import Home from './pages/Home.tsx'
 import About from './pages/About.tsx'
 import Menu from './pages/Menu.tsx'
@@ -15,6 +16,7 @@ import NotFound from './pages/NotFound.tsx'
 function Layout() {
   return (
     <div className="app">
+      <ScrollToTop />
       <Nav />
       <main>
         <Outlet />
