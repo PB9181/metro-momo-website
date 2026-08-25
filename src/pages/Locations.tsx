@@ -14,7 +14,7 @@ export default function Locations() {
         <div className="blob blob-orange" />
         <div className="locations-hero-pattern pattern-map" aria-hidden="true" />
         <div className="locations-hero-map" aria-hidden="true">
-          <svg className="locations-europe-map" viewBox="0 0 640 420" role="img" aria-label={t('locations.hero.mapPinLabel')}>
+          <svg className="locations-europe-map" viewBox="0 0 640 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label={t('locations.hero.mapPinLabel')}>
             <defs>
               <filter id="map-pin-glow" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -323,32 +323,90 @@ export default function Locations() {
             .locations-hero {
               display: flex;
               flex-direction: column;
-              padding: 60px 0 40px;
+              min-height: calc(100vh - 80px);
+              min-height: calc(100dvh - 80px);
+              padding: 0;
+            }
+            .locations-hero .blob,
+            .locations-hero-pattern {
+              display: none;
             }
             .locations-hero-map {
-              position: relative;
-              inset: auto;
+              position: absolute;
+              inset: 0;
               width: 100%;
-              height: auto;
-              padding: 0 24px;
-              margin-top: 40px;
-              z-index: 1;
+              height: 100%;
+              padding: 0;
+              margin: 0;
+              z-index: 0;
               opacity: 1;
-              pointer-events: auto;
+              pointer-events: none;
+              overflow: hidden;
             }
             .locations-europe-map {
-              position: relative;
-              top: auto;
-              right: auto;
-              transform: none;
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translateX(-10%);
               width: 100%;
-              max-width: 520px;
-              height: auto;
-              margin: 0 auto;
+              height: 100%;
+              max-width: none;
+              margin: 0;
               opacity: 1;
             }
             .locations-hero-inner {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              z-index: 2;
               width: 100%;
+              flex: 1 1 auto;
+              padding: 24px;
+              min-height: 100%;
+              text-align: center;
+            }
+            .locations-hero-content {
+              background: rgba(255, 251, 247, 0.78);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              border-radius: var(--radius-lg);
+              padding: 24px;
+              box-shadow: var(--shadow-md);
+              max-width: 520px;
+              width: 100%;
+            }
+            .locations-hero-title {
+              margin-top: 16px;
+              margin-bottom: 12px;
+            }
+            .locations-hero-subtitle {
+              font-size: 1rem;
+              margin-bottom: 24px;
+            }
+            .locations-hero-actions {
+              flex-direction: column;
+              align-items: stretch;
+              gap: 12px;
+            }
+            .locations-hero-actions .btn {
+              width: 100%;
+            }
+            .locations-hero-stickers {
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              margin-top: 16px;
+            }
+            .locations-hero-stickers .sticker:nth-child(2),
+            .locations-hero-stickers .sticker:nth-child(3) {
+              align-self: auto;
+            }
+            .map-legend {
+              display: none;
             }
             .pin-label {
               font-size: 10px;
@@ -358,12 +416,14 @@ export default function Locations() {
             }
           }
           @media (max-width: 480px) {
-            .locations-hero-map {
-              padding: 0 20px;
-              margin-top: 32px;
+            .locations-hero-content {
+              padding: 20px;
             }
-            .locations-europe-map {
-              max-width: 360px;
+            .locations-hero-title {
+              font-size: clamp(2.25rem, 11vw, 3rem);
+            }
+            .locations-hero-subtitle {
+              font-size: 0.95rem;
             }
             .pin-label {
               font-size: 9px;
