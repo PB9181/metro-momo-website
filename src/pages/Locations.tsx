@@ -375,49 +375,47 @@ export default function Locations() {
               z-index: 2;
               width: 100%;
               flex: 1 1 auto;
-              padding: 120px 24px 40px;
+              padding: 96px 20px 24px;
               min-height: 100%;
               text-align: center;
             }
             .locations-hero-content {
-              background: rgba(255, 251, 247, 0.72);
-              backdrop-filter: blur(10px);
-              -webkit-backdrop-filter: blur(10px);
+              background: rgba(255, 251, 247, 0.55);
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
               border-radius: var(--radius-lg);
-              padding: 24px;
+              padding: 20px;
               box-shadow: var(--shadow-md);
-              max-width: 520px;
+              max-width: 480px;
               width: 100%;
             }
             .locations-hero-title {
-              margin-top: 16px;
-              margin-bottom: 12px;
-              text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+              font-size: clamp(2rem, 9vw, 2.75rem);
+              margin-top: 12px;
+              margin-bottom: 10px;
+              text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
             }
             .locations-hero-subtitle {
-              font-size: 1rem;
-              margin-bottom: 24px;
-              text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+              font-size: 0.9rem;
+              margin-bottom: 16px;
+              text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
             }
             .locations-hero-actions {
-              flex-direction: column;
-              align-items: stretch;
-              gap: 12px;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              flex-wrap: wrap;
             }
             .locations-hero-actions .btn {
-              width: 100%;
+              width: auto;
+              flex: 1 1 0;
+              min-width: 140px;
+              padding: 10px 16px;
+              font-size: 0.85rem;
             }
             .locations-hero-stickers {
-              flex-direction: row;
-              flex-wrap: wrap;
-              justify-content: center;
-              align-items: center;
-              gap: 8px;
-              margin-top: 16px;
-            }
-            .locations-hero-stickers .sticker:nth-child(2),
-            .locations-hero-stickers .sticker:nth-child(3) {
-              align-self: auto;
+              display: none;
             }
             .map-legend {
               display: none;
@@ -427,30 +425,37 @@ export default function Locations() {
             }
             .pin-label-show-mobile {
               display: block;
-              font-size: 12px;
+              font-size: 13px;
               font-weight: 900;
               fill: var(--mm-dark);
-              text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+              text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
             }
             .legend-label {
               font-size: 9px;
             }
           }
           @media (max-width: 480px) {
+            .locations-hero-inner {
+              padding: 88px 16px 20px;
+            }
             .locations-hero-content {
-              padding: 20px;
+              padding: 16px;
             }
             .locations-hero-title {
-              font-size: clamp(2.25rem, 11vw, 3rem);
+              font-size: clamp(1.75rem, 8vw, 2.25rem);
             }
             .locations-hero-subtitle {
-              font-size: 0.95rem;
+              font-size: 0.85rem;
+            }
+            .locations-hero-actions .btn {
+              min-width: 120px;
+              font-size: 0.8rem;
             }
             .pin-label {
               font-size: 9px;
             }
             .pin-label-show-mobile {
-              font-size: 11px;
+              font-size: 12px;
             }
             .legend-label {
               font-size: 8px;
