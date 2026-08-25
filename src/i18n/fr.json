@@ -261,28 +261,13 @@
       "badge": "Nous trouver",
       "title": "Là où les momos",
       "titleHighlight": "roulent",
-      "subtitle": "Aujourd'hui un flagship. Bientôt plus de quartiers, de villes et de pays. Trouvez-nous, amenez des amis et goûtez au mouvement.",
+      "subtitle": "Aujourd'hui un flagship. Bientôt plus de quartiers et de villes. Trouvez-nous, amenez des amis et goûtez au mouvement.",
       "ctaPrimary": "Planifier votre visite",
       "ctaSecondary": "Devenir partenaire",
       "sticker1": "BIENTÔT",
-      "sticker2": "9 PAYS",
-      "sticker3": "VOTRE PAYS ?",
-      "mapPinLabel": "Carte des pays de Metro Momo",
-      "map": {
-        "comingSoonLabel": "Bientôt",
-        "yourCountryLabel": "Votre pays ?",
-        "countries": {
-          "netherlands": "Pays-Bas",
-          "france": "France",
-          "portugal": "Portugal",
-          "uk": "Royaume-Uni",
-          "germany": "Allemagne",
-          "norway": "Norvège",
-          "finland": "Finlande",
-          "belgium": "Belgique",
-          "spain": "Espagne"
-        }
-      }
+      "sticker2": "EXPANSION",
+      "sticker3": "VOTRE VILLE ?",
+      "mapPinLabel": "Carte des emplacements de Metro Momo"
     },
     "feature": {
       "badge": "Flagship",

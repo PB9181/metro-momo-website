@@ -15,79 +15,9 @@ export default function Locations() {
         <div className="locations-hero-pattern pattern-map" aria-hidden="true" />
         <div className="locations-hero-map" aria-hidden="true">
           <svg className="locations-europe-map" viewBox="0 0 640 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label={t('locations.hero.mapPinLabel')}>
-            <defs>
-              <filter id="map-pin-glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                <feMerge>
-                  <feMergeNode in="coloredBlur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
             <path className="europe-landmass" d="M90 290 L95 230 L150 205 L190 170 L260 160 L330 155 L360 115 L395 75 L475 65 L515 110 L500 170 L455 220 L410 270 L350 320 L260 335 L180 315 Z" />
             <path className="europe-island" d="M180 160 L185 135 L210 130 L230 145 L220 165 L195 170 Z" />
             <path className="europe-island" d="M165 150 L170 130 L185 132 L180 155 Z" />
-            <path className="europe-route" stroke="var(--mm-coral)" d="M340 150 L400 175 L400 95 L490 90 L210 145 L155 290 L220 305 L275 225 L315 180 Z" />
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="340" cy="150" r="7" fill="var(--mm-red)" filter="url(#map-pin-glow)" />
-              <circle cx="340" cy="150" r="14" fill="none" stroke="var(--mm-red)" strokeWidth="1.5" className="pin-ring" />
-              <text x="340" y="132" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.netherlands')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="315" cy="180" r="7" fill="var(--mm-neon-lime)" filter="url(#map-pin-glow)" />
-              <circle cx="315" cy="180" r="14" fill="none" stroke="var(--mm-neon-lime)" strokeWidth="1.5" className="pin-ring" />
-              <text x="325" y="184" textAnchor="start" className="pin-label">{t('locations.hero.map.countries.belgium')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="275" cy="225" r="7" fill="var(--mm-hot-pink)" filter="url(#map-pin-glow)" />
-              <circle cx="275" cy="225" r="14" fill="none" stroke="var(--mm-hot-pink)" strokeWidth="1.5" className="pin-ring" />
-              <text x="275" y="249" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.france')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="220" cy="305" r="7" fill="var(--mm-coral)" filter="url(#map-pin-glow)" />
-              <circle cx="220" cy="305" r="14" fill="none" stroke="var(--mm-coral)" strokeWidth="1.5" className="pin-ring" />
-              <text x="220" y="329" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.spain')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="155" cy="290" r="7" fill="var(--mm-gold)" filter="url(#map-pin-glow)" />
-              <circle cx="155" cy="290" r="14" fill="none" stroke="var(--mm-gold)" strokeWidth="1.5" className="pin-ring" />
-              <text x="155" y="314" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.portugal')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="210" cy="145" r="7" fill="var(--mm-teal)" filter="url(#map-pin-glow)" />
-              <circle cx="210" cy="145" r="14" fill="none" stroke="var(--mm-teal)" strokeWidth="1.5" className="pin-ring" />
-              <text x="210" y="127" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.uk')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="400" cy="175" r="7" fill="var(--mm-electric-blue)" filter="url(#map-pin-glow)" />
-              <circle cx="400" cy="175" r="14" fill="none" stroke="var(--mm-electric-blue)" strokeWidth="1.5" className="pin-ring" />
-              <text x="410" y="179" textAnchor="start" className="pin-label">{t('locations.hero.map.countries.germany')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="400" cy="95" r="7" fill="var(--mm-pink)" filter="url(#map-pin-glow)" />
-              <circle cx="400" cy="95" r="14" fill="none" stroke="var(--mm-pink)" strokeWidth="1.5" className="pin-ring" />
-              <text x="400" y="77" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.norway')}</text>
-            </g>
-            <g className="europe-pin europe-pin-soon">
-              <circle cx="490" cy="90" r="7" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
-              <circle cx="490" cy="90" r="14" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
-              <text x="490" y="72" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.finland')}</text>
-            </g>
-            <g className="europe-pin europe-pin-your-country">
-              <circle cx="450" cy="255" r="7" fill="var(--mm-purple)" filter="url(#map-pin-glow)" />
-              <circle cx="450" cy="255" r="14" fill="none" stroke="var(--mm-purple)" strokeWidth="1.5" className="pin-ring" />
-              <text x="450" y="279" textAnchor="middle" className="pin-label">{t('locations.hero.map.yourCountryLabel')}</text>
-            </g>
-            <g className="map-legend">
-              <rect x="24" y="348" width="172" height="56" rx="12" />
-              <circle cx="40" cy="370" r="4" fill="var(--mm-red)" />
-              <circle cx="50" cy="370" r="4" fill="var(--mm-gold)" />
-              <circle cx="60" cy="370" r="4" fill="var(--mm-teal)" />
-              <circle cx="70" cy="370" r="4" fill="var(--mm-electric-blue)" />
-              <text x="84" y="373" textAnchor="start" className="legend-label">{t('locations.hero.map.comingSoonLabel')}</text>
-              <circle cx="40" cy="390" r="4" fill="var(--mm-purple)" />
-              <text x="52" y="393" textAnchor="start" className="legend-label">{t('locations.hero.map.yourCountryLabel')}</text>
-            </g>
           </svg>
         </div>
         <div className="container locations-hero-inner">
@@ -353,22 +283,34 @@ export default function Locations() {
               max-width: none;
               margin: 0;
               opacity: 1;
+              filter: drop-shadow(0 0 40px rgba(232, 23, 43, 0.16));
+            }
+            .locations-hero-map .europe-landmass,
+            .locations-hero-map .europe-island {
+              fill: var(--mm-border);
+              stroke: var(--mm-coral);
+            }
+            .locations-hero-map .europe-landmass {
+              stroke-width: 2.5;
+            }
+            .locations-hero-map .europe-island {
+              stroke-width: 2;
             }
             .locations-hero-inner {
               display: flex;
               flex-direction: column;
-              justify-content: center;
+              justify-content: flex-end;
               align-items: center;
               position: relative;
               z-index: 2;
               width: 100%;
               flex: 1 1 auto;
-              padding: 24px;
+              padding: 120px 24px 40px;
               min-height: 100%;
               text-align: center;
             }
             .locations-hero-content {
-              background: rgba(255, 251, 247, 0.78);
+              background: rgba(255, 251, 247, 0.72);
               backdrop-filter: blur(10px);
               -webkit-backdrop-filter: blur(10px);
               border-radius: var(--radius-lg);
@@ -380,10 +322,12 @@ export default function Locations() {
             .locations-hero-title {
               margin-top: 16px;
               margin-bottom: 12px;
+              text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
             }
             .locations-hero-subtitle {
               font-size: 1rem;
               margin-bottom: 24px;
+              text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
             }
             .locations-hero-actions {
               flex-direction: column;
