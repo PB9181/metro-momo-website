@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Flame, Leaf, Sparkles, ArrowRight, ChefHat, WheatOff, MilkOff, NutOff, Download } from 'lucide-react'
+import { Flame, Leaf, Sparkles, ArrowRight, ChefHat, WheatOff, MilkOff, NutOff, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { menuCategories } from '../data/menuData.ts'
 import Sticker from '../components/Sticker.tsx'
@@ -36,8 +36,8 @@ export default function Menu() {
               <Link to="/contact" className="btn btn-secondary">
                 {t('menu.hero.ctaSecondary')}
               </Link>
-              <a href="/metro-momo-menu.pdf" download className="btn btn-secondary">
-                {t('menu.hero.ctaDownload')} <Download size={18} />
+              <a href="/metro-momo-menu.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                {t('menu.hero.ctaViewMenu')} <ExternalLink size={18} />
               </a>
             </div>
           </div>
