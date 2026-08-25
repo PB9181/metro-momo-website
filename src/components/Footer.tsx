@@ -81,11 +81,9 @@ export default function Footer() {
                   hello@metro-momo.com
                 </a>
               </li>
-              <li>
-                <a href="tel:Coming Soon">
-                  <Phone size={16} />
-                  Coming Soon
-                </a>
+              <li className="footer-contact-text">
+                <Phone size={16} />
+                Coming Soon
               </li>
             </ul>
           </div>
@@ -219,6 +217,16 @@ export default function Footer() {
           line-height: 1.5;
         }
         .footer-address svg {
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+        .footer-contact-text {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: rgba(255, 255, 255, 0.7);
+        }
+        .footer-contact-text svg {
           flex-shrink: 0;
           margin-top: 2px;
         }
