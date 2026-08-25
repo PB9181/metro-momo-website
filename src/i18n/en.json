@@ -73,7 +73,7 @@
       "stat2Label": "Bold flavors",
       "stat2Sublabel": "Sauces made in-house",
       "imageAlt": "Loaded MOMO spread with dumplings, bowls, and loaded fries",
-      "smallAlt1": "Gourmet pan-fried momos with colorful sauce swoosh",
+      "smallAlt1": "Gourmet pan-fried momo with colorful sauce swoosh",
       "smallAlt2": "Vibrant red cocktail with crushed ice and citrus garnish",
       "smallAlt3": "Steaming MOMO platter ready to share",
       "imageBadge": "FRESH",
@@ -88,7 +88,7 @@
       "images": [
         {
           "src": "/New_Photos/momo4.jpg",
-          "alt": "Pan-fried momos on a dark plate with colorful sauces"
+          "alt": "Pan-fried momo on a dark plate with colorful sauces"
         },
         {
           "src": "/New_Photos/bar2.jpg",
@@ -104,11 +104,11 @@
         },
         {
           "src": "/New_Photos/momo5.jpg",
-          "alt": "Steamed momos in a bamboo basket with dipping sauces"
+          "alt": "Steamed momo in a bamboo basket with dipping sauces"
         },
         {
           "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Hands folding fresh momos one by one"
+          "alt": "Hands folding fresh momo one by one"
         }
       ]
     },
@@ -122,7 +122,7 @@
         },
         {
           "src": "/New_Photos/momo4.jpg",
-          "alt": "Pan-fried momos on a dark plate with colorful sauces"
+          "alt": "Pan-fried momo on a dark plate with colorful sauces"
         },
         {
           "src": "/New_Photos/bar4.jpg",
@@ -134,7 +134,7 @@
         },
         {
           "src": "/New_Photos/momo5.jpg",
-          "alt": "Steamed momos in a bamboo basket with dipping sauces"
+          "alt": "Steamed momo in a bamboo basket with dipping sauces"
         },
         {
           "src": "/New_Photos/bar6.jpg",
@@ -142,11 +142,11 @@
         },
         {
           "src": "/New_Photos/momo3.jpg",
-          "alt": "Gourmet pan-fried momos with sauce swoosh"
+          "alt": "Gourmet pan-fried momo with sauce swoosh"
         },
         {
           "src": "/New_Photos/Momo 2.jpeg",
-          "alt": "Hands folding fresh momos one by one"
+          "alt": "Hands folding fresh momo one by one"
         }
       ]
     },
@@ -183,7 +183,7 @@
       "title": "Not your average",
       "titleHighlight": "dumpling",
       "body1": "Metro Momo started with a simple idea: the world needs more food that makes people smile. We took the Himalayan momo — warm, comforting, made for sharing — and gave it a fresh, modern twist.",
-      "body2": "Every dumpling is hand-pleated, every sauce is made in-house, and every location is designed to feel like your neighborhood's coolest hangout. We're building a brand that feels as good as it tastes.",
+      "body2": "Every momo is hand-pleated, every sauce is made in-house, and every location is designed to feel like your neighborhood's coolest hangout. We're building a brand that feels as good as it tastes.",
       "imageAlt": "People enjoying MOMO together",
       "imageAlt2": "Close-up of colorful MOMO platter",
       "cta": "Read our story",
@@ -295,14 +295,14 @@
       "hoursLabel": "Hours",
       "hours": "Mon–Sun: 11:00 – 22:00",
       "phoneLabel": "Phone",
-      "phone": "+46 12 345 67 89",
+      "phone": "+46 704219811",
       "emailLabel": "Email",
-      "email": "hello@metromomo.com"
+      "email": "hello@metro-momo.com"
     },
     "services": {
       "dineIn": {
         "title": "Dine-in",
-        "text": "Colorful seating, quick service, and momos served fresh from the steamer."
+        "text": "Colorful seating, quick service, and momo served fresh from the steamer."
       },
       "delivery": {
         "title": "Delivery",
