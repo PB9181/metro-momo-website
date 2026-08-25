@@ -31,7 +31,7 @@ export default function Locations() {
             <g className="europe-pin europe-pin-soon">
               <circle cx="340" cy="150" r="7" fill="var(--mm-red)" filter="url(#map-pin-glow)" />
               <circle cx="340" cy="150" r="14" fill="none" stroke="var(--mm-red)" strokeWidth="1.5" className="pin-ring" />
-              <text x="340" y="132" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.netherlands')}</text>
+              <text x="340" y="132" textAnchor="middle" className="pin-label pin-label-show-mobile">{t('locations.hero.map.countries.netherlands')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
               <circle cx="315" cy="180" r="7" fill="var(--mm-neon-lime)" filter="url(#map-pin-glow)" />
@@ -41,7 +41,7 @@ export default function Locations() {
             <g className="europe-pin europe-pin-soon">
               <circle cx="275" cy="225" r="7" fill="var(--mm-hot-pink)" filter="url(#map-pin-glow)" />
               <circle cx="275" cy="225" r="14" fill="none" stroke="var(--mm-hot-pink)" strokeWidth="1.5" className="pin-ring" />
-              <text x="275" y="249" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.france')}</text>
+              <text x="275" y="249" textAnchor="middle" className="pin-label pin-label-show-mobile">{t('locations.hero.map.countries.france')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
               <circle cx="220" cy="305" r="7" fill="var(--mm-coral)" filter="url(#map-pin-glow)" />
@@ -56,12 +56,12 @@ export default function Locations() {
             <g className="europe-pin europe-pin-soon">
               <circle cx="210" cy="145" r="7" fill="var(--mm-teal)" filter="url(#map-pin-glow)" />
               <circle cx="210" cy="145" r="14" fill="none" stroke="var(--mm-teal)" strokeWidth="1.5" className="pin-ring" />
-              <text x="210" y="127" textAnchor="middle" className="pin-label">{t('locations.hero.map.countries.uk')}</text>
+              <text x="210" y="127" textAnchor="middle" className="pin-label pin-label-show-mobile">{t('locations.hero.map.countries.uk')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
               <circle cx="400" cy="175" r="7" fill="var(--mm-electric-blue)" filter="url(#map-pin-glow)" />
               <circle cx="400" cy="175" r="14" fill="none" stroke="var(--mm-electric-blue)" strokeWidth="1.5" className="pin-ring" />
-              <text x="410" y="179" textAnchor="start" className="pin-label">{t('locations.hero.map.countries.germany')}</text>
+              <text x="410" y="179" textAnchor="start" className="pin-label pin-label-show-mobile">{t('locations.hero.map.countries.germany')}</text>
             </g>
             <g className="europe-pin europe-pin-soon">
               <circle cx="400" cy="95" r="7" fill="var(--mm-pink)" filter="url(#map-pin-glow)" />
@@ -423,7 +423,14 @@ export default function Locations() {
               display: none;
             }
             .pin-label {
-              font-size: 10px;
+              display: none;
+            }
+            .pin-label-show-mobile {
+              display: block;
+              font-size: 12px;
+              font-weight: 900;
+              fill: var(--mm-dark);
+              text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
             }
             .legend-label {
               font-size: 9px;
@@ -441,6 +448,9 @@ export default function Locations() {
             }
             .pin-label {
               font-size: 9px;
+            }
+            .pin-label-show-mobile {
+              font-size: 11px;
             }
             .legend-label {
               font-size: 8px;
