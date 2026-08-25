@@ -285,8 +285,8 @@ export default function Locations() {
             }
             .locations-europe-map {
               width: 340px;
-              opacity: 0.14;
-              right: -48px;
+              opacity: 0.25;
+              right: -32px;
               top: 25%;
               transform: translateY(-25%);
             }
@@ -309,6 +309,7 @@ export default function Locations() {
               flex-direction: row;
               flex-wrap: wrap;
               justify-content: center;
+              gap: 10px;
             }
             .locations-hero-stickers .sticker:nth-child(2),
             .locations-hero-stickers .sticker:nth-child(3) {
@@ -318,11 +319,57 @@ export default function Locations() {
               display: none;
             }
           }
-          @media (max-width: 480px) {
+          @media (max-width: 768px) {
+            .locations-hero {
+              display: flex;
+              flex-direction: column;
+              padding: 60px 0 40px;
+            }
+            .locations-hero-map {
+              position: relative;
+              inset: auto;
+              width: 100%;
+              height: auto;
+              padding: 0 24px;
+              margin-top: 40px;
+              z-index: 1;
+              opacity: 1;
+              pointer-events: auto;
+            }
             .locations-europe-map {
-              width: 280px;
-              right: -64px;
-              top: 15%;
+              position: relative;
+              top: auto;
+              right: auto;
+              transform: none;
+              width: 100%;
+              max-width: 520px;
+              height: auto;
+              margin: 0 auto;
+              opacity: 1;
+            }
+            .locations-hero-inner {
+              width: 100%;
+            }
+            .pin-label {
+              font-size: 10px;
+            }
+            .legend-label {
+              font-size: 9px;
+            }
+          }
+          @media (max-width: 480px) {
+            .locations-hero-map {
+              padding: 0 20px;
+              margin-top: 32px;
+            }
+            .locations-europe-map {
+              max-width: 360px;
+            }
+            .pin-label {
+              font-size: 9px;
+            }
+            .legend-label {
+              font-size: 8px;
             }
           }
         `}</style>

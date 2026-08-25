@@ -941,6 +941,17 @@ section.page-hero .page-hero-subtitle {
   .display-text {
     font-size: clamp(2.5rem, 12vw, 4rem);
   }
+
+  .sticker {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    gap: 4px;
+  }
+
+  .sticker svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -975,7 +986,26 @@ section.page-hero .page-hero-subtitle {
   }
 
   .sticker {
-    font-size: 0.75rem;
-    padding: 8px 12px;
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+
+  .hero-sticker-top,
+  .hero-image-badge,
+  .about-collage-sticker {
+    display: none;
+  }
+
+  .menu-hero-stickers,
+  .how-it-works-stickers,
+  .tech-hero-stickers,
+  .models-hero-stickers,
+  .faq-hero-stickers,
+  .contact-hero-stickers,
+  .locations-hero-stickers,
+  .cta-stickers,
+  .drop-stickers,
+  .coming-soon-stickers {
+    gap: 8px;
   }
 }

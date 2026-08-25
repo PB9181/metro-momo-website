@@ -214,6 +214,11 @@ export default function About() {
               display: none;
             }
           }
+          @media (max-width: 480px) {
+            .about-collage-sticker {
+              display: none;
+            }
+          }
         `}</style>
       </section>
 

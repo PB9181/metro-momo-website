@@ -376,9 +376,7 @@ export default function Home() {
               width: 38%;
             }
             .hero-image-badge {
-              bottom: 6%;
-              padding: 10px 16px;
-              font-size: 0.8rem;
+              display: none;
             }
           }
         `}</style>
