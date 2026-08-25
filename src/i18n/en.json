@@ -44,7 +44,7 @@
     "restaurant": "Restaurant",
     "company": "Company",
     "contact": "Contact",
-    "address": "123 Flavor Street, Food District, Your City",
+    "address": "Stockholm, Sweden",
     "copyright": "All rights reserved",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -276,7 +276,7 @@
       "imageAlt": "Metro Momo flagship restaurant",
       "imageSticker": "FIRST SPOT",
       "addressLabel": "Address",
-      "address": "123 Flavor Street, Food District, Your City",
+      "address": "Stockholm, Sweden",
       "hoursLabel": "Hours",
       "hours": "Mon–Sun: 11:00 – 22:00",
       "phoneLabel": "Phone",
@@ -709,7 +709,7 @@
     "details": {
       "headOffice": {
         "label": "Head Office",
-        "value": "Metro Momo HQ, Your City"
+        "value": "Metro Momo HQ, Stockholm, Sweden"
       },
       "phone": {
         "label": "Phone",
