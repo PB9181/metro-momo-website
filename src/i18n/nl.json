@@ -269,7 +269,19 @@
       "sticker1": "FLAGSHIP",
       "sticker2": "MEER Binnenkort",
       "sticker3": "JOUW STAD?",
-      "mapPinLabel": "Metro Momo Central"
+      "mapPinLabel": "Metro Momo Central",
+      "map": {
+        "flagshipLabel": "Flagship",
+        "comingSoonLabel": "Binnenkort",
+        "yourCityLabel": "Jouw stad?",
+        "cities": {
+          "stockholm": "Stockholm",
+          "amsterdam": "Amsterdam",
+          "berlin": "Berlijn",
+          "paris": "Parijs",
+          "london": "Londen"
+        }
+      }
     },
     "feature": {
       "badge": "Flagship",

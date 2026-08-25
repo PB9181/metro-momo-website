@@ -269,7 +269,19 @@
       "sticker1": "FLAGSHIP",
       "sticker2": "MORE SOON",
       "sticker3": "YOUR CITY?",
-      "mapPinLabel": "Metro Momo Central"
+      "mapPinLabel": "Metro Momo Central",
+      "map": {
+        "flagshipLabel": "Flagship",
+        "comingSoonLabel": "Coming soon",
+        "yourCityLabel": "Your city?",
+        "cities": {
+          "stockholm": "Stockholm",
+          "amsterdam": "Amsterdam",
+          "berlin": "Berlin",
+          "paris": "Paris",
+          "london": "London"
+        }
+      }
     },
     "feature": {
       "badge": "Flagship",
