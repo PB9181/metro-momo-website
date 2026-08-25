@@ -261,28 +261,13 @@
       "badge": "Vind ons",
       "title": "Waar de momo's",
       "titleHighlight": "rollen",
-      "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken, steden en landen. Vind ons, neem vrienden mee en proef de movement.",
+      "subtitle": "Vandaag één flagship-locatie. Binnenkort meer wijken en steden. Vind ons, neem vrienden mee en proef de movement.",
       "ctaPrimary": "Plan je bezoek",
       "ctaSecondary": "Partner worden",
       "sticker1": "BINNENKORT",
-      "sticker2": "9 LANDEN",
-      "sticker3": "JOUW LAND?",
-      "mapPinLabel": "Landenkaart van Metro Momo",
-      "map": {
-        "comingSoonLabel": "Binnenkort",
-        "yourCountryLabel": "Jouw land?",
-        "countries": {
-          "netherlands": "Nederland",
-          "france": "Frankrijk",
-          "portugal": "Portugal",
-          "uk": "VK",
-          "germany": "Duitsland",
-          "norway": "Noorwegen",
-          "finland": "Finland",
-          "belgium": "België",
-          "spain": "Spanje"
-        }
-      }
+      "sticker2": "IN GROEI",
+      "sticker3": "JOUW STAD?",
+      "mapPinLabel": "Locatiekaart van Metro Momo"
     },
     "feature": {
       "badge": "Flagship",
