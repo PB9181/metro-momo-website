@@ -263,11 +263,13 @@
       "badge": "Finde uns",
       "title": "Wo die Momos",
       "titleHighlight": "rollen",
-      "subtitle": "Heute ein Flagship-Standort. Bald mehr Viertel, Städte und Länder.",
+      "subtitle": "Heute ein Flagship-Standort. Bald mehr Viertel, Städte und Länder. Finde uns, bring Freunde mit und probiere die Bewegung.",
       "ctaPrimary": "Besuch planen",
       "ctaSecondary": "Partner werden",
       "sticker1": "FLAGSHIP",
-      "sticker2": "MEHR BALD"
+      "sticker2": "MEHR BALD",
+      "sticker3": "DEINE STADT?",
+      "mapPinLabel": "Metro Momo Central"
     },
     "feature": {
       "badge": "Flagship",
@@ -311,7 +313,15 @@
       "badge": "Über uns",
       "title": "Eine Bewegung für",
       "titleHighlight": "MOMO und Eigentümer",
-      "subtitle": "METRO MOMO entstand aus einer einfachen Überzeugung: Große Dumplings verdienen ein großartiges System."
+      "subtitle": "METRO MOMO entstand aus einer einfachen Überzeugung: Große Dumplings verdienen ein großartiges System. Wir bauen eine Marke, die sich so gut anfühlt wie sie schmeckt — ein Standort, ein Eigentümer, ein Lächeln nach dem anderen.",
+      "ctaPrimary": "Unsere Geschichte lesen",
+      "ctaSecondary": "Menü erkunden",
+      "sticker1": "UNSERE GESCHICHTE",
+      "sticker2": "HANDGEMACHT",
+      "sticker3": "GELIEBT",
+      "imageAlt1": "Hände, die frische Momos eins nach dem anderen falten",
+      "imageAlt2": "Bunte Momo-Platte zum Teilen bereit",
+      "imageAlt3": "Menschen, die gemeinsam MOMO genießen"
     },
     "story": {
       "badge": "Unsere Geschichte",
@@ -365,7 +375,12 @@
       "badge": "Joint Venture",
       "title": "Wähle das Format, das",
       "titleHighlight": "zu deinen Ambitionen passt",
-      "subtitle": "Von Straßenständen bis zu Ghost Kitchens — jedes Joint-Venture-Modell startet mit €0 Franchise-Gebühr. Wir wachsen gemeinsam durch Umsatzbeteiligung."
+      "subtitle": "Von Straßenständen bis zu Ghost Kitchens — jedes Joint-Venture-Modell startet mit €0 Franchise-Gebühr. Wir wachsen gemeinsam durch Umsatzbeteiligung, nicht durch Ausschluss.",
+      "ctaPrimary": "Formate vergleichen",
+      "ctaSecondary": "Jetzt bewerben",
+      "sticker1": "€0 GEBÜHR",
+      "sticker2": "3 FORMATE",
+      "sticker3": "FLEXIBEL"
     },
     "items": [
       {
@@ -471,7 +486,12 @@
       "badge": "So funktioniert's",
       "title": "Von der Bewerbung bis zum",
       "titleHighlight": "Eröffnungstag",
-      "subtitle": "Ein klarer, sechsstufiger Weg für Eigentümer, die schnell vorankommen und etwas Nachhaltiges aufbauen wollen."
+      "subtitle": "Ein klarer, sechsstufiger Weg für Eigentümer, die schnell vorankommen und etwas Nachhaltiges aufbauen wollen. Wir begleiten dich durch jede Phase — und bleiben auch nach dem Launch an deiner Seite.",
+      "ctaPrimary": "Interesse einreichen",
+      "ctaSecondary": "Modelle ansehen",
+      "sticker1": "6 SCHRITTE",
+      "sticker2": "FAST TRACK",
+      "sticker3": "BEGLEITET"
     },
     "steps": [
       {
@@ -537,7 +557,12 @@
       "badge": "FAQ",
       "title": "Fragen?",
       "titleHighlight": "Wir haben Antworten.",
-      "subtitle": "Alles, was du wissen musst, um METRO MOMO Partner zu werden."
+      "subtitle": "Alles, was du wissen musst, um METRO MOMO Partner zu werden. Keine Frage ist zu klein — wir helfen dir, deine Entscheidung leicht zu treffen.",
+      "ctaPrimary": "Kontaktiere uns",
+      "ctaSecondary": "Modelle ansehen",
+      "sticker1": "Q&A",
+      "sticker2": "FRAG LOS",
+      "sticker3": "WIR HELFEN"
     },
     "sidebar": {
       "title": "Noch Fragen?",
@@ -588,7 +613,12 @@
       "badge": "Tech-basiertes Wachstum",
       "title": "Auf einem Restaurant",
       "titleHighlight": "Operating System gebaut",
-      "subtitle": "Jeder METRO MOMO Partner erhält Zugang zur gleichen Operations-Plattform, die moderne Restaurantteams antreibt — für Bestellung, Küche, Inventar und Back-Office an einem Ort."
+      "subtitle": "Jeder METRO MOMO Partner erhält Zugang zur gleichen Operations-Plattform, die moderne Restaurantteams antreibt — für Bestellung, Küche, Inventar und Back-Office an einem Ort.",
+      "ctaPrimary": "Modelle ansehen",
+      "ctaSecondary": "Partner werden",
+      "sticker1": "ALL-IN-ONE",
+      "sticker2": "LIVE DATEN",
+      "sticker3": "ZUKUNFTSGERICHTET"
     },
     "categories": [
       {
@@ -693,7 +723,12 @@
       "badge": "Partner With Us",
       "title": "Bring Metro Momo",
       "titleHighlight": "to your city",
-      "subtitle": "Tell us about yourself and your target market. Our partnership team will reach out within 48 hours."
+      "subtitle": "Erzähle uns von dir und deinem Zielmarkt. Unser Partnerschaftsteam meldet sich innerhalb von 48 Stunden und begleitet dich durch die nächsten Schritte.",
+      "ctaPrimary": "Lass uns reden",
+      "ctaSecondary": "Unsere Standorte ansehen",
+      "sticker1": "LASS UNS REDEN",
+      "sticker2": "48H ANTWORT",
+      "sticker3": "PARTNERSCHAFT"
     },
     "benefits": {
       "badge": "Why METRO MOMO?",
@@ -810,6 +845,9 @@
     "title": "404",
     "subtitle": "Dieser Momo ist weggerollt",
     "text": "Wir konnten die gesuchte Seite nicht finden. Aber zu Hause gibt es reichlich MOMO.",
-    "cta": "Back to Home"
+    "cta": "Back to Home",
+    "sticker1": "UPS",
+    "searchLabel": "Suche läuft noch...",
+    "lostMomoLabel": "Verlorener Momo"
   }
 }
