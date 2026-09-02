@@ -306,6 +306,15 @@ export default function Nav() {
               )}
             </div>
 
+            <a
+              href="https://app.fewa.se"
+              className="btn btn-secondary nav-app-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleNavClick}
+            >
+              {t("nav.app")}
+            </a>
             <Link
               to="/menu"
               className="btn btn-primary nav-cta"
@@ -594,6 +603,10 @@ export default function Nav() {
           padding: 12px 24px;
           font-size: 0.85rem;
         }
+        .nav-app-cta {
+          padding: 12px 20px;
+          font-size: 0.85rem;
+        }
         .nav-toggle {
           display: none;
           background: transparent;
@@ -718,6 +731,12 @@ export default function Nav() {
           }
           .nav-cta {
             margin-top: 16px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+          }
+          .nav-app-cta {
+            margin-top: 8px;
             width: 100%;
             text-align: center;
             justify-content: center;
