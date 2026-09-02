@@ -65,6 +65,11 @@ export default function Footer() {
                   <Link to={link.href}>{link.label}</Link>
                 </li>
               ))}
+              <li>
+                <a href="https://app.fewa.se" target="_blank" rel="noopener noreferrer">
+                  {t('nav.app')}
+                </a>
+              </li>
             </ul>
           </div>
 
